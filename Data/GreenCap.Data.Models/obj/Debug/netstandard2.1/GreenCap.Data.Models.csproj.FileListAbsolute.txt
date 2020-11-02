@@ -1,0 +1,12 @@
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\bin\Debug\netstandard2.1\GreenCap.Data.Models.deps.json
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\bin\Debug\netstandard2.1\GreenCap.Data.Models.dll
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\bin\Debug\netstandard2.1\GreenCap.Data.Models.pdb
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\bin\Debug\netstandard2.1\GreenCap.Data.Common.dll
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\bin\Debug\netstandard2.1\GreenCap.Data.Common.pdb
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.csprojAssemblyReference.cache
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.AssemblyInfoInputs.cache
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.AssemblyInfo.cs
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.csproj.CoreCompileInputs.cache
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.csproj.CopyComplete
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.dll
+D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Models\obj\Debug\netstandard2.1\GreenCap.Data.Models.pdb

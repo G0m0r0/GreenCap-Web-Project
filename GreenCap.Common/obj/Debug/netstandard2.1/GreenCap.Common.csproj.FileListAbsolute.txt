@@ -1,0 +1,9 @@
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\bin\Debug\netstandard2.1\GreenCap.Common.deps.json
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\bin\Debug\netstandard2.1\GreenCap.Common.dll
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\bin\Debug\netstandard2.1\GreenCap.Common.pdb
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.csprojAssemblyReference.cache
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.AssemblyInfoInputs.cache
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.AssemblyInfo.cs
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.csproj.CoreCompileInputs.cache
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.dll
+D:\Programming\SoftUni-Final-Project\GreenCap.Common\obj\Debug\netstandard2.1\GreenCap.Common.pdb
