@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {}
+    "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {
+    "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj",
+        "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj",
         "projectName": "GreenCap.Services",
-        "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj",
+        "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj",
         "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\obj\\",
+        "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/T+YQoH92aGop9Ynv8+ff1Gdz1x1U+/kS7iQOdghe2vEtdSC9Z4WbXm0K5vNaODObmu0T5+J2EGZ8/2xhCriA==",
+  "dgSpecHash": "m4/B+fvUpR27tEw9XJ0+FPkK59PKvpBScLAuYIeaDScqIWyWlymQD0ywDOnRlJl7MAmMSVLSfsUCaWSPYq27yQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

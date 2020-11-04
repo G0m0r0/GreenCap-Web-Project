@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rZdOGyRgvtu2QFYSjJHMFE+p6Defwu16mcThtoo9ulvZBRZmd6fdZWOZbqFEpHAlnkRrd6huBmLHrUEI7I7iow==",
+  "dgSpecHash": "0RmJApAN61FLX7upuRAqQMbr82S3GFm3Mw2p3sKBsoaR2wiCkEFyCOIMLq5VrUPe+tBii4TtLcQ3syOytO2WmQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",

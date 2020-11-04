@@ -12,8 +12,8 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GreenCap.Data", "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data", "GreenCap.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GreenCap.Web", "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web", "GreenCap.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GreenCap.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data", "GreenCap.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GreenCap.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web", "GreenCap.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreenCap.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

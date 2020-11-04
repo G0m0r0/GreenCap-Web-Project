@@ -9481,11 +9481,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
       "projectName": "GreenCap.Web",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9506,32 +9506,32 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\GreenCap.Common\\GreenCap.Common.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\GreenCap.Common\\GreenCap.Common.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\GreenCap.Common\\GreenCap.Common.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\GreenCap.Common\\GreenCap.Common.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj"
             }
           }
         }

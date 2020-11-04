@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj",
       "projectName": "GreenCap.Web.Infrastructure",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.Infrastructure\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

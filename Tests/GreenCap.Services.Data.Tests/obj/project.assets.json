@@ -8579,11 +8579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
       "projectName": "GreenCap.Services.Data.Tests",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Services.Data.Tests\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Services.Data.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8604,11 +8604,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj"
             }
           }
         }

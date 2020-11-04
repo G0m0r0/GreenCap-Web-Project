@@ -6104,11 +6104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
       "projectName": "GreenCap.Data",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\GreenCap.Data.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6129,14 +6129,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\GreenCap.Common\\GreenCap.Common.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\GreenCap.Common\\GreenCap.Common.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\GreenCap.Common\\GreenCap.Common.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\GreenCap.Common\\GreenCap.Common.csproj"
             }
           }
         }

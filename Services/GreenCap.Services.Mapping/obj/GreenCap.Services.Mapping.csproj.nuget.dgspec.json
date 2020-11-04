@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {}
+    "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
+    "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
+        "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
         "projectName": "GreenCap.Services.Mapping",
-        "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
+        "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
         "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\obj\\",
+        "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

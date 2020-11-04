@@ -10797,11 +10797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Web.Tests\\GreenCap.Web.Tests.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Web.Tests\\GreenCap.Web.Tests.csproj",
       "projectName": "GreenCap.Web.Tests",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Web.Tests\\GreenCap.Web.Tests.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Web.Tests\\GreenCap.Web.Tests.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Web.Tests\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Web.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10822,8 +10822,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj"
             }
           }
         }

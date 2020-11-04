@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J7ue/tNARmfbYKFfIi8kxvAGkccvUo0agPmiocfNhLXSJjnCYmKg+jiNYfxmRAILqQEfq6jZHu3MCRZhuxJyHA==",
+  "dgSpecHash": "dwBPNbMGTM/03I8viPbjjYp7CMGawNoaRy0cFKWKmz9vckKOvuzJU/nrNvuWnuugJwSgPVhGZ9STAlm3E6VTCQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",

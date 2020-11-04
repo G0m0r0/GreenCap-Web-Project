@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FcpXoQpr+xKevDdkijNzOSfaAp5tU1O3ipeJ6i4oRuedXEO2dw6kAxiBCdhEjhIZhESnNkDzHrtGYf7ekqRFbA==",
+  "dgSpecHash": "ECbh2IxFPVg0pjQwsFeNXfsZ+JfrAOkk64OkG8nw0nTxZwkzIhrHckKXThTBidPeion8/etxLJ5r089FfCiaww==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

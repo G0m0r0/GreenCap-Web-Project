@@ -36,4 +36,8 @@
     <ProjectReference Include="..\GreenCap.Web.Infrastructure\GreenCap.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\GreenCap.Web.ViewModels\GreenCap.Web.ViewModels.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\webfonts\" />
+  </ItemGroup>
 </Project>

@@ -2784,11 +2784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
       "projectName": "GreenCap.Services.Messaging",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\GreenCap.Services.Messaging.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Messaging\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1117,11 +1117,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj",
       "projectName": "GreenCap.Data.Models",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1142,8 +1142,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Common\\GreenCap.Data.Common.csproj"
             }
           }
         }

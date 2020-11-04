@@ -1324,11 +1324,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
+      "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
       "projectName": "GreenCap.Web.ViewModels",
-      "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
+      "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web.ViewModels\\obj\\",
+      "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1349,11 +1349,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
             },
-            "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
-              "projectPath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+            "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
             }
           }
         }

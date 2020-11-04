@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "opRnPz+igwc+7UhVUCNm1oeR/ZONTehz1bvNNZ6CH2cij3l1CUbFbN4zreYmim6pr1spE6ZMX+5eUNbRsZBICQ==",
+  "dgSpecHash": "IcNHG0saN5aqaFK3tMa6UET6VpBYpO2ss5h6xiqXb4w1pj0Z9RpMd9bUpDxu+xKB7UAgTty+eZCKwKBBKXUu9Q==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

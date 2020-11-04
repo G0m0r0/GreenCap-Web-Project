@@ -7,3 +7,12 @@ D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Common\obj\Debug\netstan
 D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.csproj.CoreCompileInputs.cache
 D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.dll
 D:\Programming\SoftUni-Final-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.pdb
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\bin\Debug\netstandard2.1\GreenCap.Data.Common.deps.json
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\bin\Debug\netstandard2.1\GreenCap.Data.Common.dll
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\bin\Debug\netstandard2.1\GreenCap.Data.Common.pdb
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.csprojAssemblyReference.cache
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.AssemblyInfoInputs.cache
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.AssemblyInfo.cs
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.csproj.CoreCompileInputs.cache
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.dll
+D:\Programming\SoftUni-Web-Project\Data\GreenCap.Data.Common\obj\Debug\netstandard2.1\GreenCap.Data.Common.pdb

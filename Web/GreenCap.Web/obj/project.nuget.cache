@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7+I9gqkMKjnWOIY4BE0M6sAOqJ4v+qLi5VRyIfm3oyCgI6K83vl2TCoVOYY7KqAPEs06dNSAqDfh/usC0/wauw==",
+  "dgSpecHash": "Orp059sd9IgepAqBGAKgQXM20LqAodC5rKi2aRDm61dGrTgb6bhIYR2wTrKqg8EWbV56a1MNA1E2kvgZMS3XvQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\SoftUni-Final-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
+  "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web\\GreenCap.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
