@@ -2,7 +2,7 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    public class IdeasController : BaseController
+    public class ProposalsController : BaseController
     {
         public IActionResult All()
         {

@@ -896,8 +896,8 @@ D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Gree
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\GreenCap.Web.dll
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\GreenCap.Web.pdb
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\GreenCap.Web.genruntimeconfig.cache
-D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Ideas\All.cshtml.g.cs
-D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Ideas\Create.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Categories.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Create.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Latest.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\All.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\Create.cshtml.g.cs

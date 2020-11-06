@@ -3,6 +3,8 @@
     using System;
     using System.Linq;
     using System.Reflection;
+    using System.Runtime.CompilerServices;
+    using System.Security.Cryptography.X509Certificates;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -26,6 +28,22 @@
 
         public DbSet<Setting> Settings { get; set; }
 
+        public DbSet<Post> Posts { get; set; }
+
+        public DbSet<Comment> Comments { get; set; }
+
+        // public DbSet<GreenCapUser> GreenCapUsers { get; set; }
+        public DbSet<UserLike> UserLikes { get; set; }
+
+        // public DbSet<Address> Addresses { get; set; }
+
+        // public DbSet<UserComment> UserComments { get; set; }
+        public DbSet<UserEvent> UserEvents { get; set; }
+
+        public DbSet<Idea> Ideas { get; set; }
+
+        public DbSet<Event> Events { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -47,6 +65,16 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            // Needed for many-to-many relationships
+            builder.Entity<UserLike>()
+                .HasKey(x => new { x.PostId, x.UserId });
+
+            builder.Entity<UserLike>()
+                 .HasKey(x => new { x.PostId, x.UserId });
+
+            builder.Entity<UserEvent>()
+                .HasKey(x => new { x.UserId, x.EventId });
+
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 

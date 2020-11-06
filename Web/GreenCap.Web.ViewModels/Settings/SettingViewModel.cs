@@ -1,9 +1,9 @@
 ﻿namespace GreenCap.Web.ViewModels.Settings
 {
+    using AutoMapper;
+
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
-
-    using AutoMapper;
 
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {

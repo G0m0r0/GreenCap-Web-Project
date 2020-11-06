@@ -1,6 +1,14 @@
-﻿<ul class="nav nav-tabs">
+﻿@using GreenCap.Common
+@{
+    this.ViewData["Title"] = "Forum categories";
+}
+
+<ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#health">Health</a>
+        <a class="nav-link active" data-toggle="tab" href="#general">General</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#health">Health</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#ecology">Ecology</a>
@@ -9,40 +17,110 @@
         <a class="nav-link" data-toggle="tab" href="#exercise">Exercise</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#onvirment">Envirment</a>
+        <a class="nav-link" data-toggle="tab" href="#envirment">Envirment</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#other">Other</a>
     </li>
 </ul>
 <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade" id="health">
-        <p>Health</p>
-    </div>
-    <div class="tab-pane fade" id="ecology">
-        <p>Ecology</p>
-    </div>
-    <div class="tab-pane fade" id="exercise">
-        <p>Exercise</p>
-    </div>
-    <div class="tab-pane fade" id="Envirment">
-        <p>Envirment</p>
-    </div>
-    <div class="tab-pane fade active show" id="other">
+    <div class="tab-pane fade show active" id="general">
         <br />
         <!--foreach-->
         <!--if category-->
-        <div class="card text-white bg-success">
+        <div class="card text-white bg-success active">
             <div class="card-header">
                 Username- Posted on
                 <i class="fas fa-thumbs-up"></i>
                 <i class="fas fa-thumbs-down"></i>
             </div>
             <div class="card-body">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Title-General</h3>
                 <p class="card-text">Description</p>
             </div>
         </div>
-        <br />
     </div>
+    <div class="tab-pane fade" id="health">
+        <br />
+        <!--foreach-->
+        <!--if category-->
+        <div class="card text-white bg-danger">
+            <div class="card-header">
+                Username- Posted on
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Title-Health</h3>
+                <p class="card-text">Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ecology">
+        <br />
+        <!--foreach-->
+        <!--if category-->
+        <div class="card text-white bg-secondary">
+            <div class="card-header">
+                Username- Posted on
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Title-Ecology</h3>
+                <p class="card-text">Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="exercise">
+        <br />
+        <!--foreach-->
+        <!--if category-->
+        <div class="card text-white bg-warning">
+            <div class="card-header">
+                Username- Posted on
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Title-Exercise</h3>
+                <p class="card-text">Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="envirment">
+        <br />
+        <!--foreach-->
+        <!--if category-->
+        <div class="card text-white bg-info">
+            <div class="card-header">
+                Username- Posted on
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Title-Envirment</h3>
+                <p class="card-text">Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade show" id="other">
+        <br />
+        <!--foreach-->
+        <!--if category-->
+        <div class="card text-white bg-primary">
+            <div class="card-header">
+                Username- Posted on
+                <i class="fas fa-thumbs-up"></i>
+                <i class="fas fa-thumbs-down"></i>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Title-Other</h3>
+                <p class="card-text">Description</p>
+            </div>
+        </div>
+    </div>
+
+    <!--out of foreach-->
+    <br />
 </div>

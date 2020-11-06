@@ -1,4 +1,9 @@
-﻿<div class="row mt-2 mb-4">
+﻿@using GreenCap.Common
+@{
+    this.ViewData["Title"] = "All proposals";
+}
+
+<div class="row mt-2 mb-4">
     <!--foreach-->
     <div class="card-deck col-sm-3 col-md-6 col-lg-4">
         <div class="card">
@@ -6,12 +11,11 @@
             <div class="card-body">
                 <h2 class="card-title">Title</h2>
                 <h5 class="card-title">ShortDescription</h5>
-                <p class="card-text">Description</p>
             </div>
             <div class="card-footer">
                 <small class="text-muted">CreatedOn</small>
                 <i class="fas fa-info-circle"></i>
             </div>
         </div>
-    </div>   
+    </div>
 </div>
