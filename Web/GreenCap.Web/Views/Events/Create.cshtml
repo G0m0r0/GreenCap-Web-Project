@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using GreenCap.Web.ViewModels.InputViewModels
+@model EventInputModel
+
 @{
+    this.ViewData["Title"] = "Create post";
 }
+
+<div class="jumbotron">
+    <h1 class="display-3">Create your own event! </h1>
+    <p class="lead">If you have and idea to create your own event thats the right place to do it! We will contact you later to cofirm that the event is real and will make it visible to everyone. </p>
+    <hr class="my-4">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" type="text" class="form-control  col-4" id="EventNameArea" placeholder="Event name" name="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImagePath"></label>
+                <input asp-for="ImagePath" type="text" class="form-control  col-md-4" id="EventImageArea" placeholder="Image URL" name="Image">
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StartDate"></label>
+                <input asp-for="StartDate" class="form-control  col-md-4" id="EventStartDateArea" name="StartDate">
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EndDate"></label>
+                <input asp-for="EndDate" class="form-control  col-md-4" id="EventEndDateArea" name="EndDate">
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TotalPeople">Number</label>
+                <input class="form-control  col-md-4" type="number" max="100" min="0" value="1" id="EventTotalPeople">
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control" id="EventDescriptionArea" rows="3" placeholder="Share in details about the event." name="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-info">Submit</button>
+        </fieldset>
+    </form>
+</div>

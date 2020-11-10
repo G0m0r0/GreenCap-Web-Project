@@ -5,6 +5,7 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
     using GreenCap.Data;
     using GreenCap.Data.Common;
     using GreenCap.Data.Common.Repositories;
@@ -13,9 +14,6 @@
     using GreenCap.Data.Seeding;
     using GreenCap.Services.Data;
     using GreenCap.Services.Messaging;
-
-    using CommandLine;
-
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;

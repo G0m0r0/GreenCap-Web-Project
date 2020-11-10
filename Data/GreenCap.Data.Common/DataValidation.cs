@@ -3,6 +3,7 @@
     public static class DataValidation
     {
         public const int NameTitleMaxLength = 30;
+        public const int NameTitleMinLength = 3;
         public const int FullNameMaxLength = 60;
 
         public static class Comment
@@ -10,21 +11,30 @@
             public const int ContentLength = 250;
         }
 
-        public static class Idea
+        public static class Proposal
         {
-            public const int ImagePathLength = 500;
-            public const int DescriptionLength = 1000;
-            public const int ShortLength = 100;
+            public const int DescriptionMaxLength = 1000;
+            public const int DescriptionMinLength = 30;
+
+            public const int ShortDescriptionMaxLength = 100;
+            public const int ShortDescriptionMinLength = 10;
         }
 
         public static class Post
         {
-            public const int Description = 550;
+            public const int DescriptionMaxLength = 550;
+            public const int DescriptionMinLength = 30;
         }
 
         public static class Events
         {
-            public const int Description = 550;
+            public const int DescriptionMaxLength = 550;
+            public const int DescriptionMinLength = 30;
+
+            public const int ImagePathMaxLength = 1000;
+
+            public const int TotalPeopleMaxCount = 10;
+            public const int TotalPeopleMinCount = 1;
         }
 
         public static class Address

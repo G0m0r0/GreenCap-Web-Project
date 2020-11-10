@@ -1,6 +1,5 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,22 +7,21 @@
 
     using GreenCap.Data.Common.Models;
 
-    public class Idea : BaseDeletableModel<int>
+    public class Proposal : BaseDeletableModel<int>
     {
         [Required]
         [MaxLength(DataValidation.NameTitleMaxLength)]
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Idea.ImagePathLength)]
-        public string ImagePath { get; set; }
+        public string Image { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Idea.DescriptionLength)]
+        [MaxLength(DataValidation.Proposal.DescriptionMaxLength)]
         public string Description { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Idea.ShortLength)]
+        [MaxLength(DataValidation.Proposal.ShortDescriptionMaxLength)]
         public string ShortDescription { get; set; }
 
         public virtual ApplicationUser User { get; set; }

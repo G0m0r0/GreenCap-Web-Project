@@ -1,36 +1,36 @@
 ﻿@using GreenCap.Common
+@using GreenCap.Web.ViewModels.InputViewModels
+@using GreenCap.Data.Models.Enums
+@model ForumInputViewModel
+
 @{
     this.ViewData["Title"] = "Create post";
 }
 
 <div class="jumbotron">
-    <h1 class="display-3">Do you have a problem? </h1>
+    <h1 class="display-3">Do you have something in mind to share? </h1>
     <p class="lead">Tell us in details what is your problem. Shared it with our community to get the best ideas! </p>
     <hr class="my-4">
     <form>
         <fieldset>
             <div class="form-group">
-                <label for="InputProblem">Problem</label>
-                <input type="text" class="form-control" id="ProblemNameArea" placeholder="Problem name" name="ProblemName">
+                <label asp-for="ProblemTitle"></label>
+                <input asp-for="ProblemTitle" type="text" class="form-control  col-md-4" id="ProblemNameArea" placeholder="Problem name" name="Title">
+                <span asp-validation-for="ProblemTitle" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label for="CategorySelect">Select category</label>
-                <select class="form-control" id="CategorySelect" name="Category">
-                    <option>Health</option>
-                    <option>Ecology</option>
-                    <option>Exercise</option>
-                    <option>Envirment</option>
-                    <option>Other</option>
-                </select>
+                <label asp-for="Category"></label>
+                <select asp-for="Category" asp-items="@Html.GetEnumSelectList<Category>()" class="form-control  col-md-4" id="CategorySelect" name="Category"></select>
             </div>
 
             <div class="form-group">
-                <label for="InputDescrption">Description</label>
-                <textarea class="form-control" id="DescriptionProblemArea" rows="3" placeholder="Share your problem here." name="Description"></textarea>
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control" id="DescriptionProblemArea" rows="3" placeholder="Share your problem here." name="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-info">Submit</button>
         </fieldset>
     </form>
 </div>

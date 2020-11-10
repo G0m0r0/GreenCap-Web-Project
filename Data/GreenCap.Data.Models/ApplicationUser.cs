@@ -18,7 +18,7 @@ namespace GreenCap.Data.Models
             this.Logins = new HashSet<IdentityUserLogin<string>>();
             this.Posts = new HashSet<Post>();
             this.Comments = new HashSet<Comment>();
-            this.Ideas = new HashSet<Idea>();
+            this.Ideas = new HashSet<Proposal>();
             this.UserLikes = new HashSet<UserLike>();
             this.UserEvents = new HashSet<UserEvent>();
         }
@@ -43,7 +43,7 @@ namespace GreenCap.Data.Models
 
         public virtual ICollection<Comment> Comments { get; set; }
 
-        public virtual ICollection<Idea> Ideas { get; set; }
+        public virtual ICollection<Proposal> Ideas { get; set; }
 
         public virtual ICollection<UserLike> UserLikes { get; set; }
 

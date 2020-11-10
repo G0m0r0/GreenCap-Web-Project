@@ -10,7 +10,7 @@
         {
             this.Posts = new HashSet<Post>();
             this.UserComments = new HashSet<UserComment>();
-            this.Ideas = new HashSet<Idea>();
+            this.Ideas = new HashSet<Proposal>();
             this.UserLikes = new HashSet<UserLike>();
             this.UserEvents = new HashSet<UserEvent>();
         }
@@ -19,7 +19,7 @@
 
         public virtual ICollection<UserComment> UserComments { get; set; }
 
-        public virtual ICollection<Idea> Ideas { get; set; }
+        public virtual ICollection<Proposal> Ideas { get; set; }
 
         public virtual ICollection<UserLike> UserLikes { get; set; }
 

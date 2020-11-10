@@ -22,7 +22,7 @@
         public string ProblemTitle { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Post.Description)]
+        [MaxLength(DataValidation.Post.DescriptionMaxLength)]
         public string Description { get; set; }
 
         public virtual ApplicationUser User { get; set; }

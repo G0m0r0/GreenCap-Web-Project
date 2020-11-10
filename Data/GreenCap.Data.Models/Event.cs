@@ -18,11 +18,17 @@
 
         [Required]
         [MaxLength(DataValidation.NameTitleMaxLength)]
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Events.Description)]
+        [MaxLength(DataValidation.Events.DescriptionMaxLength)]
         public string Description { get; set; }
+
+        [Required]
+        [MaxLength(DataValidation.Events.ImagePathMaxLength)]
+        public string ImagePath { get; set; }
+
+        public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
@@ -32,9 +38,9 @@
         public string HostId { get; set; }
 
         [Required]
-        public int TotalNeededPeople { get; set; }
+        public int TotalPeople { get; set; }
 
-        public int NeededPeople => (this.TotalNeededPeople - this.UserEvents.Count) > 0 ? (this.TotalNeededPeople - this.UserEvents.Count) : 0;
+        public int NeededPeople => (this.TotalPeople - this.UserEvents.Count) > 0 ? (this.TotalPeople - this.UserEvents.Count) : 0;
 
         // public virtual Address Address { get; set; }
         // [ForeignKey(nameof(Address))]

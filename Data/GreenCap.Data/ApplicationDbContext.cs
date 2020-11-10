@@ -3,8 +3,6 @@
     using System;
     using System.Linq;
     using System.Reflection;
-    using System.Runtime.CompilerServices;
-    using System.Security.Cryptography.X509Certificates;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -40,7 +38,7 @@
         // public DbSet<UserComment> UserComments { get; set; }
         public DbSet<UserEvent> UserEvents { get; set; }
 
-        public DbSet<Idea> Ideas { get; set; }
+        public DbSet<Proposal> Ideas { get; set; }
 
         public DbSet<Event> Events { get; set; }
 
