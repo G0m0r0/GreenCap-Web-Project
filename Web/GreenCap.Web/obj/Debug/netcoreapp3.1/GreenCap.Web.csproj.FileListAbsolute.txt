@@ -901,3 +901,7 @@ D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razo
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Latest.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\All.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\Create.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\bin\Debug\netcoreapp3.1\appsettings.Production.json
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\All.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Events\Create.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\News\All.cshtml.g.cs

@@ -31,6 +31,11 @@
         [ForeignKey(nameof(HostedBy))]
         public string HostId { get; set; }
 
+        [Required]
+        public int TotalNeededPeople { get; set; }
+
+        public int NeededPeople => (this.TotalNeededPeople - this.UserEvents.Count) > 0 ? (this.TotalNeededPeople - this.UserEvents.Count) : 0;
+
         // public virtual Address Address { get; set; }
         // [ForeignKey(nameof(Address))]
         // public int AddressId { get; set; }

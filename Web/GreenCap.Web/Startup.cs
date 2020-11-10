@@ -52,7 +52,7 @@
                     {
                         options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                     }).AddRazorRuntimeCompilation();
-            services.AddRazorPages();
+            services.AddRazorPages(); // small services 40/50
 
             services.AddSingleton(this.configuration);
 
@@ -79,6 +79,7 @@
                 new ApplicationDbContextSeeder().SeedAsync(dbContext, serviceScope.ServiceProvider).GetAwaiter().GetResult();
             }
 
+            // register middleware
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -88,8 +89,9 @@
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
-            }
+             }
 
+            // middware
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
