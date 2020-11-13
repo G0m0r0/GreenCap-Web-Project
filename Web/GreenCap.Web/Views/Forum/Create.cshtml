@@ -11,22 +11,22 @@
     <h1 class="display-3">Do you have something in mind to share? </h1>
     <p class="lead">Tell us in details what is your problem. Shared it with our community to get the best ideas! </p>
     <hr class="my-4">
-    <form>
+    <form method="post">
         <fieldset>
             <div class="form-group">
                 <label asp-for="ProblemTitle"></label>
-                <input asp-for="ProblemTitle" type="text" class="form-control  col-md-4" id="ProblemNameArea" placeholder="Problem name" name="Title">
+                <input asp-for="ProblemTitle" type="text" class="form-control  col-md-4" placeholder="Problem name">
                 <span asp-validation-for="ProblemTitle" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Category"></label>
-                <select asp-for="Category" asp-items="@Html.GetEnumSelectList<Category>()" class="form-control  col-md-4" id="CategorySelect" name="Category"></select>
+                <select asp-for="Category" asp-items="@Html.GetEnumSelectList<Category>()" class="form-control  col-md-4"></select>
             </div>
 
             <div class="form-group">
                 <label asp-for="Description"></label>
-                <textarea asp-for="Description" class="form-control" id="DescriptionProblemArea" rows="3" placeholder="Share your problem here." name="Description"></textarea>
+                <textarea asp-for="Description" class="form-control" rows="3" placeholder="Share your problem here."></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 

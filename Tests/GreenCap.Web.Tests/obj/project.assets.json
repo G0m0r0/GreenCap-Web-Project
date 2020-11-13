@@ -3450,9 +3450,6 @@
       "GreenCap.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
         "compile": {
           "bin/placeholder/GreenCap.Common.dll": {}
         },
@@ -3522,7 +3519,8 @@
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
-          "GreenCap.Services.Mapping": "1.0.0"
+          "GreenCap.Services.Mapping": "1.0.0",
+          "GreenCap.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GreenCap.Services.Data.dll": {}
@@ -3590,6 +3588,9 @@
       "GreenCap.Web.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/GreenCap.Web.Infrastructure.dll": {}
         },

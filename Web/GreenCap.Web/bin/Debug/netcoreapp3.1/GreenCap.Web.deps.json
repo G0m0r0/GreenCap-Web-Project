@@ -2521,9 +2521,6 @@
         }
       },
       "GreenCap.Common/1.0.0": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
         "runtime": {
           "GreenCap.Common.dll": {}
         },
@@ -2583,7 +2580,8 @@
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
-          "GreenCap.Services.Mapping": "1.0.0"
+          "GreenCap.Services.Mapping": "1.0.0",
+          "GreenCap.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "GreenCap.Services.Data.dll": {}
@@ -2615,6 +2613,9 @@
         }
       },
       "GreenCap.Web.Infrastructure/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "runtime": {
           "GreenCap.Web.Infrastructure.dll": {}
         },

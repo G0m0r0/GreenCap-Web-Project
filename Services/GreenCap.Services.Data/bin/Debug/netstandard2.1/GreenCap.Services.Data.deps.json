@@ -12,6 +12,7 @@
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
           "GreenCap.Services.Mapping": "1.0.0",
+          "GreenCap.Web.ViewModels": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
@@ -414,6 +415,16 @@
         "runtime": {
           "GreenCap.Services.Mapping.dll": {}
         }
+      },
+      "GreenCap.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "GreenCap.Data.Models": "1.0.0",
+          "GreenCap.Services.Mapping": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.0"
+        },
+        "runtime": {
+          "GreenCap.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -693,6 +704,11 @@
       "sha512": ""
     },
     "GreenCap.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GreenCap.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

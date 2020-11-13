@@ -465,6 +465,21 @@
         "runtime": {
           "bin/placeholder/GreenCap.Services.Mapping.dll": {}
         }
+      },
+      "GreenCap.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "GreenCap.Data.Models": "1.0.0",
+          "GreenCap.Services.Mapping": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GreenCap.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GreenCap.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -1390,6 +1405,11 @@
       "type": "project",
       "path": "../GreenCap.Services.Mapping/GreenCap.Services.Mapping.csproj",
       "msbuildProject": "../GreenCap.Services.Mapping/GreenCap.Services.Mapping.csproj"
+    },
+    "GreenCap.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/GreenCap.Web.ViewModels/GreenCap.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/GreenCap.Web.ViewModels/GreenCap.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1397,6 +1417,7 @@
       "GreenCap.Data.Common >= 1.0.0",
       "GreenCap.Data.Models >= 1.0.0",
       "GreenCap.Services.Mapping >= 1.0.0",
+      "GreenCap.Web.ViewModels >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -1440,6 +1461,9 @@
             },
             "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
               "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+            },
+            "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
+              "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj"
             }
           }
         }

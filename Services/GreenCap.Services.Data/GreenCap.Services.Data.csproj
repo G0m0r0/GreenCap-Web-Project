@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\GreenCap.Data.Common\GreenCap.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\GreenCap.Data.Models\GreenCap.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Web\GreenCap.Web.ViewModels\GreenCap.Web.ViewModels.csproj" />
     <ProjectReference Include="..\GreenCap.Services.Mapping\GreenCap.Services.Mapping.csproj" />
   </ItemGroup>
 

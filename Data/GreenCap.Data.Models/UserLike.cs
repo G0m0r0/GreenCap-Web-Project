@@ -5,7 +5,7 @@
 
     using GreenCap.Data.Common.Models;
 
-    public class UserLike : IDeletableEntity
+    public class UserLike
     {
         public virtual Post Post { get; set; }
 
@@ -18,9 +18,5 @@
         public string UserId { get; set; }
 
         public bool IsPositive { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
     }
 }

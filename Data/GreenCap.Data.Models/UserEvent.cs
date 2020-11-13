@@ -5,7 +5,7 @@
 
     using GreenCap.Data.Common.Models;
 
-    public class UserEvent : IDeletableEntity
+    public class UserEvent
     {
         public ApplicationUser User { get; set; }
 
@@ -18,9 +18,5 @@
         public int EventId { get; set; }
 
         public DateTime SignedOn { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
     }
 }

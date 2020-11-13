@@ -1665,9 +1665,6 @@
       "GreenCap.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
         "compile": {
           "bin/placeholder/GreenCap.Common.dll": {}
         },
@@ -1737,7 +1734,8 @@
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
-          "GreenCap.Services.Mapping": "1.0.0"
+          "GreenCap.Services.Mapping": "1.0.0",
+          "GreenCap.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GreenCap.Services.Data.dll": {}
@@ -1770,6 +1768,21 @@
         },
         "runtime": {
           "bin/placeholder/GreenCap.Services.Messaging.dll": {}
+        }
+      },
+      "GreenCap.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "GreenCap.Data.Models": "1.0.0",
+          "GreenCap.Services.Mapping": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GreenCap.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GreenCap.Web.ViewModels.dll": {}
         }
       }
     }
@@ -6206,6 +6219,11 @@
       "type": "project",
       "path": "../../Services/GreenCap.Services.Messaging/GreenCap.Services.Messaging.csproj",
       "msbuildProject": "../../Services/GreenCap.Services.Messaging/GreenCap.Services.Messaging.csproj"
+    },
+    "GreenCap.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/GreenCap.Web.ViewModels/GreenCap.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/GreenCap.Web.ViewModels/GreenCap.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

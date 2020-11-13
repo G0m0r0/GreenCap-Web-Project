@@ -303,10 +303,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.2.0-beta.205, )"
-            },
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -364,6 +360,9 @@
               },
               "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
                 "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+              },
+              "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj"
               }
             }
           }
@@ -568,6 +567,83 @@
           ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
+        "projectName": "GreenCap.Web.ViewModels",
+        "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dimit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Programming\\NugetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj": {
+                "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Data\\GreenCap.Data.Models\\GreenCap.Data.Models.csproj"
+              },
+              "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
+                "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },

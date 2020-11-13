@@ -303,10 +303,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.2.0-beta.205, )"
-            },
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -364,6 +360,9 @@
               },
               "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj": {
                 "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj"
+              },
+              "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.ViewModels\\GreenCap.Web.ViewModels.csproj"
               }
             }
           }
@@ -655,6 +654,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.2.0-beta.205, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [

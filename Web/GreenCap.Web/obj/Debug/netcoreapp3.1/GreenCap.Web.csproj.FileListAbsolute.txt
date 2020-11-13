@@ -906,3 +906,5 @@ D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razo
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\News\All.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexSignedIn.cshtml.g.cs
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\Details.cshtml.g.cs

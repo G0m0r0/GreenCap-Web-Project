@@ -1,4 +1,5 @@
 ﻿@using GreenCap.Common
+@model GreenCap.Web.ViewModels.Home.HomeViewModel
 @{
     this.ViewData["Title"] = "Home Page";
 }
@@ -6,6 +7,26 @@
 <div class="jumbotron">
     <h1 class="display-3">Welcome to @GlobalConstants.SystemName!</h1>
     <p class="text-muted">Keep it green! </p>
+
+    <ul class="list-group display-5">
+        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+            Total posts: 
+            <span class="badge badge-primary badge-pill">@Model.TotalPosts</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+            Total proposals: 
+            <span class="badge badge-primary badge-pill">@Model.TotalProposals</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+            Total events: 
+            <span class="badge badge-primary badge-pill">@Model.TotalEvents</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+            Total users: 
+            <span class="badge badge-primary badge-pill">@Model.TotalUsers</span>
+        </li>
+    </ul>
+
     <hr class="my-4">
     <p class="text-muted">Prepare yourself to join our family and to become even more environmental friendly than before. You can share your creative ideas or to discuss a problem in the forum. It's up to you!</p>
     <p class="lead">

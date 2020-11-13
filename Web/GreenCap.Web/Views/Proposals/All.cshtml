@@ -1,23 +1,26 @@
 ﻿@using GreenCap.Common
+@using GreenCap.Web.ViewModels.OutputViewModel
 @{
     this.ViewData["Title"] = "All proposals";
 }
 
 <div class="row mt-2 mb-4">
-    <!--foreach-->
-    <div class="card-deck col-sm-3 col-md-6 col-lg-4">
-        <div class="card">
-            <img class="card-img-top" src="https://media.apnarm.net.au/media/images/2017/10/11/green_bags-npsrivtnf6loicjl2p2_t1880.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h2 class="card-title">Title</h2>
-                <h5 class="card-title">ShortDescription</h5>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">CreatedOn</small>
-                <i class="fas fa-info-circle"></i>
+    @foreach (ProposalOutputViewModel proposal in Model)
+    {
+        <div class="card-deck col-sm-3 col-md-6 col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src=@proposal.Image alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">@proposal.Title</h2>
+                    <h5 class="card-title">@proposal.ShortDescription</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">@proposal.CreatedOn</small>
+                    <a class="btn float-right" href="/Proposals/Details?id=@proposal.Id"><i class="fas fa-info-circle"></i></a>
+                </div>
             </div>
         </div>
-    </div>
+    }
 </div>
 
 <div>

@@ -9,8 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "GreenCap.Common/1.0.0": {
         "dependencies": {
-          "StyleCop.Analyzers": "1.2.0-beta.205",
-          "System.ComponentModel.Annotations": "4.7.0"
+          "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
           "GreenCap.Common.dll": {}
@@ -21,15 +20,7 @@
           "StyleCop.Analyzers.Unstable": "1.2.0.205"
         }
       },
-      "StyleCop.Analyzers.Unstable/1.2.0.205": {},
-      "System.ComponentModel.Annotations/4.7.0": {
-        "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
-            "assemblyVersion": "4.3.1.0",
-            "fileVersion": "4.700.19.56404"
-          }
-        }
-      }
+      "StyleCop.Analyzers.Unstable/1.2.0.205": {}
     }
   },
   "libraries": {
@@ -51,13 +42,6 @@
       "sha512": "sha512-YiRjba3yBp2mCvtsOeQf8XU1tPaOZFTKxcsj44tTpGrhRchmtuKtgyMCV9kkOFdfKISnHk0gzhigITlrrrvMuA==",
       "path": "stylecop.analyzers.unstable/1.2.0.205",
       "hashPath": "stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
-      "path": "system.componentmodel.annotations/4.7.0",
-      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
     }
   }
 }

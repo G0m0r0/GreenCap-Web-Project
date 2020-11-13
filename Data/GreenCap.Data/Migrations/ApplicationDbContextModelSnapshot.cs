@@ -215,15 +215,15 @@ namespace GreenCap.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<int>("TotalNeededPeople")
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TotalPeople")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -233,6 +233,43 @@ namespace GreenCap.Data.Migrations
                     b.HasIndex("IsDeleted");
 
                     b.ToTable("Events");
+                });
+
+            modelBuilder.Entity("GreenCap.Data.Models.Image", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AddedById")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProposalId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddedById");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("ProposalId");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.Post", b =>
@@ -286,6 +323,9 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CreatedById")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -296,10 +336,6 @@ namespace GreenCap.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(1000)")
                         .HasMaxLength(1000);
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -317,16 +353,13 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Ideas");
+                    b.ToTable("Proposals");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.Setting", b =>
@@ -369,20 +402,12 @@ namespace GreenCap.Data.Migrations
                     b.Property<int>("EventId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime>("SignedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("UserId", "EventId");
 
                     b.HasIndex("EventId");
-
-                    b.HasIndex("IsDeleted");
 
                     b.ToTable("UserEvents");
                 });
@@ -395,18 +420,10 @@ namespace GreenCap.Data.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("IsPositive")
                         .HasColumnType("bit");
 
                     b.HasKey("PostId", "UserId");
-
-                    b.HasIndex("IsDeleted");
 
                     b.HasIndex("UserId");
 
@@ -537,6 +554,19 @@ namespace GreenCap.Data.Migrations
                         .HasForeignKey("HostId");
                 });
 
+            modelBuilder.Entity("GreenCap.Data.Models.Image", b =>
+                {
+                    b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("AddedById");
+
+                    b.HasOne("GreenCap.Data.Models.Proposal", "Proposal")
+                        .WithMany("Images")
+                        .HasForeignKey("ProposalId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("GreenCap.Data.Models.Post", b =>
                 {
                     b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
@@ -548,7 +578,7 @@ namespace GreenCap.Data.Migrations
                 {
                     b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
                         .WithMany("Ideas")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("CreatedById");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.UserEvent", b =>

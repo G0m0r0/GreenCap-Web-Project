@@ -38,9 +38,11 @@
         // public DbSet<UserComment> UserComments { get; set; }
         public DbSet<UserEvent> UserEvents { get; set; }
 
-        public DbSet<Proposal> Ideas { get; set; }
+        public DbSet<Proposal> Proposals { get; set; }
 
         public DbSet<Event> Events { get; set; }
+
+        public DbSet<Image> Images { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

@@ -6,7 +6,7 @@
 
     using Microsoft.AspNetCore.Http;
 
-    public class ProposalInputModel
+    public class ProposalInputViewModel
     {
         [Required]
         [MinLength(DataValidation.NameTitleMinLength)]
@@ -26,7 +26,6 @@
         [RegularExpression("[A-Z][^_]+", ErrorMessage = "Short description should start with upper letter.")]
         public string ShortDescription { get; set; }
 
-        [Required]
         public IFormFile Image { get; set; }
     }
 }

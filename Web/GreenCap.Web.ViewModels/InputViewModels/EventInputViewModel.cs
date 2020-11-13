@@ -5,7 +5,7 @@
 
     using GreenCap.Data.Common;
 
-    public class EventInputModel
+    public class EventInputViewModel
     {
         [Required]
         [MinLength(DataValidation.NameTitleMinLength)]
