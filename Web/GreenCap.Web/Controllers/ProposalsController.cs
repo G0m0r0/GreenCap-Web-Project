@@ -1,10 +1,9 @@
 ﻿namespace GreenCap.Web.Controllers
 {
-    using System.IO;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
-    using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;

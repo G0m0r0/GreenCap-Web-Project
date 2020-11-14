@@ -13,6 +13,7 @@
     using GreenCap.Data.Repositories;
     using GreenCap.Data.Seeding;
     using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Messaging;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;

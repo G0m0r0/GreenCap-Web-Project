@@ -1,6 +1,7 @@
 ﻿namespace GreenCap.Web.Areas.Administration.Controllers
 {
     using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.Administration.Dashboard;
 
     using Microsoft.AspNetCore.Mvc;

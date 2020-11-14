@@ -29,6 +29,7 @@
                               new SettingsSeeder(),
                               new UserSeeder(),
                               new ProposalsSeeder(),
+                              new PostsSeed(),
                           };
 
             foreach (var seeder in seeders)

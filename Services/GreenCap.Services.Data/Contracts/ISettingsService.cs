@@ -1,4 +1,4 @@
-﻿namespace GreenCap.Services.Data
+﻿namespace GreenCap.Services.Data.Contracts
 {
     using System.Collections.Generic;
 

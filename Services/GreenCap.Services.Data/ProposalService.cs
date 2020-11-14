@@ -9,6 +9,7 @@
 
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,43 @@
             await this.proposalDb.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync()
+        {
+            return await this.proposalDb.All().Select(x => new ProposalOutputViewModel
+            {
+                Id = x.Id,
+                Title = x.Title,
+                ShortDescription = x.ShortDescription,
+                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
+                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
+            }).ToListAsync();
+        }
+
+        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id)
+        {
+            return await this.proposalDb.All().Where(x => x.CreatedById == id).Select(x => new ProposalOutputViewModel
+            {
+                Id = x.Id,
+                Title = x.Title,
+                ShortDescription = x.ShortDescription,
+                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
+                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
+            }).ToListAsync();
+        }
+
+        public async Task<ProposalOutputViewModel> GetByIdAsync(int id)
+        {
+            return await this.proposalDb.All().Where(x => x.Id == id).Select(x => new ProposalOutputViewModel
+            {
+                Id = x.Id,
+                CreatedByName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName ?? FormatValidations.DefaultUserName,
+                Title = x.Title,
+                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
+                Description = x.Description,
+                ModifiedOn = (x.ModifiedOn == null) ? FormatValidations.DateTimeNeverModified : x.ModifiedOn.ToString(),
+            }).FirstOrDefaultAsync();
+        }
+
         public async Task DeleteByIdAsync(int id)
         {
             var modelToDelete = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
@@ -52,43 +90,6 @@
             this.proposalDb.Update(modelToDelete);
 
             await this.proposalDb.SaveChangesAsync();
-        }
-
-        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync()
-        {
-            return await this.proposalDb.All().Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                ShortDescription = x.ShortDescription,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString("dd/MMM/yyyy"),
-                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
-            }).ToListAsync();
-        }
-
-        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id)
-        {
-            return await this.proposalDb.All().Where(x => x.CreatedById == id).Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                ShortDescription = x.ShortDescription,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString("dd/MMM/yyyy"),
-                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
-            }).ToListAsync();
-        }
-
-        public async Task<ProposalOutputViewModel> GetByIdAsync(int id)
-        {
-            return await this.proposalDb.All().Where(x => x.Id == id).Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                CreatedByName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName ?? "Admin@gmail.com",
-                Title = x.Title,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString("dd/MMM/yyyy"),
-                Description = x.Description,
-                ModifiedOn = (x.ModifiedOn == null) ? "Never modified." : x.ModifiedOn.ToString(),
-            }).FirstOrDefaultAsync();
         }
     }
 }

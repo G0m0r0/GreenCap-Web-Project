@@ -5,6 +5,7 @@
 
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
 
     public class SettingsService : ISettingsService

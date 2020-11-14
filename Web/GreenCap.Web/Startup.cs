@@ -9,6 +9,7 @@
     using GreenCap.Data.Repositories;
     using GreenCap.Data.Seeding;
     using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
     using GreenCap.Services.Messaging;
     using GreenCap.Web.ViewModels;
@@ -65,6 +66,7 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProposalService, ProposalService>();
+            services.AddTransient<IPostservice, PostService>();
             services.AddTransient<IHomeStatistics, HomeStatistics>();
         }
 

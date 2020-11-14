@@ -6,6 +6,7 @@
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.Settings;
 
     using Microsoft.AspNetCore.Mvc;

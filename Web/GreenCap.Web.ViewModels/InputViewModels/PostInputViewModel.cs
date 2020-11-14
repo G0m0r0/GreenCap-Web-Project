@@ -5,7 +5,7 @@
     using GreenCap.Data.Common;
     using GreenCap.Data.Models.Enums;
 
-    public class ForumInputViewModel
+    public class PostInputViewModel
     {
         [Required]
         [MinLength(DataValidation.NameTitleMinLength)]

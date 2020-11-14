@@ -3,6 +3,7 @@
     using System.Diagnostics;
 
     using GreenCap.Services.Data;
+    using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels;
     using GreenCap.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Mvc;
