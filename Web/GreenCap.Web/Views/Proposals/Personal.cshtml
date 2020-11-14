@@ -1,0 +1,47 @@
+﻿@using GreenCap.Common
+@using GreenCap.Web.ViewModels.OutputViewModel
+@{ this.ViewData["Title"] = "All proposals"; }
+
+<div class="row mt-2 mb-4">
+    @foreach (ProposalOutputViewModel proposal in Model)
+    {
+<div class="card-deck col-sm-3 col-md-6 col-lg-4">
+    <div class="card">
+        <img class="card-img-top" src=@proposal.Image alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card-title">@proposal.Title</h2>
+            <h5 class="card-title">@proposal.ShortDescription</h5>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">@proposal.CreatedOn</small>
+            <a class="btn float-right" href="/Proposals/Details?id=@proposal.Id"><i class="fas fa-info-circle"></i></a>
+        </div>
+    </div>
+</div>}
+</div>
+
+<div>
+    <ul class="pagination pagination-lg">
+        <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">5</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+        </li>
+    </ul>
+</div>

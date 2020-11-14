@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace GreenCap.Data.Migrations
+﻿namespace GreenCap.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class NameChangesMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -69,7 +70,7 @@ namespace GreenCap.Data.Migrations
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     AddedById = table.Column<string>(nullable: true),
                     Extension = table.Column<string>(nullable: true),
-                    ProposalId = table.Column<int>(nullable: false)
+                    ProposalId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -165,7 +166,7 @@ namespace GreenCap.Data.Migrations
                 table: "Ideas",
                 type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: "");
+                defaultValue: " ");
 
             migrationBuilder.AddColumn<string>(
                 name: "UserId",

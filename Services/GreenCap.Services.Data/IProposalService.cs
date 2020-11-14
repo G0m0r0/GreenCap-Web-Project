@@ -10,10 +10,12 @@
     {
         Task CreateAsync(ProposalInputViewModel model, string id);
 
-        IEnumerable<ProposalOutputViewModel> GetAll();
+        Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync();
 
-        ProposalOutputViewModel GetById(int id);
+        Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id);
 
-        int Delete(string id);
+        Task<ProposalOutputViewModel> GetByIdAsync(int id);
+
+        Task DeleteByIdAsync(int id);
     }
 }

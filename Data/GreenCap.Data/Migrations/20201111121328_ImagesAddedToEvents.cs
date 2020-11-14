@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace GreenCap.Data.Migrations
+﻿namespace GreenCap.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class ImagesAddedToEvents : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

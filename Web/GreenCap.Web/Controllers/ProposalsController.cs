@@ -20,15 +20,9 @@
             this.proposalService = proposalService;
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> All()
         {
-            var model = this.proposalService.GetById(id);
-            return this.View(model);
-        }
-
-        public IActionResult All()
-        {
-            var proposalModel = this.proposalService.GetAll();
+            var proposalModel = await this.proposalService.GetAllAsync();
             return this.View(proposalModel);
         }
 
@@ -40,26 +34,45 @@
         [HttpPost]
         public async Task<IActionResult> Create(ProposalInputViewModel proposal)
         {
-           // if (!proposal.Image.FileName.EndsWith(".png") || !proposal.Image.FileName.EndsWith(".jpeg"))
-           // {
-           //     this.ModelState.AddModelError("Image", "Invalid file type. Supported .png and .jpeg!");
-           // }
-           //
-           // if (proposal.Image.Length > 10 * 1024 * 1024)
-           // {
-           //     this.ModelState.AddModelError("Image", "File size is over 10Mb.");
-           // }
+            // if (!proposal.Image.FileName.EndsWith(".png") || !proposal.Image.FileName.EndsWith(".jpeg"))
+            // {
+            //     this.ModelState.AddModelError("Image", "Invalid file type. Supported .png and .jpeg!");
+            // }
+            //
+            // if (proposal.Image.Length > 10 * 1024 * 1024)
+            // {
+            //     this.ModelState.AddModelError("Image", "File size is over 10Mb.");
+            // }
             if (!this.ModelState.IsValid)
             {
                 return this.View();
             }
 
-           // using (FileStream fs = new FileStream(
-           //     this.webHostEnvironment.WebRootPath + "/user.png", FileMode.Create))
-           // {
-           //     await proposal.Image.CopyToAsync(fs);
-           // }
+            // using (FileStream fs = new FileStream(
+            //     this.webHostEnvironment.WebRootPath + "/user.png", FileMode.Create))
+            // {
+            //     await proposal.Image.CopyToAsync(fs);
+            // }
             await this.proposalService.CreateAsync(proposal, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            return this.Redirect("All");
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var model = await this.proposalService.GetByIdAsync(id);
+            return this.View(model);
+        }
+
+        public async Task<IActionResult> Personal()
+        {
+            var proposalModel = await this.proposalService.GetAllForSignedInUserAsync(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            return this.View(proposalModel);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.proposalService.DeleteByIdAsync(id);
 
             return this.Redirect("All");
         }
