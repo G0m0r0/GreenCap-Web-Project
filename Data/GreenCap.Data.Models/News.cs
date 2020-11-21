@@ -22,9 +22,24 @@
         [MaxLength(DataValidation.News.DescriptionMaxLength)]
         public string Description { get; set; }
 
-        public virtual SummaryNews SummaryNews { get; set; }
+        [Required]
+        [MaxLength(DataValidation.News.PostedOnMaxLength)]
+        public string PostedOn { get; set; }
 
-        [ForeignKey(nameof(SummaryNews))]
-        public int SummaryNewsId { get; set; }
+        [Required]
+        [MaxLength(DataValidation.News.SummaryMaxLength)]
+        public string Summary { get; set; }
+
+        [Required]
+        [MaxLength(DataValidation.UrlPathMaxLength)]
+        public string OriginalUrl { get; set; }
+
+        [MaxLength(DataValidation.UrlPathMaxLength)]
+        public string ImageSmallUrl { get; set; }
+
+        public virtual CategoryNews Category { get; set; }
+
+        [ForeignKey(nameof(Category))]
+        public int CategoryId { get; set; }
     }
 }

@@ -30,12 +30,9 @@
 
         public DbSet<Comment> Comments { get; set; }
 
-        // public DbSet<GreenCapUser> GreenCapUsers { get; set; }
         public DbSet<UserLike> UserLikes { get; set; }
 
         // public DbSet<Address> Addresses { get; set; }
-
-        // public DbSet<UserComment> UserComments { get; set; }
         public DbSet<UserEvent> UserEvents { get; set; }
 
         public DbSet<Proposal> Proposals { get; set; }
@@ -45,8 +42,6 @@
         public DbSet<Image> Images { get; set; }
 
         public DbSet<News> News { get; set; }
-
-        public DbSet<SummaryNews> SummaryNews { get; set; }
 
         public DbSet<CategoryNews> CategoryNews { get; set; }
 

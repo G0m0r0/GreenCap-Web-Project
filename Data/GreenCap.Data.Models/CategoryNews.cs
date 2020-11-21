@@ -10,13 +10,13 @@
     {
         public CategoryNews()
         {
-            this.SummaryNews = new HashSet<SummaryNews>();
+            this.SummaryNews = new HashSet<News>();
         }
 
         [Required]
         [MaxLength(DataValidation.NameTitleMaxLength)]
         public string Name { get; set; }
 
-        public virtual ICollection<SummaryNews> SummaryNews { get; set; }
+        public virtual ICollection<News> SummaryNews { get; set; }
     }
 }

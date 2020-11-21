@@ -310,6 +310,9 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -325,6 +328,10 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(50000);
 
+                    b.Property<string>("ImageSmallUrl")
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(1000)")
                         .HasMaxLength(1000);
@@ -335,8 +342,20 @@ namespace GreenCap.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("SummaryNewsId")
-                        .HasColumnType("int");
+                    b.Property<string>("OriginalUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
+
+                    b.Property<string>("PostedOn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<string>("Summary")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -345,9 +364,9 @@ namespace GreenCap.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IsDeleted");
+                    b.HasIndex("CategoryId");
 
-                    b.HasIndex("SummaryNewsId");
+                    b.HasIndex("IsDeleted");
 
                     b.ToTable("News");
                 });
@@ -472,61 +491,6 @@ namespace GreenCap.Data.Migrations
                     b.HasIndex("IsDeleted");
 
                     b.ToTable("Settings");
-                });
-
-            modelBuilder.Entity("GreenCap.Data.Models.SummaryNews", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ImageSmallUrl")
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("NewsId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("OriginalUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
-
-                    b.Property<string>("PostedOn")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
-
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.HasIndex("NewsId");
-
-                    b.ToTable("SummaryNews");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.UserEvent", b =>
@@ -704,9 +668,9 @@ namespace GreenCap.Data.Migrations
 
             modelBuilder.Entity("GreenCap.Data.Models.News", b =>
                 {
-                    b.HasOne("GreenCap.Data.Models.SummaryNews", "SummaryNews")
-                        .WithMany()
-                        .HasForeignKey("SummaryNewsId")
+                    b.HasOne("GreenCap.Data.Models.CategoryNews", "Category")
+                        .WithMany("SummaryNews")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
@@ -723,21 +687,6 @@ namespace GreenCap.Data.Migrations
                     b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
                         .WithMany("Ideas")
                         .HasForeignKey("CreatedById");
-                });
-
-            modelBuilder.Entity("GreenCap.Data.Models.SummaryNews", b =>
-                {
-                    b.HasOne("GreenCap.Data.Models.CategoryNews", "Category")
-                        .WithMany("SummaryNews")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("GreenCap.Data.Models.News", "News")
-                        .WithMany()
-                        .HasForeignKey("NewsId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.UserEvent", b =>
