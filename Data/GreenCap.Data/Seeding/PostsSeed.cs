@@ -60,8 +60,6 @@
                 });
             }
 
-
-
             if (!dbContext.Posts.Where(x => x.Category == Category.Exercise).Any())
             {
                 await dbContext.Posts.AddAsync(new Post

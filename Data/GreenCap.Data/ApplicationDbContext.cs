@@ -44,6 +44,12 @@
 
         public DbSet<Image> Images { get; set; }
 
+        public DbSet<News> News { get; set; }
+
+        public DbSet<SummaryNews> SummaryNews { get; set; }
+
+        public DbSet<CategoryNews> CategoryNews { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

@@ -9,15 +9,15 @@
 
     public class Address : BaseDeletableModel<int>
     {
-        [MaxLength(DataValidation.Address.CountryName)]
+        [MaxLength(DataValidation.Address.CountryNameMaxLength)]
         public string CountryName { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Address.TownName)]
+        [MaxLength(DataValidation.Address.TownNameMaxLength)]
         public string TownName { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Address.StreetName)]
+        [MaxLength(DataValidation.Address.StreetNameMaxLength)]
         public string StreetName { get; set; }
 
         public Event Event { get; set; }

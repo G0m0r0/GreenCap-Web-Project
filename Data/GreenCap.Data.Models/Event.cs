@@ -25,7 +25,7 @@
         public string Description { get; set; }
 
         [Required]
-        [MaxLength(DataValidation.Events.ImagePathMaxLength)]
+        [MaxLength(DataValidation.UrlPathMaxLength)]
         public string ImagePath { get; set; }
 
         public DateTime StartDate { get; set; }
