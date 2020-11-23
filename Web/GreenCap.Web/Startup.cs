@@ -70,6 +70,7 @@
             services.AddTransient<IPostservice, PostService>();
             services.AddTransient<IHomeStatistics, HomeStatistics>();
             services.AddTransient<IPhysNewsScarperService, PhysNewsScarperService>();
+            services.AddTransient<INewsService, NewsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

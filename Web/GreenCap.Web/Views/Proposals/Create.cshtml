@@ -15,13 +15,14 @@
             <div class="form-group">
                 <label asp-for="Title"></label>
                 <input asp-for="Title" class="form-control  col-md-4" placeholder="Title">
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <span asp-validation-for="Title" class="invalid-feedback"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Image"></label>
                 <input asp-for="Image" class="form-control col-md-4">
                 <span asp-validation-for="Image" class="text-danger"></span>
+                
             </div>
 
             <div class="form-group">

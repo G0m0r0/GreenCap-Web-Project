@@ -911,3 +911,4 @@ D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razo
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Proposals\Personal.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Personal.cshtml.g.cs
 D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\bin\Debug\netcoreapp3.1\AngleSharp.dll
+D:\Programming\SoftUni-Web-Project\Web\GreenCap.Web\obj\Debug\netcoreapp3.1\Razor\Views\News\Details.cshtml.g.cs
