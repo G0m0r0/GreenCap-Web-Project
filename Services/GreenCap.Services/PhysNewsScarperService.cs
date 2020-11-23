@@ -5,10 +5,13 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
+    using System.Security.Cryptography.X509Certificates;
     using System.Text;
     using System.Threading.Tasks;
 
     using AngleSharp;
+    using GreenCap.Data.Common.Repositories;
+    using GreenCap.Data.Models;
     using GreenCap.Services.Models;
 
     public class PhysNewsScarperService : IPhysNewsScarperService
@@ -17,50 +20,117 @@
 
         private readonly IConfiguration config;
         private readonly IBrowsingContext context;
+        private readonly IDeletableEntityRepository<CategoryNews> categoryDb;
+        private readonly IDeletableEntityRepository<News> newsDb;
 
-        public PhysNewsScarperService()
+        public PhysNewsScarperService(
+            IDeletableEntityRepository<CategoryNews> categoryDb,
+            IDeletableEntityRepository<News> newsDb)
         {
             this.config = Configuration.Default.WithDefaultLoader();
             this.context = BrowsingContext.New(this.config);
+            this.categoryDb = categoryDb;
+            this.newsDb = newsDb;
         }
 
-        public async Task ImportNewsAsync(int countPages)
+        public async Task ImportNewsAsync(int countNews)
         {
-            var concurrentBagNews = this.ScraperNews(countPages);
+            var concurrentBagNews = this.ScraperNews(countNews);
 
             foreach (var news in concurrentBagNews)
             {
+                var categoryId = await this.GetOrCreateCategoryAsync(news.ShortIntro.CategoryName);
+
+                var newsExist = this.newsDb
+                    .AllAsNoTracking()
+                    .Any(x => x.Title == news.Title);
+
+                if (newsExist)
+                {
+                    continue;
+                }
+
+                var newNews = new News
+                {
+                    Title = news.Title,
+                    CategoryId = categoryId,
+                    Credit = news.Credit,
+                    Description = news.MainText,
+                    ImageSmallUrl = news.ShortIntro.SmallPhotoUrl,
+                    ImageUrl = news.ImageUrl,
+                    OriginalUrl = news.ShortIntro.MainPageUrl,
+                    PostedOn = news.ShortIntro.PostedOn,
+                    Summary = news.ShortIntro.Summary,
+                };
+
+                await this.newsDb.AddAsync(newNews);
+                await this.newsDb.SaveChangesAsync();
             }
         }
 
-        private ConcurrentBag<NewsDto> ScraperNews(int countPages)
+        private async Task<int> GetOrCreateCategoryAsync(string categoryName)
         {
-            var concurrentBag = new ConcurrentBag<NewsDto>();
+            var category = this.categoryDb
+                .AllAsNoTracking()
+                .FirstOrDefault(x => x.Name == categoryName);
 
-            Parallel.For(1, countPages, i =>
+            if (category != null)
+            {
+                return category.Id;
+            }
+
+            category = new CategoryNews
+            {
+                Name = categoryName,
+            };
+
+            await this.categoryDb.AddAsync(category);
+            await this.categoryDb.SaveChangesAsync();
+
+            return category.Id;
+        }
+
+        private List<NewsDto> ScraperNews(int countNews)
+        {
+            // var concurrentBag = new ConcurrentBag<NewsDto>();
+            var bag = new List<NewsDto>();
+
+            for (int i = 0; i < countNews; i++)
             {
                 try
                 {
-                    var newsColletion = this.GetNews(i);
-                    foreach (var item in newsColletion)
-                    {
-                        concurrentBag.Add(item);
-                    }
+                    var news = this.GetNews(i);
+
+                    // concurrentBag.Add(news);
+                    bag.Add(news);
                 }
                 catch
                 {
                     // ignored
                 }
-            });
+            }
 
-            return concurrentBag;
+            // return concurrentBag;
+            return bag;
         }
 
-        private List<NewsDto> GetNews(int id)
+        private NewsDto GetNews(int countNews)
         {
-            var newsList = new List<NewsDto>();
+            int currentPage;
+            int newsNumber;
 
-            var url = string.Format(BaseUrl, id);
+            if (countNews < ServicesConstrants.NumberOfNewsOnPage)
+            {
+                currentPage = 1;
+            }
+            else
+            {
+                currentPage = (countNews / ServicesConstrants.NumberOfNewsOnPage) + 1;
+            }
+
+            newsNumber = countNews % ServicesConstrants.NumberOfNewsOnPage;
+
+            var url = string.Format(BaseUrl, currentPage);
 
             var document = this.context
                 .OpenAsync(url)
@@ -76,64 +146,59 @@
             var shortNews = new NewsShortIntroDTO();
             var mainNews = new NewsDto();
 
-            var news = document.GetElementsByClassName("sorted-article");
+            var x = document.GetElementsByClassName("sorted-article")[newsNumber];
 
-            foreach (var x in news)
+            shortNews.MainPageUrl = x.GetElementsByClassName("sorted-article-figure")[0]
+                            .GetElementsByTagName("a")[0]
+                            .GetAttribute("href");
+
+            shortNews.SmallPhotoUrl = x.GetElementsByClassName("sorted-article-figure")[0]
+                            .GetElementsByTagName("img")[0]
+                            .GetAttribute("data-src");
+
+            shortNews.Title = x.GetElementsByClassName("sorted-article-content")[0]
+                            .GetElementsByTagName("a")[0]
+                            .TextContent;
+
+            shortNews.Summary = x.GetElementsByClassName("sorted-article-content")[0]
+                           .GetElementsByTagName("p")[0]
+                           .TextContent
+                           .Trim();
+
+            shortNews.CategoryName = x.GetElementsByClassName("article__info")[0]
+                            .GetElementsByTagName("p")[0]
+                            .TextContent
+                            .Trim();
+
+            shortNews.PostedOn = x.GetElementsByClassName("article__info")[0]
+                            .GetElementsByTagName("p")[1]
+                            .TextContent
+                            .Trim();
+
+            var mainUrl = shortNews.MainPageUrl;
+
+            var doc = this.context
+                .OpenAsync(mainUrl)
+                .GetAwaiter()
+                .GetResult();
+
+            mainNews.Title = doc.GetElementsByClassName("news-article")[0].GetElementsByTagName("h1")[0].TextContent;
+            mainNews.ImageUrl = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("img")[0].GetAttribute("src");
+            mainNews.Credit = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("figcaption")[0].TextContent.Trim();
+
+            var textParagraphs = doc.GetElementsByClassName("article-main")[0].GetElementsByTagName("p");
+            var sb = new StringBuilder();
+            foreach (var paragraph in textParagraphs)
             {
-                shortNews.MainPageUrl = x.GetElementsByClassName("sorted-article-figure")[0]
-                                .GetElementsByTagName("img")[0]
-                                .GetAttribute("data-src");
-
-                shortNews.MainPhotoUrl = x.GetElementsByClassName("sorted-article-figure")[0]
-                                .GetElementsByTagName("a")[0]
-                                .GetAttribute("href");
-
-                shortNews.Title = x.GetElementsByClassName("sorted-article-content")[0]
-                                .GetElementsByTagName("a")[0]
-                                .TextContent;
-
-                shortNews.ShortIntro = x.GetElementsByClassName("sorted-article-content")[0]
-                               .GetElementsByTagName("p")[0]
-                               .TextContent
-                               .Trim();
-
-                shortNews.CategoryName = x.GetElementsByClassName("article__info")[0]
-                                .GetElementsByTagName("p")[0]
-                                .TextContent
-                                .Trim();
-
-                shortNews.PostedOn = x.GetElementsByClassName("article__info")[0]
-                                .GetElementsByTagName("p")[1]
-                                .TextContent
-                                .Trim();
-
-                var mainUrl = shortNews.MainPageUrl;
-
-                var doc = this.context
-                    .OpenAsync(mainUrl)
-                    .GetAwaiter()
-                    .GetResult();
-
-                mainNews.Title = doc.GetElementsByClassName("news-article")[0].GetElementsByTagName("h1")[0].TextContent;
-                mainNews.ImageUrl = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("img")[0].GetAttribute("src");
-                mainNews.Credit = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("figcaption")[0].TextContent.Trim();
-
-                var textParagraphs = doc.GetElementsByClassName("article-main")[0].GetElementsByTagName("p");
-                var sb = new StringBuilder();
-                foreach (var paragraph in textParagraphs)
-                {
-                    sb.AppendLine(paragraph.TextContent.Trim());
-                    sb.AppendLine();
-                }
-
-                mainNews.MainText = sb.ToString().TrimEnd();
-
-                mainNews.ShortIntro = shortNews;
-
-                newsList.Add(mainNews);
+                sb.AppendLine(paragraph.TextContent.Trim());
+                sb.AppendLine();
             }
 
-            return newsList;
+            mainNews.MainText = sb.ToString().TrimEnd();
+
+            mainNews.ShortIntro = shortNews;
+
+            return mainNews;
         }
     }
 }

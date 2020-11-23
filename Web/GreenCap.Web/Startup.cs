@@ -8,6 +8,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Data.Repositories;
     using GreenCap.Data.Seeding;
+    using GreenCap.Services;
     using GreenCap.Services.Data;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
@@ -68,6 +69,7 @@
             services.AddTransient<IProposalService, ProposalService>();
             services.AddTransient<IPostservice, PostService>();
             services.AddTransient<IHomeStatistics, HomeStatistics>();
+            services.AddTransient<IPhysNewsScarperService, PhysNewsScarperService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

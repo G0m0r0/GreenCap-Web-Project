@@ -2584,7 +2584,8 @@
       },
       "GreenCap.Services/1.0.0": {
         "dependencies": {
-          "AngleSharp": "0.14.0"
+          "AngleSharp": "0.14.0",
+          "GreenCap.Data.Models": "1.0.0"
         },
         "runtime": {
           "GreenCap.Services.dll": {}

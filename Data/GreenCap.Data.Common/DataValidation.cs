@@ -2,7 +2,7 @@
 {
     public static class DataValidation
     {
-        public const byte NameTitleMaxLength = 50;
+        public const ushort NameTitleMaxLength = 500;
         public const byte NameTitleMinLength = 3;
 
         public const byte FullNameMaxLength = 60;
@@ -59,7 +59,7 @@
             public const ushort SummaryMaxLength = 1000;
             public const byte SummaryMinLength = 10;
 
-            public const ushort CreditMaxLength = 1000;
+            public const int CreditMaxLength = int.MaxValue;
             public const byte CreaditMinLegth = 3;
 
             public const ushort DescriptionMaxLength = 50_000;
