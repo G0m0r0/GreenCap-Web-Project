@@ -2,13 +2,17 @@
 @{
     this.ViewData["Title"] = "Latest news details";
 }
+@model NewsOutputViewModel
 
 <div class="jumbotron">
-    <h1 class="display-3">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <h1 class="text-success display-4">@Model.Title</h1>
+    <br>
+    <img src=@Model.ImageUrl class="rounded img-fluid mx-auto d-block" alt="Responsive image">
+    <div class="container p-3 my-3 bg-info text-dark"  >
+        <p>Credit: @Model.Credit</p>
+        <p>Posted on: @Model.PostedOn</p>
+        <p>Original site: <a href=@Model.MainPageUrl class="text-white">Phys.org</a></p>
+        <p>Category: @Model.CategoryName</p>
+    </div>    
+    <div class="container p-3 my-3 bg-success text-dark">@Model.MainText</div>
 </div>
