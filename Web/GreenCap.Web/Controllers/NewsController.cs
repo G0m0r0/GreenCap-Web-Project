@@ -5,6 +5,7 @@
     using GreenCap.Services;
     using GreenCap.Services.Data.Contracts;
     using Microsoft.AspNetCore.Authentication;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class NewsController : Controller
@@ -20,9 +21,9 @@
 
         public async Task<IActionResult> All()
         {
-            const int constPages = 5;
+            const int constPages = 3;
 
-            // await this.newsService.ImportNewsAsync(constPages);
+            await this.newsService.ImportNewsAsync(constPages);
             var models = await this.newsServiceData.GetAllAsync();
 
             return this.View(models);
@@ -35,7 +36,7 @@
             return this.View(model);
         }
 
-        [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Refresh()
         {
             return this.Redirect("All");

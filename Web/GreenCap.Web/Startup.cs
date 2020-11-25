@@ -27,10 +27,12 @@
     public class Startup
     {
         private readonly IConfiguration configuration;
+        private readonly IWebHostEnvironment environment;
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             this.configuration = configuration;
+            this.environment = environment;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -39,8 +41,16 @@
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
-                .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            if (this.environment.IsDevelopment())
+            {
+                services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsDevelopment)
+                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            }
+            else if (this.environment.IsProduction())
+            {
+                services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsProduction)
+                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            }
 
             services.Configure<CookiePolicyOptions>(
                 options =>
@@ -96,7 +106,7 @@
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
-             }
+            }
 
             // middware
             app.UseHttpsRedirection();

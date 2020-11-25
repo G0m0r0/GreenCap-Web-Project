@@ -39,7 +39,7 @@
 
         public async Task<IEnumerable<NewsOutputViewModel>> GetAllAsync()
         {
-            return await this.newsDb.All().Select(x => new NewsOutputViewModel
+            return await this.newsDb.All().OrderByDescending(x => x.CreatedOn).Select(x => new NewsOutputViewModel
             {
                 Id = x.Id,
                 Title = x.Title,
@@ -52,7 +52,7 @@
 
         public async Task<NewsOutputViewModel> GetByIdAsync(int id)
         {
-            return await this.newsDb.All().Where(x => x.Id == id).Select(x => new NewsOutputViewModel
+            var model = await this.newsDb.All().Where(x => x.Id == id).Select(x => new NewsOutputViewModel
             {
                 Id = x.Id,
                 Title = x.Title,
@@ -63,6 +63,13 @@
                 Credit = x.Credit,
                 MainText = x.Description,
             }).FirstOrDefaultAsync();
+
+            if (!model.Credit.StartsWith("Credit:"))
+            {
+                model.Credit = OperationalMessages.CreditToAdmin;
+            }
+
+            return model;
         }
     }
 }

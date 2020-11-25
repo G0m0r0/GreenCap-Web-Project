@@ -59,7 +59,7 @@
             public const ushort SummaryMaxLength = 1000;
             public const byte SummaryMinLength = 10;
 
-            public const int CreditMaxLength = int.MaxValue;
+            public const ushort CreditMaxLength = 1000;
             public const byte CreaditMinLegth = 3;
 
             public const ushort DescriptionMaxLength = 50_000;

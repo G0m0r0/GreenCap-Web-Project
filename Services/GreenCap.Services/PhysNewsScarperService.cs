@@ -5,8 +5,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
-    using System.Security.Cryptography.X509Certificates;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
 
     using AngleSharp;
@@ -90,28 +90,26 @@
             return category.Id;
         }
 
-        private List<NewsDto> ScraperNews(int countNews)
+        private ConcurrentBag<NewsDto> ScraperNews(int countNews)
         {
-            // var concurrentBag = new ConcurrentBag<NewsDto>();
-            var bag = new List<NewsDto>();
+            var concurrentBag = new ConcurrentBag<NewsDto>();
 
-            for (int i = 0; i < countNews; i++)
+            // count news
+            Parallel.For(0, countNews, i =>
             {
                 try
                 {
                     var news = this.GetNews(i);
 
-                    // concurrentBag.Add(news);
-                    bag.Add(news);
+                    concurrentBag.Add(news);
                 }
                 catch
                 {
                     // ignored
                 }
-            }
+            });
 
-            // return concurrentBag;
-            return bag;
+            return concurrentBag;
         }
 
         private NewsDto GetNews(int countNews)
@@ -119,16 +117,16 @@
             int currentPage;
             int newsNumber;
 
-            if (countNews < ServicesConstrants.NumberOfNewsOnPage)
+            if (countNews < ServicesConstants.NumberOfNewsOnPage)
             {
                 currentPage = 1;
             }
             else
             {
-                currentPage = (countNews / ServicesConstrants.NumberOfNewsOnPage) + 1;
+                currentPage = (countNews / ServicesConstants.NumberOfNewsOnPage) + 1;
             }
 
-            newsNumber = countNews % ServicesConstrants.NumberOfNewsOnPage;
+            newsNumber = countNews % ServicesConstants.NumberOfNewsOnPage;
 
             var url = string.Format(BaseUrl, currentPage);
 
@@ -137,8 +135,10 @@
                 .GetAwaiter()
                 .GetResult();
 
+            // prevent block from the site
+            // Thread.Sleep(1000);
             if (document.StatusCode == HttpStatusCode.NotFound ||
-                document.DocumentElement.OuterHtml.Contains("Ooops... 404 Error"))
+                document.DocumentElement.OuterHtml.Contains(ServicesConstants.ErrorMessageIfArticleDoesNotExist))
             {
                 throw new InvalidOperationException();
             }
@@ -170,10 +170,18 @@
                             .TextContent
                             .Trim();
 
-            shortNews.PostedOn = x.GetElementsByClassName("article__info")[0]
+            var date = x.GetElementsByClassName("article__info")[0]
                             .GetElementsByTagName("p")[1]
                             .TextContent
                             .Trim();
+
+            if (date.ToLower().Contains(ServicesConstants.DateTimeHoursStringToLower) ||
+                date.ToLower().Contains(ServicesConstants.DateTimeMinutesStringToLower))
+            {
+                date = DateTime.Now.ToString(ServicesConstants.DateTimeFormat);
+            }
+
+            shortNews.PostedOn = date;
 
             var mainUrl = shortNews.MainPageUrl;
 
@@ -182,6 +190,8 @@
                 .GetAwaiter()
                 .GetResult();
 
+            // prevent block from the site
+            // Thread.Sleep(1000);
             mainNews.Title = doc.GetElementsByClassName("news-article")[0].GetElementsByTagName("h1")[0].TextContent;
             mainNews.ImageUrl = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("img")[0].GetAttribute("src");
             mainNews.Credit = doc.GetElementsByClassName("article-img")[0].GetElementsByTagName("figcaption")[0].TextContent.Trim();
