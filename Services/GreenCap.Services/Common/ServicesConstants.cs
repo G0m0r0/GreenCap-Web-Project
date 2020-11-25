@@ -6,7 +6,11 @@
 
         public const string DateTimeHoursStringToLower = "hours";
 
+        public const string DateTimeHourStringToLower = "hour";
+
         public const string DateTimeMinutesStringToLower = "minutes";
+
+        public const string DateTimeMinuteStringToLower = "minute";
 
         public const string ErrorMessageIfArticleDoesNotExist = "Ooops... 404 Error";
 

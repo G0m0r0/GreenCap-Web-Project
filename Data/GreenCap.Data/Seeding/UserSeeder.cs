@@ -11,7 +11,7 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            if (dbContext.Users.Any())
+            if (dbContext.Users.Any(x => x.Id == "1"))
             {
                 return;
             }

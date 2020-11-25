@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace GreenCap.Data.Migrations
+﻿namespace GreenCap.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class MergedTableNews : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -39,21 +40,21 @@ namespace GreenCap.Data.Migrations
                 table: "News",
                 maxLength: 1000,
                 nullable: false,
-                defaultValue: "");
+                defaultValue: string.Empty);
 
             migrationBuilder.AddColumn<string>(
                 name: "PostedOn",
                 table: "News",
                 maxLength: 30,
                 nullable: false,
-                defaultValue: "");
+                defaultValue: string.Empty);
 
             migrationBuilder.AddColumn<string>(
                 name: "Summary",
                 table: "News",
                 maxLength: 1000,
                 nullable: false,
-                defaultValue: "");
+                defaultValue: string.Empty);
 
             migrationBuilder.CreateIndex(
                 name: "IX_News_CategoryId",
@@ -121,7 +122,7 @@ namespace GreenCap.Data.Migrations
                     NewsId = table.Column<int>(type: "int", nullable: false),
                     OriginalUrl = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     PostedOn = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Summary = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false)
+                    Summary = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                 },
                 constraints: table =>
                 {

@@ -176,7 +176,9 @@
                             .Trim();
 
             if (date.ToLower().Contains(ServicesConstants.DateTimeHoursStringToLower) ||
-                date.ToLower().Contains(ServicesConstants.DateTimeMinutesStringToLower))
+                date.ToLower().Contains(ServicesConstants.DateTimeMinutesStringToLower) ||
+                date.ToLower().Contains(ServicesConstants.DateTimeMinuteStringToLower) ||
+                date.ToLower().Contains(ServicesConstants.DateTimeMinuteStringToLower))
             {
                 date = DateTime.Now.ToString(ServicesConstants.DateTimeFormat);
             }

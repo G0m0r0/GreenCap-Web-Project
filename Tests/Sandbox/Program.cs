@@ -24,9 +24,6 @@
     {
         public static int Main(string[] args)
         {
-            Console.WriteLine(DateTime.Now.ToString("MMM dd, yyyy"));
-
-            return 0;
             Console.WriteLine($"{typeof(Program).Namespace} ({string.Join(" ", args)}) starts working...");
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);

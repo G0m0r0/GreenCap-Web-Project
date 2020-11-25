@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace GreenCap.Data.Migrations
+﻿namespace GreenCap.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class AddedNewsFunctionallity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -89,7 +90,7 @@ namespace GreenCap.Data.Migrations
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(maxLength: 50, nullable: false)
+                    Name = table.Column<string>(maxLength: 50, nullable: false),
                 },
                 constraints: table =>
                 {
@@ -111,7 +112,7 @@ namespace GreenCap.Data.Migrations
                     OriginalUrl = table.Column<string>(maxLength: 1000, nullable: false),
                     ImageSmallUrl = table.Column<string>(maxLength: 1000, nullable: true),
                     CategoryId = table.Column<int>(nullable: false),
-                    NewsId = table.Column<int>(nullable: false)
+                    NewsId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -138,7 +139,7 @@ namespace GreenCap.Data.Migrations
                     ImageUrl = table.Column<string>(maxLength: 1000, nullable: true),
                     Credit = table.Column<string>(maxLength: 1000, nullable: true),
                     Description = table.Column<string>(maxLength: 50000, nullable: false),
-                    SummaryNewsId = table.Column<int>(nullable: false)
+                    SummaryNewsId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
