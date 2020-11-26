@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IcNHG0saN5aqaFK3tMa6UET6VpBYpO2ss5h6xiqXb4w1pj0Z9RpMd9bUpDxu+xKB7UAgTty+eZCKwKBBKXUu9Q==",
+  "dgSpecHash": "0PoedaGSHR883R4cXtGALxyDAy4wV3kxjrER3yyOfUevaTYY3GM1Kb9THUWazsgM+ZKUtUoFB+JdpyH7xXhWdw==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Mapping\\GreenCap.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.261\\stylecop.analyzers.1.2.0-beta.261.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []

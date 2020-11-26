@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5quA8MQzzeSddCl7M+/CMO+OXKcV/RLStPwtAaZN+M+rFSjxNBYx2sPkfmc96kNWFmYO9awN8SLBvRmjMmniLw==",
+  "dgSpecHash": "v0SvYdH5KZB2meRkTw8v/mkKD+h/c7TufSO0zJijveMfK4Iq25yoUMp56C+tsjyvBvW3vN/YXaVTsS92XO4REg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\GreenCap.Common\\GreenCap.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.261\\stylecop.analyzers.1.2.0-beta.261.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512"
   ],
   "logs": []
 }

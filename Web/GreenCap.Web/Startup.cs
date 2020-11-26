@@ -6,7 +6,7 @@
     using GreenCap.Data.Common;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
-    using Gre  enCap.Data.Repositories;
+    using GreenCap.Data.Repositories;
     using GreenCap.Data.Seeding;
     using GreenCap.Services;
     using GreenCap.Services.Data;
@@ -66,6 +66,8 @@
                     }).AddRazorRuntimeCompilation();
             services.AddRazorPages(); // small services 40/50
 
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.AddSingleton(this.configuration);
 
             // Data repositories
@@ -100,7 +102,7 @@
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {

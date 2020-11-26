@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1ldWIYCzl+hrlW7S51jFJTXB9sHHBfH/tvy7MNn/Q6PUpC0yV1E4Z0VG2sGX2WBtHMm9CO26tedNP4Pxoi2pEA==",
+  "dgSpecHash": "DjdltgoXetVGaJMYlFZTEBRJEaJNOjvKSfn/tkcht2XsmKj4rZc9aGEQMcpUEnIKqjSGm+RcEBL3JunGZc6nxQ==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Web\\GreenCap.Web.Infrastructure\\GreenCap.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.261\\stylecop.analyzers.1.2.0-beta.261.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -9,8 +9,8 @@
     ".NETStandard,Version=v2.1/": {
       "GreenCap.Services.Messaging/1.0.0": {
         "dependencies": {
-          "SendGrid": "9.21.0",
-          "StyleCop.Analyzers": "1.2.0-beta.205"
+          "SendGrid": "9.21.2",
+          "StyleCop.Analyzers": "1.2.0-beta.261"
         },
         "runtime": {
           "GreenCap.Services.Messaging.dll": {}
@@ -76,15 +76,15 @@
           }
         }
       },
-      "SendGrid/9.21.0": {
+      "SendGrid/9.21.2": {
         "dependencies": {
           "Newtonsoft.Json": "9.0.1",
           "starkbank-ecdsa": "1.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/SendGrid.dll": {
-            "assemblyVersion": "9.21.0.0",
-            "fileVersion": "9.21.0.0"
+            "assemblyVersion": "9.21.2.0",
+            "fileVersion": "9.21.2.0"
           }
         }
       },
@@ -96,12 +96,12 @@
           }
         }
       },
-      "StyleCop.Analyzers/1.2.0-beta.205": {
+      "StyleCop.Analyzers/1.2.0-beta.261": {
         "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.205"
+          "StyleCop.Analyzers.Unstable": "1.2.0.261"
         }
       },
-      "StyleCop.Analyzers.Unstable/1.2.0.205": {},
+      "StyleCop.Analyzers.Unstable/1.2.0.261": {},
       "System.Collections/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1",
@@ -519,12 +519,12 @@
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
     },
-    "SendGrid/9.21.0": {
+    "SendGrid/9.21.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GY7NZcS0K4WjepDZhs5XxORqZDC1FmTz6iT/j9crCSCMBG4Y/9I/ia9b6ws8209Yv1uVjnDcNr0gf54ibIxIsw==",
-      "path": "sendgrid/9.21.0",
-      "hashPath": "sendgrid.9.21.0.nupkg.sha512"
+      "sha512": "sha512-vYp/UPtiO9FkaziuVzoGJqmKJV4WBhN6gmryXnpL9ga/UPJH2bBmzg0As8DO75lhboORKYim8cZFdDhKVthokQ==",
+      "path": "sendgrid/9.21.2",
+      "hashPath": "sendgrid.9.21.2.nupkg.sha512"
     },
     "starkbank-ecdsa/1.2.0": {
       "type": "package",
@@ -533,19 +533,19 @@
       "path": "starkbank-ecdsa/1.2.0",
       "hashPath": "starkbank-ecdsa.1.2.0.nupkg.sha512"
     },
-    "StyleCop.Analyzers/1.2.0-beta.205": {
+    "StyleCop.Analyzers/1.2.0-beta.261": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ORvUXKlJRqAWstZiSH9LgEuM5hBye8mUDDSpMoQhiKLFUtFEGesfr88Qa8jC0KKVaBTUZzdo4fNZM4oHeV/JsQ==",
-      "path": "stylecop.analyzers/1.2.0-beta.205",
-      "hashPath": "stylecop.analyzers.1.2.0-beta.205.nupkg.sha512"
+      "sha512": "sha512-C0bMvkB95HkX2LNsKO9KbVM+BMzkHjRXxdxQ7rogiy8gtwy2yAaPNFY1+98DzlN8XUpJ/39oGX6Da7qnMp2FeA==",
+      "path": "stylecop.analyzers/1.2.0-beta.261",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.261.nupkg.sha512"
     },
-    "StyleCop.Analyzers.Unstable/1.2.0.205": {
+    "StyleCop.Analyzers.Unstable/1.2.0.261": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YiRjba3yBp2mCvtsOeQf8XU1tPaOZFTKxcsj44tTpGrhRchmtuKtgyMCV9kkOFdfKISnHk0gzhigITlrrrvMuA==",
-      "path": "stylecop.analyzers.unstable/1.2.0.205",
-      "hashPath": "stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+      "sha512": "sha512-FpInVJVmFyWIRz4oIpPpLuOkW3oFhfU4CcT7bkeZlN+iwG1T37hGVZFQ8bA2fsJv5vAHOlqLpvk7HyU3q6tF2w==",
+      "path": "stylecop.analyzers.unstable/1.2.0.261",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",
