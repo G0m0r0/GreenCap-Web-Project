@@ -40,17 +40,6 @@
             await this.proposalDb.SaveChangesAsync();
         }
 
-        // public async Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync(int page, int itemsPerPage)
-        // {
-        //    return await this.proposalDb.All().Select(x => new ProposalOutputViewModel
-        //    {
-        //        Id = x.Id,
-        //        Title = x.Title,
-        //        ShortDescription = x.ShortDescription,
-        //        CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-        //        Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
-        //    }).ToListAsync();
-        // }
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
             return this.proposalDb
@@ -62,34 +51,37 @@
                 .ToList();
         }
 
-        public int GetCount()
+        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id)
         {
-            return this.proposalDb.All().Count();
+            return this.proposalDb
+                .AllAsNoTracking()
+                .Where(x => x.CreatedById == id)
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
         }
 
-        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id)
+        // public async Task<ProposalDetailsOutputViewModel> GetByIdAsync(int id)
+        // {
+        //     return await this.proposalDb.All().Where(x => x.Id == id).Select(x => new ProposalDetailsOutputViewModel
+        //     {
+        //         Id = x.Id,
+        //         CreatedByName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName ?? FormatValidations.DefaultUserName,
+        //         Title = x.Title,
+        //         CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
+        //         Description = x.Description,
+        //         ModifiedOn = (x.ModifiedOn == null) ? FormatValidations.DateTimeNeverModified : x.ModifiedOn.ToString(),
+        //     }).FirstOrDefaultAsync();
+        // }
+        public async Task<T> GetByIdAsync<T>(int id)
         {
-            return await this.proposalDb.All().Where(x => x.CreatedById == id).Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                ShortDescription = x.ShortDescription,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
-            }).ToListAsync();
-        }
-
-        public async Task<ProposalOutputViewModel> GetByIdAsync(int id)
-        {
-            return await this.proposalDb.All().Where(x => x.Id == id).Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                CreatedByName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName ?? FormatValidations.DefaultUserName,
-                Title = x.Title,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Description = x.Description,
-                ModifiedOn = (x.ModifiedOn == null) ? FormatValidations.DateTimeNeverModified : x.ModifiedOn.ToString(),
-            }).FirstOrDefaultAsync();
+            return await this.proposalDb
+                .AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefaultAsync();
         }
 
         public async Task DeleteByIdAsync(int id)
@@ -106,6 +98,16 @@
             this.proposalDb.Update(modelToDelete);
 
             await this.proposalDb.SaveChangesAsync();
+        }
+
+        public int GetCount()
+        {
+            return this.proposalDb.All().Count();
+        }
+
+        public int GetCountPersonal(string id)
+        {
+            return this.proposalDb.All().Where(x => x.CreatedById == id).Count();
         }
     }
 }

@@ -5,6 +5,7 @@
 
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
+    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
 
@@ -26,14 +27,14 @@
                 return this.NotFound();
             }
 
-            const int ItemsPerPage = 12;
+            const int ItemsPerPage = 9;
 
-            var viewModel = new ProposalsListViewModel
+            var viewModel = new ProposalsListOutputViewModel
             {
                 ItemsPerPage = ItemsPerPage,
                 PageNumber = id,
                 EntitiesCount = this.proposalService.GetCount(),
-                Proposals = this.proposalService.GetAll<ProposalViewModel>(id, ItemsPerPage),
+                Proposals = this.proposalService.GetAll<ProposalOutputViewModel>(id, ItemsPerPage),
             };
 
             return this.View(viewModel);
@@ -76,14 +77,29 @@
 
         public async Task<IActionResult> Details(int id)
         {
-            var model = await this.proposalService.GetByIdAsync(id);
+            var model = await this.proposalService.GetByIdAsync<ProposalDetailsOutputViewModel>(id);
             return this.View(model);
         }
 
-        public async Task<IActionResult> Personal()
+        public IActionResult Personal(int id = 1)
         {
-            var proposalModel = await this.proposalService.GetAllForSignedInUserAsync(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
-            return this.View(proposalModel);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 9;
+            var userdId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var viewModel = new ProposalsListOutputViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.proposalService.GetCountPersonal(userdId),
+                Proposals = this.proposalService.GetAllPersonal<ProposalOutputViewModel>(id, ItemsPerPage, userdId),
+            };
+
+            return this.View(viewModel);
         }
 
         public async Task<IActionResult> Delete(int id)

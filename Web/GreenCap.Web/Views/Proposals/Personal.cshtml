@@ -1,9 +1,14 @@
-﻿@using GreenCap.Common
-@using GreenCap.Web.ViewModels.OutputViewModel
-@{ this.ViewData["Title"] = "All proposals"; }
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
+
+@{ 
+    this.ViewData["Title"] = "Personal proposals " + Model.PageNumber; 
+}
+
+@model ProposalsListOutputViewModel
+
 
 <div class="row mt-2 mb-4">
-    @foreach (ProposalOutputViewModel proposal in Model)
+    @foreach (var proposal in Model.Proposals)
     {
 <div class="card-deck col-sm-3 col-md-6 col-lg-4">
     <div class="card">
@@ -20,28 +25,4 @@
 </div>}
 </div>
 
-<div>
-    <ul class="pagination pagination-lg">
-        <li class="page-item disabled">
-            <a class="page-link" href="#">&laquo;</a>
-        </li>
-        <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">4</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">5</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">&raquo;</a>
-        </li>
-    </ul>
-</div>
+<partial name="_PagingPartial" model="@Model" />

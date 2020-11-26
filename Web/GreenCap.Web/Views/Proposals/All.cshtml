@@ -1,8 +1,10 @@
-﻿@model GreenCap.Web.ViewModels.InputViewModels.ProposalsListViewModel
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
 
 @{ 
-    this.ViewData["Title"] = "All proposals, page "+Model.PageNumber; 
+    this.ViewData["Title"] = "All proposals " + Model.PageNumber; 
 }
+
+@model ProposalsListOutputViewModel
 
 
 <div class="row mt-2 mb-4">
