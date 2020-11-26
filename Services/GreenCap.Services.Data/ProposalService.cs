@@ -10,6 +10,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@
             this.userDb = userDb;
         }
 
-        public async Task CreateAsync(ProposalInputViewModel model, string id)
+        public async Task CreateAsync(ProposalViewModel model, string id)
         {
             var proposal = new Proposal
             {
@@ -39,16 +40,31 @@
             await this.proposalDb.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync()
+        // public async Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync(int page, int itemsPerPage)
+        // {
+        //    return await this.proposalDb.All().Select(x => new ProposalOutputViewModel
+        //    {
+        //        Id = x.Id,
+        //        Title = x.Title,
+        //        ShortDescription = x.ShortDescription,
+        //        CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
+        //        Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
+        //    }).ToListAsync();
+        // }
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
-            return await this.proposalDb.All().Select(x => new ProposalOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                ShortDescription = x.ShortDescription,
-                CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Image = "https://cdn130.picsart.com/259427916032202.jpg?type=webp&to=crop&r=256",
-            }).ToListAsync();
+            return this.proposalDb
+                .AllAsNoTracking()
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
+        }
+
+        public int GetCount()
+        {
+            return this.proposalDb.All().Count();
         }
 
         public async Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id)

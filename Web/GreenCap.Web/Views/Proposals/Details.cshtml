@@ -65,11 +65,11 @@
     </div>
     <!--/.Carousel Wrapper-->
 
-    <p class="lead">Created by: @Model.CreatedByName.Split("@")[0] (@Model.CreatedOn)        Last modified on: @Model.ModifiedOn</p>
-    <hr class="my-4">
-    <p>@Model.Description</p>
-    <p class="lead">
-        <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a>
-        <a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>
-    </p>
-</div>
+        <p class="lead">Created by: @Model.CreatedByName.Split("@")[0] (@Model.CreatedOn)        Last modified on: @Model.ModifiedOn</p>
+        <hr class="my-4">
+        <p class="card-body">@Model.Description</p>           
+        <p class="lead">
+             <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a>
+             <a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>
+        </p>
+        </div>

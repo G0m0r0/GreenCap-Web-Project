@@ -11,5 +11,7 @@
         public const string AdministratorPhoneNumber = "+359887967927";
 
         public const string AdministratorPassword = "Aa123.@";
+
+        public const string DateTimeFormat = "dd/MMM/yyyy";
     }
 }

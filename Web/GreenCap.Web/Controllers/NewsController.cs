@@ -37,7 +37,7 @@
         }
 
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Refresh()
+        public IActionResult Refresh()
         {
             return this.Redirect("All");
         }

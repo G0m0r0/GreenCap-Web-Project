@@ -19,10 +19,24 @@
             this.proposalService = proposalService;
         }
 
-        public async Task<IActionResult> All()
+        public IActionResult All(int id = 1)
         {
-            var proposalModel = await this.proposalService.GetAllAsync();
-            return this.View(proposalModel);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 12;
+
+            var viewModel = new ProposalsListViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.proposalService.GetCount(),
+                Proposals = this.proposalService.GetAll<ProposalViewModel>(id, ItemsPerPage),
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Create()
@@ -31,7 +45,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ProposalInputViewModel proposal)
+        public async Task<IActionResult> Create(ProposalViewModel proposal)
         {
             // if (!proposal.Image.FileName.EndsWith(".png") || !proposal.Image.FileName.EndsWith(".jpeg"))
             // {
@@ -52,7 +66,10 @@
             // {
             //     await proposal.Image.CopyToAsync(fs);
             // }
-            await this.proposalService.CreateAsync(proposal, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            // get id from cookie
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await this.proposalService.CreateAsync(proposal, userId);
 
             return this.Redirect("All");
         }

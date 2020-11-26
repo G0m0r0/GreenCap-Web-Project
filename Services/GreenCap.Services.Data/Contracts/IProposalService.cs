@@ -6,15 +6,16 @@
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
 
-    public interface IProposalService
+    public interface IProposalService : IBaseService
     {
-        Task CreateAsync(ProposalInputViewModel model, string id);
+        Task CreateAsync(ProposalViewModel model, string id);
 
-        Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync();
-
+        // Task<IEnumerable<ProposalOutputViewModel>> GetAllAsync();
         Task<IEnumerable<ProposalOutputViewModel>> GetAllForSignedInUserAsync(string id);
 
         Task<ProposalOutputViewModel> GetByIdAsync(int id);
+
+        int GetCount();
 
         Task DeleteByIdAsync(int id);
     }

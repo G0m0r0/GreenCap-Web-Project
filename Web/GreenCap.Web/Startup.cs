@@ -6,7 +6,7 @@
     using GreenCap.Data.Common;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
-    using GreenCap.Data.Repositories;
+    using Gre  enCap.Data.Repositories;
     using GreenCap.Data.Seeding;
     using GreenCap.Services;
     using GreenCap.Services.Data;
