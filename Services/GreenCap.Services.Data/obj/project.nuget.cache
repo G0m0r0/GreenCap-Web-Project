@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nonQaabV4HRn9JwH21F+XSLGXaAhg+R9c+kKaELQrWJQTuw98ONX4v8c2dEycIz73JQexZVW7yMfVcgliXcg6g==",
+  "dgSpecHash": "j1EUwTidJ+NF1MT72AZse2FS+2DMtc1opkNTrUZna0yWdZdfdJ4CxaNEv4n95ssuNetSra8fQMPm4SD6KR9o+w==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services.Data\\GreenCap.Services.Data.csproj",
   "expectedPackageFiles": [
@@ -25,8 +25,8 @@
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.261\\stylecop.analyzers.1.2.0-beta.261.nupkg.sha512",
-    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

@@ -17,6 +17,8 @@
         [ForeignKey(nameof(User))]
         public string AddedById { get; set; }
 
+        public string RemoteImageUrl { get; set; }
+
         public string Extension { get; set; }
 
         public Proposal Proposal { get; set; }

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@
 
     public class ProposalService : IProposalService
     {
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
         private readonly IDeletableEntityRepository<Proposal> proposalDb;
 
         public ProposalService(IDeletableEntityRepository<Proposal> proposalDb)
@@ -23,15 +25,38 @@
             this.proposalDb = proposalDb;
         }
 
-        public async Task CreateAsync(ProposalViewModel model, string id)
+        public async Task CreateAsync(ProposalViewModel model, string userId, string imagePath)
         {
             var proposal = new Proposal
             {
                 Title = model.Title,
                 ShortDescription = model.ShortDescription,
                 Description = model.Description,
-                CreatedById = id,
+                CreatedById = userId,
             };
+
+            // image sharp to say if its real photo
+            // /wwwroot/images/recipes/{id}.{ext}
+            Directory.CreateDirectory($"{imagePath}/Proposals/");
+            foreach (var image in model.Images)
+            {
+                var extension = Path.GetExtension(image.FileName).TrimStart('.');
+                if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
+                {
+                    throw new Exception(string.Format(ExceptionMessages.InvalidImageExtentionException, extension));
+                }
+
+                var dbImage = new Image
+                {
+                    AddedById = userId,
+                    Extension = extension,
+                };
+                proposal.Images.Add(dbImage);
+
+                var physicalPath = $"{imagePath}/Proposals/{dbImage.Id}.{extension}";
+                using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+                await image.CopyToAsync(fileStream);
+            }
 
             await this.proposalDb.AddAsync(proposal);
             await this.proposalDb.SaveChangesAsync();
@@ -48,11 +73,11 @@
                 .ToList();
         }
 
-        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id)
+        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string userId)
         {
             return this.proposalDb
                 .AllAsNoTracking()
-                .Where(x => x.CreatedById == id)
+                .Where(x => x.CreatedById == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -95,9 +120,9 @@
             return this.proposalDb.All().Count();
         }
 
-        public int GetCountPersonal(string id)
+        public int GetCountPersonal(string userId)
         {
-            return this.proposalDb.All().Where(x => x.CreatedById == id).Count();
+            return this.proposalDb.All().Where(x => x.CreatedById == userId).Count();
         }
     }
 }

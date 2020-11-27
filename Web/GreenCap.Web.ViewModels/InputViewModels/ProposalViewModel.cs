@@ -1,8 +1,10 @@
 ﻿namespace GreenCap.Web.ViewModels.InputViewModels
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using GreenCap.Data.Common;
+    using Microsoft.AspNetCore.Http;
 
     public class ProposalViewModel
     {
@@ -24,6 +26,6 @@
         [RegularExpression("[A-Z][^_]+", ErrorMessage = "Short description should start with upper letter.")]
         public string ShortDescription { get; set; }
 
-        public string Image { get; set; }
+        public IEnumerable<IFormFile> Images { get; set; }
     }
 }

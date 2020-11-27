@@ -4,13 +4,12 @@
 
 @model ProposalsListOutputViewModel
 
-
 <div class="row mt-2 mb-4">
     @foreach (var proposal in this.Model.Proposals)
     {
 <div class="card-deck col-sm-3 col-md-6 col-lg-4">
     <div class="card">
-        <img class="card-img-top" src=@proposal.Image alt="Card image cap">
+        <img class="card-img-top" src=@proposal.ImageUrl alt="Card image cap">
         <div class="card-body">
             <h2 class="card-title">@proposal.Title</h2>
             <h5 class="card-title text-success">@proposal.ShortDescription</h5>
@@ -19,8 +18,7 @@
             <small class="text-muted">@proposal.CreatedOn</small>
             @if (proposal.CreatedByName == this.User.Identity.Name)
             {
-                <small class="text-success">(Personal)</small>
-            }
+<small class="text-success">(Personal)</small>}
             <a class="btn float-right text-primary" href="/Proposals/Details?id=@proposal.Id"><i class="fas fa-info-circle"></i></a>
         </div>
     </div>

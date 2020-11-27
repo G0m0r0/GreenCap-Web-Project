@@ -1920,7 +1920,8 @@
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
           "GreenCap.Services.Mapping": "1.0.0",
-          "GreenCap.Web.ViewModels": "1.0.0"
+          "GreenCap.Web.ViewModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.0"
         },
         "compile": {
           "bin/placeholder/GreenCap.Services.Data.dll": {}

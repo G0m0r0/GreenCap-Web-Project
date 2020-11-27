@@ -33,6 +33,7 @@
                 PageNumber = id,
                 EntitiesCount = this.postService.GetCountPersonal(userdId),
                 Posts = this.postService.GetAllPersonal<PostOutputViewModel>(id, ItemsPerPage, userdId),
+                AspAction = nameof(this.Personal),
             };
 
             return this.View(viewModel);
@@ -54,6 +55,7 @@
                 PageNumber = id,
                 EntitiesCount = this.postService.GetCount(),
                 Posts = this.postService.GetAll<PostOutputViewModel>(id, ItemsPerPage),
+                AspAction = nameof(this.All),
             };
 
             return this.View(viewModel);

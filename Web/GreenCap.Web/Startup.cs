@@ -80,7 +80,7 @@
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProposalService, ProposalService>();
             services.AddTransient<IPostservice, PostService>();
-            services.AddTransient<IHomeStatistics, HomeStatistics>();
+            services.AddTransient<IHomeService, HomeService>();
             services.AddTransient<IPhysNewsScarperService, PhysNewsScarperService>();
             services.AddTransient<INewsService, NewsService>();
         }

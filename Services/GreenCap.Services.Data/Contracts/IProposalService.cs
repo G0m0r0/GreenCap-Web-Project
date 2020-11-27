@@ -8,7 +8,7 @@
 
     public interface IProposalService : IBaseService
     {
-        Task CreateAsync(ProposalViewModel model, string id);
+        Task CreateAsync(ProposalViewModel model, string id, string imagepath);
 
         Task DeleteByIdAsync(int id, string userId);
 

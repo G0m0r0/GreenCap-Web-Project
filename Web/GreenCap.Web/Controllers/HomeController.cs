@@ -9,9 +9,9 @@
 
     public class HomeController : BaseController
     {
-        private readonly IHomeStatistics homeStatistics;
+        private readonly IHomeService homeStatistics;
 
-        public HomeController(IHomeStatistics homeStatistics)
+        public HomeController(IHomeService homeStatistics)
         {
             this.homeStatistics = homeStatistics;
         }

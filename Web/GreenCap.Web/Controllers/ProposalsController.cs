@@ -1,5 +1,6 @@
 ﻿namespace GreenCap.Web.Controllers
 {
+    using System;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -12,10 +13,12 @@
     public class ProposalsController : BaseController
     {
         private readonly IProposalService proposalService;
+        private readonly IWebHostEnvironment environment;
 
-        public ProposalsController( IProposalService proposalService)
+        public ProposalsController(IProposalService proposalService, IWebHostEnvironment environment)
         {
             this.proposalService = proposalService;
+            this.environment = environment;
         }
 
         public IActionResult All(int id = 1)
@@ -33,6 +36,7 @@
                 PageNumber = id,
                 EntitiesCount = this.proposalService.GetCount(),
                 Proposals = this.proposalService.GetAll<ProposalOutputViewModel>(id, ItemsPerPage),
+                AspAction = nameof(this.All),
             };
 
             return this.View(viewModel);
@@ -46,29 +50,24 @@
         [HttpPost]
         public async Task<IActionResult> Create(ProposalViewModel proposal)
         {
-            // if (!proposal.Image.FileName.EndsWith(".png") || !proposal.Image.FileName.EndsWith(".jpeg"))
-            // {
-            //     this.ModelState.AddModelError("Image", "Invalid file type. Supported .png and .jpeg!");
-            // }
-            //
-            // if (proposal.Image.Length > 10 * 1024 * 1024)
-            // {
-            //     this.ModelState.AddModelError("Image", "File size is over 10Mb.");
-            // }
             if (!this.ModelState.IsValid)
             {
                 return this.View();
             }
 
-            // using (FileStream fs = new FileStream(
-            //     this.webHostEnvironment.WebRootPath + "/user.png", FileMode.Create))
-            // {
-            //     await proposal.Image.CopyToAsync(fs);
-            // }
-
             // get id from cookie
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            await this.proposalService.CreateAsync(proposal, userId);
+            var pathImages = $"{this.environment.WebRootPath}/Images";
+
+            try
+            {
+                await this.proposalService.CreateAsync(proposal, userId, pathImages);
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+                return this.View(proposal);
+            }
 
             return this.Redirect("All");
         }
@@ -95,6 +94,7 @@
                 PageNumber = id,
                 EntitiesCount = this.proposalService.GetCountPersonal(userdId),
                 Proposals = this.proposalService.GetAllPersonal<ProposalOutputViewModel>(id, ItemsPerPage, userdId),
+                AspAction = nameof(this.Personal),
             };
 
             return this.View(viewModel);

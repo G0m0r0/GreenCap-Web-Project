@@ -19,5 +19,7 @@
         public int EntitiesCount { get; set; }
 
         public int ItemsPerPage { get; set; }
+
+        public string AspAction { get; set; }
     }
 }

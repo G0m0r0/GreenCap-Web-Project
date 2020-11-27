@@ -13,7 +13,8 @@
           "GreenCap.Data.Models": "1.0.0",
           "GreenCap.Services.Mapping": "1.0.0",
           "GreenCap.Web.ViewModels": "1.0.0",
-          "StyleCop.Analyzers": "1.2.0-beta.261"
+          "Microsoft.AspNetCore.Http.Features": "5.0.0",
+          "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
           "GreenCap.Services.Data.dll": {}
@@ -252,12 +253,12 @@
           }
         }
       },
-      "StyleCop.Analyzers/1.2.0-beta.261": {
+      "StyleCop.Analyzers/1.2.0-beta.205": {
         "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.261"
+          "StyleCop.Analyzers.Unstable": "1.2.0.205"
         }
       },
-      "StyleCop.Analyzers.Unstable/1.2.0.261": {},
+      "StyleCop.Analyzers.Unstable/1.2.0.205": {},
       "System.Buffers/4.5.1": {
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {
@@ -542,19 +543,19 @@
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
     },
-    "StyleCop.Analyzers/1.2.0-beta.261": {
+    "StyleCop.Analyzers/1.2.0-beta.205": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-C0bMvkB95HkX2LNsKO9KbVM+BMzkHjRXxdxQ7rogiy8gtwy2yAaPNFY1+98DzlN8XUpJ/39oGX6Da7qnMp2FeA==",
-      "path": "stylecop.analyzers/1.2.0-beta.261",
-      "hashPath": "stylecop.analyzers.1.2.0-beta.261.nupkg.sha512"
+      "sha512": "sha512-ORvUXKlJRqAWstZiSH9LgEuM5hBye8mUDDSpMoQhiKLFUtFEGesfr88Qa8jC0KKVaBTUZzdo4fNZM4oHeV/JsQ==",
+      "path": "stylecop.analyzers/1.2.0-beta.205",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.205.nupkg.sha512"
     },
-    "StyleCop.Analyzers.Unstable/1.2.0.261": {
+    "StyleCop.Analyzers.Unstable/1.2.0.205": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FpInVJVmFyWIRz4oIpPpLuOkW3oFhfU4CcT7bkeZlN+iwG1T37hGVZFQ8bA2fsJv5vAHOlqLpvk7HyU3q6tF2w==",
-      "path": "stylecop.analyzers.unstable/1.2.0.261",
-      "hashPath": "stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512"
+      "sha512": "sha512-YiRjba3yBp2mCvtsOeQf8XU1tPaOZFTKxcsj44tTpGrhRchmtuKtgyMCV9kkOFdfKISnHk0gzhigITlrrrvMuA==",
+      "path": "stylecop.analyzers.unstable/1.2.0.205",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
