@@ -12,18 +12,15 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.InputViewModels;
-    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
 
     public class ProposalService : IProposalService
     {
         private readonly IDeletableEntityRepository<Proposal> proposalDb;
-        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
 
-        public ProposalService(IDeletableEntityRepository<Proposal> proposalDb, IDeletableEntityRepository<ApplicationUser> userDb)
+        public ProposalService(IDeletableEntityRepository<Proposal> proposalDb)
         {
             this.proposalDb = proposalDb;
-            this.userDb = userDb;
         }
 
         public async Task CreateAsync(ProposalViewModel model, string id)
@@ -63,18 +60,6 @@
                 .ToList();
         }
 
-        // public async Task<ProposalDetailsOutputViewModel> GetByIdAsync(int id)
-        // {
-        //     return await this.proposalDb.All().Where(x => x.Id == id).Select(x => new ProposalDetailsOutputViewModel
-        //     {
-        //         Id = x.Id,
-        //         CreatedByName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName ?? FormatValidations.DefaultUserName,
-        //         Title = x.Title,
-        //         CreatedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-        //         Description = x.Description,
-        //         ModifiedOn = (x.ModifiedOn == null) ? FormatValidations.DateTimeNeverModified : x.ModifiedOn.ToString(),
-        //     }).FirstOrDefaultAsync();
-        // }
         public async Task<T> GetByIdAsync<T>(int id)
         {
             return await this.proposalDb

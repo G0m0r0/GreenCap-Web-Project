@@ -10,10 +10,10 @@
     {
         Task CreateAsync(ProposalViewModel model, string id);
 
+        Task DeleteByIdAsync(int id);
+
         int GetCount();
 
         int GetCountPersonal(string id);
-
-        Task DeleteByIdAsync(int id);
     }
 }

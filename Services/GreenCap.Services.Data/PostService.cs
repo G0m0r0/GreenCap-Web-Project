@@ -9,6 +9,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
@@ -16,12 +17,10 @@
     public class PostService : IPostservice
     {
         private readonly IDeletableEntityRepository<Post> forumDb;
-        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
 
-        public PostService(IDeletableEntityRepository<Post> forumDb, IDeletableEntityRepository<ApplicationUser> userDb)
+        public PostService(IDeletableEntityRepository<Post> forumDb)
         {
             this.forumDb = forumDb;
-            this.userDb = userDb;
         }
 
         public async Task CreateAsync(PostInputViewModel model, string id)
@@ -36,6 +35,38 @@
 
             await this.forumDb.AddAsync(modelToCreate);
             await this.forumDb.SaveChangesAsync();
+        }
+
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
+        {
+            return this.forumDb
+                .AllAsNoTracking()
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
+        }
+
+        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id)
+        {
+            return this.forumDb
+                .AllAsNoTracking()
+                .Where(x => x.CreatedById == id)
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
+        }
+
+        public async Task<T> GetByIdAsync<T>(int id)
+        {
+            return await this.forumDb
+                .AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefaultAsync();
         }
 
         public async Task DeleteByIdAsync(int id)
@@ -54,46 +85,19 @@
             await this.forumDb.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<PostOutputViewModel>> GetAllAsync()
+        public int GetCount()
         {
-            return await this.forumDb.All().Select(x => new PostOutputViewModel
-            {
-                Title = x.ProblemTitle,
-                CreatorName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName,
-                Category = x.Category.ToString(),
-                Description = x.Description,
-                PostedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Likes = x.UsersLikes.Where(x => x.IsPositive == true).Count(),
-                DissLikes = x.UsersLikes.Where(x => x.IsPositive == false).Count(),
-            }).ToListAsync();
+            return this.forumDb.All().Count();
         }
 
-        public async Task<IEnumerable<PostOutputViewModel>> GetAllForSignedInUserAsync(string id)
+        public int GetCountPersonal(string id)
         {
-            return await this.forumDb.All().Where(x => x.CreatedById == id).Select(x => new PostOutputViewModel
-            {
-                Title = x.ProblemTitle,
-                CreatorName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName,
-                Category = x.Category.ToString(),
-                Description = x.Description,
-                PostedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Likes = x.UsersLikes.Where(x => x.IsPositive == true).Count(),
-                DissLikes = x.UsersLikes.Where(x => x.IsPositive == false).Count(),
-            }).ToListAsync();
+            return this.forumDb.All().Where(x => x.CreatedById == id).Count();
         }
 
-        public async Task<PostOutputViewModel> GetByIdAsync(int id)
+        public int GetCountByCategory(string categoryName)
         {
-            return await this.forumDb.All().Where(x => x.Id == id).Select(x => new PostOutputViewModel
-            {
-                Title = x.ProblemTitle,
-                CreatorName = this.userDb.All().Where(y => y.Id == x.CreatedById).FirstOrDefault().UserName,
-                Category = x.Category.ToString(),
-                Description = x.Description,
-                PostedOn = x.CreatedOn.ToLocalTime().ToString(FormatValidations.DateTimeFormat),
-                Likes = x.UsersLikes.Where(x => x.IsPositive == true).Count(),
-                DissLikes = x.UsersLikes.Where(x => x.IsPositive == false).Count(),
-            }).FirstOrDefaultAsync();
+            return this.forumDb.All().Where(x => x.Category.ToString() == categoryName).Count();
         }
     }
 }

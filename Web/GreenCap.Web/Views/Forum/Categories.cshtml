@@ -1,9 +1,10 @@
-﻿@using GreenCap.Common
-@using GreenCap.Web.ViewModels.OutputViewModel
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
 @using GreenCap.Data.Models.Enums
 @{
-    this.ViewData["Title"] = "Forum categories";
+    this.ViewData["Title"] = "Forum categories " + Model.PageNumber;
 }
+
+@model PostsListOutputViewModel
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
@@ -28,19 +29,19 @@
 
 <div id="myTabContent" class="tab-content">   
     <div class="tab-pane fade show active" id="general">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {
-            @if(post.Category==Category.General.ToString())
+            @if(post.CategoryName==Category.General.ToString())
             {
                <br />
                 <div class="card text-white bg-success active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -49,19 +50,19 @@
     </div>
    
     <div class="tab-pane fade" id="health">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {
-            @if(post.Category==Category.Health.ToString())
+            @if(post.CategoryName==Category.Health.ToString())
             {
               <br />
                 <div class="card text-white bg-danger active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -69,19 +70,19 @@
         }
     </div>
     <div class="tab-pane fade" id="ecology">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {             
-            @if(post.Category==Category.Ecology.ToString())
+            @if(post.CategoryName==Category.Ecology.ToString())
             {
               <br />
                 <div class="card text-white bg-secondary active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -89,19 +90,19 @@
         }
     </div>
     <div class="tab-pane fade" id="exercise">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {             
-            @if(post.Category==Category.Exercise.ToString())
+            @if(post.CategoryName==Category.Exercise.ToString())
             {
                 <br />
                 <div class="card text-white bg-warning active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -109,19 +110,19 @@
         }
     </div>
     <div class="tab-pane fade" id="envirment">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {
-            @if(post.Category==Category.Environment.ToString())
+            @if(post.CategoryName==Category.Environment.ToString())
             {
                 <br />
                 <div class="card text-white bg-info active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -129,19 +130,19 @@
         }
     </div>
     <div class="tab-pane fade show" id="other">
-        @foreach (PostOutputViewModel post in Model)
+        @foreach (PostOutputViewModel post in Model.Posts)
         {
-            @if(post.Category==Category.Other.ToString())
+            @if(post.CategoryName==Category.Other.ToString())
             {
                 <br />
                 <div class="card text-white bg-primary active">
                     <div class="card-header">
-                        @post.CreatorName.Split("@")[0] posted on @post.PostedOn
+                        @post.CreatorName posted on @post.PostedOn
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
                     </div>
                 <div class="card-body">
-                    <h3 class="card-title">@post.Title</h3>
+                    <h3 class="card-title">@post.ProblemTitle</h3>
                     <p class="card-text">@post.Description</p>
                 </div>
             </div>
@@ -150,3 +151,5 @@
     </div>
     <br />
 </div>
+
+<partial name="_PagingPartial" model="@Model" />

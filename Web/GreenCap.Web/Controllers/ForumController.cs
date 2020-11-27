@@ -5,6 +5,7 @@
 
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
+    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Mvc;
 
     public class ForumController : BaseController
@@ -16,22 +17,66 @@
             this.postService = postService;
         }
 
-        public async Task<IActionResult> Personal()
+        public IActionResult Personal(int id = 1)
         {
-            var forumModel = await this.postService.GetAllForSignedInUserAsync(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
-            return this.View(forumModel);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 6;
+            var userdId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var viewModel = new PostsListOutputViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.postService.GetCountPersonal(userdId),
+                Posts = this.postService.GetAllPersonal<PostOutputViewModel>(id, ItemsPerPage, userdId),
+            };
+
+            return this.View(viewModel);
         }
 
-        public async Task<IActionResult> Latest()
+        [Route("Forum/Latest")]
+        public IActionResult All(int id = 1)
         {
-            var postModel = await this.postService.GetAllAsync();
-            return this.View(postModel);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 6;
+
+            var viewModel = new PostsListOutputViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.postService.GetCount(),
+                Posts = this.postService.GetAll<PostOutputViewModel>(id, ItemsPerPage),
+            };
+
+            return this.View(viewModel);
         }
 
-        public async Task<IActionResult> Categories()
+        public IActionResult Categories(int id = 1)
         {
-            var postModel = await this.postService.GetAllAsync();
-            return this.View(postModel);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 6;
+
+            var viewModel = new PostsListOutputViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.postService.GetCount(),
+                Posts = this.postService.GetAll<PostOutputViewModel>(id, ItemsPerPage),
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Create()

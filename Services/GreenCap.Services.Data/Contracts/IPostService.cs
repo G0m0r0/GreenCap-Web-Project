@@ -6,16 +6,14 @@
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
 
-    public interface IPostservice
+    public interface IPostservice : IBaseService
     {
         Task CreateAsync(PostInputViewModel model, string id);
 
-        Task<IEnumerable<PostOutputViewModel>> GetAllAsync();
-
-        Task<IEnumerable<PostOutputViewModel>> GetAllForSignedInUserAsync(string id);
-
-        Task<PostOutputViewModel> GetByIdAsync(int id);
-
         Task DeleteByIdAsync(int id);
+
+        int GetCount();
+
+        int GetCountPersonal(string id);
     }
 }
