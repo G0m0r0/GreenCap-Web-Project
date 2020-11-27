@@ -10,10 +10,12 @@
     {
         Task CreateAsync(PostInputViewModel model, string id);
 
-        Task DeleteByIdAsync(int id);
+        Task DeleteByIdAsync(int id, string userId);
 
         int GetCount();
 
         int GetCountPersonal(string id);
+
+        int GetCountByCategory(string categoryName);
     }
 }

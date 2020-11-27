@@ -1,6 +1,6 @@
-﻿namespace GreenCap.Services.Data.DTOs
+﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
-    public class HomeStatisticsDto
+    public class HomeStatisticsOutputViewModel
     {
         public int PostsCount { get; set; }
 

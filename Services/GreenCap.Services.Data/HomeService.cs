@@ -7,33 +7,37 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Data.DTOs;
 
-    public class HomeStatistics : IHomeStatistics
+    public class HomeService : IHomeService
     {
         private readonly IDeletableEntityRepository<Event> events;
         private readonly IDeletableEntityRepository<Proposal> proposals;
         private readonly IDeletableEntityRepository<ApplicationUser> users;
         private readonly IDeletableEntityRepository<Post> posts;
+        private readonly IDeletableEntityRepository<News> news;
 
-        public HomeStatistics(
+        public HomeService(
             IDeletableEntityRepository<Event> events,
             IDeletableEntityRepository<Proposal> proposals,
             IDeletableEntityRepository<ApplicationUser> users,
-            IDeletableEntityRepository<Post> posts)
+            IDeletableEntityRepository<Post> posts,
+            IDeletableEntityRepository<News> news)
         {
             this.events = events;
             this.proposals = proposals;
             this.users = users;
             this.posts = posts;
+            this.news = news;
         }
 
-        public HomeStatisticsDTO GetCounts()
+        public HomeStatisticsDto GetCounts()
         {
-            var data = new HomeStatisticsDTO
+            var data = new HomeStatisticsDto
             {
-                TotalEvents = this.events.All().Count(),
-                TotalPosts = this.posts.All().Count(),
-                TotalProposals = this.proposals.All().Count(),
-                TotalUsers = this.users.All().Count(),
+                EventsCount = this.events.All().Count(),
+                PostsCount = this.posts.All().Count(),
+                ProposalsCount = this.proposals.All().Count(),
+                UsersCount = this.users.All().Count(),
+                NewsCount = this.news.All().Count(),
             };
 
             return data;

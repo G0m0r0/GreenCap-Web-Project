@@ -11,12 +11,10 @@
 
     public class ProposalsController : BaseController
     {
-        private readonly IWebHostEnvironment webHostEnvironment;
         private readonly IProposalService proposalService;
 
-        public ProposalsController(IWebHostEnvironment webHostEnvironment, IProposalService proposalService)
+        public ProposalsController( IProposalService proposalService)
         {
-            this.webHostEnvironment = webHostEnvironment;
             this.proposalService = proposalService;
         }
 
@@ -104,7 +102,9 @@
 
         public async Task<IActionResult> Delete(int id)
         {
-            await this.proposalService.DeleteByIdAsync(id);
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await this.proposalService.DeleteByIdAsync(id, userId);
 
             return this.Redirect("All");
         }

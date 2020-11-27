@@ -59,7 +59,7 @@
             return this.View(viewModel);
         }
 
-        public IActionResult Categories(int id = 1)
+        public IActionResult Categories(int id = 1, string categoryName = "General")
         {
             if (id <= 0)
             {

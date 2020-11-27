@@ -18,6 +18,8 @@
 
         public string Image { get; set; }
 
+        public string CreatedByName { get; set; }
+
         // public string CreatedOn { get; set; }
         public void CreateMappings(IProfileExpression configuration)
         {
@@ -25,7 +27,9 @@
                 .ForMember(x => x.Image, opt =>
                     opt.MapFrom(x => "/Images/Proposals/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension))
                 .ForMember(x => x.CreatedOn, opt =>
-                  opt.MapFrom(x => x.CreatedOn.ToLocalTime().ToString("dd / MMM / yyyy")));
+                  opt.MapFrom(x => x.CreatedOn.ToLocalTime().ToString("dd / MMM / yyyy")))
+                .ForMember(x => x.CreatedByName, opt =>
+                  opt.MapFrom(x => x.User.UserName));
         }
     }
 }

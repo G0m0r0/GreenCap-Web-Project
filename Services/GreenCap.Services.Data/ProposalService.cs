@@ -69,9 +69,14 @@
                 .FirstOrDefaultAsync();
         }
 
-        public async Task DeleteByIdAsync(int id)
+        public async Task DeleteByIdAsync(int id, string userId)
         {
             var modelToDelete = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (modelToDelete.CreatedById != userId)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
+            }
 
             if (modelToDelete == null)
             {

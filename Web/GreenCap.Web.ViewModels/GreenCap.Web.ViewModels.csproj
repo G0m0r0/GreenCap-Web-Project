@@ -24,4 +24,8 @@
     <ProjectReference Include="..\..\Services\GreenCap.Services.Mapping\GreenCap.Services.Mapping.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Home\" />
+  </ItemGroup>
+
 </Project>

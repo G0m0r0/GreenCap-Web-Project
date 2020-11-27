@@ -1,8 +1,6 @@
 ﻿@using GreenCap.Web.ViewModels.OutputViewModel
 
-@{ 
-    this.ViewData["Title"] = "All proposals " + Model.PageNumber; 
-}
+@{ this.ViewData["Title"] = "All proposals " + Model.PageNumber; }
 
 @model ProposalsListOutputViewModel
 
@@ -15,11 +13,15 @@
         <img class="card-img-top" src=@proposal.Image alt="Card image cap">
         <div class="card-body">
             <h2 class="card-title">@proposal.Title</h2>
-            <h5 class="card-title">@proposal.ShortDescription</h5>
+            <h5 class="card-title text-success">@proposal.ShortDescription</h5>
         </div>
         <div class="card-footer">
             <small class="text-muted">@proposal.CreatedOn</small>
-            <a class="btn float-right" href="/Proposals/Details?id=@proposal.Id"><i class="fas fa-info-circle"></i></a>
+            @if (proposal.CreatedByName == this.User.Identity.Name)
+            {
+                <small class="text-success">(Personal)</small>
+            }
+            <a class="btn float-right text-primary" href="/Proposals/Details?id=@proposal.Id"><i class="fas fa-info-circle"></i></a>
         </div>
     </div>
 </div>}
