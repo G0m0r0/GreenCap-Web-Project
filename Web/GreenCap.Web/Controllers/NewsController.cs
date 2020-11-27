@@ -4,6 +4,7 @@
 
     using GreenCap.Services;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
@@ -19,19 +20,33 @@
             this.newsServiceData = newsServiceData;
         }
 
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> All(int id = 1)
         {
             const int constPages = 3;
-
             await this.newsService.ImportNewsAsync(constPages);
-            var models = await this.newsServiceData.GetAllAsync();
 
-            return this.View(models);
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 9;
+
+            var viewModel = new NewsListOutputViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
+                PageNumber = id,
+                EntitiesCount = this.newsServiceData.GetCount(),
+                NewsList = this.newsServiceData.GetAll<NewsOutputViewModel>(id, ItemsPerPage),
+                AspAction = nameof(this.All),
+            };
+
+            return this.View(viewModel);
         }
 
         public async Task<IActionResult> Details(int id)
         {
-            var model = await this.newsServiceData.GetByIdAsync(id);
+            var model = await this.newsServiceData.GetByIdAsync<NewsOutputViewModel>(id);
 
             return this.View(model);
         }

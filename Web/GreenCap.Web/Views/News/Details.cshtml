@@ -11,8 +11,8 @@
     <div class="container p-3 my-3 bg-info text-dark"  >
         <p>@Model.Credit</p>
         <p>Posted on: @Model.PostedOn</p>
-        <p>Original site: <a href=@Model.MainPageUrl class="text-white">Phys.org</a></p>
+        <p>Original site: <a href=@Model.OriginalUrl class="text-white">Phys.org</a></p>
         <p>Category: @Model.CategoryName</p>
     </div>    
-    <div class="container p-3 my-3 bg-success text-dark">@Model.MainText</div>
+    <div class="container p-3 my-3 bg-success text-dark">@Model.Description</div>
 </div>

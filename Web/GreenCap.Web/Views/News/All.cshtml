@@ -1,8 +1,9 @@
 ﻿@using GreenCap.Web.ViewModels.OutputViewModel
 @{
-    this.ViewData["Title"] = "Latest news";
+    this.ViewData["Title"] = "Latest news "+Model.PageNumber;
 }
 
+@model NewsListOutputViewModel
 
 <div class="jumbotron text-center">
     <h1 class="text-primary display-4">Latest news around the world! <a href="https://phys.org/biology-news/ecology/sort/date/all/" class="alert-link">Click here!</a></h1>
@@ -13,11 +14,11 @@
         <div class="col-12 col-sm-12 col-lg-12">
             <h6 class="text-muted">All articles</h6>
             <ul class="list-group">
-                @foreach (NewsOutputViewModel article in Model)
+                @foreach (NewsOutputViewModel article in this.Model.NewsList)
                 {
                     <a href="/News/Details?id=@article.Id" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             <div class="image-parent">
-                                <img src=@article.SmallPhotoUrl alt="quixote">
+                                <img src=@article.ImageSmallUrl alt="quixote">
                             </div>
                             <div class="flex-column text-info">
                                 @article.Title
@@ -30,3 +31,5 @@
         </div>
     </div>
 </div>
+
+<partial name="_PagingPartial" model="@Model" />

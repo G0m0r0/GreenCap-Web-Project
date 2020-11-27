@@ -9,6 +9,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
 
@@ -37,39 +38,29 @@
             await this.newsDb.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<NewsOutputViewModel>> GetAllAsync()
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
-            return await this.newsDb.All().OrderByDescending(x => x.CreatedOn).Select(x => new NewsOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                SmallPhotoUrl = x.ImageSmallUrl,
-                PostedOn = x.PostedOn,
-                CategoryName = x.Category.Name,
-                Summary = x.Summary,
-            }).ToListAsync();
+            return this.newsDb
+                .AllAsNoTracking()
+                .OrderByDescending(x => x.CreatedOn)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
         }
 
-        public async Task<NewsOutputViewModel> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync<T>(int id)
         {
-            var model = await this.newsDb.All().Where(x => x.Id == id).Select(x => new NewsOutputViewModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                MainPageUrl = x.OriginalUrl,
-                ImageUrl = x.ImageUrl,
-                PostedOn = x.PostedOn,
-                CategoryName = x.Category.Name,
-                Credit = x.Credit,
-                MainText = x.Description,
-            }).FirstOrDefaultAsync();
+            return await this.newsDb
+                .AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefaultAsync();
+        }
 
-            if (!model.Credit.StartsWith("Credit:"))
-            {
-                model.Credit = OperationalMessages.CreditToAdmin;
-            }
-
-            return model;
+        public int GetCount()
+        {
+            return this.newsDb.All().Count();
         }
     }
 }

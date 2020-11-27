@@ -4,10 +4,11 @@
     using System.Threading.Tasks;
 
     using GreenCap.Web.ViewModels.InputViewModels;
-    using GreenCap.Web.ViewModels.OutputViewModel;
 
     public interface IProposalService : IBaseService
     {
+        IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id);
+
         Task CreateAsync(ProposalViewModel model, string id, string imagepath);
 
         Task DeleteByIdAsync(int id, string userId);

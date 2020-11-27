@@ -1,16 +1,11 @@
 ﻿namespace GreenCap.Services.Data.Contracts
 {
-    using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using GreenCap.Web.ViewModels.OutputViewModel;
-
-    public interface INewsService
+    public interface INewsService : IBaseService
     {
-        Task<IEnumerable<NewsOutputViewModel>> GetAllAsync();
-
-        Task<NewsOutputViewModel> GetByIdAsync(int id);
-
         Task DeleteByIdAsync(int id);
+
+        int GetCount();
     }
 }
