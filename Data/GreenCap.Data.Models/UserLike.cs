@@ -1,9 +1,6 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using System;
     using System.ComponentModel.DataAnnotations.Schema;
-
-    using GreenCap.Data.Common.Models;
 
     public class UserLike
     {

@@ -14,7 +14,7 @@
     using GreenCap.Services.Mapping;
     using GreenCap.Services.Messaging;
     using GreenCap.Web.ViewModels;
-
+    using Hangfire;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -68,6 +68,11 @@
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.AddAntiforgery(options =>
+            {
+                options.HeaderName = "X-CSRF-TOKEN";
+            });
+
             services.AddSingleton(this.configuration);
 
             // Data repositories
@@ -83,6 +88,10 @@
             services.AddTransient<IHomeService, HomeService>();
             services.AddTransient<IPhysNewsScarperService, PhysNewsScarperService>();
             services.AddTransient<INewsService, NewsService>();
+            services.AddTransient<ILikeService, PostLikeService>();
+            services.AddTransient<IVotesService, VotesService>();
+
+            // services.AddHangfire(x=>x.sql);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

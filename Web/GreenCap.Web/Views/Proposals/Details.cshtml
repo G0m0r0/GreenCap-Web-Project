@@ -1,14 +1,13 @@
 ﻿@using GreenCap.Web.ViewModels.OutputViewModel
 @model ProposalDetailsOutputViewModel
 
-@{
-    this.ViewData["Title"] = "Details";
-}
+@{ this.ViewData["Title"] = "Details"; }
 <div class="jumbotron">
-    <h1 class="display-3">@Model.Title</h1>
+    <h1 class="display-4">@Model.Title</h1>
+
     <br />
     <!--Carousel Wrapper-->
-    <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
         <!--Indicators-->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
@@ -20,33 +19,36 @@
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(105).jpg" alt="First slide">
+                    <img class="d-block w-100" src="@Model.Image"
+                         alt="First slide">
                     <div class="mask rgba-black-light"></div>
                 </div>
                 <div class="carousel-caption">
-                    <h3 class="h3-responsive">This is the first title</h3>
+                    <h3 class="h3-responsive">Light mask</h3>
                     <p>First text</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <!--Mask color-->
                 <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(115).jpg" alt="Second slide">
-                    <div class="mask rgba-black-light"></div>
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                         alt="Second slide">
+                    <div class="mask rgba-black-strong"></div>
                 </div>
                 <div class="carousel-caption">
-                    <h3 class="h3-responsive">Thir is the second title</h3>
+                    <h3 class="h3-responsive">Strong mask</h3>
                     <p>Secondary text</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <!--Mask color-->
                 <div class="view">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(108).jpg" alt="Third slide">
-                    <div class="mask rgba-black-light"></div>
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                         alt="Third slide">
+                    <div class="mask rgba-black-slight"></div>
                 </div>
                 <div class="carousel-caption">
-                    <h3 class="h3-responsive">This is the third title</h3>
+                    <h3 class="h3-responsive">Slight mask</h3>
                     <p>Third text</p>
                 </div>
             </div>
@@ -65,14 +67,65 @@
     </div>
     <!--/.Carousel Wrapper-->
 
-    <p class="lead">Created by: @Model.CreatedByName (@Model.CreatedOn)        Last modified on: @Model.ModifiedOn</p>
+    <div class="container">
+        <h1 class="display-4"><span>Rating:      </span><span id="averageVoteValue">@Model.AverageVote.ToString("0.0")</span><span> / 5</span></h1>
+        <div class="rating">
+            <input type="radio" name="rating" value="5" id="5">
+            <label for="5" data-vote="5">☆</label>
+            <input type="radio" name="rating" value="4" id="4">
+            <label for="4" data-vote="4">☆</label>
+            <input type="radio" name="rating" value="3" id="3">
+            <label for="3" data-vote="3">☆</label>
+            <input type="radio" name="rating" value="2" id="2">
+            <label for="2" data-vote="2">☆</label>
+            <input type="radio" name="rating" value="1" id="1">
+            <label for="1" data-vote="1">☆</label>
+        </div>
+    </div>
+
+    <p class="lead">Created by: @Model.CreatedByName</p>
+    <p class="lead">Posted on: @Model.CreatedOn</p>
+    <p class="lead">Last modified on: @Model.ModifiedOn</p>
     <hr class="my-4">
     <p class="card-body">@Model.Description</p>
     @if (Model.CreatedByName == this.User.Identity.Name)
     {
-        <p class="lead">
-            <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a>
-            <a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>
-        </p>
-    }
+<p class="lead">
+    <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a>
+    <a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>
+</p>}
 </div>
+
+<form method="post" id="antiForgeryForm"></form>
+
+@section Scripts
+{
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/css/Rating.css" rel="stylesheet" />
+
+    <script>
+        $("label[data-vote]").each(function (el) {
+            $(this).click(function () {
+                var value = $(this).attr("data-vote");
+                var proposalId = @Model.Id;
+                var antiForgeryToken = $('#antiForgeryForm input[name=__RequestVerificationToken]').val();
+                var data = { proposalId: proposalId, value: value };
+                $.ajax({
+                    type: "POST",
+                    url: "/api/Votes",
+                    data: JSON.stringify(data),
+                    headers: {
+                        'X-CSRF-TOKEN': antiForgeryToken
+                    },
+                    success: function (data) {
+                        $('#averageVoteValue').html(data.averageVote.toFixed(1));
+                    },
+                    contentType: 'application/json',
+                });
+            })
+        });
+    </script>
+}
+

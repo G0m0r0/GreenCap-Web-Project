@@ -10,6 +10,8 @@
 
     public class PostOutputViewModel : IMapFrom<Post>, IHaveCustomMappings
     {
+        public int Id { get; set; }
+
         public string ProblemTitle { get; set; }
 
         public string Description { get; set; }
@@ -36,7 +38,9 @@
                 .ForMember(x => x.Likes, opt =>
                   opt.MapFrom(x => x.UsersLikes.Where(x => x.IsPositive).Count()))
                 .ForMember(x => x.DissLikes, opt =>
-                  opt.MapFrom(x => x.UsersLikes.Where(x => !x.IsPositive).Count()));
+                  opt.MapFrom(x => x.UsersLikes.Where(x => !x.IsPositive).Count()))
+                .ForMember(x => x.CreatorName, opt =>
+                  opt.MapFrom(x => x.User.UserName));
         }
     }
 }

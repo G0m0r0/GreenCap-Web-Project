@@ -14,6 +14,7 @@
         public Proposal()
         {
             this.Images = new HashSet<Image>();
+            this.Votes = new HashSet<Vote>();
         }
 
         [Required]
@@ -34,5 +35,7 @@
         public string CreatedById { get; set; }
 
         public ICollection<Image> Images { get; set; }
+
+        public virtual ICollection<Vote> Votes { get; set; }
     }
 }

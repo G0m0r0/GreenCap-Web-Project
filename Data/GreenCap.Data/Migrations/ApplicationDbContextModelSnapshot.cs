@@ -532,6 +532,37 @@ namespace GreenCap.Data.Migrations
                     b.ToTable("UserLikes");
                 });
 
+            modelBuilder.Entity("GreenCap.Data.Models.Vote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProposalId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<byte>("Value")
+                        .HasColumnType("tinyint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProposalId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Votes");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -746,6 +777,23 @@ namespace GreenCap.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("GreenCap.Data.Models.Vote", b =>
+                {
+                    b.HasOne("GreenCap.Data.Models.Proposal", "Proposal")
+                        .WithMany()
+                        .HasForeignKey("ProposalId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
+                        .WithMany("Votes")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Proposal");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("GreenCap.Data.Models.ApplicationRole", null)
@@ -814,6 +862,8 @@ namespace GreenCap.Data.Migrations
                     b.Navigation("UserEvents");
 
                     b.Navigation("UserLikes");
+
+                    b.Navigation("Votes");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.CategoryNews", b =>

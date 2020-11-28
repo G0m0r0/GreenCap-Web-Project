@@ -21,6 +21,7 @@ namespace GreenCap.Data.Models
             this.Ideas = new HashSet<Proposal>();
             this.UserLikes = new HashSet<UserLike>();
             this.UserEvents = new HashSet<UserEvent>();
+            this.Votes = new HashSet<Vote>();
         }
 
         // Audit info
@@ -48,5 +49,7 @@ namespace GreenCap.Data.Models
         public virtual ICollection<UserLike> UserLikes { get; set; }
 
         public virtual ICollection<UserEvent> UserEvents { get; set; }
+
+        public virtual ICollection<Vote> Votes { get; set; }
     }
 }

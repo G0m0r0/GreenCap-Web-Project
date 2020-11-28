@@ -24,6 +24,8 @@
 
         public string ModifiedOn { get; set; }
 
+        public double AverageVote { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Proposal, ProposalDetailsOutputViewModel>()
@@ -34,7 +36,11 @@
                 .ForMember(x => x.CreatedByName, opt =>
                   opt.MapFrom(x => x.User.UserName))
                 .ForMember(x => x.ModifiedOn, opt =>
-                   opt.MapFrom(x => (x.ModifiedOn == null) ? "Never modified" : x.ModifiedOn.ToString()));
+                   opt.MapFrom(x => (x.ModifiedOn == null) ? "Never modified" : x.ModifiedOn.ToString()))
+                .ForMember(x => x.AverageVote, opt =>
+                    opt.MapFrom(x => x.Votes.Count() == 0 ? 0 : x.Votes.Average(v => v.Value)));
+
+            // x => "/Images/Proposals/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension
         }
     }
 }
