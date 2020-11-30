@@ -10,12 +10,13 @@
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
-    [Route("Api/[controller]")]
-    public class LikeController : BaseController
+    [Route("api/[controller]")]
+    [IgnoreAntiforgeryToken]
+    public class LikesController : Controller
     {
         private readonly ILikeService likeService;
 
-        public LikeController(ILikeService likeService)
+        public LikesController(ILikeService likeService)
         {
             this.likeService = likeService;
         }
@@ -31,7 +32,8 @@
             var voteModel = new PostVoteResponseModel
             {
                 Likes = this.likeService.GetLikes(input.PostId),
-                Disslikes = this.likeService.GetDisslikes(input.PostId),
+                DissLikes = this.likeService.GetDisslikes(input.PostId),
+                PostId = input.PostId,
             };
 
             return voteModel;

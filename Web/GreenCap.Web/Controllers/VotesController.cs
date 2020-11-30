@@ -27,6 +27,7 @@
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await this.votesService.SetVoteAsync(input.ProposalId, userId, input.Value);
+
             var averageVotes = this.votesService.GetAverageVotes(input.ProposalId);
 
             return new ProposalVoteResponse { AverageVote = averageVotes };

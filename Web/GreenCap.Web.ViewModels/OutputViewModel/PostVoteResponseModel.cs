@@ -4,6 +4,8 @@
     {
         public int Likes { get; set; }
 
-        public int Disslikes { get; set; }
+        public int DissLikes { get; set; }
+
+        public int PostId { get; set; }
     }
 }

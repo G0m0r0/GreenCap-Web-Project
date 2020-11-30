@@ -4,24 +4,25 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using GreenCap.Common;
     using GreenCap.Data.Models;
-    using Microsoft.EntityFrameworkCore.Internal;
 
     public class UserSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            if (dbContext.Users.Any(x => x.Id == "1"))
+            if (dbContext.Users.Any(x => x.Email == GlobalConstants.AdministratorEmail))
             {
                 return;
             }
 
             await dbContext.Users.AddAsync(new ApplicationUser
             {
-                Id = "1",
-                UserName = "Admin",
-                Email = "Admin@email.com",
-                PasswordHash = "123",
+                Email = GlobalConstants.AdministratorEmail,
+                PasswordHash = "AQAAAAEAACcQAAAAEKkutl9vhu94KUBRtm1JMUiazYxLtFNyizHhKLJRBeMMkFD/IX41z6K1OpdUMRb5QA==",
+                NormalizedEmail = GlobalConstants.AdministratorEmail.ToUpper(),
+                UserName = GlobalConstants.AdministatorName,
+                NormalizedUserName = GlobalConstants.AdministatorName.ToUpper(),
             });
         }
     }

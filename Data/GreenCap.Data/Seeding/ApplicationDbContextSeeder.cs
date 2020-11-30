@@ -30,6 +30,7 @@
                               new UserSeeder(),
                               new ProposalsSeeder(),
                               new PostsSeed(),
+                              new ImageSeeder(),
                           };
 
             foreach (var seeder in seeders)

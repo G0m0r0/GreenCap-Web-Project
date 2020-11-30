@@ -6,17 +6,53 @@
 
 @foreach (var post in Model.Posts)
 {
-<br />
-                <div class="card text-white bg-secondary active">
-                    <div class="card-header">
-                        @post.CreatorName posted on @post.PostedOn
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
-                    </div>
-                </div>}
+<span id="likesValue_@(post.Id)">@post.Likes</span>
+<span id="disslikesValue_@(post.Id)">@post.DissLikes</span>
+                                <br />
+                                                <div class="card text-white bg-secondary active">
+                                                    <div class="card-header" id="@post.Id">
+                                                        @post.CreatorName posted on @post.PostedOn
+                                                        <button type="button" class="btn btn-danger  fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
+                                                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">@post.ProblemTitle</h3>
+                                                        <p class="card-text">@post.Description</p>
+                                                    </div>
+                                                </div>}
 
 <partial name="_PagingPartial" model="@Model" />
+
+@section Scripts
+{
+    <script>
+        $("button[data-vote]").each(function (el) {
+            $(this).click(function () {
+
+                var IsPositive = Boolean(parseInt($(this).attr("data-vote")));
+                var postId = parseInt(this.parentElement.getAttribute("id"));
+
+                var antiForgeryToken = $('#antiForgeryForm input[name=__RequestVerificationToken]').val();
+                var data = { postId: postId, IsPositive: IsPositive };
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/Likes",
+                    data: JSON.stringify(data),
+                    headers: {
+                        'X-CSRF-TOKEN': antiForgeryToken
+                    },
+                    success: function (data) {
+                        console.log($('#disslikesValue_' + postId).html(data.DissLikes));
+                        $('#disslikesValue_' + postId).html(data.DissLikes);
+                        $('#likesValue_' + postId).html(data.Likes);
+                    },
+                    contentType: 'application/json',
+                });
+            })
+        });
+    </script>
+}
+
+
+
