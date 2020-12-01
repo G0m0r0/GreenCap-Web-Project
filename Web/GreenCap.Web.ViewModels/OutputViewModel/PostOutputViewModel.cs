@@ -2,9 +2,9 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-
+    using System.Xml.Schema;
     using AutoMapper;
-
+    using GreenCap.Data.Common;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
 
@@ -15,6 +15,11 @@
         public string ProblemTitle { get; set; }
 
         public string Description { get; set; }
+
+        public string ShortDescription =>
+            this.Description?.Length > DataValidation.Post.ShortDescriptionMaxLength ?
+            this.Description?.Substring(DataValidation.Post.ShortDescriptionMinLength, DataValidation.Post.ShortDescriptionMaxLength) + "..."
+            : this.Description;
 
         public string CreatorName { get; set; }
 
@@ -27,6 +32,8 @@
         public int DissLikes { get; set; }
 
         public ICollection<PostCommentsOutputViewModel> Comments { get; set; }
+
+        public string CommentsCount { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
         {

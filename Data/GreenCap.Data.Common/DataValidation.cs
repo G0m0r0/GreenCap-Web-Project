@@ -28,6 +28,8 @@
         {
             public const ushort DescriptionMaxLength = 20_000;
             public const byte DescriptionMinLength = 10;
+            public const byte ShortDescriptionMaxLength = 200;
+            public const byte ShortDescriptionMinLength = 0;
         }
 
         public static class Events

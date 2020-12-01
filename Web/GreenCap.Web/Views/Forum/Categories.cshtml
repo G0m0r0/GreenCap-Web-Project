@@ -36,14 +36,19 @@
             {
                 <br />
                 <div class="card text-white bg-success active">
-                    <div class="card-header" id="@post.Id">                        
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }
@@ -58,14 +63,19 @@
             {
                 <br />
                 <div class="card text-white bg-danger active">
-                    <div class="card-header"  id="@post.Id">
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }
@@ -78,14 +88,19 @@
             {
                 <br />
                 <div class="card text-white bg-secondary active">
-                    <div class="card-header"  id="@post.Id">
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }
@@ -98,14 +113,19 @@
             {
                 <br />
                 <div class="card text-white bg-warning active">
-                    <div class="card-header"  id="@post.Id">
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }
@@ -118,14 +138,19 @@
             {
                 <br />
                 <div class="card text-white bg-info active">
-                    <div class="card-header"  id="@post.Id">
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }
@@ -138,14 +163,19 @@
             {
                 <br />
                 <div class="card text-white bg-primary active">
-                    <div class="card-header" >
-                        @post.CreatorName posted on @post.PostedOn
+                    <div class="card-header" id="@post.Id">
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">@post.ProblemTitle</h3>
-                        <p class="card-text">@post.Description</p>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <h4 class="text-dark">
+                            @post.CreatorName posted on @post.PostedOn
+                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
+                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
+                            </a>
+                        </h4>
                     </div>
                 </div>
             }

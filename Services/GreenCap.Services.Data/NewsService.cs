@@ -10,7 +10,6 @@
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
-    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
 
     public class NewsService : INewsService

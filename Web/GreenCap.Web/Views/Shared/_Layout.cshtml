@@ -15,7 +15,7 @@
     <header>
           <nav class="navbar navbar-expand-lg navbar-dark bg-secondary border-bottom box-shadow mb-6">                                                     
               <div class="container">                                                                                                                      
-                  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>                             
+                  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> @GlobalConstants.SystemName</a>                             
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                           aria-expanded="false" aria-label="Toggle navigation">                                                                            
                       <span class="navbar-toggler-icon"></span>                                                                                            
@@ -23,39 +23,39 @@
                   <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">                                                              
                       <partial name="_LoginPartial" />                                                                                                     
                       <ul class="navbar-nav flex-grow-1">
-                          <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                          </li>
+                          <!-- <li class="nav-item">-->
+                          <!--<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i>&nbsp;Home</a>-->
+                          <!--</li>-->
                           <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" asp-area="" asp-controller="Proposals" asp-action="All" role="button" aria-haspopup="true" aria-expanded="false">Proposals</a>
+                              <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" asp-area="" asp-controller="Proposals" asp-action="All" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-lightbulb"></i>&nbsp;Proposals</a>
                               <div class="dropdown-menu">
-                                  <a class="dropdown-item" asp-area="" asp-controller="Proposals" asp-action="All">View all</a>
-                                  <a class="dropdown-item" asp-area="" asp-controller="Proposals" asp-action="Create">Create new proposal</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Proposals" asp-action="All"><i class="fas fa-globe"></i>&ensp; View all</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Proposals" asp-action="Create"><i class="fas fa-plus"></i>&ensp; Create new proposal</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" asp-controller="Proposals" asp-action="Personal">Personal proposals</a>
+                                  <a class="dropdown-item" asp-controller="Proposals" asp-action="Personal"><i class="fas fa-user"></i>&ensp; Personal proposals</a>
                               </div>
                           </li>
                           <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" asp-area="" asp-controller="Forum" asp-action="Categories" role="button" aria-haspopup="true" aria-expanded="false">Forum</a>
                               <div class="dropdown-menu">
-                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Latest">Latest</a>
-                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Categories">Categories</a>
-                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Create">Create new post</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Latest"><i class="far fa-clock"></i>&ensp; Latest</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Categories"><i class="fas fa-layer-group"></i>&ensp; Categories</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Forum" asp-action="Create"><i class="fas fa-plus"></i>&ensp; Create new post</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" asp-controller="Forum" asp-action="Personal">Personal posts</a>
+                                  <a class="dropdown-item" asp-controller="Forum" asp-action="Personal"><i class="fas fa-user"></i>&ensp; Personal posts</a>
                               </div>
                           </li>
                           <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" asp-area="" asp-controller="Events" asp-action="All" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
                               <div class="dropdown-menu">
-                                  <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="All">View all</a>
-                                  <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="Create">Create new event</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="All"><i class="fas fa-globe"></i>&ensp; View all</a>
+                                  <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="Create"><i class="fas fa-plus"></i>&ensp; Create new event</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Separated link</a>
+                                  <a class="dropdown-item" href="#"><i class="far fa-calendar-check"></i>&ensp; Donate</a>
                               </div>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="News" asp-action="All">News</a>
+                              <a class="nav-link text-dark" asp-area="" asp-controller="News" asp-action="All"><i class="far fa-newspaper"></i>&nbsp;News</a>
                           </li>
 
                           <!--<li class="nav-item">-->
