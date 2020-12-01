@@ -17,7 +17,7 @@
                 @foreach (NewsOutputViewModel article in this.Model.NewsList)
                 {
                     <a href="/News/Details?id=@article.Id" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <div class="image-parent">
+                            <div class="image-parent m-4">
                                 <img src=@article.ImageSmallUrl alt="quixote">
                             </div>
                             <div class="flex-column text-info">

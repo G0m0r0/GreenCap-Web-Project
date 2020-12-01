@@ -8,10 +8,10 @@
 {
 <br />
                 <div class="card text-white bg-info active">
-                    <div class="card-header">
+                    <div class="card-header" id="@post.Id">
                         @post.CreatorName posted on @post.PostedOn
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2"> @post.DissLikes </button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2"> @post.Likes </button>
+                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
+                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">@post.ProblemTitle</h3>
@@ -20,3 +20,8 @@
                 </div>}
 
 <partial name="_PagingPartial" model="@Model" />
+
+@section Scripts
+{
+    <script src="~/js/LikesPost.js"></script>
+}
