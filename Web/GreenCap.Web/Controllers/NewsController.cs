@@ -5,11 +5,10 @@
     using GreenCap.Services;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.OutputViewModel;
-    using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
-    public class NewsController : Controller
+    public class NewsController : BaseController
     {
         private readonly IPhysNewsScarperService newsService;
         private readonly INewsService newsServiceData;

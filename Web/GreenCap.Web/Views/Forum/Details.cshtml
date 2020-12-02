@@ -1,5 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
+
+@{ this.ViewData["Title"] = "Details "; }
+
+@model PostDetailsOutputViewModel
+
+
+<div class="card text-white bg-success active">
+    <div class="card-header" id="@Model.Id">
+        <br />
+        <h1 class="text-dark">@Model.ProblemTitle</h1>
+        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(Model.Id)">@Model.DissLikes</span></button>
+        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(Model.Id)">@Model.Likes</span></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">@Html.Raw(@Model.SanitizedDescription)</p>
+        <h4 class="text-dark">
+            @Model.CreatorName posted on: @Model.PostedOn
+            <a class="btn float-right text-dark" href="/Forum/Delete?id=@Model.Id"></a>
+            <a class="btn float-right text-dark" href="/Forum/Delete?id=@Model.Id"></a>
+        </h4>
+    </div>
+</div>
+
+<form method="post" id="antiForgeryForm"></form>
+
+@section Scripts
+{
+    <script src="~/js/LikesPost.js"></script>
 }

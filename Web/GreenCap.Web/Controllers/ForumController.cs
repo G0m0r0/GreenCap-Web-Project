@@ -6,6 +6,7 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class ForumController : BaseController
@@ -17,6 +18,15 @@
             this.postService = postService;
         }
 
+        [Authorize]
+        public async Task<IActionResult> Details(int id)
+        {
+            var viewModel = await this.postService.GetByIdAsync<PostDetailsOutputViewModel>(id);
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
         public IActionResult Personal(int id = 1)
         {
             if (id <= 0)
@@ -39,6 +49,7 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
         [Route("Forum/Latest")]
         public IActionResult All(int id = 1)
         {
@@ -61,7 +72,8 @@
             return this.View(viewModel);
         }
 
-        public IActionResult Categories(int id = 1, string categoryName = "General")
+        [Authorize]
+        public IActionResult Categories(int id = 1)
         {
             if (id <= 0)
             {
@@ -81,12 +93,14 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             return this.View();
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(PostInputViewModel proposal)
         {
             if (!this.ModelState.IsValid)

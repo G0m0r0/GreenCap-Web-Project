@@ -16,7 +16,6 @@
         [Required]
         [MinLength(DataValidation.Post.DescriptionMinLength)]
         [MaxLength(DataValidation.Post.DescriptionMaxLength)]
-        [RegularExpression("[A-Z][^_]+", ErrorMessage = "Description should start with upper letter.")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 

@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "GreenCap.Services/1.0.0": {
         "dependencies": {
-          "AngleSharp": "1.0.0-alpha-844",
+          "AngleSharp": "0.14.0",
           "GreenCap.Data.Models": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.261"
         },
@@ -17,14 +17,14 @@
           "GreenCap.Services.dll": {}
         }
       },
-      "AngleSharp/1.0.0-alpha-844": {
+      "AngleSharp/0.14.0": {
         "dependencies": {
           "System.Text.Encoding.CodePages": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/AngleSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
           }
         }
       },
@@ -376,12 +376,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AngleSharp/1.0.0-alpha-844": {
+    "AngleSharp/0.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gQ/S3ZClscQJvFpyc8pRa75cRDMolqJ1TjIrRii9REPwI8w4hVGPM9Bdx+ONBnj56HFmCUAzLKSi+KUIFohXjA==",
-      "path": "anglesharp/1.0.0-alpha-844",
-      "hashPath": "anglesharp.1.0.0-alpha-844.nupkg.sha512"
+      "sha512": "sha512-34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
+      "path": "anglesharp/0.14.0",
+      "hashPath": "anglesharp.0.14.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.0": {
       "type": "package",

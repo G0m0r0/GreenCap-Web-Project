@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3WXN+OR7/siLAY+wJeTw2b2J8x+E5B7e6CS4dLpLhiszOfGwl8ARRa696mCIPOPtNhUm2we08thsmYqtyXGSgg==",
+  "dgSpecHash": "fjX//MlvxKl3EREOjtsZEGNQuffRhg+k2+t7rYDZUw/SRk3PnG23DLavHNd42KJGq/03U6C0ykEut/PxkAF8qg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Services\\GreenCap.Services\\GreenCap.Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp\\1.0.0-alpha-844\\anglesharp.1.0.0-alpha-844.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",

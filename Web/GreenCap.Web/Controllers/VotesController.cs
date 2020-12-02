@@ -11,7 +11,7 @@
 
     [ApiController]
     [Route("api/[controller]")]
-    public class VotesController : Controller
+    public class VotesController : BaseController
     {
         private readonly IVotesService votesService;
 

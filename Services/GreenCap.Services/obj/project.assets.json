@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "AngleSharp/1.0.0-alpha-844": {
+      "AngleSharp/0.14.0": {
         "type": "package",
         "dependencies": {
           "System.Text.Encoding.CodePages": "4.5.0"
@@ -412,14 +412,14 @@
     }
   },
   "libraries": {
-    "AngleSharp/1.0.0-alpha-844": {
-      "sha512": "gQ/S3ZClscQJvFpyc8pRa75cRDMolqJ1TjIrRii9REPwI8w4hVGPM9Bdx+ONBnj56HFmCUAzLKSi+KUIFohXjA==",
+    "AngleSharp/0.14.0": {
+      "sha512": "34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
       "type": "package",
-      "path": "anglesharp/1.0.0-alpha-844",
+      "path": "anglesharp/0.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "anglesharp.1.0.0-alpha-844.nupkg.sha512",
+        "anglesharp.0.14.0.nupkg.sha512",
         "anglesharp.nuspec",
         "lib/net46/AngleSharp.dll",
         "lib/net46/AngleSharp.xml",
@@ -1227,7 +1227,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "AngleSharp >= 1.0.0-alpha-844",
+      "AngleSharp >= 0.14.0",
       "GreenCap.Data.Models >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.261"
     ]
@@ -1285,7 +1285,7 @@
         "dependencies": {
           "AngleSharp": {
             "target": "Package",
-            "version": "[1.0.0-alpha-844, )"
+            "version": "[0.14.0, )"
           },
           "StyleCop.Analyzers": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",

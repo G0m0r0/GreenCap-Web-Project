@@ -7,6 +7,7 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
 
@@ -42,11 +43,13 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             return this.View();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(ProposalViewModel proposal)
         {
@@ -78,6 +81,7 @@
             return this.View(model);
         }
 
+        [Authorize]
         public IActionResult Personal(int id = 1)
         {
             if (id <= 0)
@@ -100,6 +104,7 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);

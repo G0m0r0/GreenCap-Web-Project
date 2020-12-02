@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "q8USz40sloBF2FdUb/dGHR8ASPyJKx7aVj2E15YDSI1M360W0UWn3r/YWJ4lKRckzxoeo20KSF61YGv0Op2hFg==",
+  "dgSpecHash": "ckEI/utStR8uQ0bvtXJmK10MD3bUyCwA/i4vhcVmNFphvwn0SgT3KcpMzMNsJnMuGeSUmCYWNxE9J9BczK+jIA==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\GreenCap.Services.Data.Tests\\GreenCap.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp.css\\0.14.2\\anglesharp.css.0.14.2.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\htmlsanitizer\\5.0.355\\htmlsanitizer.5.0.355.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",

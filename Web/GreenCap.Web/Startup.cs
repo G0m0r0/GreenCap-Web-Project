@@ -14,7 +14,6 @@
     using GreenCap.Services.Mapping;
     using GreenCap.Services.Messaging;
     using GreenCap.Web.ViewModels;
-    using Hangfire;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "PajYNZ6Ql4G00WW03SGWsrBBb2Ye2FZVkHbG9oQ7TPxgCsaR+gO80HGQHxqLOy81IWD0Hlwgu/sIMa5rxh3vIw==",
+  "dgSpecHash": "+wdSeRx27yMUMwnW0PyaHq29lRrgz/cn4XMVvvKDm0t/4Sb9njtc/UBflUavE04K96F8omsY38rKk28v9aiyRg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\SoftUni-Web-Project\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp\\1.0.0-alpha-844\\anglesharp.1.0.0-alpha-844.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\anglesharp.css\\0.14.2\\anglesharp.css.0.14.2.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\commandlineparser\\2.9.0-preview1\\commandlineparser.2.9.0-preview1.nupkg.sha512",
+    "C:\\Users\\dimit\\.nuget\\packages\\htmlsanitizer\\5.0.355\\htmlsanitizer.5.0.355.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
     "C:\\Users\\dimit\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",

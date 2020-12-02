@@ -11,8 +11,7 @@
 
     [ApiController]
     [Route("api/[controller]")]
-    [IgnoreAntiforgeryToken]
-    public class LikesController : Controller
+    public class LikesController : BaseController
     {
         private readonly ILikeService likeService;
 
