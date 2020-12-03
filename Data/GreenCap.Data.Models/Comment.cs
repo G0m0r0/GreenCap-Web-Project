@@ -13,6 +13,11 @@
         [MaxLength(DataValidation.Comment.ContentLength)]
         public string Content { get; set; }
 
+        public virtual Comment Parent { get; set; }
+
+        [ForeignKey(nameof(Parent))]
+        public int? ParentId { get; set; }
+
         public virtual Post Post { get; set; }
 
         [ForeignKey(nameof(Post))]

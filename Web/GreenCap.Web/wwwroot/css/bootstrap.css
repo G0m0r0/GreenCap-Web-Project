@@ -10538,3 +10538,10 @@ a.text-dark:hover, a.text-dark:focus {
 .alert-light .alert-link {
   color: #002b36;
 }
+
+.avatar {
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    border-radius: 10%;
+}

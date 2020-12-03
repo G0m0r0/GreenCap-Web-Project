@@ -89,6 +89,7 @@
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<ILikeService, PostLikeService>();
             services.AddTransient<IVotesService, VotesService>();
+            services.AddTransient<ICommentsService, CommentsService>();
 
             // services.AddHangfire(x=>x.sql);
         }

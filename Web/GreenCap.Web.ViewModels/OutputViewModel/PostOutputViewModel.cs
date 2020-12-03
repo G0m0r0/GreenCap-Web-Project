@@ -1,5 +1,6 @@
 ﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Net;
     using System.Text.RegularExpressions;
@@ -41,6 +42,8 @@
         public int DissLikes { get; set; }
 
         public string CommentsCount { get; set; }
+
+        public IEnumerable<PostCommentsOutputViewModel> Comments { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
         {

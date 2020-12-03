@@ -12,7 +12,7 @@
 
         public static class Comment
         {
-            public const ushort ContentLength = 500;
+            public const int ContentLength = 50_000;
         }
 
         public static class Proposal
@@ -26,7 +26,7 @@
 
         public static class Post
         {
-            public const ushort DescriptionMaxLength = 20_000;
+            public const ushort DescriptionMaxLength = 50_000;
             public const byte DescriptionMinLength = 10;
             public const byte ShortDescriptionMaxLength = 200;
             public const byte ShortDescriptionMinLength = 0;

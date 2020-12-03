@@ -10,8 +10,8 @@
                 <div class="card text-white bg-info active">
                     <div class="card-header" id="@post.Id">
                         <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
+                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0">&nbsp;<span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
+                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1">&nbsp;<span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
                         <p class="card-text">@post.ShortDescription</p>

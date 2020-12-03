@@ -11,8 +11,15 @@
         }
 
         [Authorize]
+        [HttpPost]
         public IActionResult Create()
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+
             return this.View();
         }
     }
