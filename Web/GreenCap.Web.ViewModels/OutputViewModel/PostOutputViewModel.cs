@@ -6,6 +6,7 @@
     using System.Text.RegularExpressions;
 
     using AutoMapper;
+    using Ganss.XSS;
     using GreenCap.Data.Common;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
@@ -17,6 +18,8 @@
         public string ProblemTitle { get; set; }
 
         public string Description { get; set; }
+
+        public string UserEmail { get; set; }
 
         public string ShortDescription
         {
@@ -30,6 +33,8 @@
                        : description;
             }
         }
+
+        public string ShortDescriptionSanitized => new HtmlSanitizer().Sanitize(this.ShortDescription);
 
         public string CreatorName { get; set; }
 

@@ -1,10 +1,13 @@
 ﻿namespace GreenCap.Services.Data
 {
+    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
+    using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using Microsoft.EntityFrameworkCore;
 
     public class CommentsService : ICommentsService
     {
@@ -29,9 +32,27 @@
             await this.commentsDb.SaveChangesAsync();
         }
 
-        public Task DeleteByIdAsync(int id)
+        public async Task<int> DeleteByIdAsync(int id, string userId)
         {
-            throw new System.NotImplementedException();
+            var modelToDelete = await this.commentsDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (modelToDelete.UserId != userId)
+            {
+                throw new NullReferenceException(ExceptionMessages.YouCanDeleteOnlyYourOwnCommentsException);
+            }
+
+            if (modelToDelete == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.CommentNotFound);
+            }
+
+            modelToDelete.IsDeleted = true;
+            modelToDelete.DeletedOn = DateTime.UtcNow;
+            this.commentsDb.Update(modelToDelete);
+
+            await this.commentsDb.SaveChangesAsync();
+
+            return modelToDelete.PostId;
         }
 
         public bool IsInPostId(int commentId, int postId)

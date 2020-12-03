@@ -30,20 +30,20 @@
                         <div class="text-muted small ml-3">
                             @if (this.User.Identity.IsAuthenticated)
                             {
-                                <button type="button" class="btn btn-secondary btn-sm" onclick="showAddCommentForm(@comment.Id)"><i class="fa fa-plus"></i>&nbsp; click to answer</button>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="showAddCommentForm(@comment.Id)"><i class="fa fa-plus"></i>&nbsp; click to answer</button>
+                        <div class="container">
 
-                                <div class="container">
-                                    <a class="btn btn-secondary float-right text-dark btn-sm m-1" href="/Comments/Edit?id=@Model.Id">Edit</a>
-                                    <a class="btn btn-danger float-right text-dark btn-sm m-1" href="/Comments/Delete?id=@Model.Id">Delete</a>
-                                </div>}
-                        </div>
+                            @if (comment.UserEmail == this.User.Identity.Name)
+                            {
+                            <a class="btn btn-secondary float-right text-dark btn-sm m-1" href="/Comments/Edit?id=@comment.Id">Edit</a>
+                            <a class="btn btn-danger float-right text-dark btn-sm m-1" href="/Comments/Delete?id=@comment.Id">Delete</a>
+                            }
+                        </div>}
+                                                                    </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="container">
-                        <a class="btn btn-secondary float-right text-dark btn-sm m-1" href="/Comments/Edit?id=@Model.Id">Edit</a>
-                        <a class="btn btn-danger float-right text-dark btn-sm m-1" href="/Comments/Delete?id=@Model.Id">Delete</a>
-                    </div>
+                    
                     <article>
                         @Html.Raw(comment.SanitizedContent)
                     </article>
@@ -72,15 +72,27 @@
         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-2 btn-lg" data-vote="1">&nbsp;&nbsp;<span id="likesValue_@(Model.Id)">@Model.Likes</span></button>
     </div>
     <div class="card-body">
-        <p class="text-dark">@Html.Raw(@Model.SanitizedDescription)</p>
+        <p class="text-light">@Html.Raw(@Model.SanitizedDescription)</p>
         <h4 class="text-success">Posted by: @Model.CreatorName on @Model.PostedOn</h4>
         <br />
-        <a class="btn btn-danger float-left text-dark btn-lg m-1" href="/Forum/Delete?id=@Model.Id">Delete</a>
-        <a class="btn btn-secondary float-left text-dark btn-lg m-1" href="/Forum/Edit?id=@Model.Id">Edit</a>
-        <button type="button" class="btn btn-info float-right btn-lg" onclick="showAddCommentForm(0)">Comment (@Model.CommentsCount)</button>
+        @if (Model.UserEmail == this.User.Identity.Name)
+        {
+            <a class="btn btn-danger float-left text-dark btn-lg m-1" href="/Forum/Delete?id=@Model.Id">Delete</a>
+           <a class="btn btn-secondary float-left text-dark btn-lg m-1" href="/Forum/Edit?id=@Model.Id">Edit</a>
+        }
+        @if(this.User.Identity.IsAuthenticated)
+        {
+                <button type="button" class="btn btn-info float-right btn-lg" onclick="showAddCommentForm(0)">Comment (@Model.CommentsCount)</button>
+        }        
     </div>
     <hr />
-    <h5 class="text-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All comments:</h5>
+    @if (Model.Comments.Count == 0)
+    {
+<h5 class="text-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will be the first one to comment!</h5> }
+            else
+            {
+                <h5 class="text-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All comments:</h5>
+            }
     <div class="card-body">
         @{ DisplayComments(null); }
     </div>

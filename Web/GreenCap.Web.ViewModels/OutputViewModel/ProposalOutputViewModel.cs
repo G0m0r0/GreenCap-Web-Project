@@ -18,6 +18,8 @@
 
         public string ImageUrl { get; set; }
 
+        public string UserEmail { get; set; }
+
         public string CreatedByName { get; set; }
 
         // public string CreatedOn { get; set; }
@@ -30,7 +32,7 @@
                 .ForMember(x => x.CreatedOn, opt =>
                   opt.MapFrom(x => x.CreatedOn.ToLocalTime().ToString("dd / MMM / yyyy")))
                 .ForMember(x => x.CreatedByName, opt =>
-                  opt.MapFrom(x => x.User.UserName));
+                  opt.MapFrom(x => x.User.UserName.Split('@', System.StringSplitOptions.RemoveEmptyEntries)[0]));
         }
     }
 }

@@ -6,6 +6,7 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http.Extensions;
     using Microsoft.AspNetCore.Mvc;
 
     public class CommentsController : Controller
@@ -35,6 +36,18 @@
             await this.commentsService.CreateAsync(model.PostId, userId, model.Content, parentId);
 
             return this.RedirectToAction("Details", "Forum", new { id = model.PostId });
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var postId = await this.commentsService.DeleteByIdAsync(id, userId);
+
+            string url = this.Request.GetDisplayUrl();
+
+            return this.RedirectToAction("Details", "Forum", new { id = postId });
         }
     }
 }

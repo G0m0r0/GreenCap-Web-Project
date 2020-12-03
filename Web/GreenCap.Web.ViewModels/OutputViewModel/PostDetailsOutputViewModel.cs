@@ -28,6 +28,8 @@
 
         public int DissLikes { get; set; }
 
+        public string UserEmail { get; set; }
+
         public ICollection<PostCommentsOutputViewModel> Comments { get; set; }
 
         public string CommentsCount { get; set; }

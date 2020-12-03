@@ -1,5 +1,6 @@
 ﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
+    using System.Collections.Generic;
     using System.Linq;
 
     using AutoMapper;
@@ -16,7 +17,7 @@
 
         public string CreatedOn { get; set; }
 
-        public string Image { get; set; }
+        public List<string> Images { get; set; }
 
         public string CreatedByName { get; set; }
 
@@ -26,11 +27,11 @@
 
         public double AverageVote { get; set; }
 
+        public string UserEmail { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Proposal, ProposalDetailsOutputViewModel>()
-                .ForMember(x => x.Image, opt =>
-                    opt.MapFrom(x => "/Images/Proposals/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension))
                 .ForMember(x => x.CreatedOn, opt =>
                   opt.MapFrom(x => x.CreatedOn.ToLocalTime().ToString("dd / MMM / yyyy")))
                 .ForMember(x => x.CreatedByName, opt =>
@@ -38,7 +39,9 @@
                 .ForMember(x => x.ModifiedOn, opt =>
                    opt.MapFrom(x => (x.ModifiedOn == null) ? "Never modified" : x.ModifiedOn.ToString()))
                 .ForMember(x => x.AverageVote, opt =>
-                    opt.MapFrom(x => x.Votes.Count() == 0 ? 0 : x.Votes.Average(v => v.Value)));
+                    opt.MapFrom(x => x.Votes.Count() == 0 ? 0 : x.Votes.Average(v => v.Value)))
+                .ForMember(x => x.Images, opt =>
+                  opt.MapFrom(x => x.Images.Select(y => "/Images/Proposals/" + y.Id + "." + y.Extension).ToList()));
 
             // x => "/Images/Proposals/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension
         }

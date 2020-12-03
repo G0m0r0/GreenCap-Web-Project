@@ -19,6 +19,8 @@
 
         public string CreatorName { get; set; }
 
+        public string UserEmail { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Comment, PostCommentsOutputViewModel>()

@@ -42,7 +42,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
@@ -69,7 +69,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
@@ -94,7 +94,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
@@ -119,7 +119,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
@@ -144,7 +144,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
@@ -169,7 +169,7 @@
                         <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@post.ShortDescription</p>
+                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
                         <h4 class="text-dark">
                             @post.CreatorName posted on: @post.PostedOn
                             <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">

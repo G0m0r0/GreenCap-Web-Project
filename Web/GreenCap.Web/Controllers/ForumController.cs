@@ -117,5 +117,15 @@
 
             return this.Redirect("Categories");
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await this.postService.DeleteByIdAsync(id, userId);
+
+            return this.Redirect("Categories");
+        }
     }
 }

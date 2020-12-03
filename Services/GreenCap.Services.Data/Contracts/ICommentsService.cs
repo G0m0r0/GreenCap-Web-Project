@@ -8,6 +8,6 @@
 
         bool IsInPostId(int commentId, int postId);
 
-        Task DeleteByIdAsync(int id);
+        Task<int> DeleteByIdAsync(int id, string userId);
     }
 }
