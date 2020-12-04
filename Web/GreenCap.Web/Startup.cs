@@ -19,6 +19,7 @@
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Caching.Distributed;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
@@ -40,6 +41,13 @@
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
+           // services.AddMemoryCache();
+           // services.AddDistributedSqlServerCache(opt =>
+           // {
+           //     opt.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
+           //     opt.SchemaName = "dbo";
+           //     opt.TableName = "CacheRecords";
+           // });
             if (this.environment.IsDevelopment())
             {
                 services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsDevelopment)

@@ -1,0 +1,17 @@
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
+@model PostOutputViewModel
+<div class="card-header" id="@Model.Id">
+
+    <u><a href="/Forum/Details?id=@Model.Id" class="text-dark">@Model.ProblemTitle</a></u>
+    <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(Model.Id)">@Model.DissLikes</span></button>
+    <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(Model.Id)">@Model.Likes</span></button>
+</div>
+<div class="card-body">
+    <p class="card-text">@Html.Raw(Model.ShortDescriptionSanitized)</p>
+    <h4 class="text-dark">
+        @Model.CreatorName posted on: @Model.PostedOn
+        <a class="btn float-right text-dark" href="/Forum/Details?id=@Model.Id">
+            <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @Model.CommentsCount
+        </a>
+    </h4>
+</div>

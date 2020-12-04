@@ -1,29 +1,39 @@
 ﻿namespace GreenCap.Data.Seeding
 {
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using GreenCap.Common;
     using GreenCap.Data.Models;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.Extensions.DependencyInjection;
 
     public class UserSeeder : ISeeder
     {
-        public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
+        public static async Task SeedAdminAsync(UserManager<ApplicationUser> userManager)
         {
-            if (dbContext.Users.Any(x => x.Email == GlobalConstants.AdministratorEmail))
+            var admin = await userManager.FindByEmailAsync(GlobalConstants.AdministratorEmail);
+
+            if (admin != null)
             {
                 return;
             }
 
-            await dbContext.Users.AddAsync(new ApplicationUser
+            var user = new ApplicationUser
             {
+                UserName = GlobalConstants.AdministratorEmail,
                 Email = GlobalConstants.AdministratorEmail,
-                PasswordHash = "AQAAAAEAACcQAAAAEKkutl9vhu94KUBRtm1JMUiazYxLtFNyizHhKLJRBeMMkFD/IX41z6K1OpdUMRb5QA==",
-                NormalizedEmail = GlobalConstants.AdministratorEmail.ToUpper(),
-                UserName = GlobalConstants.AdministatorName,
-                NormalizedUserName = GlobalConstants.AdministatorName.ToUpper(),
-            });
+            };
+
+            await userManager.CreateAsync(user, GlobalConstants.AdministratorPassword);
+            await userManager.AddToRoleAsync(user, GlobalConstants.AdministratorRoleName);
+        }
+
+        public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
+        {
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            await SeedAdminAsync(userManager);
         }
     }
 }

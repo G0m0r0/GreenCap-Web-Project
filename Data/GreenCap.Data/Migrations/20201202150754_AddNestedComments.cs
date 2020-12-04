@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace GreenCap.Data.Migrations
+﻿namespace GreenCap.Data.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class AddNestedComments : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

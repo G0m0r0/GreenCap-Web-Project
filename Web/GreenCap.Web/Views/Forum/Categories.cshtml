@@ -1,7 +1,7 @@
 ﻿@using GreenCap.Web.ViewModels.OutputViewModel
 @using GreenCap.Data.Models.Enums
 @{
-    this.ViewData["Title"] = "Forum category " + Model.PageNumber;
+    this.ViewData["Title"] = "Forum category ";
 }
 
 @model PostsListOutputViewModel
@@ -36,20 +36,7 @@
             {
                 <br />
                 <div class="card text-white bg-success active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }
@@ -63,20 +50,7 @@
             {
                 <br />
                 <div class="card text-white bg-danger active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }
@@ -88,20 +62,7 @@
             {
                 <br />
                 <div class="card text-white bg-secondary active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }
@@ -113,20 +74,7 @@
             {
                 <br />
                 <div class="card text-white bg-warning active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }
@@ -138,20 +86,7 @@
             {
                 <br />
                 <div class="card text-white bg-info active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }
@@ -163,20 +98,7 @@
             {
                 <br />
                 <div class="card text-white bg-primary active">
-                    <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>
-                        <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0"><span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>
-                        <button type="button" class="btn btn-success fas fa-thumbs-up float-right p-xl-2 m-1" data-vote="1"><span id="likesValue_@(post.Id)">@post.Likes</span></button>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Html.Raw(post.ShortDescriptionSanitized)</p>
-                        <h4 class="text-dark">
-                            @post.CreatorName posted on: @post.PostedOn
-                            <a class="btn float-right text-dark" href="/Forum/Details?id=@post.Id">
-                                <i class="fas fa-info-circle"></i>&nbsp; Comments:&nbsp; @post.CommentsCount
-                            </a>
-                        </h4>
-                    </div>
+                    <partial name="_CategoriesPartial" model="@post" />
                 </div>
             }
         }

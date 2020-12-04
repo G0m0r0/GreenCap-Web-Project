@@ -12,8 +12,7 @@
 
         public const string AdministratorPhoneNumber = "+359887967927";
 
-        // @Aa123.
-        public const string AdministratorPasswordHash = "AQAAAAEAACcQAAAAEKkutl9vhu94KUBRtm1JMUiazYxLtFNyizHhKLJRBeMMkFD/IX41z6K1OpdUMRb5QA==";
+        public const string AdministratorPassword = "@Aa123.";
 
         public const string DateTimeFormat = "dd/MMM/yyyy";
     }

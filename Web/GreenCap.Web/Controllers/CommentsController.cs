@@ -45,8 +45,6 @@
 
             var postId = await this.commentsService.DeleteByIdAsync(id, userId);
 
-            string url = this.Request.GetDisplayUrl();
-
             return this.RedirectToAction("Details", "Forum", new { id = postId });
         }
     }
