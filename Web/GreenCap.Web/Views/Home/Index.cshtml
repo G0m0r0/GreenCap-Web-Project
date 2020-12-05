@@ -76,6 +76,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <script>
         var monthActivity;
         $(document).ready(function () {
@@ -89,7 +90,7 @@
                 },
             }).then();
 
-            function chart(dataObject ) {
+            function chart(dataObject) {
                 var data = dataObject.monthsActivity;
                 var currentYear = new Date().getFullYear()
 
@@ -129,7 +130,7 @@
                         }
                     },
                     series: [{
-                        name: "Activity for " + currentYear, 
+                        name: "Activity for " + currentYear,
                         data: [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11]],
                     }]
                 });
