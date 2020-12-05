@@ -1,4 +1,6 @@
-﻿Highcharts.chart('container', {
+﻿
+
+Highcharts.chart('container', {
     chart: {
         type: 'column',
         options3d: {
@@ -9,10 +11,10 @@
         }
     },
     title: {
-        text: '3D chart with null values'
+        text: 'Montly users activity'
     },
     subtitle: {
-        text: 'Notice the difference between a 0 value and a null point'
+        text: 'Become even green by participating in the site!'
     },
     plotOptions: {
         column: {
@@ -34,7 +36,7 @@
         }
     },
     series: [{
-        name: 'Sales',
+        name: 'Activity',
         data: [2, 3, null, 4, 0, 5, 1, 4, 6, 3]
     }]
 });

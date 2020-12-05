@@ -1,14 +1,16 @@
 ﻿@using GreenCap.Common
-@model GreenCap.Web.ViewModels.OutputViewModel.HomeStatisticsOutputViewModel
+@using GreenCap.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using GreenCap.Web.ViewModels.OutputViewModel
+@model HomeStatisticsOutputViewModel
+@inject SignInManager<ApplicationUser> SignInManager
 
-@{ 
-    this.ViewData["Title"] = "Home Page"; 
-}
+@{ this.ViewData["Title"] = "Home Page"; }
 
 
 @section Styles
 {
-            <link rel="stylesheet" href="~/css/HighCharts.css" />
+    <link rel="stylesheet" href="~/css/HighCharts.css" />
 }
 
 
@@ -16,31 +18,42 @@
     <h1 class="display-3">Welcome to @GlobalConstants.SystemName!</h1>
     <p class="text-muted">Keep it green! </p>
 
-    <ul class="list-group display-5">
-        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
-            Total posts:
-            <span class="badge badge-primary badge-pill">@Model.PostsCount</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
-            Total proposals:
-            <span class="badge badge-primary badge-pill">@Model.ProposalsCount</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
-            Total events:
-            <span class="badge badge-primary badge-pill">@Model.EventsCount</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
-            Total users:
-            <span class="badge badge-primary badge-pill">@Model.UsersCount</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
-            Total news:
-            <span class="badge badge-primary badge-pill">@Model.NewsCount</span>
-        </li>
-    </ul>
+    @if (this.SignInManager.IsSignedIn(this.User))
+    {
+        <ul class="list-group display-5">
+            <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+                Total posts:
+                <span class="badge badge-primary badge-pill">@Model.PostsCount</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+                Total proposals:
+                <span class="badge badge-primary badge-pill">@Model.ProposalsCount</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+                Total events:
+                <span class="badge badge-primary badge-pill">@Model.EventsCount</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+                Total users:
+                <span class="badge badge-primary badge-pill">@Model.UsersCount</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center col-md-4">
+                Total news:
+                <span class="badge badge-primary badge-pill">@Model.NewsCount</span>
+            </li>
+        </ul>
+    }
 
     <hr class="my-4">
-    <p class="text-muted">Prepare yourself to join our family and to become even more environmental friendly than before. You can share your creative ideas or to discuss a problem in the forum. It's up to you!</p>
+    @if (this.SignInManager.IsSignedIn(this.User))
+    {
+        <p class="text-muted">Share your creative idea <a asp-controller="Proposals" asp-action="Create">here</a>, create new post in the <a asp-controller="Forum" asp-action="Create">forum</a> or join upcoming <a asp-controller="Events" asp-action="All">event</a>! <br />It's up to you!</p>
+    }
+    else
+    {
+        <p class="text-muted">Prepare yourself to join our family and to become even more environmental friendly than before. You can share your creative ideas or to discuss a problem in the forum. It's up to you!</p>
+        <br />
+    }
     <p class="lead">
         <a class="btn btn-info btn-lg" asp-controller="News" asp-action="All" role="button">Check latest news!</a>
     </p>
@@ -48,18 +61,79 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            Chart designed to show the difference between 0 and null in a 3D column
-            chart. A null point represents missing data, while 0 is a valid value.
+            Look at our web site activite, join us to make it even heigher!
         </p>
     </figure>
 </div>
 
+<form method="post" id="antiForgeryForm"></form>
+
 @section Scripts
 {
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="~/js/HighCharts.js"></script>
+    <script>
+        var monthActivity;
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/chart",
+                dataType: 'json',
+                success: function (data) {
+                    chart(data);
+
+                },
+            }).then();
+
+            function chart(dataObject ) {
+                var data = dataObject.monthsActivity;
+                var currentYear = new Date().getFullYear()
+
+                Highcharts.chart('container', {
+                    chart: {
+                        type: 'column',
+                        options3d: {
+                            enabled: true,
+                            alpha: 10,
+                            beta: 20,
+                            depth: 90
+                        }
+                    },
+                    title: {
+                        text: 'Montly users activity'
+                    },
+                    subtitle: {
+                        text: 'Become even green by participating in the site!'
+                    },
+                    plotOptions: {
+                        column: {
+                            depth: 50
+                        }
+                    },
+                    xAxis: {
+                        categories: Highcharts.getOptions().lang.shortMonths,
+                        labels: {
+                            skew3d: true,
+                            style: {
+                                fontSize: '16px'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: null
+                        }
+                    },
+                    series: [{
+                        name: "Activity for " + currentYear, 
+                        data: [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11]],
+                    }]
+                });
+            }
+        });
+    </script>
 }
