@@ -1,79 +1,77 @@
 ﻿@model IEnumerable<GreenCap.Data.Models.Proposal>
 
 @{
-    ViewData["Title"] = "All proposals, Admin view";
+    ViewData["Title"] = "Index";
 }
 
-<div class="jumbotron">
-    <h1 class="text-center display-3">@ViewData["Title"]</h1>
-</div>
+<h1>Index</h1>
 
 <p>
-    <a class="btn btn-success" asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New</a>
 </p>
-
-<div class="row justify-content-center">
-    <div class="col-auto">
-        <table class="table table-responsive table-striped table-dark">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Title)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Description)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.User)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IsDeleted)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.CreatedOn)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ModifiedOn)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Title)
-                            </td>
-                            <td>
-                                <div id="div_@item.Id" style="display:none">
-                                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                                </div>
-                                <button id="button_@item.Id" class="btn btn-info btn-sm" onclick="showhide(@item.Id)">Show</button>
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.User.Id)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.IsDeleted)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CreatedOn)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ModifiedOn)
-                            </td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
-                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-</div>
-
-
-<script src="~/js/Show- Hide.js"></script>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeletedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedOn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeletedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedOn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
