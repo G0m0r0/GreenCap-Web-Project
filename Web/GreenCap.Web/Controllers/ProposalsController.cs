@@ -44,6 +44,12 @@
         }
 
         [Authorize]
+        public IActionResult Edit(int id)
+        {
+            return this.View();
+        }
+
+        [Authorize]
         public IActionResult Create()
         {
             return this.View();

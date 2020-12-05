@@ -32,6 +32,12 @@
         }
 
         [Authorize]
+        public IActionResult Edit(int id)
+        {
+            return this.View();
+        }
+
+        [Authorize]
         public IActionResult Personal(int id = 1)
         {
             if (id <= 0)

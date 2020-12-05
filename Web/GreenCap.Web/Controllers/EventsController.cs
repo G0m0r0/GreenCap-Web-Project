@@ -21,5 +21,11 @@
 
             return this.View();
         }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            return this.View();
+        }
     }
 }
