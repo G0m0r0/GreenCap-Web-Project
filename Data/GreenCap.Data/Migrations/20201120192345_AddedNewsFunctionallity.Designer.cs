@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreenCap.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(IDeletableRepository))]
     [Migration("20201120192345_AddedNewsFunctionallity")]
     partial class AddedNewsFunctionallity
     {

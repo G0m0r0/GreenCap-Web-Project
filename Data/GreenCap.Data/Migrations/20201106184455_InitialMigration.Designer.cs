@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreenCap.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(IDeletableRepository))]
     [Migration("20201106184455_InitialMigration")]
     partial class InitialMigration
     {

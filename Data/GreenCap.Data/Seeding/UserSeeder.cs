@@ -29,7 +29,7 @@
             await userManager.AddToRoleAsync(user, GlobalConstants.AdministratorRoleName);
         }
 
-        public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
+        public async Task SeedAsync(IDeletableRepository dbContext, IServiceProvider serviceProvider)
         {
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 

@@ -10,7 +10,7 @@
 
     public class ImageSeeder : ISeeder
     {
-        public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
+        public async Task SeedAsync(IDeletableRepository dbContext, IServiceProvider serviceProvider)
         {
             if (dbContext.Images.Any())
             {

@@ -38,7 +38,7 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(
+            services.AddDbContext<IDeletableRepository>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
            // services.AddMemoryCache();
@@ -51,12 +51,12 @@
             if (this.environment.IsDevelopment())
             {
                 services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsDevelopment)
-                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<IDeletableRepository>();
             }
             else if (this.environment.IsProduction())
             {
                 services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsProduction)
-                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+                        .AddRoles<ApplicationRole>().AddEntityFrameworkStores<IDeletableRepository>();
             }
 
             services.Configure<CookiePolicyOptions>(
@@ -111,7 +111,7 @@
             // Seed data on application startup
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                var dbContext = serviceScope.ServiceProvider.GetRequiredService<IDeletableRepository>();
                 dbContext.Database.Migrate();
                 new ApplicationDbContextSeeder().SeedAsync(dbContext, serviceScope.ServiceProvider).GetAwaiter().GetResult();
             }

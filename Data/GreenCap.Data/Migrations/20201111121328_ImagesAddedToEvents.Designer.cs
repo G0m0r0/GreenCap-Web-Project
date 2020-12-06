@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreenCap.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(IDeletableRepository))]
     [Migration("20201111121328_ImagesAddedToEvents")]
     partial class ImagesAddedToEvents
     {

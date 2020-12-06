@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreenCap.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(IDeletableRepository))]
     [Migration("20201127120002_AddedRemoteUrlToImages")]
     partial class AddedRemoteUrlToImages
     {

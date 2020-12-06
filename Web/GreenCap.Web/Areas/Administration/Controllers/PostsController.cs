@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using GreenCap.Data;
+    using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,17 +13,19 @@
     [Area("Administration")]
     public class PostsController : AdministrationController
     {
-        private readonly ApplicationDbContext context;
+        private readonly IDeletableEntityRepository<Post> context;
+        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
 
-        public PostsController(ApplicationDbContext context)
+        public PostsController(IDeletableEntityRepository<Post> context, IDeletableEntityRepository<ApplicationUser> userDb)
         {
             this.context = context;
+            this.userDb = userDb;
         }
 
         // GET: Administration/Posts
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.context.Posts.Include(p => p.User);
+            var applicationDbContext = this.context.AllWithDeleted().Include(p => p.User);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,7 +37,7 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.Posts
+            var post = await this.context.All()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (post == null)
@@ -48,7 +51,7 @@
         // GET: Administration/Posts/Create
         public IActionResult Create()
         {
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id");
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id");
             return this.View();
         }
 
@@ -61,12 +64,12 @@
         {
             if (this.ModelState.IsValid)
             {
-                this.context.Add(post);
+                await this.context.AddAsync(post);
                 await this.context.SaveChangesAsync();
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", post.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", post.CreatedById);
             return this.View(post);
         }
 
@@ -78,13 +81,13 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.Posts.FindAsync(id);
+            var post = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
             if (post == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", post.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", post.CreatedById);
             return this.View(post);
         }
 
@@ -122,7 +125,8 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", post.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", post.CreatedById);
+
             return this.View(post);
         }
 
@@ -134,7 +138,7 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.Posts
+            var post = await this.context.All()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (post == null)
@@ -151,15 +155,15 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var post = await this.context.Posts.FindAsync(id);
-            this.context.Posts.Remove(post);
+            var post = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            this.context.Delete(post);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool PostExists(int id)
         {
-            return this.context.Posts.Any(e => e.Id == id);
+            return this.context.All().Any(e => e.Id == id);
         }
     }
 }

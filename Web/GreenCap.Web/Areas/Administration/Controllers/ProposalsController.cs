@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using GreenCap.Data;
+    using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,17 +13,19 @@
     [Area("Administration")]
     public class ProposalsController : AdministrationController
     {
-        private readonly ApplicationDbContext context;
+        private readonly IDeletableEntityRepository<Proposal> context;
+        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
 
-        public ProposalsController(ApplicationDbContext context)
+        public ProposalsController(IDeletableEntityRepository<Proposal> context, IDeletableEntityRepository<ApplicationUser> userDb)
         {
             this.context = context;
+            this.userDb = userDb;
         }
 
         // GET: Administration/Proposals
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.context.Proposals.Include(p => p.User);
+            var applicationDbContext = this.context.AllWithDeleted().Include(p => p.User);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,7 +37,7 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.Proposals
+            var proposal = await this.context.All()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (proposal == null)
@@ -48,7 +51,7 @@
         // GET: Administration/Proposals/Create
         public IActionResult Create()
         {
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id");
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id");
             return this.View();
         }
 
@@ -61,12 +64,12 @@
         {
             if (this.ModelState.IsValid)
             {
-                this.context.Add(proposal);
+                await this.context.AddAsync(proposal);
                 await this.context.SaveChangesAsync();
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -78,13 +81,13 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.Proposals.FindAsync(id);
+            var proposal = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
             if (proposal == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -122,7 +125,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.context.Users, "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -134,7 +137,7 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.Proposals
+            var proposal = await this.context.All()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (proposal == null)
@@ -151,15 +154,15 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var proposal = await this.context.Proposals.FindAsync(id);
-            this.context.Proposals.Remove(proposal);
+            var proposal = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            this.context.Delete(proposal);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool ProposalExists(int id)
         {
-            return this.context.Proposals.Any(e => e.Id == id);
+            return this.context.All().Any(e => e.Id == id);
         }
     }
 }

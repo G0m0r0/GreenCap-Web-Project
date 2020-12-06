@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using GreenCap.Data;
+    using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,17 +13,19 @@
     [Area("Administration")]
     public class NewsController : AdministrationController
     {
-        private readonly ApplicationDbContext context;
+        private readonly IDeletableEntityRepository<News> context;
+        private readonly IDeletableEntityRepository<CategoryNews> categoryNewsDb;
 
-        public NewsController(ApplicationDbContext context)
+        public NewsController(IDeletableEntityRepository<News> context, IDeletableEntityRepository<CategoryNews> categoryNewsDb)
         {
             this.context = context;
+            this.categoryNewsDb = categoryNewsDb;
         }
 
         // GET: Administration/News
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.context.News.Include(n => n.Category);
+            var applicationDbContext = this.context.AllWithDeleted().Include(n => n.Category);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,7 +37,7 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.News
+            var news = await this.context.All()
                 .Include(n => n.Category)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
@@ -48,7 +51,7 @@
         // GET: Administration/News/Create
         public IActionResult Create()
         {
-            this.ViewData["CategoryId"] = new SelectList(this.context.CategoryNews, "Id", "Name");
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name");
             return this.View();
         }
 
@@ -61,12 +64,12 @@
         {
             if (this.ModelState.IsValid)
             {
-                this.context.Add(news);
+                await this.context.AddAsync(news);
                 await this.context.SaveChangesAsync();
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.context.CategoryNews, "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -78,13 +81,13 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.News.FindAsync(id);
+            var news = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
             if (news == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.context.CategoryNews, "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -122,7 +125,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.context.CategoryNews, "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -134,7 +137,7 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.News
+            var news = await this.context.All()
                 .Include(n => n.Category)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
@@ -151,15 +154,15 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var news = await this.context.News.FindAsync(id);
-            this.context.News.Remove(news);
+            var news = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            this.context.Delete(news);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool NewsExists(int id)
         {
-            return this.context.News.Any(e => e.Id == id);
+            return this.context.All().Any(e => e.Id == id);
         }
     }
 }

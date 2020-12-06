@@ -11,7 +11,7 @@
 
     public class PostsSeed : ISeeder
     {
-        public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
+        public async Task SeedAsync(IDeletableRepository dbContext, IServiceProvider serviceProvider)
         {
             var user = await dbContext.Users.Where(x => x.Email == GlobalConstants.AdministratorEmail).FirstOrDefaultAsync();
 
