@@ -12,6 +12,7 @@
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using Microsoft.EntityFrameworkCore;
 
@@ -92,6 +93,17 @@
                 .Where(x => x.Id == id)
                 .To<T>()
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task UpdateAsync(int id, ProposalEditViewModel input)
+        {
+            var proposal = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            proposal.Title = input.Title;
+            proposal.Description = input.Description;
+            proposal.ShortDescription = input.ShortDescription;
+
+            await this.proposalDb.SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id, string userId)

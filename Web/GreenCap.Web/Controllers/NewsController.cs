@@ -2,6 +2,7 @@
 {
     using System.Threading.Tasks;
 
+    using GreenCap.Common;
     using GreenCap.Services;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.OutputViewModel;
@@ -53,10 +54,10 @@
             return this.View(model);
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Refresh()
         {
-            return this.Redirect("All");
+            return this.Redirect(nameof(this.All));
         }
     }
 }

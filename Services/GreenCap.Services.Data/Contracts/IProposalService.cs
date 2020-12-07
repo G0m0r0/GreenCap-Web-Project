@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
 
     public interface IProposalService : IBaseService
@@ -12,6 +13,8 @@
         Task CreateAsync(ProposalViewModel model, string id, string imagepath);
 
         Task DeleteByIdAsync(int id, string userId);
+
+        Task UpdateAsync(int id, ProposalEditViewModel input);
 
         int GetCount();
 

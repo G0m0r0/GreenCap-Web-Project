@@ -10,6 +10,7 @@
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
@@ -67,6 +68,17 @@
                 .Where(x => x.Id == id)
                 .To<T>()
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task UpdateAsync(int id, PostEditViewModel input)
+        {
+            var proposal = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            proposal.ProblemTitle = input.ProblemTitle;
+            proposal.Description = input.Description;
+            proposal.Category = input.Category;
+
+            await this.forumDb.SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id, string userId)

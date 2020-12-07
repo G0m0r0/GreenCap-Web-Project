@@ -5,6 +5,7 @@
     using System.Threading.Tasks;
 
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Authorization;
@@ -44,9 +45,25 @@
         }
 
         [Authorize]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            return this.View();
+            var inputModel = await this.proposalService.GetByIdAsync<ProposalEditViewModel>(id);
+
+            return this.View(inputModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, ProposalEditViewModel proposal)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            await this.proposalService.UpdateAsync(id, proposal);
+
+            return this.RedirectToAction(nameof(this.Details), new { id });
         }
 
         [Authorize]
@@ -78,7 +95,7 @@
                 return this.View(proposal);
             }
 
-            return this.Redirect("All");
+            return this.Redirect(nameof(this.All));
         }
 
         public async Task<IActionResult> Details(int id)
@@ -117,7 +134,7 @@
 
             await this.proposalService.DeleteByIdAsync(id, userId);
 
-            return this.Redirect("All");
+            return this.Redirect(nameof(this.All));
         }
     }
 }

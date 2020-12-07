@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
 
     public interface IPostservice : IBaseService
@@ -12,6 +13,8 @@
         Task CreateAsync(PostInputViewModel model, string id);
 
         Task DeleteByIdAsync(int id, string userId);
+
+        Task UpdateAsync(int id, PostEditViewModel input);
 
         int GetCount();
 
