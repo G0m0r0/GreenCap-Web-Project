@@ -2,9 +2,13 @@
 {
     using System;
     using System.Security.Claims;
+    using System.Text;
     using System.Threading.Tasks;
 
+    using GreenCap.Common;
+
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Messaging;
     using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
@@ -16,11 +20,13 @@
     {
         private readonly IProposalService proposalService;
         private readonly IWebHostEnvironment environment;
+        private readonly IEmailSender emailSender;
 
-        public ProposalsController(IProposalService proposalService, IWebHostEnvironment environment)
+        public ProposalsController(IProposalService proposalService, IWebHostEnvironment environment, IEmailSender emailSender)
         {
             this.proposalService = proposalService;
             this.environment = environment;
+            this.emailSender = emailSender;
         }
 
         public IActionResult All(int id = 1)
@@ -137,6 +143,29 @@
             await this.proposalService.DeleteByIdAsync(id, userId);
 
             return this.RedirectToAction(nameof(this.All));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SendToEmail(int id)
+        {
+            var targetEmail = this.User.FindFirstValue(ClaimTypes.Email);
+
+            var proposal = await this.proposalService.GetByIdAsync<ProposalDetailsOutputViewModel>(id);
+            var html = new StringBuilder();
+
+            html.AppendLine($"<h1>{proposal.Title}</h1>");
+            html.AppendLine($"<h3>{proposal.ShortDescription}</h3>");
+            html.AppendLine($"<img src=\"{proposal.Images}\" />");
+            html.AppendLine($"<h1>{proposal.Description}</h1>");
+
+            await this.emailSender.SendEmailAsync(
+                GlobalConstants.AdministratorEmail,
+                GlobalConstants.SystemName,
+                targetEmail,
+                proposal.Title,
+                html.ToString());
+
+            return this.RedirectToAction(nameof(this.Details), new { id });
         }
     }
 }
