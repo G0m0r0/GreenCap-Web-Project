@@ -39,6 +39,7 @@
         }
 
         [Authorize]
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);

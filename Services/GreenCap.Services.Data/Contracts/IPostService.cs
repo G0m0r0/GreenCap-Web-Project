@@ -14,7 +14,7 @@
 
         Task DeleteByIdAsync(int id, string userId);
 
-        Task UpdateAsync(int id, PostEditViewModel input);
+        Task UpdateAsync(int id, PostEditViewModel input, string userId);
 
         int GetCount();
 

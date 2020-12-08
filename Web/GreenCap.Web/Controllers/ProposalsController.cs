@@ -61,7 +61,8 @@
                 return this.View();
             }
 
-            await this.proposalService.UpdateAsync(id, proposal);
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await this.proposalService.UpdateAsync(id, proposal, userId);
 
             return this.RedirectToAction(nameof(this.Details), new { id });
         }
@@ -128,13 +129,14 @@
         }
 
         [Authorize]
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await this.proposalService.DeleteByIdAsync(id, userId);
 
-            return this.Redirect(nameof(this.All));
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

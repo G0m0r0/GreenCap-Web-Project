@@ -95,9 +95,19 @@
                 .FirstOrDefaultAsync();
         }
 
-        public async Task UpdateAsync(int id, ProposalEditViewModel input)
+        public async Task UpdateAsync(int id, ProposalEditViewModel input, string userId)
         {
             var proposal = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (proposal.User.Id != userId)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, proposal.Title));
+            }
+
+            if (proposal == null)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.ProposalNotFound));
+            }
 
             proposal.Title = input.Title;
             proposal.Description = input.Description;
@@ -120,9 +130,7 @@
                 throw new NullReferenceException(string.Format(ExceptionMessages.ProposalNotFound));
             }
 
-            modelToDelete.IsDeleted = true;
-            modelToDelete.DeletedOn = DateTime.UtcNow;
-            this.proposalDb.Update(modelToDelete);
+            this.proposalDb.Delete(modelToDelete);
 
             await this.proposalDb.SaveChangesAsync();
         }

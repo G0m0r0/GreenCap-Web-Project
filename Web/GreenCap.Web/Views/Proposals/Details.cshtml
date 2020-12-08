@@ -1,5 +1,8 @@
-﻿@using GreenCap.Web.ViewModels.OutputViewModel
+﻿@using GreenCap.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using GreenCap.Web.ViewModels.OutputViewModel
 @model ProposalDetailsOutputViewModel
+@inject SignInManager<ApplicationUser> SignInManager
 
 @{ this.ViewData["Title"] = "Details"; }
 <div class="jumbotron">
@@ -12,7 +15,8 @@
         <ol class="carousel-indicators">
             @for (int i = 0; i < Model.Images.Count; i++)
             {
-<li data-target="#carousel-example-2" data-slide-to="@i" class="active"></li>}
+                <li data-target="#carousel-example-2" data-slide-to="@i" class="active"></li>
+            }
 
         </ol>
         <!--/.Indicators-->
@@ -20,49 +24,49 @@
         <div class="carousel-inner" role="listbox">
             @if (Model.Images.Count >= 1)
             {
-<div class="carousel-item active">
-    <div class="view">
-        <img class="rounded mx-auto d-block" src="@Model.Images[0]"
-             alt="First slide">
-        <div class="mask rgba-black-light"></div>
-    </div>
-</div>}
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="rounded mx-auto d-block" src="@Model.Images[0]"
+                             alt="First slide">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                </div>}
 
             @if (Model.Images.Count >= 2)
             {
-<div class="carousel-item">
-    <!--Mask color-->
-    <div class="view">
-        <img class="rounded mx-auto d-block" src="@Model.Images[1]"
-             alt="Second slide">
-        <div class="mask rgba-black-strong"></div>
-    </div>
-</div>}
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="rounded mx-auto d-block" src="@Model.Images[1]"
+                             alt="Second slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                </div>}
 
             @if (Model.Images.Count >= 3)
             {
-<div class="carousel-item">
-    <!--Mask color-->
-    <div class="view">
-        <img class="rounded mx-auto d-block" src="@Model.Images[2]"
-             alt="Third slide">
-        <div class="mask rgba-black-slight"></div>
-    </div>
-</div>      }
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="rounded mx-auto d-block" src="@Model.Images[2]"
+                             alt="Third slide">
+                        <div class="mask rgba-black-slight"></div>
+                    </div>
+                </div>      }
 
         </div>
         <!--/.Slides-->
         <!--Controls-->
         @if (Model.Images.Count > 1)
         {
-<a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-</a>
-                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>}
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>}
 
         <!--/.Controls-->
     </div>
@@ -94,11 +98,24 @@
         <a class="btn btn-info btn-lg" asp-action="ALL">Back to List</a>
         @if (Model.UserEmail == this.User.Identity.Name)
         {
-            <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a>
-            <a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>
+            <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a> <!--<a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>-->}
+
+        @if (this.SignInManager.IsSignedIn(this.User))
+        {
+            <button class="btn btn-primary btn-lg" onclick="window.print()">Print</button>
+
+            <form method="post" class="float-right m-1" asp-action="SendToEmail" asp-route-id="@Model.Id">
+                <button class="btn btn-warning btn-lg">Send to my email</button>
+            </form>
+            @if (Model.UserEmail == this.User.Identity.Name)
+            {
+                <form method="post" class="float-right m-1" asp-controller="Proposals" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
+                    <button class="btn btn-danger float-right btn-lg" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                </form>
+            }
         }
     </p>
-    </div>
+</div>
 
 <form method="post" id="antiForgeryForm"></form>
 
@@ -133,4 +150,3 @@
         });
     </script>
 }
-

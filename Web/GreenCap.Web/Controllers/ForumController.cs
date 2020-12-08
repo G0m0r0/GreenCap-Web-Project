@@ -49,7 +49,8 @@
                 return this.View();
             }
 
-            await this.postService.UpdateAsync(id, post);
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await this.postService.UpdateAsync(id, post, userId);
 
             return this.RedirectToAction(nameof(this.Details), new { id });
         }
@@ -138,9 +139,10 @@
 
             await this.postService.CreateAsync(proposal, this.User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            return this.Redirect(nameof(this.Categories));
+            return this.RedirectToAction(nameof(this.Categories));
         }
 
+        [HttpPost]
         [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
@@ -148,7 +150,7 @@
 
             await this.postService.DeleteByIdAsync(id, userId);
 
-            return this.Redirect(nameof(this.Categories));
+            return this.RedirectToAction(nameof(this.Categories));
         }
     }
 }

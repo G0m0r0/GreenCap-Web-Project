@@ -27,6 +27,7 @@
         {
             var vote = this.votesRepository.All()
                 .FirstOrDefault(x => x.ProposalId == proposalId && x.UserId == userId);
+
             if (vote == null)
             {
                 vote = new Vote

@@ -46,10 +46,7 @@
                 throw new NullReferenceException(ExceptionMessages.CommentNotFound);
             }
 
-            modelToDelete.IsDeleted = true;
-            modelToDelete.DeletedOn = DateTime.UtcNow;
-            this.commentsDb.Update(modelToDelete);
-
+            this.commentsDb.Delete(modelToDelete);
             await this.commentsDb.SaveChangesAsync();
 
             return modelToDelete.PostId;

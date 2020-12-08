@@ -57,7 +57,7 @@
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Refresh()
         {
-            return this.Redirect(nameof(this.All));
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

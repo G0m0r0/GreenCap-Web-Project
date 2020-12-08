@@ -35,11 +35,11 @@
 
                             @if (comment.UserEmail == this.User.Identity.Name)
                             {
-                            <a class="btn btn-secondary float-right text-dark btn-sm m-1" href="/Comments/Edit?id=@comment.Id">Edit</a>
-                            <a class="btn btn-danger float-right text-dark btn-sm m-1" href="/Comments/Delete?id=@comment.Id">Delete</a>
+                                <a class="btn btn-secondary float-right text-dark btn-sm m-1 disabled" href="/Comments/Edit?id=@comment.Id">Edit</a>
+                                <a class="btn btn-danger float-right text-dark btn-sm m-1" href="/Comments/Delete?id=@comment.Id">Delete</a>                                
                             }
                         </div>}
-                                                                    </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -77,13 +77,15 @@
         <br />
         @if (Model.UserEmail == this.User.Identity.Name)
         {
-            <a class="btn btn-danger float-left text-dark btn-lg m-1" href="/Forum/Delete?id=@Model.Id">Delete</a>
-           <a class="btn btn-secondary float-left text-dark btn-lg m-1" href="/Forum/Edit?id=@Model.Id">Edit</a>
+            <form method="post" class="float-left m-1" asp-controller="Forum" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
+            </form>
+            <button class="btn btn-danger btn-lg m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+            <a class="btn btn-secondary float-left text-dark btn-lg m-1" href="/Forum/Edit?id=@Model.Id">Edit</a>
         }
-        @if(this.User.Identity.IsAuthenticated)
+        @if (this.User.Identity.IsAuthenticated)
         {
-                <button type="button" class="btn btn-info float-right btn-lg" onclick="showAddCommentForm(0)">Comment (@Model.CommentsCount)</button>
-        }        
+            <button type="button" class="btn btn-info float-right btn-lg" onclick="showAddCommentForm(0)">Comment (@Model.CommentsCount)</button>
+        }
     </div>
     <hr />
     @if (Model.Comments.Count == 0)
@@ -129,3 +131,17 @@
         }
     </script>
 }
+
+<div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Do you want to delete "@Model.ProblemTitle"?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

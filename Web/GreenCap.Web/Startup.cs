@@ -41,13 +41,13 @@
             services.AddDbContext<IDeletableRepository>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
-           // services.AddMemoryCache();
-           // services.AddDistributedSqlServerCache(opt =>
-           // {
-           //     opt.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
-           //     opt.SchemaName = "dbo";
-           //     opt.TableName = "CacheRecords";
-           // });
+            // services.AddMemoryCache();
+            // services.AddDistributedSqlServerCache(opt =>
+            // {
+            //     opt.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
+            //     opt.SchemaName = "dbo";
+            //     opt.TableName = "CacheRecords";
+            // });
             if (this.environment.IsDevelopment())
             {
                 services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsDevelopment)
@@ -88,7 +88,7 @@
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application services
-            services.AddTransient<IEmailSender, NullMessageSender>();
+            services.AddTransient<IEmailSender>(x => new SendGridEmailSender(this.configuration["SendGrid:ApiKey"]));
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IProposalService, ProposalService>();
             services.AddTransient<IPostservice, PostService>();

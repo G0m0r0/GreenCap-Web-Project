@@ -10,8 +10,8 @@
             return this.View();
         }
 
-        [Authorize]
         [HttpPost]
+        [Authorize]
         public IActionResult Create()
         {
             if (!this.ModelState.IsValid)

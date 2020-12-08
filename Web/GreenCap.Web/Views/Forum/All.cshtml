@@ -9,7 +9,7 @@
 <br />
                 <div class="card text-white bg-info active">
                     <div class="card-header" id="@post.Id">
-                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle</a></u>  
+                        <u><a href="/Forum/Details?id=@post.Id" class="text-dark">@post.ProblemTitle (@post.CategoryName)</a></u>  
                         @if (post.UserEmail == this.User.Identity.Name)
                         {<a>(Personal)</a>}
                         <button type="button" class="btn btn-danger fas fa-thumbs-down float-right p-xl-2 m-1" data-vote="0">&nbsp;<span id="disslikesValue_@(post.Id)">@post.DissLikes</span></button>

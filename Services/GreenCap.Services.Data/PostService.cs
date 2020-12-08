@@ -49,11 +49,11 @@
                 .ToList();
         }
 
-        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id)
+        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string userId)
         {
             return this.forumDb
                 .AllAsNoTracking()
-                .Where(x => x.CreatedById == id)
+                .Where(x => x.CreatedById == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -70,13 +70,23 @@
                 .FirstOrDefaultAsync();
         }
 
-        public async Task UpdateAsync(int id, PostEditViewModel input)
+        public async Task UpdateAsync(int id, PostEditViewModel input, string userId)
         {
-            var proposal = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
+            var post = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            proposal.ProblemTitle = input.ProblemTitle;
-            proposal.Description = input.Description;
-            proposal.Category = input.Category;
+            if (post.User.Id != userId)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, post.ProblemTitle));
+            }
+
+            if (post == null)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound));
+            }
+
+            post.ProblemTitle = input.ProblemTitle;
+            post.Description = input.Description;
+            post.Category = input.Category;
 
             await this.forumDb.SaveChangesAsync();
         }
@@ -95,9 +105,7 @@
                 throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound));
             }
 
-            modelToDelete.IsDeleted = true;
-            modelToDelete.DeletedOn = DateTime.UtcNow;
-            this.forumDb.Update(modelToDelete);
+            this.forumDb.Delete(modelToDelete);
 
             await this.forumDb.SaveChangesAsync();
         }
@@ -107,9 +115,9 @@
             return this.forumDb.All().Count();
         }
 
-        public int GetCountPersonal(string id)
+        public int GetCountPersonal(string userId)
         {
-            return this.forumDb.All().Where(x => x.CreatedById == id).Count();
+            return this.forumDb.All().Where(x => x.CreatedById == userId).Count();
         }
 
         public int GetCountByCategory(string categoryName)
