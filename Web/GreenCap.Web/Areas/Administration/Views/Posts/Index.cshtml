@@ -8,11 +8,11 @@
     <h1 class="text-center display-3">@ViewData["Title"]</h1>
 </div>
 
-<a class="btn btn-success" asp-action="Create">Create New</a>
+<a class="btn btn-success m-2" asp-action="Create">Create New proposal</a>
 
 <div class="row justify-content-center">
-    <div class="col-auto">
-        <table class="table table-responsive table-striped table-dark">
+    <div class="col-auto bg-info">
+        <table class="table table-responsive table-striped table-light" id="datatable">
             <thead>
                 <tr>
                     <th scope="col">
@@ -74,3 +74,12 @@
 </div>
 
 <script src="~/js/Show-Hide.js"></script>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#datatable').DataTable();
+        });
+    </script>
+}
