@@ -7,30 +7,32 @@
 
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
+    using GreenCap.Data.Models.Enums;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
-    using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.EntityFrameworkCore;
 
     public class PostService : IPostservice
     {
         private readonly IDeletableEntityRepository<Post> forumDb;
+        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
 
-        public PostService(IDeletableEntityRepository<Post> forumDb)
+        public PostService(IDeletableEntityRepository<Post> forumDb, IDeletableEntityRepository<ApplicationUser> userDb)
         {
             this.forumDb = forumDb;
+            this.userDb = userDb;
         }
 
-        public async Task CreateAsync(PostInputViewModel model, string id)
+        public async Task CreateAsync(PostInputViewModel model, string userId)
         {
             var modelToCreate = new Post
             {
                 ProblemTitle = model.ProblemTitle,
                 Category = model.Category,
-                CreatedById = id,
+                CreatedById = userId,
                 Description = model.Description,
             };
 
@@ -53,7 +55,7 @@
         {
             return this.forumDb
                 .AllAsNoTracking()
-                .Where(x => x.CreatedById == userId)
+                .Where(x => x.User.Id == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -95,7 +97,7 @@
         {
             var modelToDelete = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (modelToDelete.CreatedById != userId)
+            if (modelToDelete.User.Id != userId)
             {
                 throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.ProblemTitle));
             }
@@ -117,11 +119,30 @@
 
         public int GetCountPersonal(string userId)
         {
-            return this.forumDb.All().Where(x => x.CreatedById == userId).Count();
+            bool exist = this.userDb.All().Any(x => x.Id == userId);
+            if (!exist)
+            {
+                throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
+            }
+
+            return this.forumDb.All().Where(x => x.User.Id == userId).Count();
         }
 
         public int GetCountByCategory(string categoryName)
         {
+            if (string.IsNullOrWhiteSpace(categoryName))
+            {
+                throw new NullReferenceException(ExceptionMessages.CategoryIsNull);
+            }
+
+            bool categoryExists = Enum.IsDefined(
+                typeof(Category), categoryName);
+
+            if (!categoryExists)
+            {
+                throw new NullReferenceException(string.Format(ExceptionMessages.CategoryNameDoesNotExist, categoryName));
+            }
+
             return this.forumDb.All().Where(x => x.Category.ToString() == categoryName).Count();
         }
     }

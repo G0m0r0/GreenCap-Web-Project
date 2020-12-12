@@ -15,5 +15,11 @@
         public const string YouCanDeleteOnlyYourOwnCommentsException = "You can delete only your own comments!";
 
         public const string CommentNotFound = "This comment does not exist!";
+
+        public const string CategoryNameDoesNotExist = "Category name- {0} does not exist!";
+
+        public const string CategoryIsNull = "Category can not be null";
+
+        public const string UserDoesNotExist = "User does not exist";
     }
 }

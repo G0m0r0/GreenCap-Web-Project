@@ -78,7 +78,7 @@
         {
             return this.proposalDb
                 .AllAsNoTracking()
-                .Where(x => x.CreatedById == userId)
+                .Where(x => x.User.Id == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -120,7 +120,7 @@
         {
             var modelToDelete = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (modelToDelete.CreatedById != userId)
+            if (modelToDelete.User.Id != userId)
             {
                 throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
             }
@@ -142,7 +142,7 @@
 
         public int GetCountPersonal(string userId)
         {
-            return this.proposalDb.All().Where(x => x.CreatedById == userId).Count();
+            return this.proposalDb.All().Where(x => x.User.Id == userId).Count();
         }
     }
 }
