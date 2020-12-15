@@ -18,7 +18,7 @@
         private readonly IDeletableEntityRepository<ApplicationUser> userDb;
         private readonly IDeletableEntityRepository<UserEventHosts> userHosts;
 
-        public EventService(IDeletableEntityRepository<Event> eventsDb, IDeletableEntityRepository<ApplicationUser> userDb,IDeletableEntityRepository<UserEventHosts> userHosts)
+        public EventService(IDeletableEntityRepository<Event> eventsDb, IDeletableEntityRepository<ApplicationUser> userDb, IDeletableEntityRepository<UserEventHosts> userHosts)
         {
             this.eventsDb = eventsDb;
             this.userDb = userDb;
@@ -27,8 +27,6 @@
 
         public async Task CreateAsync(EventInputViewModel model, string userId)
         {
-            var listOfInputHosts = model.CreatorsNames.Split(new char[] { ',', ' ', '/', '\\', '-' }, StringSplitOptions.RemoveEmptyEntries);
-
             var creator = this.userDb.All().FirstOrDefault(x => x.Id == userId);
 
             if (creator == null)
@@ -56,22 +54,27 @@
             await this.userHosts.AddAsync(userCreator);
             await this.userHosts.SaveChangesAsync();
 
-            foreach (var userName in listOfInputHosts)
+            if (model.CreatorsNames != null)
             {
-                var user = this.userDb
-                    .All()
-                    .FirstOrDefault(x => x.UserName == userName);
+                var listOfInputHosts = model.CreatorsNames.Split(new char[] { ',', ' ', '/', '\\', '-' }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (user != null)
+                foreach (var userName in listOfInputHosts)
                 {
-                    var userHost = new UserEventHosts
-                    {
-                        EventId = eventModel.Id,
-                        UserId = user.Id,
-                    };
+                    var user = this.userDb
+                        .All()
+                        .FirstOrDefault(x => x.UserName == userName);
 
-                    await this.userHosts.AddAsync(userHost);
-                    await this.userHosts.SaveChangesAsync();
+                    if (user != null)
+                    {
+                        var userHost = new UserEventHosts
+                        {
+                            EventId = eventModel.Id,
+                            UserId = user.Id,
+                        };
+
+                        await this.userHosts.AddAsync(userHost);
+                        await this.userHosts.SaveChangesAsync();
+                    }
                 }
             }
         }
