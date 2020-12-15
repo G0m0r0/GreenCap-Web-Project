@@ -21,5 +21,7 @@
         public const string CategoryIsNull = "Category can not be null";
 
         public const string UserDoesNotExist = "User does not exist";
+
+        public const string EventNotFound = "Event with title {0} is not found!";
     }
 }

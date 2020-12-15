@@ -38,11 +38,12 @@
         <li class="list-group-item">Sign in users: names</li>
     </ul>
     <div class="card-body" id="@eventModel.Id">
-        <a href="#" class="card-link" data-vote="1">Join</a>
-        <a href="#" class="card-link" data-vote="0">Cancel</a>
-        
-                <a href="#" class="card-link">Edit</a>
-                <a href="#" class="card-link">Delete</a>
+        <button class="btn btn-success btn-lg m-1 float-left">Join</button>
+        <button class="btn btn-warning btn-lg m-1 float-left">Cancel</button>
+        <form method="post" class=" m-1" asp-controller="Events" asp-action="Delete" id="deleteForm" asp-route-id="@eventModel.Id">
+            <button class="btn btn-danger btn-lg m-1 float-right" data-toggle="modal" data-target="#deleteModal">Delete</button>
+        </form>
+        <button class="btn btn-secondary btn-lg m-1 float-right">Edit</button>
     </div>
     <div class="card-footer text-muted text-left">
         created @eventModel.CretedDaysAgo

@@ -65,5 +65,16 @@
         {
             return this.View();
         }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await this.eventService.DeleteByIdAsync(id, userId);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }

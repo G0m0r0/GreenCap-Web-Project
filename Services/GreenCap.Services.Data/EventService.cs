@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Security.Cryptography.X509Certificates;
     using System.Threading.Tasks;
 
     using GreenCap.Data.Common.Repositories;
@@ -11,6 +12,7 @@
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.InputViewModels;
+    using Microsoft.EntityFrameworkCore;
 
     public class EventService : IEventService
     {
@@ -79,9 +81,24 @@
             }
         }
 
-        public Task DeleteByIdAsync(int id, string userId)
+        public async Task DeleteByIdAsync(int id, string userId)
         {
-            throw new NotImplementedException();
+            var modelToDelete = await this.eventsDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (modelToDelete == null)
+            {
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.EventNotFound, modelToDelete.Name));
+            }
+
+            if (modelToDelete.UserEventsHosts.Any(x => x.UserId == userId))
+            {
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Name));
+            }
+
+            this.eventsDb.Delete(modelToDelete);
+            await this.eventsDb.SaveChangesAsync();
         }
 
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)

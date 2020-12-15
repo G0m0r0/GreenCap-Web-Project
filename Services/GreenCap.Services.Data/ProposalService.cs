@@ -122,16 +122,16 @@
         {
             var modelToDelete = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (modelToDelete.CreatedById != userId)
-            {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
-            }
-
             if (modelToDelete == null)
             {
                 throw new NullReferenceException(
                     string.Format(ExceptionMessages.ProposalNotFound, modelToDelete.Title));
+            }
+
+            if (modelToDelete.CreatedById != userId)
+            {
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
             }
 
             this.proposalDb.Delete(modelToDelete);
