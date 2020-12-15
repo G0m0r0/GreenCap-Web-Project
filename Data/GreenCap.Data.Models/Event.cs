@@ -13,8 +13,8 @@
     {
         public Event()
         {
-            this.UserEvents = new HashSet<UserEvent>();
-            this.HostedBy = new HashSet<ApplicationUser>();
+            this.UserEventsHosts = new HashSet<UserEventHosts>();
+            this.UserEventSignedIn = new HashSet<UserEventSignedIn>();
         }
 
         [Required]
@@ -36,13 +36,13 @@
         [Required]
         public int TotalPeople { get; set; }
 
-        public int NeededPeople => (this.TotalPeople - this.UserEvents.Count) > 0 ? (this.TotalPeople - this.UserEvents.Count) : 0;
+        public int NeededPeople => (this.TotalPeople - this.UserEventSignedIn.Count) > 0 ? (this.TotalPeople - this.UserEventSignedIn.Count) : 0;
 
         // public virtual Address Address { get; set; }
         // [ForeignKey(nameof(Address))]
         // public int AddressId { get; set; }
-        public virtual ICollection<UserEvent> UserEvents { get; set; }
+        public virtual ICollection<UserEventHosts> UserEventsHosts { get; set; }
 
-        public virtual ICollection<ApplicationUser> HostedBy { get; set; }
+        public virtual ICollection<UserEventSignedIn> UserEventSignedIn { get; set; }
     }
 }

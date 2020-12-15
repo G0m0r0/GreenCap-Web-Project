@@ -1,11 +1,10 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using System;
     using System.ComponentModel.DataAnnotations.Schema;
 
     using GreenCap.Data.Common.Models;
 
-    public class UserEvent : BaseModel<int>
+    public class UserEventSignedIn : BaseDeletableModel<int>
     {
         public ApplicationUser User { get; set; }
 
@@ -16,9 +15,5 @@
 
         [ForeignKey(nameof(Event))]
         public int EventId { get; set; }
-
-        public DateTime SignedOn { get; set; }
-
-        public bool IsGoing { get; set; }
     }
 }

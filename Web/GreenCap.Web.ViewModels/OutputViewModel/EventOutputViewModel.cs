@@ -31,15 +31,14 @@
 
         public string CretedDaysAgo { get; set; }
 
-        //public string UserEmail { get; set; }
-
+       // public string UserEmail { get; set; }
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Event, EventOutputViewModel>()
                 .ForMember(x => x.CreatedOn, opt =>
                   opt.MapFrom(x => x.CreatedOn.ToLocalTime().ToString("dd / MMM / yyyy")))
-                // .ForMember(x => x.HostedByNames, opt =>
-                //   opt.MapFrom(x => x.HostedBy.Select(y => string.Join(' ', y.UserName)).ToString())
+                 .ForMember(x => x.HostedByNames, opt =>
+                   opt.MapFrom(x => string.Join(", ", x.UserEventsHosts.Select(y => y.User.UserName.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]).ToList())))
                 .ForMember(x => x.StartDate, opt =>
                   opt.MapFrom(x => x.StartDate.ToLocalTime().ToString("dd / MMM / yyyy")))
                 .ForMember(x => x.EndDate, opt =>
@@ -51,8 +50,8 @@
                   ((DateTime.Now.DayOfYear - x.CreatedOn.ToLocalTime().DayOfYear) == 1 ?
                   "day ago" :
                   "days ago"))));
-                //.ForMember(x => x.UserEmail, opt =>
-                //  opt.MapFrom(x => x.u));
+                // .ForMember(x => x.UserEmail, opt =>
+                // opt.MapFrom(x => x.u));
         }
     }
 }

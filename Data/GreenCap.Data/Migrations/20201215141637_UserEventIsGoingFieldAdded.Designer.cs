@@ -4,14 +4,16 @@ using GreenCap.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreenCap.Data.Migrations
 {
     [DbContext(typeof(IDeletableRepository))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201215141637_UserEventIsGoingFieldAdded")]
+    partial class UserEventIsGoingFieldAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,6 +87,9 @@ namespace GreenCap.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("EventId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -125,6 +130,8 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventId");
 
                     b.HasIndex("IsDeleted");
 
@@ -496,7 +503,7 @@ namespace GreenCap.Data.Migrations
                     b.ToTable("Settings");
                 });
 
-            modelBuilder.Entity("GreenCap.Data.Models.UserEventHosts", b =>
+            modelBuilder.Entity("GreenCap.Data.Models.UserEvent", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -507,57 +514,23 @@ namespace GreenCap.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsDeleted")
+                    b.Property<bool>("IsGoing")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SignedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("UserId", "EventId");
 
                     b.HasIndex("EventId");
 
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("UserEventHosts");
-                });
-
-            modelBuilder.Entity("GreenCap.Data.Models.UserEventSignedIn", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("UserId", "EventId");
-
-                    b.HasIndex("EventId");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("UserEventSignedIns");
+                    b.ToTable("UserEvents");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.UserLike", b =>
@@ -713,6 +686,13 @@ namespace GreenCap.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("GreenCap.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("GreenCap.Data.Models.Event", null)
+                        .WithMany("HostedBy")
+                        .HasForeignKey("EventId");
+                });
+
             modelBuilder.Entity("GreenCap.Data.Models.Comment", b =>
                 {
                     b.HasOne("GreenCap.Data.Models.Comment", "Parent")
@@ -782,35 +762,16 @@ namespace GreenCap.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("GreenCap.Data.Models.UserEventHosts", b =>
+            modelBuilder.Entity("GreenCap.Data.Models.UserEvent", b =>
                 {
                     b.HasOne("GreenCap.Data.Models.Event", "Event")
-                        .WithMany("UserEventsHosts")
+                        .WithMany("UserEvents")
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
-                        .WithMany("UserEventsHosts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Event");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("GreenCap.Data.Models.UserEventSignedIn", b =>
-                {
-                    b.HasOne("GreenCap.Data.Models.Event", "Event")
-                        .WithMany("UserEventSignedIn")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("GreenCap.Data.Models.ApplicationUser", "User")
-                        .WithMany("UserEventSignedIns")
+                        .WithMany("UserEvents")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -921,9 +882,7 @@ namespace GreenCap.Data.Migrations
 
                     b.Navigation("Roles");
 
-                    b.Navigation("UserEventsHosts");
-
-                    b.Navigation("UserEventSignedIns");
+                    b.Navigation("UserEvents");
 
                     b.Navigation("UserLikes");
 
@@ -937,9 +896,9 @@ namespace GreenCap.Data.Migrations
 
             modelBuilder.Entity("GreenCap.Data.Models.Event", b =>
                 {
-                    b.Navigation("UserEventsHosts");
+                    b.Navigation("HostedBy");
 
-                    b.Navigation("UserEventSignedIn");
+                    b.Navigation("UserEvents");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.Post", b =>

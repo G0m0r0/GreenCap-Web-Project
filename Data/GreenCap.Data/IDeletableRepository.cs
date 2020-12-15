@@ -33,7 +33,9 @@
         public DbSet<UserLike> UserLikes { get; set; }
 
         // public DbSet<Address> Addresses { get; set; }
-        public DbSet<UserEvent> UserEvents { get; set; }
+        public DbSet<UserEventHosts> UserEventHosts { get; set; }
+
+        public DbSet<UserEventSignedIn> UserEventSignedIns { get; set; }
 
         public DbSet<Proposal> Proposals { get; set; }
 
@@ -75,8 +77,11 @@
             builder.Entity<UserLike>()
                  .HasKey(x => new { x.PostId, x.UserId });
 
-            builder.Entity<UserEvent>()
+            builder.Entity<UserEventHosts>()
                 .HasKey(x => new { x.UserId, x.EventId });
+
+            builder.Entity<UserEventSignedIn>()
+               .HasKey(x => new { x.UserId, x.EventId });
 
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
