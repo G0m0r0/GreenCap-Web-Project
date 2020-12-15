@@ -46,7 +46,7 @@
         {
             return this.eventsDb
                 .AllAsNoTracking()
-                .OrderByDescending(x => x.CreatedOn)
+                .OrderBy(x => x.StartDate)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
                 .To<T>()

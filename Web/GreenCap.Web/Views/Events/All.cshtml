@@ -1,33 +1,82 @@
 ﻿@using GreenCap.Web.ViewModels.OutputViewModel
 @model EventsListOutputViewModel
 
-@{ this.ViewData["Title"] = "All events" + Model.PageNumber; }
 
-@foreach (var eventModel in this.Model.Events)
-{    
-    <div class="card mb-3">
-        <h3 class="card-header">@eventModel.Name</h3>
-        <div class="card-body">
-            <h6 class="card-subtitle text-muted">Event duration: @eventModel.StartDate - @eventModel.EndDate</h6>
-        </div>
+@{ this.ViewData["Title"] = "All events " + Model.PageNumber; }
+
+<div class="jumbotron bg-gradient-info">
+
+    @if (Model.PageNumber == 1)
+    {
+        <div class="jumbotron bg-dark">
+            <h1 class="display-3 text-primary text-center">Take a part in events happining around you!</h1>
+        </div>}
+    @foreach (var eventModel in this.Model.Events)
+    {
+<div class="card mb-3 text-center bg-gradient-dark">
+    <h3 class="card-header display-3 text-primary">@eventModel.Name</h3>
+    <div class="card-body">
+        <h6 class="card-subtitle text-muted">Event duration: @eventModel.StartDate - @eventModel.EndDate</h6>
+    </div>
+    <div class="container">
         <img class="card-img-top" src=@eventModel.ImagePath alt="No available image." />
-        <div class="card-body">
-            <p class="card-text">@eventModel.Description</p>
+    </div>
+    <div class="card-body">
+        <p class="card-text text-light">@eventModel.Description</p>
+    </div>
+    <ul class="list-group list-group-flush text-left text-info">
+        <li class="list-group-item">Total needed people: @eventModel.TotalPeople</li>
+        <div class="container bg-gradient-success">
+            <p class="float-right text-dark">100%</p>
+            <p class="text-dark">0%</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="@eventModel.NeededPeople" aria-valuemin="0" aria-valuemax="@eventModel.TotalPeople" style="width: @(@eventModel.TotalPeople-@eventModel.NeededPeople)"></div>
+            </div>
+            <p class="text-center text-dark">@eventModel.NeededPeople left</p>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item text-muted">Total needed people: @eventModel.NeededPeople</li>
-            <li class="list-group-item text-muted">Hosted by: @eventModel.HostedByName</li>
-            <li class="list-group-item text-muted">Sign in users: names</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Join</a>
-            <a href="#" class="card-link">Edit</a>
-            <a href="#" class="card-link">Delete</a>
-        </div>
-        <div class="card-footer text-muted">
-            created @eventModel.CretedDaysAgo
-        </div>   
-        </div>
-}     
+        <li class="list-group-item">Hosted by: @eventModel.HostedByName</li>
+        <li class="list-group-item">Sign in users: names</li>
+    </ul>
+    <div class="card-body" id="@eventModel.Id">
+        <a href="#" class="card-link" data-vote="1">Join</a>
+        <a href="#" class="card-link" data-vote="0">Cancel</a>
+        @if (eventModel.UserEmail == this.User.Identity.Name)
+        {
+                <a href="#" class="card-link">Edit</a>
+                <a href="#" class="card-link">Delete</a>}
+    </div>
+    <div class="card-footer text-muted text-left">
+        created @eventModel.CretedDaysAgo
+    </div>
+</div>}
+</div>
 
 <partial name="_PagingPartial" model="@Model" />
+
+@section Scripts
+{
+    <script>
+        $("a[data-vote]").each(function (el) {
+            $(this).click(function () {
+
+                var isJoin = Boolean(parseInt($(this).attr("data-vote")));
+                var eventId = parseInt(this.parentElement.getAttribute("id"));
+                console.log(eventId);
+
+                $.ajax({
+                    type: "POST",
+                    url: "/api/",
+                    data: JSON.stringify(data),
+                    headers: {
+                        'X-CSRF-TOKEN': antiForgeryToken
+                    },
+                    success: function (data) {
+                        $('#disslikesValue_' + postId).html(data.dissLikes);
+                        $('#likesValue_' + postId).html(data.likes);
+                    },
+                    contentType: 'application/json',
+                });
+            })
+        });
+    </script>
+}
