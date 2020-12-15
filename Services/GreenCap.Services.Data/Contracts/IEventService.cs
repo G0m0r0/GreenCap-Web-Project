@@ -10,6 +10,8 @@
 
         Task DeleteByIdAsync(int id, string userId);
 
+        Task JoinEventAsync(int eventId, string userId);
+
         int GetCount();
     }
 }

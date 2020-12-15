@@ -1,8 +1,8 @@
 ﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
+
     using AutoMapper;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
@@ -31,7 +31,8 @@
 
         public string CretedDaysAgo { get; set; }
 
-       // public string UserEmail { get; set; }
+        public string SignedInByNames { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Event, EventOutputViewModel>()
@@ -49,9 +50,12 @@
                   ("created" +
                   ((DateTime.Now.DayOfYear - x.CreatedOn.ToLocalTime().DayOfYear) == 1 ?
                   "day ago" :
-                  "days ago"))));
-                // .ForMember(x => x.UserEmail, opt =>
-                // opt.MapFrom(x => x.u));
+                  "days ago"))))
+                .ForMember(x => x.SignedInByNames, opt =>
+                   opt.MapFrom(x => string.Join(", ", x.UserEventSignedIn.Select(y => y.User.UserName.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]).ToList())))
+                .ForMember(x => x.NeededPeople, opt =>
+                  opt.MapFrom(x => x.TotalPeople - x.UserEventSignedIn.Where(x => x.Id == this.Id).Count()));
+
         }
     }
 }

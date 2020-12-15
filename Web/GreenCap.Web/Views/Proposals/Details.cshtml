@@ -98,7 +98,7 @@
         <a class="btn btn-info btn-lg" asp-action="ALL">Back to List</a>
         @if (Model.UserEmail == this.User.Identity.Name)
         {
-            <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a> <!--<a class="btn btn-danger btn-lg" href="/Proposals/Delete?id=@Model.Id" role="button">Delete</a>-->}
+            <a class="btn btn-secondary btn-lg" href="/Proposals/Edit?id=@Model.Id" role="button">Edit</a> }
 
         @if (this.SignInManager.IsSignedIn(this.User))
         {

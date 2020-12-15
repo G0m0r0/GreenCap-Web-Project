@@ -99,7 +99,6 @@
             services.AddTransient<ICommentsService, CommentsService>();
             services.AddTransient<IChartService, ChartService>();
             services.AddTransient<IEventService, EventService>();
-            services.AddTransient<IJoinEventService, JoinEventService>();
 
             // services.AddHangfire(x=>x.sql);
         }

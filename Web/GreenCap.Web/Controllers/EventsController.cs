@@ -61,6 +61,16 @@
         }
 
         [Authorize]
+        public async Task<IActionResult> Join(int id)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await this.eventService.JoinEventAsync(id, userId);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
+
+        [Authorize]
         public IActionResult Edit(int id)
         {
             return this.View();

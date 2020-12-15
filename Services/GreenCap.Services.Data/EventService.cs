@@ -18,13 +18,19 @@
     {
         private readonly IDeletableEntityRepository<Event> eventsDb;
         private readonly IDeletableEntityRepository<ApplicationUser> userDb;
-        private readonly IDeletableEntityRepository<UserEventHosts> userHosts;
+        private readonly IDeletableEntityRepository<UserEventHosts> userHostsDb;
+        private readonly IDeletableEntityRepository<UserEventSignedIn> userJoinDb;
 
-        public EventService(IDeletableEntityRepository<Event> eventsDb, IDeletableEntityRepository<ApplicationUser> userDb, IDeletableEntityRepository<UserEventHosts> userHosts)
+        public EventService(
+            IDeletableEntityRepository<Event> eventsDb,
+            IDeletableEntityRepository<ApplicationUser> userDb,
+            IDeletableEntityRepository<UserEventHosts> userHostsDb,
+            IDeletableEntityRepository<UserEventSignedIn> userJoinDb)
         {
             this.eventsDb = eventsDb;
             this.userDb = userDb;
-            this.userHosts = userHosts;
+            this.userHostsDb = userHostsDb;
+            this.userJoinDb = userJoinDb;
         }
 
         public async Task CreateAsync(EventInputViewModel model, string userId)
@@ -53,8 +59,8 @@
                 UserId = creator.Id,
                 EventId = eventModel.Id,
             };
-            await this.userHosts.AddAsync(userCreator);
-            await this.userHosts.SaveChangesAsync();
+            await this.userHostsDb.AddAsync(userCreator);
+            await this.userHostsDb.SaveChangesAsync();
 
             if (model.CreatorsNames != null)
             {
@@ -74,11 +80,41 @@
                             UserId = user.Id,
                         };
 
-                        await this.userHosts.AddAsync(userHost);
-                        await this.userHosts.SaveChangesAsync();
+                        await this.userHostsDb.AddAsync(userHost);
+                        await this.userHostsDb.SaveChangesAsync();
                     }
                 }
             }
+        }
+
+        public async Task JoinEventAsync(int eventId, string userId)
+        {
+            var eventModel = this.eventsDb.All().FirstOrDefault(x => x.Id == eventId);
+            var userModel = this.userDb.All().FirstOrDefault(x => x.Id == userId);
+
+            if (eventModel == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.EventNotFound);
+            }
+
+            if (userModel == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
+            }
+
+            if (this.userJoinDb.All().Any(x => x.UserId == userId && x.EventId == eventId))
+            {
+                return;
+            }
+
+            var userEventJoin = new UserEventSignedIn
+            {
+                UserId = userModel.Id,
+                EventId = eventModel.Id,
+            };
+
+            await this.userJoinDb.AddAsync(userEventJoin);
+            await this.userJoinDb.SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id, string userId)
@@ -87,14 +123,12 @@
 
             if (modelToDelete == null)
             {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.EventNotFound, modelToDelete.Name));
+                throw new NullReferenceException(ExceptionMessages.EventNotFound);
             }
 
             if (modelToDelete.UserEventsHosts.Any(x => x.UserId == userId))
             {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Name));
+                throw new NullReferenceException(ExceptionMessages.YouHaveToBeCreatorException);
             }
 
             this.eventsDb.Delete(modelToDelete);
