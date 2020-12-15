@@ -101,12 +101,14 @@
 
             if (proposal.User.Id != userId)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, proposal.Title));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, proposal.Title));
             }
 
             if (proposal == null)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.ProposalNotFound));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.ProposalNotFound, proposal.Title));
             }
 
             proposal.Title = input.Title;

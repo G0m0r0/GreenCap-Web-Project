@@ -1,18 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GreenCap.Web.Controllers
+﻿namespace GreenCap.Web.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     [ApiController]
     [Route("api/[controller]")]
     public class JoinEventController : BaseController
     {
         public JoinEventController()
         {
-
         }
 
         public IActionResult Index()

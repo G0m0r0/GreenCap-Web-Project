@@ -5,7 +5,7 @@
 
     using GreenCap.Data.Common.Models;
 
-    public class UserEvent
+    public class UserEvent : BaseModel<int>
     {
         public ApplicationUser User { get; set; }
 
@@ -18,5 +18,7 @@
         public int EventId { get; set; }
 
         public DateTime SignedOn { get; set; }
+
+        public bool IsGoing { get; set; }
     }
 }

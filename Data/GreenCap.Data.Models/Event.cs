@@ -14,6 +14,7 @@
         public Event()
         {
             this.UserEvents = new HashSet<UserEvent>();
+            this.HostedBy = new HashSet<ApplicationUser>();
         }
 
         [Required]
@@ -32,11 +33,6 @@
 
         public DateTime EndDate { get; set; }
 
-        public virtual ApplicationUser HostedBy { get; set; }
-
-        [ForeignKey(nameof(HostedBy))]
-        public string HostId { get; set; }
-
         [Required]
         public int TotalPeople { get; set; }
 
@@ -46,5 +42,7 @@
         // [ForeignKey(nameof(Address))]
         // public int AddressId { get; set; }
         public virtual ICollection<UserEvent> UserEvents { get; set; }
+
+        public virtual ICollection<ApplicationUser> HostedBy { get; set; }
     }
 }

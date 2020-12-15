@@ -2,6 +2,7 @@
 {
     using System.Linq;
     using System.Threading.Tasks;
+
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Contracts;
@@ -34,7 +35,6 @@
 
                 await this.userEventsDb.AddAsync(userEvents);
             }
-
         }
     }
 }

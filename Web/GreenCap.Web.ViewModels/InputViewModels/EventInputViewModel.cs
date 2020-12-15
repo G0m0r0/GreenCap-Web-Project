@@ -1,6 +1,7 @@
 ﻿namespace GreenCap.Web.ViewModels.InputViewModels
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using GreenCap.Data.Common;
@@ -34,5 +35,8 @@
         [Range(DataValidation.Events.TotalPeopleMinCount, DataValidation.Events.TotalPeopleMaxCount)]
         [Display(Name = "Total people")]
         public int TotalPeople { get; set; }
+
+        [Display(Name="List of hosts")]
+        public string CreatorsNames { get; set; }
     }
 }

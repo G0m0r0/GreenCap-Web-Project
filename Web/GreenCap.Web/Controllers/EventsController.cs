@@ -1,12 +1,13 @@
 ﻿namespace GreenCap.Web.Controllers
 {
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
 
     public class EventsController : BaseController
     {

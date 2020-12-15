@@ -85,6 +85,9 @@ namespace GreenCap.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("EventId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -125,6 +128,8 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventId");
 
                     b.HasIndex("IsDeleted");
 
@@ -179,8 +184,8 @@ namespace GreenCap.Data.Migrations
 
                     b.Property<string>("Content")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(50000)
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -237,9 +242,6 @@ namespace GreenCap.Data.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("HostId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("ImagePath")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -263,8 +265,6 @@ namespace GreenCap.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("HostId");
 
                     b.HasIndex("IsDeleted");
 
@@ -400,7 +400,7 @@ namespace GreenCap.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(20000)
+                        .HasMaxLength(50000)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -508,6 +508,18 @@ namespace GreenCap.Data.Migrations
 
                     b.Property<int>("EventId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsGoing")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("SignedOn")
                         .HasColumnType("datetime2");
@@ -672,6 +684,13 @@ namespace GreenCap.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("GreenCap.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("GreenCap.Data.Models.Event", null)
+                        .WithMany("HostedBy")
+                        .HasForeignKey("EventId");
+                });
+
             modelBuilder.Entity("GreenCap.Data.Models.Comment", b =>
                 {
                     b.HasOne("GreenCap.Data.Models.Comment", "Parent")
@@ -693,15 +712,6 @@ namespace GreenCap.Data.Migrations
                     b.Navigation("Post");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("GreenCap.Data.Models.Event", b =>
-                {
-                    b.HasOne("GreenCap.Data.Models.ApplicationUser", "HostedBy")
-                        .WithMany()
-                        .HasForeignKey("HostId");
-
-                    b.Navigation("HostedBy");
                 });
 
             modelBuilder.Entity("GreenCap.Data.Models.Image", b =>
@@ -884,6 +894,8 @@ namespace GreenCap.Data.Migrations
 
             modelBuilder.Entity("GreenCap.Data.Models.Event", b =>
                 {
+                    b.Navigation("HostedBy");
+
                     b.Navigation("UserEvents");
                 });
 

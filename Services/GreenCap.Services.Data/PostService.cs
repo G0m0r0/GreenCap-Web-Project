@@ -83,7 +83,7 @@
 
             if (post == null)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound));
+                throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound, post.ProblemTitle));
             }
 
             post.ProblemTitle = input.ProblemTitle;
@@ -99,12 +99,14 @@
 
             if (modelToDelete.User.Id != userId)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.ProblemTitle));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.ProblemTitle));
             }
 
             if (modelToDelete == null)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.PostNotFound, modelToDelete.ProblemTitle));
             }
 
             this.forumDb.Delete(modelToDelete);
