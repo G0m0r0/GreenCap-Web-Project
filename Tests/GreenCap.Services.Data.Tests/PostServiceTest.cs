@@ -1,6 +1,7 @@
 ﻿namespace GreenCap.Services.Data.Tests
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -16,8 +17,9 @@
     using GreenCap.Web.ViewModels.OutputViewModel;
 
     using Microsoft.EntityFrameworkCore;
-
+    using Moq;
     using Xunit;
+
     public class PostServiceTest : IDisposable
     {
         private readonly IPostservice postService;
@@ -82,23 +84,6 @@
             Assert.Equal("Test title", title.ProblemTitle);
             Assert.Equal("Test description", title.Description);
             Assert.Equal(Category.General, title.Category);
-        }
-
-        [Fact]
-        public async Task TestGetAllEntities()
-        {
-            // var postModel = new PostInputViewModel
-            // {
-            //     Category = Category.General,
-            //     Description = "Test description",
-            //     ProblemTitle = "Test title",
-            // };
-            //
-            // await this.postService.CreateAsync(postModel, "test id");
-            //
-            // var models = this.postService.GetAll<PostOutputViewModel>(1, 6);
-            //
-            // Assert.Single(models);
         }
 
         [Fact]
@@ -170,5 +155,33 @@
                 () => this.postService.GetCountPersonal("not valid"));
         }
 
+        [Fact]
+        public async Task CreateMethodShouldCreateUser()
+        {
+            var list = new List<Post>();
+            var mockRepo = new Mock<IDeletableEntityRepository<Post>>();
+            mockRepo.Setup(x => x.All()).Returns(list.AsQueryable());
+            mockRepo.Setup(x => x.AddAsync(It.IsAny<Post>())).Callback(
+                (Post post) => list.Add(post));
+
+            var listUser = new List<ApplicationUser>();
+            var mockRepoUser = new Mock<IDeletableEntityRepository<ApplicationUser>>();
+            mockRepoUser.Setup(x => x.All()).Returns(listUser.AsQueryable());
+            mockRepoUser.Setup(x => x.AddAsync(It.IsAny<ApplicationUser>())).Callback(
+                (ApplicationUser user) => listUser.Add(user));
+
+            var service = new PostService(mockRepo.Object, mockRepoUser.Object);
+
+            var postModel = new PostInputViewModel
+            {
+                Category = Category.General,
+                Description = "Test description",
+                ProblemTitle = "Test title",
+            };
+
+            await service.CreateAsync(postModel, "1");
+
+            Assert.Single(list);
+        }
     }
 }

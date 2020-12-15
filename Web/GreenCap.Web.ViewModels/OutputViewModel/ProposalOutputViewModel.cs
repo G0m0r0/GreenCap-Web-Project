@@ -22,7 +22,6 @@
 
         public string CreatedByName { get; set; }
 
-        // public string CreatedOn { get; set; }
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Proposal, ProposalOutputViewModel>()

@@ -2697,7 +2697,7 @@
       },
       "GreenCap.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/GreenCap.Common.dll": {}
         },
@@ -2725,7 +2725,7 @@
       },
       "GreenCap.Data.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
         },
@@ -2738,7 +2738,7 @@
       },
       "GreenCap.Data.Models/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.0",
@@ -2753,7 +2753,7 @@
       },
       "GreenCap.Services/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AngleSharp": "0.14.0",
           "GreenCap.Data.Models": "1.0.0"
@@ -2767,7 +2767,7 @@
       },
       "GreenCap.Services.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "GreenCap.Data.Models": "1.0.0",
@@ -2784,7 +2784,7 @@
       },
       "GreenCap.Services.Mapping/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "10.1.1"
         },
@@ -2797,7 +2797,7 @@
       },
       "GreenCap.Services.Messaging/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Sendgrid": "9.21.2"
         },
@@ -2810,7 +2810,7 @@
       },
       "GreenCap.Web.Infrastructure/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
         },
@@ -2823,7 +2823,7 @@
       },
       "GreenCap.Web.ViewModels/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "GreenCap.Data.Models": "1.0.0",
           "GreenCap.Services.Mapping": "1.0.0",

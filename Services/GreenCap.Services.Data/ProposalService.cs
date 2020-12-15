@@ -122,12 +122,14 @@
 
             if (modelToDelete.User.Id != userId)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Title));
             }
 
             if (modelToDelete == null)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.ProposalNotFound));
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.ProposalNotFound, modelToDelete.Title));
             }
 
             this.proposalDb.Delete(modelToDelete);

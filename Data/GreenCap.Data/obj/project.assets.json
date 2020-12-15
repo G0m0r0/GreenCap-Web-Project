@@ -1713,7 +1713,7 @@
       },
       "GreenCap.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/GreenCap.Common.dll": {}
         },
@@ -1723,7 +1723,7 @@
       },
       "GreenCap.Data.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
         },
@@ -1736,7 +1736,7 @@
       },
       "GreenCap.Data.Models/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "GreenCap.Data.Common": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.0",

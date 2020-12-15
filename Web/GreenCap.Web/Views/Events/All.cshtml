@@ -1,32 +1,33 @@
-﻿@using GreenCap.Common
-@{
-    this.ViewData["Title"] = "All events";
-}
+﻿@using GreenCap.Web.ViewModels.OutputViewModel
+@model EventsListOutputViewModel
 
-<!--foreach-->
-<div class="card mb-3">
-    <h3 class="card-header">Name</h3>
-    <div class="card-body">
-        <h6 class="card-subtitle text-muted">StartDate - EndDate</h6>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-        <rect width="100%" height="100%" fill="#868e96"></rect>
-        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-    </svg>
-    <div class="card-body">
-        <p class="card-text">Description</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Total people needed</li>
-        <li class="list-group-item">Creator</li>
-        <li class="list-group-item">Sign in users: names</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">Join</a>
-        <a href="#" class="card-link">Edit</a>
-        <a href="#" class="card-link">Delete</a>
-    </div>
-    <div class="card-footer text-muted">
-        created x days ago
-    </div>
-</div>
+@{ this.ViewData["Title"] = "All events" + Model.PageNumber; }
+
+@foreach (var eventModel in this.Model.Events)
+{    
+    <div class="card mb-3">
+        <h3 class="card-header">@eventModel.Name</h3>
+        <div class="card-body">
+            <h6 class="card-subtitle text-muted">Event duration: @eventModel.StartDate - @eventModel.EndDate</h6>
+        </div>
+        <img class="card-img-top" src=@eventModel.ImagePath alt="No available image." />
+        <div class="card-body">
+            <p class="card-text">@eventModel.Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-muted">Total needed people: @eventModel.NeededPeople</li>
+            <li class="list-group-item text-muted">Hosted by: @eventModel.HostedByName</li>
+            <li class="list-group-item text-muted">Sign in users: names</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Join</a>
+            <a href="#" class="card-link">Edit</a>
+            <a href="#" class="card-link">Delete</a>
+        </div>
+        <div class="card-footer text-muted">
+            created @eventModel.CretedDaysAgo
+        </div>   
+        </div>
+}     
+
+<partial name="_PagingPartial" model="@Model" />
