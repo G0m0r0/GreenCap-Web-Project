@@ -12,6 +12,8 @@
 
         Task JoinEventAsync(int eventId, string userId);
 
+        Task CancelEventAsync(int eventId, string userId);
+
         int GetCount();
     }
 }

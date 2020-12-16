@@ -67,6 +67,16 @@
         }
 
         [Authorize]
+        public async Task<IActionResult> Cancel(int id)
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await this.eventService.CancelEventAsync(id, userId);
+
+            return this.RedirectToAction(nameof(this.All));
+        }
+
+        [Authorize]
         public async Task<IActionResult> Join(int id)
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);

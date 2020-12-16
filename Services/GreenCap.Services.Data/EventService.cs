@@ -102,8 +102,15 @@
                 throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
             }
 
-            if (this.userJoinDb.All().Any(x => x.UserId == userId && x.EventId == eventId))
+            var userEvent = await this.userJoinDb
+                .AllWithDeleted()
+                .FirstOrDefaultAsync(x => x.UserId == userId && x.EventId == eventId);
+
+            if (userEvent != null)
             {
+                userEvent.IsDeleted = false;
+                await this.userJoinDb.SaveChangesAsync();
+
                 return;
             }
 
@@ -154,6 +161,37 @@
         public int GetCount()
         {
             return this.eventsDb.AllAsNoTracking().Count();
+        }
+
+        public async Task CancelEventAsync(int eventId, string userId)
+        {
+            var eventModel = this.eventsDb.All().FirstOrDefault(x => x.Id == eventId);
+            var userModel = this.userDb.All().FirstOrDefault(x => x.Id == userId);
+
+            if (eventModel == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.EventNotFound);
+            }
+
+            if (userModel == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
+            }
+
+            var userEvent = await this.userJoinDb
+                .AllWithDeleted()
+                .FirstOrDefaultAsync(x => x.UserId == userId && x.EventId == eventId);
+
+            if (userEvent == null)
+            {
+                return;
+            }
+
+            if (userEvent.IsDeleted == false)
+            {
+                this.userJoinDb.Delete(userEvent);
+                await this.userJoinDb.SaveChangesAsync();
+            }
         }
     }
 }

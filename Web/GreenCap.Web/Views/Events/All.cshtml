@@ -1,4 +1,7 @@
-﻿@using GreenCap.Web.ViewModels.OutputViewModel
+﻿@using GreenCap.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using GreenCap.Web.ViewModels.OutputViewModel
+@inject SignInManager<ApplicationUser> SignInManager
 @model EventsListOutputViewModel
 
 
@@ -8,9 +11,9 @@
 
     @if (Model.PageNumber == 1)
     {
-        <div class="jumbotron bg-dark">
-            <h1 class="display-3 text-primary text-center">Take a part in events happening around you!</h1>
-        </div>}
+<div class="jumbotron bg-dark">
+    <h1 class="display-3 text-primary text-center">Take a part in events happening around you!</h1>
+</div>}
     @foreach (var eventModel in this.Model.Events)
     {
 <div class="card mb-3 text-center bg-gradient-dark">
@@ -34,23 +37,35 @@
             </div>
             @if (eventModel.NeededPeople >= 0)
             {
-                <p class="text-center text-dark">@eventModel.NeededPeople left</p>
-            }else
+                <p class="text-center text-dark">@eventModel.NeededPeople left</p> }
+            else
             {
                 <p class="text-center text-dark">@Math.Abs(eventModel.NeededPeople) extra</p>
             }
         </div>
-        <li class="list-group-item">Hosted by: <p class="text-muted">@eventModel.HostedByNames</p></li>
-        <li class="list-group-item">Sign in users: <p class="text-muted">@eventModel.SignedInByNames </p> </li>
+            <li class="list-group-item">Hosted by: <p class="text-muted">@eventModel.HostedByNames</p></li>
+            <li class="list-group-item">Sign in users: <p class="text-muted">@eventModel.SignedInByNames </p> </li>
     </ul>
-    <div class="card-body" id="@eventModel.Id">
-        <a class="btn btn-success btn-lg float-left m-2" href="/Events/Join?id=@eventModel.Id" role="button">Join</a>
-        <a class="btn btn-warning btn-lg float-left m-2" href="/Events/Cancel?id=@eventModel.Id" role="button">Cancel</a>
-        <form method="post" class=" m-1" asp-controller="Events" asp-action="Delete" id="deleteForm" asp-route-id="@eventModel.Id">
-            <button class="btn btn-danger btn-lg m-1 float-right" data-toggle="modal" data-target="#deleteModal">Delete</button>
-        </form>
-        <button class="btn btn-secondary btn-lg m-1 float-right">Edit</button>
-    </div>
+        @if (this.SignInManager.IsSignedIn(this.User))
+        {
+         <div class="card-body" id="@eventModel.Id">
+            @if (!eventModel.SignedInByNames.Contains(this.User.Identity.Name.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]))
+            {
+                <a class="btn btn-success btn-lg float-left m-2" href="/Events/Join?id=@eventModel.Id" role="button">Join event</a> 
+            }
+            else
+            {
+                <a class="btn btn-warning btn-lg float-left m-2" href="/Events/Cancel?id=@eventModel.Id" role="button">Cancel attending</a>
+            }
+            @if (eventModel.HostedByNames.Contains(this.User.Identity.Name.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]))
+            {
+                <form method="post" class=" m-1" asp-controller="Events" asp-action="Delete" id="deleteForm" asp-route-id="@eventModel.Id">
+                    <button class="btn btn-danger btn-lg m-1 float-right" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                </form>
+                <button class="btn btn-secondary btn-lg m-1 float-right">Edit</button>
+            }
+        </div>
+    }
     <div class="card-footer text-muted text-left">
         created @eventModel.CretedDaysAgo
     </div>
