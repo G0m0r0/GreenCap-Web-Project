@@ -1,0 +1,91 @@
+﻿@model IEnumerable<GreenCap.Data.Models.Event>
+
+@{
+    ViewData["Title"] = "Details events, Admin view";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center display-3">@ViewData["Title"]</h1>
+</div>
+
+<a class="btn btn-success m-2" asp-action="Create">Create New event</a>
+
+<div class="row justify-content-center">
+    <div class="col-auto bg-info">
+        <table class="table table-responsive table-striped table-light" id="datatable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImagePath)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EndDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TotalPeople)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsDeleted)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            <div id="div_@item.Id" style="display:none">
+                                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                            </div>
+                            <button id="button_@item.Id" class="btn btn-info btn-sm" onclick="showhide(@item.Id)">Show</button>
+                        </td>
+                        <td>
+                            <img src="@Html.DisplayFor(modelItem => item.ImagePath)" alt="Img" width="100" height="100">
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalPeople)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsDeleted)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/js/Show-Hide.js"></script>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#datatable').DataTable();
+        });
+    </script>
+}

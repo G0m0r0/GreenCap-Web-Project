@@ -40,6 +40,12 @@
         }
 
         [Authorize]
+        public IActionResult Donate()
+        {
+            return this.View();
+        }
+
+        [Authorize]
         public IActionResult Create()
         {
             return this.View();

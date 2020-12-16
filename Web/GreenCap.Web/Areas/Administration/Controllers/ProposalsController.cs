@@ -3,7 +3,6 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using GreenCap.Data;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
@@ -37,7 +36,7 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.All()
+            var proposal = await this.context.AllWithDeleted()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (proposal == null)
@@ -51,7 +50,7 @@
         // GET: Administration/Proposals/Create
         public IActionResult Create()
         {
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id");
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id");
             return this.View();
         }
 
@@ -69,7 +68,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -81,13 +80,13 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            var proposal = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
             if (proposal == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -125,7 +124,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.All(), "Id", "Id", proposal.CreatedById);
+            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", proposal.CreatedById);
             return this.View(proposal);
         }
 
@@ -137,7 +136,7 @@
                 return this.NotFound();
             }
 
-            var proposal = await this.context.All()
+            var proposal = await this.context.AllWithDeleted()
                 .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (proposal == null)
@@ -154,7 +153,7 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var proposal = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            var proposal = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
             this.context.Delete(proposal);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
@@ -162,7 +161,7 @@
 
         private bool ProposalExists(int id)
         {
-            return this.context.All().Any(e => e.Id == id);
+            return this.context.AllWithDeleted().Any(e => e.Id == id);
         }
     }
 }

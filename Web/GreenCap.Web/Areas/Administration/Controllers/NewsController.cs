@@ -3,7 +3,6 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using GreenCap.Data;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
@@ -37,7 +36,7 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.All()
+            var news = await this.context.AllWithDeleted()
                 .Include(n => n.Category)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
@@ -51,7 +50,7 @@
         // GET: Administration/News/Create
         public IActionResult Create()
         {
-            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name");
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.AllWithDeleted(), "Id", "Name");
             return this.View();
         }
 
@@ -69,7 +68,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.AllWithDeleted(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -81,13 +80,13 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            var news = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
             if (news == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.AllWithDeleted(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -125,7 +124,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.All(), "Id", "Name", news.CategoryId);
+            this.ViewData["CategoryId"] = new SelectList(this.categoryNewsDb.AllWithDeleted(), "Id", "Name", news.CategoryId);
             return this.View(news);
         }
 
@@ -137,7 +136,7 @@
                 return this.NotFound();
             }
 
-            var news = await this.context.All()
+            var news = await this.context.AllWithDeleted()
                 .Include(n => n.Category)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
@@ -154,7 +153,7 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var news = await this.context.All().FirstOrDefaultAsync(x => x.Id == id);
+            var news = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
             this.context.Delete(news);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
@@ -162,7 +161,7 @@
 
         private bool NewsExists(int id)
         {
-            return this.context.All().Any(e => e.Id == id);
+            return this.context.AllWithDeleted().Any(e => e.Id == id);
         }
     }
 }

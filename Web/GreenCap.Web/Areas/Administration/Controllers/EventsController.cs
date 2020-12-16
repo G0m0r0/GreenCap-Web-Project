@@ -6,29 +6,25 @@
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class PostsController : AdministrationController
+    public class EventsController : AdministrationController
     {
-        private readonly IDeletableEntityRepository<Post> context;
-        private readonly IDeletableEntityRepository<ApplicationUser> userDb;
+        private readonly IDeletableEntityRepository<Event> context;
 
-        public PostsController(IDeletableEntityRepository<Post> context, IDeletableEntityRepository<ApplicationUser> userDb)
+        public EventsController(IDeletableEntityRepository<Event> context)
         {
             this.context = context;
-            this.userDb = userDb;
         }
 
-        // GET: Administration/Posts
+        // GET: Administration/Events
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.context.AllWithDeleted().Include(p => p.User);
-            return this.View(await applicationDbContext.ToListAsync());
+            return this.View(await this.context.AllAsNoTrackingWithDeleted().ToListAsync());
         }
 
-        // GET: Administration/Posts/Details/5
+        // GET: Administration/Events/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,43 +32,40 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.AllWithDeleted()
-                .Include(p => p.User)
+            var @event = await this.context.AllAsNoTrackingWithDeleted()
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (post == null)
+            if (@event == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(post);
+            return this.View(@event);
         }
 
-        // GET: Administration/Posts/Create
+        // GET: Administration/Events/Create
         public IActionResult Create()
         {
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id");
             return this.View();
         }
 
-        // POST: Administration/Posts/Create
+        // POST: Administration/Events/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProblemTitle,Description,CreatedById,Category,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Post post)
+        public async Task<IActionResult> Create([Bind("Name,Description,ImagePath,StartDate,EndDate,TotalPeople,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Event @event)
         {
             if (this.ModelState.IsValid)
             {
-                await this.context.AddAsync(post);
+                await this.context.AddAsync(@event);
                 await this.context.SaveChangesAsync();
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", post.CreatedById);
-            return this.View(post);
+            return this.View(@event);
         }
 
-        // GET: Administration/Posts/Edit/5
+        // GET: Administration/Events/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,24 +73,23 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
-            if (post == null)
+            var @event = await this.context.AllAsNoTrackingWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
+            if (@event == null)
             {
                 return this.NotFound();
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", post.CreatedById);
-            return this.View(post);
+            return this.View(@event);
         }
 
-        // POST: Administration/Posts/Edit/5
+        // POST: Administration/Events/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProblemTitle,Description,CreatedById,Category,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Post post)
+        public async Task<IActionResult> Edit(int id, [Bind("Name,Description,ImagePath,StartDate,EndDate,TotalPeople,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Event @event)
         {
-            if (id != post.Id)
+            if (id != @event.Id)
             {
                 return this.NotFound();
             }
@@ -106,12 +98,12 @@
             {
                 try
                 {
-                    this.context.Update(post);
+                    this.context.Update(@event);
                     await this.context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!this.PostExists(post.Id))
+                    if (!this.EventExists(@event.Id))
                     {
                         return this.NotFound();
                     }
@@ -124,12 +116,10 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CreatedById"] = new SelectList(this.userDb.AllWithDeleted(), "Id", "Id", post.CreatedById);
-
-            return this.View(post);
+            return this.View(@event);
         }
 
-        // GET: Administration/Posts/Delete/5
+        // GET: Administration/Events/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,32 +127,31 @@
                 return this.NotFound();
             }
 
-            var post = await this.context.AllWithDeleted()
-                .Include(p => p.User)
+            var @event = await this.context.AllAsNoTrackingWithDeleted()
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (post == null)
+            if (@event == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(post);
+            return this.View(@event);
         }
 
-        // POST: Administration/Posts/Delete/5
+        // POST: Administration/Events/Delete/5
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var post = await this.context.AllWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
-            this.context.Delete(post);
+            var @event = await this.context.AllAsNoTrackingWithDeleted().FirstOrDefaultAsync(x => x.Id == id);
+            this.context.Delete(@event);
             await this.context.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
         }
 
-        private bool PostExists(int id)
+        private bool EventExists(int id)
         {
-            return this.context.AllWithDeleted().Any(e => e.Id == id);
+            return this.context.AllAsNoTrackingWithDeleted().Any(e => e.Id == id);
         }
     }
 }
