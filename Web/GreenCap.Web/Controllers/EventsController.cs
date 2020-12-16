@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using GreenCap.Web.ViewModels.OutputViewModel;
     using Microsoft.AspNetCore.Authorization;
@@ -37,6 +38,29 @@
             };
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var inputModel = await this.eventService.GetByIdAsync<EventEditViewModel>(id);
+
+            return this.View(inputModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, EventEditViewModel eventModel)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await this.eventService.UpdateAsync(id, eventModel, userId);
+
+            return this.RedirectToAction(nameof(this.All));
         }
 
         [Authorize]
@@ -84,12 +108,6 @@
             await this.eventService.JoinEventAsync(id, userId);
 
             return this.RedirectToAction(nameof(this.All));
-        }
-
-        [Authorize]
-        public IActionResult Edit(int id)
-        {
-            return this.View();
         }
 
         [Authorize]

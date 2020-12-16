@@ -62,7 +62,7 @@
                 <form method="post" class=" m-1" asp-controller="Events" asp-action="Delete" id="deleteForm" asp-route-id="@eventModel.Id">
                     <button class="btn btn-danger btn-lg m-1 float-right" data-toggle="modal" data-target="#deleteModal">Delete</button>
                 </form>
-                <button class="btn btn-secondary btn-lg m-1 float-right">Edit</button>
+                <a class="btn btn-secondary btn-lg m-1 float-right" href="/Events/Edit?id=@eventModel.Id" role="button">Edit</a>
             }
         </div>
     }

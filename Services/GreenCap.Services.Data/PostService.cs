@@ -55,7 +55,7 @@
         {
             return this.forumDb
                 .AllAsNoTracking()
-                .Where(x => x.User.Id == userId)
+                .Where(x => x.CreatedById == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -76,7 +76,7 @@
         {
             var post = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (post.User.Id != userId)
+            if (post.CreatedById != userId)
             {
                 throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, post.ProblemTitle));
             }
@@ -97,7 +97,7 @@
         {
             var modelToDelete = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (modelToDelete.User.Id != userId)
+            if (modelToDelete.CreatedById != userId)
             {
                 throw new NullReferenceException(
                     string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.ProblemTitle));
@@ -127,7 +127,7 @@
                 throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
             }
 
-            return this.forumDb.All().Where(x => x.User.Id == userId).Count();
+            return this.forumDb.All().Where(x => x.CreatedById == userId).Count();
         }
 
         public int GetCountByCategory(string categoryName)

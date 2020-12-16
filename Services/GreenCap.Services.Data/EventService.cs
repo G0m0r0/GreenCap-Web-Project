@@ -11,6 +11,7 @@
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Mapping;
+    using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
     using Microsoft.EntityFrameworkCore;
 
@@ -153,9 +154,13 @@
                 .ToList();
         }
 
-        public Task<T> GetByIdAsync<T>(int id)
+        public async Task<T> GetByIdAsync<T>(int id)
         {
-            throw new NotImplementedException();
+            return await this.eventsDb
+               .AllAsNoTracking()
+               .Where(x => x.Id == id)
+               .To<T>()
+               .FirstOrDefaultAsync();
         }
 
         public int GetCount()
@@ -192,6 +197,31 @@
                 this.userJoinDb.Delete(userEvent);
                 await this.userJoinDb.SaveChangesAsync();
             }
+        }
+
+        public async Task UpdateAsync(int id, EventEditViewModel input, string userId)
+        {
+            var eventModel = await this.eventsDb.All().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (eventModel == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.EventNotFound);
+            }
+
+            if (eventModel.UserEventsHosts.Any(x => x.UserId == userId))
+            {
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, eventModel.Name));
+            }
+
+            eventModel.Name = input.Name;
+            eventModel.Description = input.Description;
+            eventModel.StartDate = input.StartDate;
+            eventModel.EndDate = input.EndDate;
+            eventModel.ImagePath = input.ImagePath;
+            eventModel.TotalPeople = input.TotalPeople;
+
+            await this.eventsDb.SaveChangesAsync();
         }
     }
 }

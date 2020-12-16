@@ -78,7 +78,7 @@
         {
             return this.proposalDb
                 .AllAsNoTracking()
-                .Where(x => x.User.Id == userId)
+                .Where(x => x.CreatedById == userId)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -99,7 +99,7 @@
         {
             var proposal = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
-            if (proposal.User.Id != userId)
+            if (proposal.CreatedById != userId)
             {
                 throw new NullReferenceException(
                     string.Format(ExceptionMessages.YouHaveToBeCreatorException, proposal.Title));
@@ -146,7 +146,7 @@
 
         public int GetCountPersonal(string userId)
         {
-            return this.proposalDb.All().Where(x => x.User.Id == userId).Count();
+            return this.proposalDb.All().Where(x => x.CreatedById == userId).Count();
         }
     }
 }
