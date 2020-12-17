@@ -22,7 +22,7 @@
 
         public async Task<IActionResult> All(int id = 1)
         {
-            const int constPages = 3;
+            const int constPages = 1;
             if (id == 1)
             {
                 await this.newsService.ImportNewsAsync(constPages);
