@@ -22,6 +22,11 @@
         [Authorize]
         public async Task<IActionResult> Create(CommentInputModel model)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
             var parentId = model.ParentId == 0 ? (int?)null : model.ParentId;
 
             if (parentId.HasValue)

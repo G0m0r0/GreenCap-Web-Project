@@ -2,9 +2,9 @@
 {
     public static class ExceptionMessages
     {
-        public const string ProposalNotFound = "Proposal with title {0} is not found!";
+        public const string ProposalNotFound = "Proposal is not found!";
 
-        public const string PostNotFound = "Post with title {0} is not found!";
+        public const string PostNotFound = "Post is not found!";
 
         public const string NewsNotFound = "Current article is not available!";
 
@@ -16,12 +16,14 @@
 
         public const string CommentNotFound = "This comment does not exist!";
 
-        public const string CategoryNameDoesNotExist = "Category name- {0} does not exist!";
+        public const string CategoryNameDoesNotExist = "Category name does not exist!";
 
         public const string CategoryIsNull = "Category can not be null";
 
         public const string UserDoesNotExist = "User does not exist";
 
-        public const string EventNotFound = "Event with title {0} is not found!";
+        public const string EventNotFound = "Event is not found!";
+
+        public const string CanNotBeNegativeNumber = "{0} can not be negative number!";
     }
 }

@@ -5,7 +5,9 @@
 
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
+    using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Data.Exceptions;
 
     public class VotesService : IVotesService
     {
@@ -18,6 +20,8 @@
 
         public double GetAverageVotes(int proposalId)
         {
+            CheckIfIdIsCorrect(proposalId);
+
             return this.votesRepository.All()
                 .Where(x => x.ProposalId == proposalId)
                 .Average(x => x.Value);
@@ -41,6 +45,15 @@
 
             vote.Value = value;
             await this.votesRepository.SaveChangesAsync();
+        }
+
+        private static void CheckIfIdIsCorrect(int id)
+        {
+            if (id < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(id)));
+            }
         }
     }
 }

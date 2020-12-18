@@ -10,6 +10,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Data.Exceptions;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
@@ -136,7 +137,8 @@
 
             if (modelToDelete.UserEventsHosts.Any(x => x.UserId == userId))
             {
-                throw new NullReferenceException(ExceptionMessages.YouHaveToBeCreatorException);
+                throw new NullReferenceException(
+                    string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.Name));
             }
 
             this.eventsDb.Delete(modelToDelete);
@@ -145,6 +147,8 @@
 
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
+            CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
+
             return this.eventsDb
                 .AllAsNoTracking()
                 .OrderBy(x => x.StartDate)
@@ -156,6 +160,8 @@
 
         public async Task<T> GetByIdAsync<T>(int id)
         {
+            CheckIfIdIsCorrect(id);
+
             return await this.eventsDb
                .AllAsNoTracking()
                .Where(x => x.Id == id)
@@ -222,6 +228,30 @@
             eventModel.TotalPeople = input.TotalPeople;
 
             await this.eventsDb.SaveChangesAsync();
+        }
+
+        private static void CheckIfIdIsCorrect(int id)
+        {
+            if (id < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(id)));
+            }
+        }
+
+        private static void CheckIfPageAndItemsPerPageIsCorrect(int page, int itemsPerPage)
+        {
+            if (page < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(page)));
+            }
+
+            if (itemsPerPage < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(itemsPerPage)));
+            }
         }
     }
 }

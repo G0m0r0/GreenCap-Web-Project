@@ -24,6 +24,11 @@
         [Authorize]
         public async Task<ActionResult<ProposalVoteResponse>> Post(ProposalVoteInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await this.votesService.SetVoteAsync(input.ProposalId, userId, input.Value);

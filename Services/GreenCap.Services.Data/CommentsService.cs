@@ -8,6 +8,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Data.Exceptions;
     using Microsoft.EntityFrameworkCore;
 
     public class CommentsService : ICommentsService
@@ -55,12 +56,24 @@
 
         public bool IsInPostId(int commentId, int postId)
         {
+            CheckIfIdIsCorrect(commentId);
+            CheckIfIdIsCorrect(postId);
+
             var commentPostId = this.commentsDb
                                 .All().Where(x => x.Id == commentId)
                                 .Select(x => x.PostId)
                                 .FirstOrDefault();
 
             return commentPostId == postId;
+        }
+
+        private static void CheckIfIdIsCorrect(int id)
+        {
+            if (id < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(id)));
+            }
         }
     }
 }

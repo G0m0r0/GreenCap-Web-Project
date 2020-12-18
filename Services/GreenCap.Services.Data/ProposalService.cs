@@ -11,6 +11,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Data.Exceptions;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
@@ -65,6 +66,8 @@
 
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
+            CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
+
             return this.proposalDb
                 .AllAsNoTracking()
                 .OrderByDescending(x => x.CreatedOn)
@@ -76,6 +79,8 @@
 
         public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string userId)
         {
+            CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
+
             return this.proposalDb
                 .AllAsNoTracking()
                 .Where(x => x.CreatedById == userId)
@@ -88,6 +93,8 @@
 
         public async Task<T> GetByIdAsync<T>(int id)
         {
+            CheckIfIdIsCorrect(id);
+
             return await this.proposalDb
                 .AllAsNoTracking()
                 .Where(x => x.Id == id)
@@ -99,16 +106,15 @@
         {
             var proposal = await this.proposalDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
+            if (proposal == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.ProposalNotFound);
+            }
+
             if (proposal.CreatedById != userId)
             {
                 throw new NullReferenceException(
                     string.Format(ExceptionMessages.YouHaveToBeCreatorException, proposal.Title));
-            }
-
-            if (proposal == null)
-            {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.ProposalNotFound, proposal.Title));
             }
 
             proposal.Title = input.Title;
@@ -124,8 +130,7 @@
 
             if (modelToDelete == null)
             {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.ProposalNotFound, modelToDelete.Title));
+                throw new NullReferenceException(ExceptionMessages.ProposalNotFound);
             }
 
             if (modelToDelete.CreatedById != userId)
@@ -147,6 +152,30 @@
         public int GetCountPersonal(string userId)
         {
             return this.proposalDb.All().Where(x => x.CreatedById == userId).Count();
+        }
+
+        private static void CheckIfIdIsCorrect(int id)
+        {
+            if (id < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(id)));
+            }
+        }
+
+        private static void CheckIfPageAndItemsPerPageIsCorrect(int page, int itemsPerPage)
+        {
+            if (page < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(page)));
+            }
+
+            if (itemsPerPage < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(itemsPerPage)));
+            }
         }
     }
 }

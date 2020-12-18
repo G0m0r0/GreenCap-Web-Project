@@ -20,26 +20,6 @@
           "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         }
       }
-    },
-    "net5.0/win-x64": {
-      "StyleCop.Analyzers/1.2.0-beta.261": {
-        "type": "package",
-        "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.261"
-        }
-      },
-      "StyleCop.Analyzers.Unstable/1.2.0.261": {
-        "type": "package"
-      },
-      "System.ComponentModel.Annotations/5.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -253,11 +233,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }

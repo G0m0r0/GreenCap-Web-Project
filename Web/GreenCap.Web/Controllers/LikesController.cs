@@ -24,6 +24,11 @@
         [Authorize]
         public async Task<ActionResult<PostVoteResponseModel>> Post(PostLikeInputViewModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             await this.likeService.SetLikeAsync(input.PostId, userId, input.IsPositive);

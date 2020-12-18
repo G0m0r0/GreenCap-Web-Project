@@ -10,6 +10,7 @@
     using GreenCap.Data.Models.Enums;
     using GreenCap.Services.Data.Common;
     using GreenCap.Services.Data.Contracts;
+    using GreenCap.Services.Data.Exceptions;
     using GreenCap.Services.Mapping;
     using GreenCap.Web.ViewModels.EditViewModel;
     using GreenCap.Web.ViewModels.InputViewModels;
@@ -42,6 +43,8 @@
 
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage)
         {
+            CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
+
             return this.forumDb
                 .AllAsNoTracking()
                 .OrderByDescending(x => x.CreatedOn)
@@ -53,6 +56,13 @@
 
         public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string userId)
         {
+            CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
+
+            if (!this.userDb.All().Any(x => x.Id == userId))
+            {
+                throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
+            }
+
             return this.forumDb
                 .AllAsNoTracking()
                 .Where(x => x.CreatedById == userId)
@@ -65,6 +75,8 @@
 
         public async Task<T> GetByIdAsync<T>(int id)
         {
+            CheckIfIdIsCorrect(id);
+
             return await this.forumDb
                 .AllAsNoTracking()
                 .Where(x => x.Id == id)
@@ -76,14 +88,14 @@
         {
             var post = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
+            if (post == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.PostNotFound);
+            }
+
             if (post.CreatedById != userId)
             {
                 throw new NullReferenceException(string.Format(ExceptionMessages.YouHaveToBeCreatorException, post.ProblemTitle));
-            }
-
-            if (post == null)
-            {
-                throw new NullReferenceException(string.Format(ExceptionMessages.PostNotFound, post.ProblemTitle));
             }
 
             post.ProblemTitle = input.ProblemTitle;
@@ -97,16 +109,15 @@
         {
             var modelToDelete = await this.forumDb.All().FirstOrDefaultAsync(x => x.Id == id);
 
+            if (modelToDelete == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.PostNotFound);
+            }
+
             if (modelToDelete.CreatedById != userId)
             {
                 throw new NullReferenceException(
                     string.Format(ExceptionMessages.YouHaveToBeCreatorException, modelToDelete.ProblemTitle));
-            }
-
-            if (modelToDelete == null)
-            {
-                throw new NullReferenceException(
-                    string.Format(ExceptionMessages.PostNotFound, modelToDelete.ProblemTitle));
             }
 
             this.forumDb.Delete(modelToDelete);
@@ -142,10 +153,34 @@
 
             if (!categoryExists)
             {
-                throw new NullReferenceException(string.Format(ExceptionMessages.CategoryNameDoesNotExist, categoryName));
+                throw new NullReferenceException(ExceptionMessages.CategoryNameDoesNotExist);
             }
 
             return this.forumDb.All().Where(x => x.Category.ToString() == categoryName).Count();
+        }
+
+        private static void CheckIfIdIsCorrect(int id)
+        {
+            if (id < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(id)));
+            }
+        }
+
+        private static void CheckIfPageAndItemsPerPageIsCorrect(int page, int itemsPerPage)
+        {
+            if (page < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(page)));
+            }
+
+            if (itemsPerPage < 0)
+            {
+                throw new NegativeNumberNotAllowedException(
+                    string.Format(ExceptionMessages.CanNotBeNegativeNumber, nameof(itemsPerPage)));
+            }
         }
     }
 }

@@ -5,8 +5,6 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using Ganss.XSS;
-
     using GreenCap.Data;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
@@ -14,21 +12,19 @@
     using GreenCap.Data.Repositories;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
-    using GreenCap.Web.ViewModels.OutputViewModel;
 
     using Microsoft.EntityFrameworkCore;
     using Moq;
     using Xunit;
 
-    public class PostServiceTest : IDisposable
+    public class PostServiceTest
     {
         private readonly IPostservice postService;
 
-        private EfDeletableEntityRepository<Post> postRepo;
-        private EfDeletableEntityRepository<ApplicationUser> userRepo;
+        private readonly EfDeletableEntityRepository<Post> postRepo;
+        private readonly EfDeletableEntityRepository<ApplicationUser> userRepo;
 
-        private IDeletableRepository connection;
-        private IHtmlSanitizer htmlSanitizer;
+        private readonly IDeletableRepository connection;
 
         public PostServiceTest()
         {
@@ -39,17 +35,7 @@
             this.postRepo = new EfDeletableEntityRepository<Post>(this.connection);
             this.userRepo = new EfDeletableEntityRepository<ApplicationUser>(this.connection);
 
-            this.htmlSanitizer = new HtmlSanitizer();
-
-            this.htmlSanitizer = new HtmlSanitizer();
-
             this.postService = new PostService(this.postRepo, this.userRepo);
-        }
-
-        public void Dispose()
-        {
-            this.connection.Database.EnsureDeleted();
-            this.connection.Dispose();
         }
 
         [Fact]
