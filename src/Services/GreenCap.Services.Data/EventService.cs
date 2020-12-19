@@ -151,6 +151,7 @@
 
             return this.eventsDb
                 .AllAsNoTracking()
+                .Where(x => x.EndDate > DateTime.UtcNow)
                 .OrderBy(x => x.StartDate)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)

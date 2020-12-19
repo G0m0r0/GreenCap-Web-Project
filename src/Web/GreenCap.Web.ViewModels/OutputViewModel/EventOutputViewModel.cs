@@ -46,11 +46,11 @@
                   opt.MapFrom(x => x.EndDate.ToLocalTime().ToString("dd / MMM / yyyy")))
                 .ForMember(x => x.CretedDaysAgo, opt =>
                   opt.MapFrom(x => (DateTime.Now.DayOfYear - x.CreatedOn.ToLocalTime().DayOfYear) == 0 ?
-                  "today" :
-                  ("created" +
+                  "created today " :
+                  ("created " +
                   ((DateTime.Now.DayOfYear - x.CreatedOn.ToLocalTime().DayOfYear) == 1 ?
-                  "day ago" :
-                  "days ago"))))
+                  "Yesterday" :
+                  ((DateTime.Now.DayOfYear - x.CreatedOn.ToLocalTime().DayOfYear) + " days ago")))))
                 .ForMember(x => x.SignedInByNames, opt =>
                    opt.MapFrom(x => string.Join(", ", x.UserEventSignedIn.Select(y => y.User.UserName.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]).ToList())))
                 .ForMember(x => x.NeededPeople, opt =>
