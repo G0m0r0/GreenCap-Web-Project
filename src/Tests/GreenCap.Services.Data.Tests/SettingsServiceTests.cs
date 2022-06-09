@@ -1,18 +1,11 @@
 ﻿namespace GreenCap.Services.Data.Tests
 {
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using GreenCap.Data;
-    using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using GreenCap.Data.Repositories;
-
     using Microsoft.EntityFrameworkCore;
-
-    using Moq;
-
     using Xunit;
 
     public class SettingsServiceTests

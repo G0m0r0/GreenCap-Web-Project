@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using GreenCap.Data.Common;
-
     using GreenCap.Data.Common.Models;
 
     public class Comment : BaseDeletableModel<int>

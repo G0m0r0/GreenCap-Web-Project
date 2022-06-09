@@ -4,8 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using GreenCap.Common;
 
+    using GreenCap.Common;
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Contracts;

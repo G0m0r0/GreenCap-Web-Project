@@ -3,10 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     using GreenCap.Data.Common;
-
     using GreenCap.Data.Common.Models;
 
     public class Event : BaseDeletableModel<int>
@@ -38,9 +36,6 @@
 
         public int NeededPeople => (this.TotalPeople - this.UserEventSignedIn.Count) > 0 ? (this.TotalPeople - this.UserEventSignedIn.Count) : 0;
 
-        // public virtual Address Address { get; set; }
-        // [ForeignKey(nameof(Address))]
-        // public int AddressId { get; set; }
         public virtual ICollection<UserEventHosts> UserEventsHosts { get; set; }
 
         public virtual ICollection<UserEventSignedIn> UserEventSignedIn { get; set; }

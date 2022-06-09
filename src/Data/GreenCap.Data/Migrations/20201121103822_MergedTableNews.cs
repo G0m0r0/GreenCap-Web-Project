@@ -1,8 +1,7 @@
 ﻿namespace GreenCap.Data.Migrations
 {
-    using System;
-
     using Microsoft.EntityFrameworkCore.Migrations;
+    using System;
 
     public partial class MergedTableNews : Migration
     {

@@ -39,7 +39,7 @@
                 .ForMember(x => x.ModifiedOn, opt =>
                    opt.MapFrom(x => (x.ModifiedOn == null) ? "Never modified" : x.ModifiedOn.ToString()))
                 .ForMember(x => x.AverageVote, opt =>
-                    opt.MapFrom(x => x.Votes.Count() == 0 ? 0 : x.Votes.Average(v => v.Value)))
+                    opt.MapFrom(x => x.Votes.Count == 0 ? 0 : x.Votes.Average(v => v.Value)))
                 .ForMember(x => x.Images, opt =>
                   opt.MapFrom(x => x.Images.Select(y => "/Images/Proposals/" + y.Id + "." + y.Extension).ToList()));
 

@@ -6,7 +6,7 @@
 
     using Xunit;
 
-    public class SeleniumTests : IClassFixture<SeleniumServerFactory<Startup>>
+    public class SeleniumTests : IClassFixture<SeleniumServerFactory<Startup>>, System.IDisposable
     {
         private readonly SeleniumServerFactory<Startup> server;
         private readonly IWebDriver browser;
@@ -28,6 +28,11 @@
             Assert.Contains(
                 this.browser.FindElements(By.CssSelector("footer a")),
                 x => x.GetAttribute("href").EndsWith("/Home/Privacy"));
+        }
+
+        public void Dispose()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

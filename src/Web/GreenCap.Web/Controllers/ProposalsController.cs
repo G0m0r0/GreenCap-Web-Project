@@ -6,7 +6,6 @@
     using System.Threading.Tasks;
 
     using GreenCap.Common;
-
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Services.Messaging;
     using GreenCap.Web.ViewModels.EditViewModel;

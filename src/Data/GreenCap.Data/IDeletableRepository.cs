@@ -8,7 +8,6 @@
 
     using GreenCap.Data.Common.Models;
     using GreenCap.Data.Models;
-
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 
@@ -32,7 +31,6 @@
 
         public DbSet<UserLike> UserLikes { get; set; }
 
-        // public DbSet<Address> Addresses { get; set; }
         public DbSet<UserEventHosts> UserEventHosts { get; set; }
 
         public DbSet<UserEventSignedIn> UserEventSignedIns { get; set; }

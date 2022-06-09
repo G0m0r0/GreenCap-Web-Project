@@ -60,9 +60,9 @@
                 .ForMember(x => x.CategoryName, opt =>
                   opt.MapFrom(x => x.Category.ToString()))
                 .ForMember(x => x.Likes, opt =>
-                  opt.MapFrom(x => x.UsersLikes.Where(x => x.IsPositive).Count()))
+                  opt.MapFrom(x => x.UsersLikes/*.Where(x => x.IsPositive)*/.Count(x => x.IsPositive)))
                 .ForMember(x => x.DissLikes, opt =>
-                  opt.MapFrom(x => x.UsersLikes.Where(x => !x.IsPositive).Count()));
+                  opt.MapFrom(x => x.UsersLikes/*.Where(x => !x.IsPositive)*/.Count(x => !x.IsPositive)));
         }
     }
 }

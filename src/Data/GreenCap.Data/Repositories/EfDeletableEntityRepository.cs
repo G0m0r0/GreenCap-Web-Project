@@ -6,7 +6,6 @@
 
     using GreenCap.Data.Common.Models;
     using GreenCap.Data.Common.Repositories;
-
     using Microsoft.EntityFrameworkCore;
 
     public class EfDeletableEntityRepository<TEntity> : EfRepository<TEntity>, IDeletableEntityRepository<TEntity>

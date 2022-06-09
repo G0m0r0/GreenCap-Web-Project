@@ -15,13 +15,11 @@
 
         public override bool IsValid(object value)
         {
-            if (value is int intValue)
+            if (value is int intValue
+                && intValue <= DateTime.UtcNow.Year
+                && intValue >= this.MinYear)
             {
-                if (intValue <= DateTime.UtcNow.Year
-                    && intValue >= this.MinYear)
-                {
-                    return true;
-                }
+                return true;
             }
 
             return false;

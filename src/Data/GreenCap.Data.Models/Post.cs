@@ -5,7 +5,6 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using GreenCap.Data.Common;
-
     using GreenCap.Data.Common.Models;
     using GreenCap.Data.Models.Enums;
 

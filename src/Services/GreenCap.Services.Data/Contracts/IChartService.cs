@@ -5,6 +5,6 @@
 
     public interface IChartService
     {
-         Task<List<int>> GetMonthsActivity();
+        Task<List<int>> GetMonthsActivity();
     }
 }

@@ -1,9 +1,7 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using System;
-    using System.ComponentModel.DataAnnotations.Schema;
-
     using GreenCap.Data.Common.Models;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class UserEventHosts : BaseDeletableModel<int>
     {

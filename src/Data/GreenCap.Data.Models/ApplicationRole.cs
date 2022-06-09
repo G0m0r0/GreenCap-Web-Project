@@ -4,7 +4,6 @@ namespace GreenCap.Data.Models
     using System;
 
     using GreenCap.Data.Common.Models;
-
     using Microsoft.AspNetCore.Identity;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity

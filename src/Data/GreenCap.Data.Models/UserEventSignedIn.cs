@@ -1,8 +1,7 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using System.ComponentModel.DataAnnotations.Schema;
-
     using GreenCap.Data.Common.Models;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class UserEventSignedIn : BaseDeletableModel<int>
     {

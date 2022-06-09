@@ -7,7 +7,6 @@
     using GreenCap.Data.Models;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.Settings;
-
     using Microsoft.AspNetCore.Mvc;
 
     public class SettingsController : BaseController

@@ -4,11 +4,7 @@
     using GreenCap.Data.Models;
     using GreenCap.Data.Repositories;
     using GreenCap.Services.Data.Contracts;
-    using GreenCap.Web.ViewModels.InputViewModels;
     using Microsoft.EntityFrameworkCore;
-    using System;
-    using System.Threading.Tasks;
-    using Xunit;
 
     public class ProposalServiceTest
     {

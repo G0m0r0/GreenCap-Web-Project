@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using GreenCap.Data.Common;
-
     using GreenCap.Data.Common.Models;
 
     public class Address : BaseDeletableModel<int>
@@ -24,9 +23,5 @@
 
         [ForeignKey(nameof(Event))]
         public int EventId { get; set; }
-
-        // public ApplicationUser User { get; set; }
-        // [ForeignKey(nameof(User))]
-        // public string UserId { get; set; }
     }
 }

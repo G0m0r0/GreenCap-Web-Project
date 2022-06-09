@@ -1,7 +1,6 @@
 ﻿namespace GreenCap.Services.Data
 {
     using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
     using System.Threading.Tasks;
 
     using GreenCap.Data.Common.Repositories;

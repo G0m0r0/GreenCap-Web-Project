@@ -1,7 +1,6 @@
 ﻿namespace GreenCap.Web.ViewModels.InputViewModels
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using GreenCap.Data.Common;
@@ -36,7 +35,7 @@
         [Display(Name = "Total people")]
         public int TotalPeople { get; set; }
 
-        [Display(Name="List of hosts")]
+        [Display(Name = "List of hosts")]
         public string CreatorsNames { get; set; }
     }
 }

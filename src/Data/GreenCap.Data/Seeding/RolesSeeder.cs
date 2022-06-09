@@ -6,7 +6,6 @@
 
     using GreenCap.Common;
     using GreenCap.Data.Models;
-
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.DependencyInjection;
 
