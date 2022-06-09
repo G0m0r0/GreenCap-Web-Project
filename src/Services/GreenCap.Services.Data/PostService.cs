@@ -29,6 +29,13 @@
 
         public async Task CreateAsync(PostInputViewModel model, string userId)
         {
+            var creator = this.userDb.All().FirstOrDefault(x => x.Id == userId);
+
+            if (creator == null)
+            {
+                throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
+            }
+
             var modelToCreate = new Post
             {
                 ProblemTitle = model.ProblemTitle,

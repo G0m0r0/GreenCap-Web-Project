@@ -16,5 +16,7 @@
         public const string AdministratorPassword = "@Aa123.";
 
         public const string DateTimeFormat = "dd/MMM/yyyy";
+
+        public const int WebsiteCreationYear = 2020;
     }
 }

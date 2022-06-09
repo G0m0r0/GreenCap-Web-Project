@@ -1,7 +1,9 @@
 ﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
+    using System.Collections.Generic;
+
     public class ChartResponseModel
     {
-        public int[] MonthsActivity { get; set; }
+        public List<int> MonthsActivity { get; set; }
     }
 }

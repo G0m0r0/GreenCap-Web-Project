@@ -2,6 +2,7 @@
 @using GreenCap.Data.Models
 @using Microsoft.AspNetCore.Identity
 @using GreenCap.Web.ViewModels.OutputViewModel
+ 
 @model HomeStatisticsOutputViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 
@@ -95,7 +96,11 @@
 
             function chart(dataObject ) {
                 var data = dataObject.monthsActivity;
-                var currentYear = new Date().getFullYear()
+                var currentYear = new Date().getFullYear();
+
+                var MontlyActivityByYears;
+
+                //TODO:
 
                 Highcharts.chart('container', {
                     chart: {
@@ -133,9 +138,10 @@
                         }
                     },
                     series: [{
-                        name: "Activity for " + currentYear, 
+                        //TODO:
+                        name: "Activity for " + currentYear,
                         data: [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11]],
-                    }]
+                    }],
                 });
             }
         });

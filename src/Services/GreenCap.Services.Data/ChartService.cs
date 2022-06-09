@@ -1,8 +1,10 @@
 ﻿namespace GreenCap.Services.Data
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using GreenCap.Common;
 
     using GreenCap.Data.Common.Repositories;
     using GreenCap.Data.Models;
@@ -31,13 +33,13 @@
             this.news = news;
         }
 
-        public async Task<int[]> GetMonthsActivity()
+        public async Task<List<int>> GetMonthsActivity()
         {
-            var monthlyActivity = new int[12];
+            var monthlyActivity = new List<int>();
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 1; i <= (DateTime.Now.Year - GlobalConstants.WebsiteCreationYear) * 12; i++)
             {
-                monthlyActivity[i] = await this.GetMonthActivity(i);
+                monthlyActivity.Add(await this.GetMonthActivity(i));
             }
 
             return monthlyActivity;
@@ -45,30 +47,37 @@
 
         private async Task<int> GetMonthActivity(int i)
         {
-            i++;
+            int yearToLookFor = GlobalConstants.WebsiteCreationYear;
+
+            if (i > 12)
+            {
+                i = i - (12 * (i / 12));
+                yearToLookFor += i / 12;
+            }
+
             var createdEventsPerMonth = await this.events
                     .AllAsNoTracking()
-                    .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == DateTime.UtcNow.Year)
+                    .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == yearToLookFor)
                     .CountAsync();
 
             var createdPostsPerMonth = await this.posts
                 .AllAsNoTracking()
-                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == DateTime.UtcNow.Year)
+                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == yearToLookFor)
                 .CountAsync();
 
             var createdProposalsPerMonth = await this.proposals
                 .AllAsNoTracking()
-                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == DateTime.UtcNow.Year)
+                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == yearToLookFor)
                 .CountAsync();
 
             var createdNewsPerMonth = await this.news
                 .AllAsNoTracking()
-                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == DateTime.UtcNow.Year)
+                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == yearToLookFor)
                 .CountAsync();
 
             var registerUsersPerMonth = await this.users
                 .AllAsNoTracking()
-                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == DateTime.UtcNow.Year)
+                .Where(x => x.CreatedOn.Month == i && x.CreatedOn.Year == yearToLookFor)
                 .CountAsync();
 
             var monthActivitySum = createdEventsPerMonth + createdNewsPerMonth + createdPostsPerMonth + createdProposalsPerMonth + registerUsersPerMonth;

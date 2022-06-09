@@ -1,9 +1,10 @@
 ﻿namespace GreenCap.Services.Data.Contracts
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public interface IChartService
     {
-         Task<int[]> GetMonthsActivity();
+         Task<List<int>> GetMonthsActivity();
     }
 }

@@ -12,7 +12,7 @@
     using GreenCap.Data.Repositories;
     using GreenCap.Services.Data.Contracts;
     using GreenCap.Web.ViewModels.InputViewModels;
-
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;
     using Moq;
     using Xunit;
@@ -20,6 +20,7 @@
     public class PostServiceTest
     {
         private readonly IPostservice postService;
+        private readonly IWebHost envirnoment;
 
         private readonly EfDeletableEntityRepository<Post> postRepo;
         private readonly EfDeletableEntityRepository<ApplicationUser> userRepo;

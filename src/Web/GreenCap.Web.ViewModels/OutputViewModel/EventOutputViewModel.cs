@@ -55,7 +55,6 @@
                    opt.MapFrom(x => string.Join(", ", x.UserEventSignedIn.Select(y => y.User.UserName.Split('@', StringSplitOptions.RemoveEmptyEntries)[0]).ToList())))
                 .ForMember(x => x.NeededPeople, opt =>
                   opt.MapFrom(x => x.TotalPeople - x.UserEventSignedIn.Where(x => x.Id == this.Id).Count()));
-
         }
     }
 }
