@@ -27,9 +27,9 @@
             this.userDb = userDb;
         }
 
-        public async Task CreateAsync(PostInputViewModel model, string userId)
+        public async Task CreateAsync(PostInputViewModel model, string id)
         {
-            var creator = this.userDb.All().FirstOrDefault(x => x.Id == userId);
+            var creator = this.userDb.All().FirstOrDefault(x => x.Id == id);
 
             if (creator == null)
             {
@@ -40,7 +40,7 @@
             {
                 ProblemTitle = model.ProblemTitle,
                 Category = model.Category,
-                CreatedById = userId,
+                CreatedById = id,
                 Description = model.Description,
             };
 
@@ -61,18 +61,18 @@
                 .ToList();
         }
 
-        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string userId)
+        public IEnumerable<T> GetAllPersonal<T>(int page, int itemsPerPage, string id)
         {
             CheckIfPageAndItemsPerPageIsCorrect(page, itemsPerPage);
 
-            if (!this.userDb.All().Any(x => x.Id == userId))
+            if (!this.userDb.All().Any(x => x.Id == id))
             {
                 throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
             }
 
             return this.forumDb
                 .AllAsNoTracking()
-                .Where(x => x.CreatedById == userId)
+                .Where(x => x.CreatedById == id)
                 .OrderByDescending(x => x.CreatedOn)
                 .Skip((page - 1) * itemsPerPage)
                 .Take(itemsPerPage)
@@ -137,15 +137,15 @@
             return this.forumDb.All().Count();
         }
 
-        public int GetCountPersonal(string userId)
+        public int GetCountPersonal(string id)
         {
-            bool exist = this.userDb.All().Any(x => x.Id == userId);
+            bool exist = this.userDb.All().Any(x => x.Id == id);
             if (!exist)
             {
                 throw new NullReferenceException(ExceptionMessages.UserDoesNotExist);
             }
 
-            return this.forumDb.All().Where(x => x.CreatedById == userId).Count();
+            return this.forumDb.All().Where(x => x.CreatedById == id).Count();
         }
 
         public int GetCountByCategory(string categoryName)

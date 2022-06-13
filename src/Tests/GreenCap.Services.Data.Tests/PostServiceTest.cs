@@ -20,7 +20,9 @@
     public class PostServiceTest
     {
         private readonly IPostservice postService;
+#pragma warning disable CS0169 // The field 'PostServiceTest.envirnoment' is never used
         private readonly IWebHost envirnoment;
+#pragma warning restore CS0169 // The field 'PostServiceTest.envirnoment' is never used
 
         private readonly EfDeletableEntityRepository<Post> postRepo;
         private readonly EfDeletableEntityRepository<ApplicationUser> userRepo;

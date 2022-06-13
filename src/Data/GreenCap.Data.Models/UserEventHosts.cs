@@ -1,7 +1,8 @@
 ﻿namespace GreenCap.Data.Models
 {
-    using GreenCap.Data.Common.Models;
     using System.ComponentModel.DataAnnotations.Schema;
+
+    using GreenCap.Data.Common.Models;
 
     public class UserEventHosts : BaseDeletableModel<int>
     {
@@ -14,6 +15,5 @@
 
         [ForeignKey(nameof(Event))]
         public int EventId { get; set; }
-
     }
 }

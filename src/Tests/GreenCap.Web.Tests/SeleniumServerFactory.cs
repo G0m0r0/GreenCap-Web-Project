@@ -66,10 +66,12 @@
         {
             public void ConfigureServices(IServiceCollection services)
             {
+                // Method intentionally left empty.
             }
 
             public void Configure()
             {
+                // Method intentionally left empty.
             }
         }
     }

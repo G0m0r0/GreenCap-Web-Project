@@ -35,18 +35,18 @@
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // services.AddMemoryCache();
+        // services.AddDistributedSqlServerCache(opt =>
+        // {
+        //     opt.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
+        //     opt.SchemaName = "dbo";
+        //     opt.TableName = "CacheRecords";
+        // });
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<IDeletableRepository>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
-            // services.AddMemoryCache();
-            // services.AddDistributedSqlServerCache(opt =>
-            // {
-            //     opt.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
-            //     opt.SchemaName = "dbo";
-            //     opt.TableName = "CacheRecords";
-            // });
             if (this.environment.IsDevelopment())
             {
                 services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptionsDevelopment)

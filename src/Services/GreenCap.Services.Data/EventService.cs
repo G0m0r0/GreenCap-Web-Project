@@ -198,7 +198,7 @@
                 return;
             }
 
-            if (userEvent.IsDeleted == false)
+            if (!userEvent.IsDeleted)
             {
                 this.userJoinDb.Delete(userEvent);
                 await this.userJoinDb.SaveChangesAsync();

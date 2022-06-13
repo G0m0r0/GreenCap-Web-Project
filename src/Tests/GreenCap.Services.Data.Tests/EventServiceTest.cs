@@ -14,13 +14,19 @@
 
     public class EventServiceTest
     {
+#pragma warning disable CS0169 // The field 'EventServiceTest.envirnoment' is never used
         private readonly IWebHost envirnoment;
+#pragma warning restore CS0169 // The field 'EventServiceTest.envirnoment' is never used
         private readonly IEventService eventService;
 
         private readonly EfDeletableEntityRepository<Event> eventRepo;
         private readonly EfDeletableEntityRepository<ApplicationUser> userRepo;
+#pragma warning disable CS0649 // Field 'EventServiceTest.eventHost' is never assigned to, and will always have its default value null
         private readonly EfDeletableEntityRepository<UserEventHosts> eventHost;
+#pragma warning restore CS0649 // Field 'EventServiceTest.eventHost' is never assigned to, and will always have its default value null
+#pragma warning disable CS0649 // Field 'EventServiceTest.eventSignedIn' is never assigned to, and will always have its default value null
         private readonly EfDeletableEntityRepository<UserEventSignedIn> eventSignedIn;
+#pragma warning restore CS0649 // Field 'EventServiceTest.eventSignedIn' is never assigned to, and will always have its default value null
 
         private readonly IDeletableRepository connection;
 
