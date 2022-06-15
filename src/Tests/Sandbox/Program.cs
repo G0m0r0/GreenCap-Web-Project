@@ -82,5 +82,10 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
         }
+
+        private static void PrimitiveDataTypes()
+        {
+            var myCar = new { XCoordinate = 5.5d, YCoordinate = 6.00d };
+        }
     }
 }
