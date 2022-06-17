@@ -4,6 +4,6 @@
 
     public interface IPhysNewsScarperService
     {
-        Task ImportNewsAsync(int countPages);
+        Task ImportNewsAsync(int countNews);
     }
 }
