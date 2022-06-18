@@ -8,17 +8,18 @@ https://greenestcap.azurewebsites.net/
 
 ## :hammer: Built With
 - Visual Studio Preview
-- [ASP.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0 "ASP.NET 5") MVC
+- [ASP.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0 "ASP.NET 5") MVC migrated to .Net 6
 - ASP.NET areas
 - MS SQL Server
 - MS SQL Server Management Studio 2018
-- ORM Entity Framwork Core 5
+- ORM Entity Framwork Core 5 migrated to 6
 - SendGrid API
 - HighChart
-- HTML 5 &&  CSS
+- HTML 5 & CSS
 - Bootstrap 4.0
 - [HtmlSanitizer](https://github.com/mganss/HtmlSanitizer)
 - StyleCop Analyzers
+- SonarLint for static code analysis
 -[Theme by bootswatch](https://bootswatch.com/solar/)
 - Custom database seeder
 - Automapper
