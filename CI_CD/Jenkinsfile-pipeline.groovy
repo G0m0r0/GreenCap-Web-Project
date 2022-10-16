@@ -5,20 +5,13 @@ pipeline {
     }
     stages {
         stage('Audit tools') {
-            steps {
-              node {
-                sh '''
-                    git version
-                    '''
-                }
-            }
+            
         }
         stage('Clone sources') {
             steps {
                 /* groovylint-disable-next-line DuplicateStringLiteral */
-                git branch: 'main', credentialsId: 'gitlab-jenkins',
+                git branch: 'master'
                 /* groovylint-disable-next-line DuplicateStringLiteral */
-                url: 'MY_SSH_URL'
             }
         }
         stage('Build') {
