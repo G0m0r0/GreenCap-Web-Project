@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - 9081:9000
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+    networks:
+      - mynetwork
+    restart: unless-stopped
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - 9080:8080
+    volumes:
+       - jenkins_data:/var/jenkins_home
+    networks:
+      - mynetwork
+    restart: unless-stopped
+networks:
+  mynetwork:
+
+volumes:
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_bundled-plugins:
+  jenkins_data:
+
+

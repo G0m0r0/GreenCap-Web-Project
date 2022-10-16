@@ -1,0 +1,5 @@
+﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Common\ServicesConstants.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\IPhysNewsScarperService.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Models\NewsDTO.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Models\NewsShortIntroDTO.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\PhysNewsScarperService.cs

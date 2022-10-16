@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>GreenCap.Data</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>4b844ecb-e845-49a6-8b31-85e577933598</ProjectGuid>
+  <FullPath>C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\GreenCap.Data.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\conf\8\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\8\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\8</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net6.0</TargetFramework>
+</ProjectInfo>

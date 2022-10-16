@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.2.0.0",
+        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
+        "semanticVersion": "4.2.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "SA1305",
+          "level": "warning",
+          "message": "variable 'myCar' should not use Hungarian notation",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 17,
+                  "endLine": 88,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1412",
+          "level": "warning",
+          "message": "Store files as UTF-8 with byte order mark",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/SandboxOptions.cs",
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "Encoding": "utf-8"
+            }
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'myCar'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 17,
+                  "endLine": 88,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private method 'PrimitiveDataTypes'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 9,
+                  "endLine": 89,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4792",
+          "level": "warning",
+          "message": "Make sure that this logger's configuration is safe.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 39,
+                  "endLine": 72,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1172",
+          "level": "warning",
+          "message": "Remove this unused method parameter 'options'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 52,
+                  "endLine": 50,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "IsRemovable": "True"
+            }
+          }
+        }
+      ],
+      "rules": {
+        "S1144": {
+          "id": "S1144",
+          "shortDescription": "Unused private types or members should be removed",
+          "fullDescription": "private or internal types or private members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+          "defaultLevel": "note",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1144",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope",
+              "Unnecessary"
+            ]
+          }
+        },
+        "S1172": {
+          "id": "S1172",
+          "shortDescription": "Unused method parameters should be removed",
+          "fullDescription": "Unused parameters are misleading. Whatever the values passed to such parameters, the behavior will be the same.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1172",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S4792": {
+          "id": "S4792",
+          "shortDescription": "Configuring loggers is security-sensitive",
+          "fullDescription": "Configuring loggers is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4792",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "NotConfigurable"
+            ]
+          }
+        },
+        "SA1305": {
+          "id": "SA1305",
+          "shortDescription": "Field names should not use Hungarian notation",
+          "fullDescription": "The name of a field or variable in C# uses Hungarian notation.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1305.md",
+          "properties": {
+            "category": "StyleCop.CSharp.NamingRules",
+            "isEnabledByDefault": false
+          }
+        },
+        "SA1412": {
+          "id": "SA1412",
+          "shortDescription": "Store files as UTF-8 with byte order mark",
+          "fullDescription": "Source files should be saved using the UTF-8 encoding with a byte order mark",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1412.md",
+          "properties": {
+            "category": "StyleCop.CSharp.MaintainabilityRules",
+            "isEnabledByDefault": false
+          }
+        }
+      }
+    }
+  ]
+}

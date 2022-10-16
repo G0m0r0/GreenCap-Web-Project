@@ -1,0 +1,9 @@
+
+vC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\EventServiceTest.csutf-8~
+uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\PostServiceTest.csutf-8‚
+yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\ProposalServiceTest.csutf-8ƒ
+zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\SettingsServiceTests.csutf-8~
+uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\VoteServiceTest.csutf-8}
+rC:\Users\dimit\.nuget\packages\microsoft.net.test.sdk\17.3.2\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.csutf-8®
+¢C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8¬
+ C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\obj\Debug\net6.0\GreenCap.Services.Data.Tests.AssemblyInfo.csutf-8

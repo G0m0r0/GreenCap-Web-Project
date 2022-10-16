@@ -6,7 +6,7 @@
     using System.Text.RegularExpressions;
 
     using AutoMapper;
-    using Ganss.XSS;
+    using Ganss.Xss;
     using GreenCap.Data.Common;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;

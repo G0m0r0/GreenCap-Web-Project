@@ -1,0 +1,482 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.2.0.0",
+        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
+        "semanticVersion": "4.2.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CA1063",
+          "level": "warning",
+          "message": "Provide an overridable implementation of Dispose(bool) on 'SeleniumTests' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 18,
+                  "endLine": 9,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1516",
+          "level": "warning",
+          "message": "Using directives should be separated by blank line",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 5,
+                  "endLine": 9,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "CodeFixAction": "InsertBlankLine"
+            }
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System' should appear before directive for 'Microsoft.Extensions.DependencyInjection'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 5,
+                  "endLine": 9,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System.Diagnostics' should appear before directive for 'Microsoft.Extensions.DependencyInjection'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 5,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System.Linq' should appear before directive for 'Microsoft.Extensions.DependencyInjection'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 5,
+                  "endLine": 11,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1065",
+          "level": "warning",
+          "message": "Dispose creates an exception of type NotImplementedException. Exceptions should not be raised in this type of method. If this exception instance might be raised, change this method's logic so it no longer raises an exception.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 13,
+                  "endLine": 35,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1063",
+          "level": "warning",
+          "message": "Modify 'SeleniumTests.Dispose' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 15,
+                  "endLine": 27,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1816",
+          "level": "note",
+          "message": "Change SeleniumTests.Dispose() to call GC.SuppressFinalize(object). This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 15,
+                  "endLine": 24,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 15,
+                  "endLine": 17,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1516",
+          "level": "warning",
+          "message": "Using directives should be separated by blank line",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 5,
+                  "endLine": 4,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "CodeFixAction": "InsertBlankLine"
+            }
+          }
+        },
+        {
+          "ruleId": "SA1516",
+          "level": "warning",
+          "message": "Using directives should be separated by blank line",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 5,
+                  "endLine": 6,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "CodeFixAction": "InsertBlankLine"
+            }
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System.Net' should appear before directive for 'Microsoft.AspNetCore.Mvc.Testing'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 5,
+                  "endLine": 4,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System.Threading.Tasks' should appear before directive for 'Microsoft.AspNetCore.Mvc.Testing'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 5,
+                  "endLine": 5,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2213",
+          "level": "warning",
+          "message": "'SeleniumTests' contains field 'browser' that is of IDisposable type 'IWebDriver', but it is never disposed. Change the Dispose method on 'SeleniumTests' to call Close or Dispose on this field.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 37,
+                  "endLine": 12,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2213",
+          "level": "warning",
+          "message": "'SeleniumServerFactory<TStartup>' contains field 'process' that is of IDisposable type 'Process', but it is never disposed. Change the Dispose method on 'SeleniumServerFactory<TStartup>' to call Close or Dispose on this field.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 34,
+                  "endLine": 16,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1063": {
+          "id": "CA1063",
+          "shortDescription": "Implement IDisposable Correctly",
+          "fullDescription": "All IDisposable types should implement the Dispose pattern correctly.",
+          "defaultLevel": "warning",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1063",
+          "properties": {
+            "category": "Design",
+            "isEnabledByDefault": false,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1065": {
+          "id": "CA1065",
+          "shortDescription": "Do not raise exceptions in unexpected locations",
+          "fullDescription": "A method that is not expected to throw exceptions throws an exception.",
+          "defaultLevel": "warning",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1065",
+          "properties": {
+            "category": "Design",
+            "isEnabledByDefault": false,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1816": {
+          "id": "CA1816",
+          "shortDescription": "Dispose methods should call SuppressFinalize",
+          "fullDescription": "A method that is an implementation of Dispose does not call GC.SuppressFinalize; or a method that is not an implementation of Dispose calls GC.SuppressFinalize; or a method calls GC.SuppressFinalize and passes something other than this (Me in Visual Basic).",
+          "defaultLevel": "note",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1816",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA2213": {
+          "id": "CA2213",
+          "shortDescription": "Disposable fields should be disposed",
+          "fullDescription": "A type that implements System.IDisposable declares fields that are of types that also implement IDisposable. The Dispose method of the field is not called by the Dispose method of the declaring type. To fix a violation of this rule, call Dispose on fields that are of types that implement IDisposable if you are responsible for allocating and releasing the unmanaged resources held by the field.",
+          "defaultLevel": "warning",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2213",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": false,
+            "tags": [
+              "PortedFromFxCop",
+              "Dataflow",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "SA1208": {
+          "id": "SA1208",
+          "shortDescription": "System using directives should be placed before other using directives",
+          "fullDescription": "A using directive which declares a member of the 'System' namespace appears after a using directive which declares a member of a different namespace, within a C# code file.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1208.md",
+          "properties": {
+            "category": "StyleCop.CSharp.OrderingRules",
+            "isEnabledByDefault": true
+          }
+        },
+        "SA1516": {
+          "id": "SA1516",
+          "shortDescription": "Elements should be separated by blank line",
+          "fullDescription": "Adjacent using directives should be separated by a blank line.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1516.md",
+          "properties": {
+            "category": "StyleCop.CSharp.LayoutRules",
+            "isEnabledByDefault": true
+          }
+        },
+        "xUnit1004": {
+          "id": "xUnit1004",
+          "shortDescription": "Test methods should not be skipped",
+          "defaultLevel": "note",
+          "helpUri": "https://xunit.net/xunit.analyzers/rules/xUnit1004",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}

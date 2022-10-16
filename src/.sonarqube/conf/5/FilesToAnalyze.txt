@@ -1,0 +1,16 @@
+﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Address.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationRole.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationUser.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\CategoryNews.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Comment.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Enums\Category.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Event.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Image.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\News.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Post.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Proposal.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Setting.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventHosts.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventSignedIn.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserLike.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Vote.cs

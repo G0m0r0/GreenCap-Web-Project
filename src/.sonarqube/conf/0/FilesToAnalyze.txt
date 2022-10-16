@@ -1,0 +1,8 @@
+﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\DataValidation.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\IDbQueryRunner.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseDeletableModel.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseModel.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IAuditInfo.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IDeletableEntity.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IDeletableEntityRepository.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IRepository.cs

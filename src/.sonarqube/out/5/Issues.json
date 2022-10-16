@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.2.0.0",
+        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
+        "semanticVersion": "4.2.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "SA1516",
+          "level": "warning",
+          "message": "Using directives should be separated by blank line",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Data/GreenCap.Data.Models/UserEventSignedIn.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 5,
+                  "endLine": 4,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "CodeFixAction": "InsertBlankLine"
+            }
+          }
+        },
+        {
+          "ruleId": "SA1208",
+          "level": "warning",
+          "message": "Using directive for 'System.ComponentModel.DataAnnotations.Schema' should appear before directive for 'GreenCap.Data.Common.Models'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Data/GreenCap.Data.Models/UserEventSignedIn.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 5,
+                  "endLine": 4,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "SA1208": {
+          "id": "SA1208",
+          "shortDescription": "System using directives should be placed before other using directives",
+          "fullDescription": "A using directive which declares a member of the 'System' namespace appears after a using directive which declares a member of a different namespace, within a C# code file.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1208.md",
+          "properties": {
+            "category": "StyleCop.CSharp.OrderingRules",
+            "isEnabledByDefault": true
+          }
+        },
+        "SA1516": {
+          "id": "SA1516",
+          "shortDescription": "Elements should be separated by blank line",
+          "fullDescription": "Adjacent using directives should be separated by a blank line.",
+          "defaultLevel": "warning",
+          "helpUri": "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1516.md",
+          "properties": {
+            "category": "StyleCop.CSharp.LayoutRules",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}

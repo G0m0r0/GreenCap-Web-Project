@@ -1,7 +1,7 @@
 ﻿namespace GreenCap.Web.ViewModels.OutputViewModel
 {
     using AutoMapper;
-    using Ganss.XSS;
+    using Ganss.Xss;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
 

@@ -4,7 +4,7 @@
     using System.Linq;
 
     using AutoMapper;
-    using Ganss.XSS;
+    using Ganss.Xss;
     using GreenCap.Data.Models;
     using GreenCap.Services.Mapping;
 

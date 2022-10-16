@@ -1,0 +1,4 @@
+﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\EmailAttachment.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\IEmailSender.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\NullMessageSender.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\SendGridEmailSender.cs

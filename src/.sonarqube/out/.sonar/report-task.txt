@@ -1,0 +1,6 @@
+projectKey=GreenCap
+serverUrl=http://localhost:9081
+serverVersion=8.9.9.56886
+dashboardUrl=http://localhost:9081/dashboard?id=GreenCap
+ceTaskId=AYPiMWOhSxwBs_Fqx6W_
+ceTaskUrl=http://localhost:9081/api/ce/task?id=AYPiMWOhSxwBs_Fqx6W_

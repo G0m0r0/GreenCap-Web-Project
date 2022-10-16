@@ -1,0 +1,5 @@
+﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Mapping\AutoMapperConfig.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Mapping\IHaveCustomMappings.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Mapping\IMapFrom.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Mapping\IMapTo.cs
+C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Mapping\QueryableMappingExtensions.cs
