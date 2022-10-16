@@ -5,13 +5,15 @@ pipeline {
     }
     stages {
         stage('Audit tools') {
-            
+            steps {
+                sh '''
+                    git version
+                    '''
+                }
         }
         stage('Clone sources') {
             steps {
-                /* groovylint-disable-next-line DuplicateStringLiteral */
-                git branch: 'master'
-                /* groovylint-disable-next-line DuplicateStringLiteral */
+                git 'https://github.com/G0m0r0/GreenCap-Web-Project.git'
             }
         }
         stage('Build') {
