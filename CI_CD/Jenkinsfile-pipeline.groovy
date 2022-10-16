@@ -18,9 +18,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh './mvnw compile'
-                sh './mvnw install'
-                sh './mvnw package'
+                sh 'dotnet build'
             }
         }
         stage('SonarQube analysis') {
