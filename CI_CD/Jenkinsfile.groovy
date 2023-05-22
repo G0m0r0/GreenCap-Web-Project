@@ -11,7 +11,7 @@ pipeline {
                 sh '''
                     git version
                     '''
-                }
+            }
         }
         stage('Clone sources') {
             steps {
@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'dotnet build'
+                sh 'cd src && dotnet build GreenCap.sln'
             }
         }
         stage('SonarQube analysis') {
@@ -33,8 +33,8 @@ pipeline {
         stage('Quality gate') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
-                waitForQualityGate abortPipeline: true
-               }
+                    waitForQualityGate abortPipeline: true
+                }
             }
         }
     }
