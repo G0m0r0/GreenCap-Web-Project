@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>GreenCap.Data</ProjectName>
+  <ProjectName>GreenCap.Web.ViewModels</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>4b844ecb-e845-49a6-8b31-85e577933598</ProjectGuid>
-  <FullPath>C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\GreenCap.Data.csproj</FullPath>
+  <ProjectGuid>13b7aacb-9c85-4409-8d4b-95a67d0dfff7</ProjectGuid>
+  <FullPath>D:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\GreenCap.Web.ViewModels.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\conf\8\FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\Programming\SoftUni-Web-Project\src\.sonarqube\conf\8\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\8\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\8</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">D:\Programming\SoftUni-Web-Project\src\.sonarqube\out\8\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">D:\Programming\SoftUni-Web-Project\src\.sonarqube\out\8</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

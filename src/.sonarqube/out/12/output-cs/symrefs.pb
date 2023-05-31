@@ -1,20 +1,18 @@
-ú
-çC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\AdministrationController.cs
+Ç
+tD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\AdministrationController.cs
 
- )˚
-àC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\DashboardController.cs
+ )’
+oD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\DashboardController.cs
 
  $
 
 
-* 9  F U
-
- "
+* 9  F U
 4 C# 2
 
  "
-  &«
-ÖC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\EventsController.cs
+  &ô
+lD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\EventsController.cs
 
  !ñ
 ; B ( /##$ +<< "== "LL$ +ee  ff &
@@ -22,43 +20,39 @@
 íí$ +
 ìì 
 îî 
-öö 
-
- 
+öö 
 B I "
 
 ) .
 
 ) 0
-6 8 $$2 4
-## %% ** #
+6 8 $$2 4
+
+## 
 $$% &$$* +
 
 .. #
 
-88) / 
+88) /
 
-88• ´<<, 2AA #
+88• ´
 
 EE) -
-EE3 5GG LLj l
-LL MM RR #
+EE3 5GG LLj l
+
+LL 
 LL] ^LLb c
 
 ZZ) -
-ZZ2 4\\ 4
+ZZ2 4\\ 
 
-ZZ´ ±\\ ee( .jj* 0ww #
-
-òò  jj )
+ZZ´ ±
 
 {{) / 
 {{5 7}} 
-ÉÉ2 4$
+ÉÉ2 4
 
-ÇÇ 
-ÑÑ 
-ââ #
+ÇÇ 
 
 ÉÉ% &
 ÉÉ* +
@@ -66,20 +60,21 @@
 êê) 8
 
 êê= ?
-ííj l
+ííj l
 
-íí 
-ìì  &
+íí 
 
 íí] ^
-ííb c
+ííb c
+
+òò  jj )
 
 òò% '
 ööN P
 
 ööA B
-ööF Gõ	
-ÉC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\NewsController.cs
+ööF Gı
+jD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\NewsController.cs
 
  ñ
 : A , 3''" )BB "CC "SS" )mm  nn &
@@ -88,9 +83,7 @@
 ùù 
 ûû 
 §§ <
-B P 55> LGG> LYY> L> L
-
- 
+B P 55> LGG> LYY> L> L
 ? F "
 q " 0
 
@@ -119,9 +112,7 @@
 bb2 4dd @
 
 bb… Õdd mm( ,rr) -m q
-ÄÄ !
-
-¢¢ rr (
+ÄÄ !
 
 ÑÑ) /$
 
@@ -148,14 +139,16 @@
 ùù  $
 
 úúO P
-úúT U
+úúT U
+
+¢¢ rr (
 
 ¢¢$ &
 §§B D
 
 §§5 6
-§§: ;ú	
-ÑC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\PostsController.cs
+§§: ;ˆ
+kD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\PostsController.cs
 
   ñ
 : A , 3''" )BB "CC "SS" )mm  nn &
@@ -164,9 +157,7 @@
 ûû 
 üü 
 •• <
-E K 55? EGG? EYY? E? E
-
- 
+E K 55? EGG? EYY? E? E
 @ G "
 u {  
 
@@ -195,9 +186,7 @@
 bb2 4dd @
 
 bbü £dd mm( ,rr) -d h
-ÅÅ !
-
-££ rr (
+ÅÅ !
 
 ÖÖ) /$
 
@@ -224,14 +213,16 @@
 ûû  $
 
 ùùO P
-ùùT U
+ùùT U
+
+££ rr (
 
 ££$ &
 ••B D
 
 ••5 6
-••: ;°	
-àC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\ProposalsController.cs
+••: ;˚
+oD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\ProposalsController.cs
 
  $ñ
 > E , 3''& -BB "CC "SS& -mm  nn &
@@ -240,9 +231,7 @@
 ùù 
 ûû 
 §§ <
-E K 55? EGG? EYY? E? E
-
- "
+E K 55? EGG? EYY? E? E
 H O "
 	} É  
 
@@ -271,9 +260,7 @@
 bb2 4dd @
 
 bb§ ¨dd mm( 0rr- 5d l
-ÄÄ %
-
-¢¢ #rr ,
+ÄÄ %
 
 ÑÑ) /$
 
@@ -300,33 +287,31 @@
 ùù  (
 
 úúS T
-úúX Y
+úúX Y
+
+¢¢ #rr ,
 
 ¢¢( *
 §§B D
 
 §§5 6
-§§: ;|
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\BaseController.cs
+§§: ;c
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\BaseController.cs
 
- ˜
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ChartController.cs
+ “
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ChartController.cs
 
   
-' 2 , 7
-
- 
+' 2 , 7
 - 8 *
 
 < G
  ! /
- % (∏
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\CommentsController.cs
+ % (ì
+YD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\CommentsController.cs
 
  #2
-* 9  !! )(( &33$ 3
-
- !
+* 9  !! )(( &33$ 3
 3 B# 2
 
 ) /F
@@ -337,13 +322,11 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 //) /
 //4 633D F
 11 33H N
-33 55H N
-pC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\EventsController.cs
+33 55H NÀ
+WD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\EventsController.cs
 
  !d
-' 3 ##% 1$$ *..( 4== #XX #bb #ll #ww #
-
- 
+' 3 ##% 1$$ *..( 4== #XX #bb #ll #ww #
 . :  ,
 
   (
@@ -378,15 +361,13 @@ pC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 
 ss) /
 ss4 6ww4 6
-uu ww8 >‘
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ForumController.cs
+uu ww8 >Ø
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ForumController.cs
 
   Ü
 & 1 ' 2&&( 355 "II% 0JJ (``% 0aa (vv% 0ww (
 åå "
-óó "
-
- 
+óó "
 , 7 *
 
 ) 0
@@ -431,15 +412,13 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 óó3 5
 
 ïï 
-óó7 =∂
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\HomeController.cs
+óó7 =ë
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\HomeController.cs
 
 
 
  
-& 4 % 3
-
- 
+& 4 % 3
 + 9" 0
 
  "<
@@ -448,26 +427,22 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 
 ## $
 
-)) "…
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\LikesController.cs
+)) "§
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\LikesController.cs
 
   2
-& 1 "" "&& (''! ,
-
- 
+& 1 "" "&& (''! ,
 , 7 *
 
 ? C<
 [ `""0 5""F K&&2 7'': ?(( 
    ""> D
-$$ ++ ÿ
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\NewsController.cs
+$$ ++ ≥
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\NewsController.cs
 
  
 1 <  &2
-& 5  **% 4++  /44# 2
-
- 
+& 5  **% 4++  /44# 2
 6 A *
 P _# 2
 
@@ -481,8 +456,8 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 225 744U W
 44 66 "
 
-:: $¸	
-sC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ProposalsController.cs
+:: $¡	
+ZD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ProposalsController.cs
 
  $Ä
 * 9  ,,% 4--! 077( 7FF &`` *mm# 2
@@ -492,9 +467,7 @@ sC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 òò& 5
 - 8 \\% 0 
 & 1 
-†† "
-
- "
+†† "
 4 C# 2
 Y d *
 s ~ *
@@ -518,8 +491,7 @@ sC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 SS) /
 SSB J``7 ?ee! )
 [[ ``A G
-\\ ``I S
-bb dd< >
+\\ ``I S
 
 kk) 0
 kk5 7mm` b
@@ -565,14 +537,12 @@ sC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 úú 
 ùù 
 ûû 
-•• ¸
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\SettingsController.cs
+•• ◊
+YD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\SettingsController.cs
 
  #
 * 9    /(
-= G $$ !%% !
-
- !
+= G $$ !%% !
 3 B# 2
 h r (
 
@@ -582,20 +552,18 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 
 ) 6
 !! ""7 =""Y _
-"" $$+ 2´
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\VotesController.cs
+"" $$+ 2Ü
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\VotesController.cs
 
   (
-' 3 "" #$$$ 0
-
- 
+' 3 "" #$$$ 0
 - 9  ,
 
 > B(
 Z _""1 6""K P$$A F
    ""C I
-$$ &&< HÕ
-[C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Program.cs
+$$ &&< H¥
+BD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Program.cs
 
  
 
@@ -607,14 +575,12 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 
  
 > B& *
-* 4 "´
-[C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Startup.cs
+* 4 "Ü
+BD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Startup.cs
 
  2
 ( 5!! 005 BRR' 4ZZR _(
-- 8"" 22  77 %
-
- 
+- 8"" 22  77 %
 & 3!!! .
 I T"" *
 

@@ -5,9 +5,9 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.2.0.0",
-        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
-        "semanticVersion": "4.2.0",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
         "language": "en-US"
       },
       "results": [
@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 18,
@@ -31,7 +31,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -42,7 +42,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/Exceptions/NegativeNumberNotAllowedException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -61,97 +61,13 @@
           }
         },
         {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 13,
-                  "endLine": 40,
-                  "endColumn": 50
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 23,
-                  "endLine": 36,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 23,
-                  "endLine": 43,
-                  "endColumn": 109
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 23,
-                  "endLine": 48,
-                  "endColumn": 84
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S927",
           "level": "warning",
           "message": "Rename parameter 'proposalId' to 'recipeId' to match the interface declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/VotesService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/VotesService.cs",
                 "region": {
                   "startLine": 21,
                   "startColumn": 43,
@@ -172,7 +88,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
                 "region": {
                   "startLine": 46,
                   "startColumn": 17,
@@ -185,7 +101,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
                 "region": {
                   "startLine": 47,
                   "startColumn": 13,
@@ -202,11 +118,32 @@
         {
           "ruleId": "S927",
           "level": "warning",
+          "message": "Rename parameter 'imagePath' to 'imagepath' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 86,
+                  "endLine": 29,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
           "message": "Rename parameter 'proposalId' to 'recipeId' to match the interface declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/VotesService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/VotesService.cs",
                 "region": {
                   "startLine": 30,
                   "startColumn": 44,
@@ -227,7 +164,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/NewsService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/NewsService.cs",
                 "region": {
                   "startLine": 33,
                   "startColumn": 23,
@@ -242,18 +179,81 @@
           }
         },
         {
-          "ruleId": "S927",
+          "ruleId": "S112",
           "level": "warning",
-          "message": "Rename parameter 'imagePath' to 'imagepath' to match the interface declaration.",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 86,
-                  "endLine": 29,
-                  "endColumn": 95
+                  "startLine": 43,
+                  "startColumn": 23,
+                  "endLine": 43,
+                  "endColumn": 109
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/CommentsService.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 23,
+                  "endLine": 48,
+                  "endColumn": 84
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 23,
+                  "endLine": 36,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'userId' to 'id' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 84,
+                  "endLine": 79,
+                  "endColumn": 90
                 }
               }
             }
@@ -269,7 +269,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
                 "region": {
                   "startLine": 47,
                   "startColumn": 27,
@@ -290,28 +290,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 23,
-                  "endLine": 70,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
                 "region": {
                   "startLine": 43,
                   "startColumn": 23,
@@ -332,301 +311,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 79,
-                  "startColumn": 84,
-                  "endLine": 79,
-                  "endColumn": 90
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
-                "region": {
-                  "startLine": 98,
-                  "startColumn": 23,
-                  "endLine": 98,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
-                "region": {
-                  "startLine": 103,
-                  "startColumn": 23,
-                  "endLine": 103,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 100,
-                  "startColumn": 23,
-                  "endLine": 100,
-                  "endColumn": 81
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 105,
-                  "startColumn": 23,
-                  "endLine": 105,
-                  "endColumn": 130
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 121,
-                  "startColumn": 23,
-                  "endLine": 121,
-                  "endColumn": 81
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 23,
-                  "endLine": 127,
-                  "endColumn": 110
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
-                "region": {
-                  "startLine": 134,
-                  "startColumn": 23,
-                  "endLine": 134,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
-                "region": {
-                  "startLine": 139,
-                  "startColumn": 23,
-                  "endLine": 140,
-                  "endColumn": 102
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 110,
-                  "startColumn": 23,
-                  "endLine": 110,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 115,
-                  "startColumn": 23,
-                  "endLine": 116,
-                  "endColumn": 98
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 132,
-                  "startColumn": 23,
-                  "endLine": 132,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
-                "region": {
-                  "startLine": 137,
-                  "startColumn": 23,
-                  "endLine": 138,
-                  "endColumn": 103
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.NullReferenceException' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
-                "region": {
-                  "startLine": 145,
-                  "startColumn": 23,
-                  "endLine": 145,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S927",
-          "level": "warning",
-          "message": "Rename parameter 'userId' to 'id' to match the interface declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
                 "region": {
                   "startLine": 151,
                   "startColumn": 44,
@@ -647,7 +332,238 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 23,
+                  "endLine": 121,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 23,
+                  "endLine": 127,
+                  "endColumn": 110
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 23,
+                  "endLine": 100,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 105,
+                  "startColumn": 23,
+                  "endLine": 105,
+                  "endColumn": 130
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "region": {
+                  "startLine": 98,
+                  "startColumn": 23,
+                  "endLine": 98,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 23,
+                  "endLine": 103,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 23,
+                  "endLine": 134,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 23,
+                  "endLine": 140,
+                  "endColumn": 102
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 132,
+                  "startColumn": 23,
+                  "endLine": 132,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 137,
+                  "startColumn": 23,
+                  "endLine": 138,
+                  "endColumn": 103
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 23,
+                  "endLine": 70,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
                 "region": {
                   "startLine": 155,
                   "startColumn": 23,
@@ -668,7 +584,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
                 "region": {
                   "startLine": 163,
                   "startColumn": 23,
@@ -689,7 +605,70 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 23,
+                  "endLine": 110,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/ProposalService.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 23,
+                  "endLine": 116,
+                  "endColumn": 98
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/PostService.cs",
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 23,
+                  "endLine": 145,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.NullReferenceException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
                 "region": {
                   "startLine": 214,
                   "startColumn": 23,
@@ -710,7 +689,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
                 "region": {
                   "startLine": 219,
                   "startColumn": 23,
@@ -731,7 +710,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
                 "region": {
                   "startLine": 184,
                   "startColumn": 23,
@@ -752,7 +731,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Data/EventService.cs",
                 "region": {
                   "startLine": 189,
                   "startColumn": 23,
@@ -771,7 +750,7 @@
         "S112": {
           "id": "S112",
           "shortDescription": "General exceptions should never be thrown",
-          "fullDescription": "Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors. ",
+          "fullDescription": "Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors.",
           "defaultLevel": "warning",
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-112",
           "properties": {
@@ -779,25 +758,8 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
-              "MainSourceScope"
-            ]
-          }
-        },
-        "S125": {
-          "id": "S125",
-          "shortDescription": "Sections of code should not be commented out",
-          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "SonarWay",
               "MainSourceScope",
-              "TestSourceScope"
+              "SonarWay"
             ]
           }
         },
@@ -812,9 +774,9 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "TestSourceScope"
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },
@@ -829,8 +791,8 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
-              "MainSourceScope"
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         },
@@ -845,9 +807,9 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "TestSourceScope"
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         }

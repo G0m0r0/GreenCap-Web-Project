@@ -4,14 +4,14 @@
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Test</ProjectType>
   <ProjectGuid>901ab2da-6e52-4fb2-91f0-58eb0115f2f7</ProjectGuid>
-  <FullPath>C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\GreenCap.Services.Data.Tests.csproj</FullPath>
+  <FullPath>D:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\GreenCap.Services.Data.Tests.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\conf\10\FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\Programming\SoftUni-Web-Project\src\.sonarqube\conf\10\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\10\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\10</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">D:\Programming\SoftUni-Web-Project\src\.sonarqube\out\10\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">D:\Programming\SoftUni-Web-Project\src\.sonarqube\out\10</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

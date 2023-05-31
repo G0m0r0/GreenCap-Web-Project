@@ -1,79 +1,48 @@
-ª
-ÅC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Configurations\ApplicationUserConfiguration.cs 8r	
- !Çô
-cC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\DbQueryRunner.cs 8	r	
- !"#$%xÇ!ô
-pC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\DesignTimeDbContextFactory.cs 8r	
-Ç≈
-hC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\EfExpressionHelper.cs 8r9	
-!"#$&')*+,-.0123456789:;=>@ABCxÇ"#$&.145689:;=@õ
-pC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\EntityIndexesConfiguration.cs 8jr	
-xÇ®
-jC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\IDeletableRepository.cs !8)jGT]furx	
- "$&(*,.0245678:;=>?@ABCEFHIKLNOQRUWY[^_`abcdghijklmopqrsvwyz{|}~ÅÇÉÑÖÜáàâäãåçéèx
-Ç.267;ABHIKLNOQRUWY[^_`bcghikrw{}~ÅÉÑÜä©
-mC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\IdentityOptionsProvider.cs 8r	
-Ç	
-‘
-
-ÄC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201106184455_InitialMigration.csP 8r©	
- !"#$%&'()*+,-./012345679:;<=>?@ABCDEFGHIKLMNOPQRSTUVWXYZ[\]^`abcdefghijklmnopqrsuvwxyz{|}~ÄÅÇÉÑÖÜáâäãåçéèêëíìîïñóòôöõúùûü°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇÄÅÇÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬂ‡·‚‰ÂÊÁÈÍÎÏÌÓÒÚÛıˆ˜¯˙˚¸˝ˇÄÅÇÑÖÜáâäãåçéêëíìïñóòöõúùü†°¢§•¶ß©™´¨ÆØ∞±≥¥µ∂∏π∫ªΩæø¿¬√ƒ≈«»… ÃÕŒœ—“”‘’◊ÿŸ⁄‹›ﬂ‡‚„ÂÊËÈÎÏÓÔÒÚÙı˜¯˙˚˝˛ÄÅÇÉÑÇô
- !"#$%&'()*+,-./012469;=?@ABCDFHKMOQRSUWXZ]`bdfghjlmoruwyz{|~ÄÅÉÜâãçéêíìïòôõû°£•¶ß®™¨≠Ø≤µ∑πªºΩæø¿¡¬ƒ∆«…Ãœ—”’÷◊ÿŸ⁄€‹›ﬂ·‚‰ÁÍÏÓÒÚÛÙıˆ˜˘˚¸˛ÅÑÜàâäãåçéèëìîñôöúü¢§¶®©™´¨≠Æ∞≤≥µ∏πªæ¡√≈∆«»… ÀÃŒ–—”÷◊Ÿ‹ﬂ‰Èı˙ˇÑâêïöü§©Æ≥∏Ω¬«Ã—Ÿ‹ﬂ‚ÂËÎÓÒÙ˜˙˝Ä‹
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201106190336_TestMigration.cs 8rB	
- !#$%&'()*,-./01345679:;<=>@ABCDEGHIJKLMNÇ
-%*,39>@Gº
-ïC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201110094552_EventsAddedTotalPeopleAndNeededPeople.cs 8r	
-Ç	–
-ÜC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201110124200_AddedStartEndEventDate.cs 8r1	
- "#$%&()*,-.0123456789Ç	
-$(,0ƒ
-|C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201110164647_MinorChanges.cs 8r1	
- !"#%&')*+,-./123456789Ç	!%)1ø
-ÉC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201111121328_ImagesAddedToEvents.cs 8r&	
- !"#$&'()*+,Ç
-&∫
-ÑC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201113115733_NameChangesMigration.cs$ 8r„	
- "#$&'(*+,./01345689:;=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[\]^`abcefghjklmopqrstuvxyz{|~ÅÇÉÖÜáâäãçéèëíìîñóòôöúùûü†°£§•¶ß®™´¨≠Æ∞±≤≥µ∂∑∏∫ªºΩø¿¡¬√ƒ≈∆«»ÇB
-"&*.38=?ABCDEFGHJLMORSUX[`ejouz~ÅÖâçëñú£™∞µ∫ø≈á
-áC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201120192345_AddedNewsFunctionallity.cs# 8rÇ	
- !"#%&'()*+,./012345789:;<=>@ABCDEFGIJKLMNOPRSTUVWXYZ[\]^_`acdefghijklmnopqrstuvwxyz{|}ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòöõúùü†°¢§•¶ß©™´¨ÆØ∞±≥¥µ∂∏π∫ªºΩæø¡¬√ƒ≈«» ÀÕŒ–—“”‘’÷◊Ÿ⁄€‹›ﬁﬂ‡‚„‰ÂÊÁËÈÎÏÌÓÔÒÚÙıˆ˜¯˘˙˚˝˛ˇÄÅÇÉÑÜáàâäãåçèêëíìîïñóòôÇm
-%.7@IRTVXYZ[\^`cegijklmnopqrtvwy|ÅÉÖÜáàâäãåçèëíîóöü§©Æ≥∏æ√« Õ–Ÿ‚ÎÙ˝Üèâ
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201121103822_MergedTableNews.cs 8rª	
- !"#%&'()*,-./01345678:;<=?@ABCDEFHIJKLNOPRSTVWXZ[\^_`bcdfghijkmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçèêëíîïñóôöõúûü†°£§•¶ß®©™´¨Ç?
-%*,138:?EJNRVZ^bfmoqstuvwxyz{|~ÄÅÉÜáâåèîôû£©ë
-ÜC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201127120002_AddedRemoteUrlToImages.cs 8ro	
- !"#$%'()*+-./012345789:;<=>?@BCDEFHIJKLMNOPRSTUVWXYZ\]^_`abcdfghijklmnpqrstuvwxyz{Ç	'-7DHR\fp⁄
-ÉC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201128154402_AddedVotesProposals.cs 8r4	
- !"#$%'()*,-./02345678Ç
-!$',4™
-èC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201128163918_AddCollectionToProposalsForVote.cs 8jr	»
-ÅC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201202150754_AddNestedComments.cs 8r.	
- !#$%&')*+-./123456Ç		 %)-1±
-äC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201202213049_ChangeNameForParentComment.cs 8r	
-Ç	ˆ
-ÖC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201215140840_CreatorsListForEvents.cs 8rQ	
- !"#%&'(*+,-./01345679:;=>?ABCDEGHIJKLMNOQRSTVWXYZ[\]^_Ç	%*059=AGQV\‘
-äC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201215141637_UserEventIsGoingFieldAdded.cs 8r1	
- !"#$&'()*,-.012456789Ç	
-(,04£
-äC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Migrations\20201215153753_UserEventsHostsAndSignedIn.cs 8rπ	
- !"#$%&'()*+,-./012346789:;<=>?@ABCDEFGHIJKLMNOPQSTUVXYZ[]^_`bcdefhijkmnpqrstvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëìîïñòôöõùûü†°¢£§•¶ÇO
- !"#%'(*-.0368:;<=>?@BDEGJKMPSX]bjmpvxz{|}~ÄÇÑÖáäãçêìòù£¡
-~C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Repositories\EfDeletableEntityRepository.cs 	8	r'	!#$%&'(*+,-./01Ç!%&',-.º
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Repositories\EfRepository.cs
- 8r-
- !"#%&(*,-./023456789:xÇ "%(*./46∏
-xC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\ApplicationDbContextSeeder.cs
- 8r&
- !"$%&'()*+,xÇ	$&'(≠
-iC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\ImageSeeder.cs 8jàr÷	 !"#$%&()*+,-.012345689:;<=>@ABCDEFHIJKLMNPQRSTUVXYZ[\]^`abcdefhijklmnpqrstuvxyz{|}~ÄÅÇÉÑÖÜâäãåçéèëíìîïñóôöõúùûü°¢£§•¶ß©™´¨≠ÆØ±≤≥¥µ∂∑π∫ªºxÇV "$(*,0248:<@BDHJLPRTXZ\`bdhjlprtxz|ÄÇÑâãçëìïôõù°£•©´≠±≥µπt
-eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\ISeeder.csr		
-‡
-gC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\PostsSeed.cs 8rN	
- !"#%&'()*+,-.012345678:;<=>?@ACDEFGHIJKMNOPQRSTUVWxÇ !%'+,0267:>?CEIJMQRö
-mC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\ProposalsSeeder.cs 8jNgò°™r÷	 !"#$&'()*+,./012346789:;<>?@ABCDFGHIJKLOPQRSTUWXYZ[\]_`abcdehijklmnpqrstuvxyz{|}~ÄÅÇÉÑÖÜàâäãåçéêëíìîïñôöõúùûü¢£§•¶ß®´¨≠ÆØ∞±≥¥µ∂∑∏πªºΩæxÇ;#&+.36;>CFKOTW\_dhmpux}ÄÖàçêïôû¢ß´∞≥∏ªü
-iC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\RolesSeeder.cs 8r	
- !"xÇí
-lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\SettingsSeeder.cs 8r	
-xÇ¢
-hC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data\Seeding\UserSeeder.cs 8r 	 !"$%&'xÇ	"$
+~
+mD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Administration\Dashboard\IndexViewModel.cs 8rí
+fD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\EventEditViewModel.cs 8r"
+!"#%&'()*Ü
+eD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\PostEditViewModel.cs 8r
+ç
+iD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\ProposalEditViewModel.cs 8r	
+j
+TD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\ErrorViewModel.cs 8r	Çz
+gD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\CommentInputModel.cs 8r		
+î
+iD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\EventInputViewModel.cs 8r!	
+!"#$&'()Ü
+hD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\PostInputViewModel.cs 8r	
+~
+lD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\PostLikeInputViewModel.cs 8r	ã
+gD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\ProposalViewModel.cs 8r	
+Ä
+lD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\ProposalVoteInputModel.cs 8r
+	
+z
+hD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ChartResponseModel.cs 8r	π
+jD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\EventOutputViewModel.cs 8r-
+ "$%&'()*+,-./0123456789:;xÇ&'()*+,-./0345678Å
+oD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\EventsListOutputViewModel.cs 8r	à
+sD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\HomeStatisticsOutputViewModel.cs 
+8
+r	
+mD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\NewsListOutputViewModel.cs 8r	û
+iD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\NewsOutputViewModel.cs 8r	 !"#$%&'(xÇ !"#$%ü
+qD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostCommentsOutputViewModel.cs 8r	
+ !Çµ
+pD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostDetailsOutputViewModel.cs 8j/1r&	!#%&'()*+,-./01234Ç'()*+,-./01¬
+iD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostOutputViewModel.cs 8j?Ar4	
+ !"#%')+-/1356789:;<=>?@ABCDxÇ %789:;<=>?@AÄ
+nD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostsListOutputViewModel.cs 8r	~
+kD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostVoteResponseModel.cs 8r		
+∂
+tD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalDetailsOutputViewModel.cs 8j.r#
+ !"#$%&'()*+,/01xÇ"#$%&'()*+,†
+mD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalOutputViewModel.cs 8r	
+ !"#$%Ç !"Ñ
+rD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalsListOutputViewModel.cs 8r	{
+jD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalVoteResponse.cs 8rw
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\PagingViewModel.cs 8r	Ç	v
+dD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Settings\SettingsListViewModel.cs 8r	Ñ
+_D:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Settings\SettingViewModel.cs 	8	r	
+Ç

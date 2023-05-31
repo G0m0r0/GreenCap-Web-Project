@@ -1,169 +1,66 @@
-Á
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\DataValidation.cs
+
+^D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\EmailAttachment.cs
 
- &
+  
 
- .
+ 
 
- ,
+ 
 
- +
+		 ½
+[D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\IEmailSender.cs
+
+ !
+
+ 
+
+		 
 
 
 
- ,
+ 
 
- )
+ 
 
- #
+ 
 
- *
+ 
 
- $
+) 4Â
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\NullMessageSender.cs
 
-  4
+ "
 
- 2
+ "
 
-  9
-
- 7
-
-  
-
-  4
-
- 2
-
- 7
-
-   7
-
-## "
-
-%%  4
-
-&& 2
-
-(( 1
-
-)) 1
-
-,, #
-
-.. 2
-
-// 2
-
-11 /
-
-22 /
-
-44 1
-
-55 1
-
-88  
-
-:: /
-
-;; /
-
-==  0
-
->> .
-
-@@  /
-
-AA -
-
-CC  4
-
-DD 2
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\IDbQueryRunner.cs
-
- #
-
- 
-
-" '
-
-9 C²
-vC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseDeletableModel.cs
-
- ,
-- 1? C
-
- 
-
-		 "µ
-mC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseModel.cs
-
- #
-$ (		 
-
-		 
-
- !
-
- #”
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IAuditInfo.cs
-
- 
-
- 
-
-		 š
-tC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IDeletableEntity.cs
-
- %
-
- 
-
-		 Å
-„C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IDeletableEntityRepository.cs
-
- /P
-0 7G N		      
-
- *
-
- 6
-
- -
-
-> @
-
- 
-
-  &
-
- 
-
- $·
-uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IRepository.cs
-
-  F
-! ( 
-
-     
+		 
 
 
 
- 
+ 
 
- +
+ 
 
- 
+ 
 
- $
+ 
 
- 
+) 4Â
+bD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\SendGridEmailSender.cs
 
- "
+ $
+( . ((* 0
+* 0- 3
 
- 
+ (
+0 4/ 3
+= E5 =
+N P- /
+Y `* 1O V
+i tP [^ i 
 
- "
-
- "
+“ ž   + 6
+ 7 B
+ D M
+ "" ((@ G
+(( ))" ***( 0

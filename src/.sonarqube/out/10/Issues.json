@@ -5,9 +5,9 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.2.0.0",
-        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
-        "semanticVersion": "4.2.0",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
         "language": "en-US"
       },
       "results": [
@@ -21,7 +21,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/PostServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/PostServiceTest.cs",
                 "region": {
                   "startLine": 24,
                   "startColumn": 35,
@@ -38,19 +38,19 @@
         {
           "ruleId": "CS0649",
           "level": "warning",
-          "message": "Field 'EventServiceTest.eventSignedIn' is never assigned to, and will always have its default value null",
+          "message": "Field 'EventServiceTest.eventHost' is never assigned to, and will always have its default value null",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
                 "region": {
-                  "startLine": 28,
-                  "startColumn": 73,
-                  "endLine": 28,
-                  "endColumn": 86
+                  "startLine": 25,
+                  "startColumn": 70,
+                  "endLine": 25,
+                  "endColumn": 79
                 }
               }
             }
@@ -62,19 +62,19 @@
         {
           "ruleId": "CS0649",
           "level": "warning",
-          "message": "Field 'EventServiceTest.eventHost' is never assigned to, and will always have its default value null",
+          "message": "Field 'EventServiceTest.eventSignedIn' is never assigned to, and will always have its default value null",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
                 "region": {
-                  "startLine": 25,
-                  "startColumn": 70,
-                  "endLine": 25,
-                  "endColumn": 79
+                  "startLine": 28,
+                  "startColumn": 73,
+                  "endLine": 28,
+                  "endColumn": 86
                 }
               }
             }
@@ -93,7 +93,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
                 "region": {
                   "startLine": 18,
                   "startColumn": 35,
@@ -110,32 +110,11 @@
         {
           "ruleId": "CA1001",
           "level": "warning",
-          "message": "Type 'ProposalServiceTest' owns disposable field(s) 'connection', 'proposalRepo' but is not disposable",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/ProposalServiceTest.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 18,
-                  "endLine": 9,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1001",
-          "level": "warning",
           "message": "Type 'EventServiceTest' owns disposable field(s) 'connection', 'eventRepo', 'userRepo' but is not disposable",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/EventServiceTest.cs",
                 "region": {
                   "startLine": 15,
                   "startColumn": 18,
@@ -152,11 +131,32 @@
         {
           "ruleId": "CA1001",
           "level": "warning",
+          "message": "Type 'ProposalServiceTest' owns disposable field(s) 'connection', 'proposalRepo' but is not disposable",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/ProposalServiceTest.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 18,
+                  "endLine": 9,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1001",
+          "level": "warning",
           "message": "Type 'PostServiceTest' owns disposable field(s) 'connection', 'postRepo', 'userRepo' but is not disposable",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/PostServiceTest.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Services.Data.Tests/PostServiceTest.cs",
                 "region": {
                   "startLine": 20,
                   "startColumn": 18,
@@ -177,7 +177,7 @@
           "shortDescription": "Types that own disposable fields should be disposable",
           "fullDescription": "A class declares and implements an instance field that is a System.IDisposable type, and the class does not implement IDisposable. A class that declares an IDisposable field indirectly owns an unmanaged resource and should implement the IDisposable interface.",
           "defaultLevel": "warning",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1001",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1001",
           "properties": {
             "category": "Design",
             "isEnabledByDefault": true,

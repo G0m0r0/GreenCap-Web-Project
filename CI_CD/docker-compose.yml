@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
 
   jenkins:
-    image: jenkins/jenkins:lts
+    image: myjenkins:1.0
     ports:
       - 9080:8080
     volumes:

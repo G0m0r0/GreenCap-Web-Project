@@ -1,1 +1,1 @@
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\.sonarqube\out\0
+D:\Programming\SoftUni-Web-Project\src\.sonarqube\out\0

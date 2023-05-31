@@ -5,9 +5,9 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.2.0.0",
-        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
-        "semanticVersion": "4.2.0",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
         "language": "en-US"
       },
       "results": [
@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
                 "region": {
                   "startLine": 88,
                   "startColumn": 17,
@@ -39,7 +39,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/SandboxOptions.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/SandboxOptions.cs",
                 "region": {
                   "startLine": 1,
                   "startColumn": 1,
@@ -63,7 +63,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
                 "region": {
                   "startLine": 88,
                   "startColumn": 17,
@@ -84,7 +84,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
                 "region": {
                   "startLine": 86,
                   "startColumn": 9,
@@ -105,7 +105,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
                 "region": {
                   "startLine": 72,
                   "startColumn": 39,
@@ -126,7 +126,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/Sandbox/Program.cs",
                 "region": {
                   "startLine": 50,
                   "startColumn": 52,
@@ -156,9 +156,9 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
               "TestSourceScope",
+              "SonarWay",
               "Unnecessary"
             ]
           }
@@ -174,9 +174,9 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "TestSourceScope"
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },
@@ -191,9 +191,9 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "TestSourceScope"
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },
@@ -208,9 +208,8 @@
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "NotConfigurable"
+              "SonarWay"
             ]
           }
         },

@@ -1,16 +1,8 @@
-©
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\DataValidation.csr8
- !#$%&()*,-./1245689:;=>@ACDEFGz
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\IDbQueryRunner.csr		
-‰
-vC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseDeletableModel.cs 8r		
-ƒ
-mC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseModel.cs 8r	
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IAuditInfo.cs8r		
-…
-tC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IDeletableEntity.cs8r		
-š
-„C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IDeletableEntityRepository.csr	
-‹
-uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IRepository.csr	
-
+q
+^D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\EmailAttachment.cs 8r		
+p
+[D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\IEmailSender.csr	
+‚
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\NullMessageSender.cs 8r	
+‚¬
+bD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\SendGridEmailSender.cs 8r-	 !"#$&'()*+,-./0123x‚ "()*./

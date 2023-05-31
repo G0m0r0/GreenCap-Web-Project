@@ -1,401 +1,680 @@
-Ú
-wC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\EmailAttachment.cs
+¬*
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\DataValidation.cs
 	namespace 	
 GreenCap
  
-. 
-Services 
-. 
-	Messaging %
+. 
+Data 
+. 
+Common 
 { 
 public 
-
-class 
-EmailAttachment  
+
+static 
+class 
+DataValidation &
 { 
-public 
-byte 
-[ 
-] 
-Content 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-string 
-FileName 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public		 
-string		 
-MimeType		 
-{		  
-get		! $
-;		$ %
-set		& )
-;		) *
-}		+ ,
-}
+public 
+const 
+ushort 
+NameTitleMaxLength .
+=/ 0
+$num1 4
+;4 5
+public 
+const 
+byte 
+NameTitleMinLength ,
+=- .
+$num/ 0
+;0 1
+public 
+const 
+byte 
+FullNameMaxLength +
+=, -
+$num. 0
+;0 1
+public
 
- 
-} ç
-tC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\IEmailSender.cs
+ 
+const
+
+ 
+ushort
+
+ 
+UrlPathMaxLength
+
+ ,
+=
+
+- .
+$num
+
+/ 3
+;
+
+3 4
+public 
+const 
+byte 
+UrlPathMinLegth )
+=* +
+$num, -
+;- .
+public 
+static 
+class 
+Comment #
+{ 	
+public 
+const 
+int 
+ContentLength *
+=+ ,
+$num- 3
+;3 4
+} 	
+public 
+static 
+class 
+Proposal $
+{ 	
+public 
+const 
+ushort  
+DescriptionMaxLength  4
+=5 6
+$num7 =
+;= >
+public 
+const 
+byte  
+DescriptionMinLength 2
+=3 4
+$num5 7
+;7 8
+public 
+const 
+ushort %
+ShortDescriptionMaxLength  9
+=: ;
+$num< ?
+;? @
+public 
+const 
+byte %
+ShortDescriptionMinLength 7
+=8 9
+$num: <
+;< =
+} 	
+public 
+static 
+class 
+Post  
+{ 	
+public 
+const 
+ushort  
+DescriptionMaxLength  4
+=5 6
+$num7 =
+;= >
+public 
+const 
+byte  
+DescriptionMinLength 2
+=3 4
+$num5 7
+;7 8
+public 
+const 
+byte %
+ShortDescriptionMaxLength 7
+=8 9
+$num: =
+;= >
+public   
+const   
+byte   %
+ShortDescriptionMinLength   7
+=  8 9
+$num  : ;
+;  ; <
+}!! 	
+public## 
+static## 
+class## 
+Events## "
+{$$ 	
+public%% 
+const%% 
+ushort%%  
+DescriptionMaxLength%%  4
+=%%5 6
+$num%%7 =
+;%%= >
+public&& 
+const&& 
+byte&&  
+DescriptionMinLength&& 2
+=&&3 4
+$num&&5 7
+;&&7 8
+public(( 
+const(( 
+byte(( 
+TotalPeopleMaxCount(( 1
+=((2 3
+$num((4 7
+;((7 8
+public)) 
+const)) 
+byte)) 
+TotalPeopleMinCount)) 1
+=))2 3
+$num))4 5
+;))5 6
+}** 	
+public,, 
+static,, 
+class,, 
+Address,, #
+{-- 	
+public.. 
+const.. 
+byte..  
+CountryNameMaxLength.. 2
+=..3 4
+$num..5 8
+;..8 9
+public// 
+const// 
+byte//  
+CountryNameMinLength// 2
+=//3 4
+$num//5 8
+;//8 9
+public11 
+const11 
+byte11 
+TownNameMaxLength11 /
+=110 1
+$num112 5
+;115 6
+public22 
+const22 
+byte22 
+TownNameMinLength22 /
+=220 1
+$num222 5
+;225 6
+public44 
+const44 
+byte44 
+StreetNameMaxLength44 1
+=442 3
+$num444 7
+;447 8
+public55 
+const55 
+byte55 
+StreetNameMinLength55 1
+=552 3
+$num554 7
+;557 8
+}66 	
+public88 
+static88 
+class88 
+News88  
+{99 	
+public:: 
+const:: 
+byte:: 
+PostedOnMaxLength:: /
+=::0 1
+$num::2 4
+;::4 5
+public;; 
+const;; 
+byte;; 
+PostedOnMinLength;; /
+=;;0 1
+$num;;2 3
+;;;3 4
+public== 
+const== 
+ushort== 
+SummaryMaxLength==  0
+===1 2
+$num==3 7
+;==7 8
+public>> 
+const>> 
+byte>> 
+SummaryMinLength>> .
+=>>/ 0
+$num>>1 3
+;>>3 4
+public@@ 
+const@@ 
+ushort@@ 
+CreditMaxLength@@  /
+=@@0 1
+$num@@2 6
+;@@6 7
+publicAA 
+constAA 
+byteAA 
+CreaditMinLegthAA -
+=AA. /
+$numAA0 1
+;AA1 2
+publicCC 
+constCC 
+ushortCC  
+DescriptionMaxLengthCC  4
+=CC5 6
+$numCC7 =
+;CC= >
+publicDD 
+constDD 
+byteDD  
+DescriptionMinLengthDD 2
+=DD3 4
+$numDD5 7
+;DD7 8
+}EE 	
+}FF 
+}GG Ø
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\IDbQueryRunner.cs
 	namespace 	
 GreenCap
  
-. 
-Services 
-. 
-	Messaging %
+. 
+Data 
+. 
+Common 
 { 
 public 
 
-	interface 
-IEmailSender !
+	interface 
+IDbQueryRunner #
+:$ %
+IDisposable& 1
 { 
-Task 
-SendEmailAsync 
-( 
-string		 
-from		 
-,		 
-string
+Task 
+RunQueryAsync 
+( 
+string !
+query" '
+,' (
+params) /
+object0 6
+[6 7
+]7 8
+
+parameters9 C
+)C D
+;D E
+}		 
+}
 
- 
-fromName
-
- 
-,
-
- 
-string 
-to 
-, 
-string 
-subject 
-, 
-string 
-htmlContent 
-, 
-IEnumerable 
-< 
-EmailAttachment '
->' (
-attachments) 4
-=5 6
-null7 ;
-); <
-;< =
-} 
-} ˜
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\NullMessageSender.cs
+ ‚
+]D:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseDeletableModel.cs
 	namespace 	
 GreenCap
  
-. 
-Services 
-. 
-	Messaging %
+. 
+Data 
+. 
+Common 
+. 
+Models %
+{ 
+public 
+
+abstract 
+class 
+BaseDeletableModel ,
+<, -
+TKey- 1
+>1 2
+:3 4
+	BaseModel5 >
+<> ?
+TKey? C
+>C D
+,D E
+IDeletableEntityF V
+{ 
+public 
+bool 
+	IsDeleted 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+public		 
+DateTime		 
+?		 
+	DeletedOn		 "
+{		# $
+get		% (
+;		( )
+set		* -
+;		- .
+}		/ 0
+}
+
+ 
+} Ü
+TD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\BaseModel.cs
+	namespace 	
+GreenCap
+ 
+. 
+Data 
+. 
+Common 
+. 
+Models %
 { 
 public 
-
-class 
-NullMessageSender "
-:# $
-IEmailSender% 1
-{ 
-public 
-Task 
-SendEmailAsync "
-(" #
-string		 
-from		 
-,		 
-string
-
- 
-fromName
-
- 
-,
-
- 
-string 
-to 
-, 
-string 
-subject 
-, 
-string 
-htmlContent 
-, 
-IEnumerable 
-< 
-EmailAttachment '
->' (
-attachments) 4
-=5 6
-null7 ;
-); <
-{ 	
-return 
-Task 
-. 
-CompletedTask %
-;% &
-} 	
-} 
-} þ!
-{C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Messaging\SendGridEmailSender.cs
+
+abstract 
+class 
+	BaseModel #
+<# $
+TKey$ (
+>( )
+:* +
+
+IAuditInfo, 6
+{ 
+[ 	
+Key	 
+] 
+public		 
+TKey		 
+Id		 
+{		 
+get		 
+;		 
+set		 !
+;		! "
+}		# $
+public 
+DateTime 
+	CreatedOn !
+{" #
+get$ '
+;' (
+set) ,
+;, -
+}. /
+public 
+DateTime 
+? 
+
+ModifiedOn #
+{$ %
+get& )
+;) *
+set+ .
+;. /
+}0 1
+} 
+} Š
+UD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IAuditInfo.cs
 	namespace 	
 GreenCap
  
-. 
-Services 
-. 
-	Messaging %
+. 
+Data 
+. 
+Common 
+. 
+Models %
 { 
-public 
-
-class 
-SendGridEmailSender $
-:% &
-IEmailSender' 3
-{ 
-private 
-readonly 
-SendGridClient '
-client( .
-;. /
-public 
-SendGridEmailSender "
-(" #
-string# )
-apiKey* 0
-)0 1
-{ 	
-this 
-. 
-client 
-= 
-new 
-SendGridClient ,
-(, -
-apiKey- 3
-)3 4
-;4 5
-} 	
-public 
-async 
-Task 
-SendEmailAsync (
-(( )
-string) /
-from0 4
-,4 5
-string6 <
-fromName= E
-,E F
-stringG M
-toN P
-,P Q
-stringR X
-subjectY `
-,` a
-stringb h
-htmlContenti t
-,t u
-IEnumerable	v 
-<
- ‚
-EmailAttachment
-‚ ‘
->
-‘ ’
-attachments
-“ ž
-=
-Ÿ  
-null
-¡ ¥
-)
-¥ ¦
-{ 	
-if 
-( 
-string 
-. 
-IsNullOrWhiteSpace )
-() *
-subject* 1
-)1 2
-&&3 5
-string6 <
-.< =
-IsNullOrWhiteSpace= O
-(O P
-htmlContentP [
-)[ \
-)\ ]
-{ 
-throw 
-new 
-ArgumentException +
-(+ ,
-$str, U
-)U V
-;V W
-} 
-var 
-fromAddress 
-= 
-new !
-EmailAddress" .
-(. /
-from/ 3
-,3 4
-fromName5 =
-)= >
-;> ?
-var 
-	toAddress 
-= 
-new 
-EmailAddress  ,
-(, -
-to- /
-)/ 0
-;0 1
-var 
-message 
-= 
+public 
+
+	interface 
 
-MailHelper $
-.$ %
-CreateSingleEmail% 6
-(6 7
-fromAddress7 B
-,B C
-	toAddressD M
-,M N
-subjectO V
-,V W
-nullX \
-,\ ]
-htmlContent^ i
-)i j
-;j k
-if 
-( 
-attachments 
-? 
-. 
-Any  
-(  !
-)! "
-==# %
-true& *
-)* +
-{ 
-foreach   
-(   
-var   
+IAuditInfo 
+{ 
+DateTime 
+	CreatedOn 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+DateTime		 
+?		 
 
-attachment   '
-in  ( *
-attachments  + 6
-)  6 7
-{!! 
-message"" 
-."" 
-AddAttachment"" )
-("") *
+ModifiedOn		 
+{		 
+get		 "
+;		" #
+set		$ '
+;		' (
+}		) *
+}
+
+ 
+} ‘
+[D:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Models\IDeletableEntity.cs
+	namespace 	
+GreenCap
+ 
+. 
+Data 
+. 
+Common 
+. 
+Models %
+{ 
+public 
+
+	interface 
+IDeletableEntity %
+{ 
+bool 
+	IsDeleted 
+{ 
+get 
+; 
+set !
+;! "
+}# $
+DateTime		 
+?		 
+	DeletedOn		 
+{		 
+get		 !
+;		! "
+set		# &
+;		& '
+}		( )
+}
+
+ 
+} ´
+kD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IDeletableEntityRepository.cs
+	namespace 	
+GreenCap
+ 
+. 
+Data 
+. 
+Common 
+. 
+Repositories +
+{ 
+public 
+
+	interface &
+IDeletableEntityRepository /
+</ 0
+TEntity0 7
+>7 8
+:9 :
+IRepository; F
+<F G
+TEntityG N
+>N O
+where		 
+TEntity		 
+:		 
+class		 
+,		 
+IDeletableEntity		 /
+{
+
+ 
 
-attachment""* 4
-.""4 5
-FileName""5 =
-,""= >
-Convert""? F
-.""F G
-ToBase64String""G U
-(""U V
+IQueryable 
+< 
+TEntity 
+> 
+AllWithDeleted *
+(* +
+)+ ,
+;, -
 
-attachment""V `
-.""` a
-Content""a h
-)""h i
-,""i j
+IQueryable 
+< 
+TEntity 
+> &
+AllAsNoTrackingWithDeleted 6
+(6 7
+)7 8
+;8 9
+Task 
+< 
+TEntity 
+> #
+GetByIdWithDeletedAsync -
+(- .
+params. 4
+object5 ;
+[; <
+]< =
+id> @
+)@ A
+;A B
+void 
 
-attachment""k u
-.""u v
-MimeType""v ~
-)""~ 
-;	"" €
-}## 
-}$$ 
-try&& 
-{'' 
-var(( 
-response(( 
-=(( 
-await(( $
-this((% )
-.(() *
-client((* 0
-.((0 1
-SendEmailAsync((1 ?
-(((? @
-message((@ G
-)((G H
-;((H I
-Console)) 
-.)) 
-	WriteLine)) !
-())! "
-response))" *
-.))* +
+HardDelete 
+( 
+TEntity 
+entity  &
+)& '
+;' (
+void 
+Undelete 
+( 
+TEntity 
+entity $
+)$ %
+;% &
+} 
+} ·
 
-StatusCode))+ 5
-)))5 6
-;))6 7
-Console** 
-.** 
-	WriteLine** !
-(**! "
-await**" '
-response**( 0
-.**0 1
-Body**1 5
-.**5 6
-ReadAsStringAsync**6 G
-(**G H
-)**H I
-)**I J
-;**J K
-}++ 
-catch,, 
-(,, 
-	Exception,, 
-e,, 
-),, 
-{-- 
-Console.. 
-... 
-	WriteLine.. !
-(..! "
-e.." #
-)..# $
-;..$ %
-throw// 
-;// 
-}00 
-}11 	
-}22 
-}33 
+\D:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Common\Repositories\IRepository.cs
+	namespace 	
+GreenCap
+ 
+. 
+Data 
+. 
+Common 
+. 
+Repositories +
+{ 
+public 
+
+	interface 
+IRepository  
+<  !
+TEntity! (
+>( )
+:* +
+IDisposable, 7
+where 
+TEntity 
+: 
+class 
+{		 
+
+IQueryable
+
+ 
+<
+
+ 
+TEntity
+
+ 
+>
+
+ 
+All
+
+ 
+(
+
+  
+)
+
+  !
+;
+
+! "
+
+IQueryable 
+< 
+TEntity 
+> 
+AllAsNoTracking +
+(+ ,
+), -
+;- .
+Task 
+AddAsync 
+( 
+TEntity 
+entity $
+)$ %
+;% &
+void 
+Update 
+( 
+TEntity 
+entity "
+)" #
+;# $
+void 
+Delete 
+( 
+TEntity 
+entity "
+)" #
+;# $
+Task 
+< 
+int 
+> 
+SaveChangesAsync "
+(" #
+)# $
+;$ %
+} 
+} 

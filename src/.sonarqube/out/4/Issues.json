@@ -5,25 +5,67 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.2.0.0",
-        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
-        "semanticVersion": "4.2.0",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
         "language": "en-US"
       },
       "results": [
         {
-          "ruleId": "S2068",
+          "ruleId": "S2326",
           "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "message": "'T' is not used in the interface.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/GreenCap.Common/GlobalConstants.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Mapping/IMapFrom.cs",
                 "region": {
-                  "startLine": 16,
+                  "startLine": 4,
+                  "startColumn": 31,
+                  "endLine": 4,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2326",
+          "level": "warning",
+          "message": "'T' is not used in the interface.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Mapping/IMapTo.cs",
+                "region": {
+                  "startLine": 4,
                   "startColumn": 29,
-                  "endLine": 16,
-                  "endColumn": 62
+                  "endLine": 4,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3260",
+          "level": "warning",
+          "message": "Private classes or records which are not derived in the current assembly should be marked as 'sealed'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Services/GreenCap.Services.Mapping/AutoMapperConfig.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 23,
+                  "endLine": 99,
+                  "endColumn": 31
                 }
               }
             }
@@ -34,20 +76,36 @@
         }
       ],
       "rules": {
-        "S2068": {
-          "id": "S2068",
-          "shortDescription": "Hard-coded credentials are security-sensitive",
-          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
+        "S2326": {
+          "id": "S2326",
+          "shortDescription": "Unused type parameters should be removed",
+          "fullDescription": "Type parameters that aren’t used are dead code, which can only distract and possibly confuse developers during maintenance. Therefore, unused type parameters should be removed.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2326",
           "properties": {
-            "category": "Blocker Security Hotspot",
+            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
-              "SonarWay",
               "MainSourceScope",
-              "NotConfigurable"
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3260": {
+          "id": "S3260",
+          "shortDescription": "Non-derived \"private\" classes and records should be \"sealed\"",
+          "fullDescription": "private classes and records aren’t visible outside of their assemblies anyway, so if they’re not extended inside the assemblies, they should be made explicitly non-extensible with the addition of the sealed keyword.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3260",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }

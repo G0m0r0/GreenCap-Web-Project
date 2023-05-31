@@ -1,5 +1,5 @@
-ù
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Address.cs
+à
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Address.cs
 	namespace 	
 GreenCap
  
@@ -113,8 +113,8 @@ ForeignKey	 
 ;% &
 }' (
 } 
-} õ
-lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationRole.cs
+} Ü
+SD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationRole.cs
 	namespace 	
 GreenCap
  
@@ -215,8 +215,8 @@ ModifiedOn #
 ;- .
 }/ 0
 } 
-} ð.
-lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationUser.cs
+} ×.
+SD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationUser.cs
 	namespace 	
 GreenCap
  
@@ -569,9 +569,9 @@ ModifiedOn #
 ;669 :
 }66; <
 }77 
-}88 º
+}88 ¡
 
-iC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\CategoryNews.cs
+PD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\CategoryNews.cs
 	namespace 	
 GreenCap
  
@@ -644,8 +644,8 @@ iC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 ;? @
 }A B
 } 
-} ç
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Comment.cs
+} Î
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Comment.cs
 	namespace 	
 GreenCap
  
@@ -777,8 +777,8 @@ ForeignKey	 
 ;' (
 }) *
 } 
-} ’
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Enums\Category.cs
+} ù
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Enums\Category.cs
 	namespace 	
 GreenCap
  
@@ -827,8 +827,8 @@ kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 
  
 } 
-} ù
-bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Event.cs
+} à
+ID:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Event.cs
 	namespace 	
 GreenCap
  
@@ -1050,8 +1050,8 @@ bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 ;))R S
 }))T U
 }** 
-}++ Ù
-bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Image.cs
+}++ À
+ID:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Image.cs
 	namespace 	
 GreenCap
  
@@ -1174,8 +1174,8 @@ ProposalId 
 ;( )
 }* +
 } 
-} â
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\News.cs
+} É
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\News.cs
 	namespace 	
 GreenCap
  
@@ -1386,8 +1386,8 @@ CategoryId++ 
 ;++( )
 }++* +
 },, 
-}-- „
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Post.cs
+}-- ë
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Post.cs
 	namespace 	
 GreenCap
  
@@ -1545,8 +1545,8 @@ UsersLikes$$- 7
 ;$$B C
 }$$D E
 }%% 
-}&& â
-eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Proposal.cs
+}&& É
+LD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Proposal.cs
 	namespace 	
 GreenCap
  
@@ -1730,8 +1730,8 @@ ForeignKey  	 
 ;%%9 :
 }%%; <
 }&& 
-}'' Ø
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Setting.cs
+}'' ¿
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Setting.cs
 	namespace 	
 GreenCap
  
@@ -1771,9 +1771,9 @@ dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 }
 
  
-} Ñ
+} ¸
 
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventHosts.cs
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventHosts.cs
 	namespace 	
 GreenCap
  
@@ -1849,9 +1849,9 @@ ForeignKey	 
 ;% &
 }' (
 } 
-} ×
+} ¾
 
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventSignedIn.cs
+UD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventSignedIn.cs
 	namespace 	
 GreenCap
  
@@ -1945,8 +1945,9 @@ ForeignKey	 
 ;% &
 }' (
 } 
-} ”
-eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserLike.cs
+} û
+
+LD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserLike.cs
 	namespace 	
 GreenCap
  
@@ -2046,8 +2047,8 @@ IsPositive 
 ;) *
 }+ ,
 } 
-} Í	
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Vote.cs
+} ´	
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Vote.cs
 	namespace 	
 GreenCap
  

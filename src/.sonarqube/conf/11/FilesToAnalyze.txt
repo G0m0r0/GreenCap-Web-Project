@@ -1,3 +1,3 @@
-﻿C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\Sandbox\Program.cs
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\Sandbox\SandboxOptions.cs
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\Sandbox\appsettings.json
+﻿D:\Programming\SoftUni-Web-Project\src\Tests\Sandbox\Program.cs
+D:\Programming\SoftUni-Web-Project\src\Tests\Sandbox\SandboxOptions.cs
+D:\Programming\SoftUni-Web-Project\src\Tests\Sandbox\appsettings.json

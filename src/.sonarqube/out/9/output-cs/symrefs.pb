@@ -1,14 +1,12 @@
-â
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\ChartService.cs
+½
+VD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\ChartService.cs
 
  
 ; A ::3 9
 > G DD6 ?
 E J NN3 8
 : ?   ??2 7
-: >!! II1 5
-
- 
+: >!! II1 5
 . 4  
 1 : &
 8 = 
@@ -32,13 +30,11 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 NN %
 SSƒ ˜
 PP PP PP6 7
-SS  UU #¾
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\CommentsService.cs
+SS  UU #™
+YD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\CommentsService.cs
 
   P
-= G !! !"" !''+ 533 44 !>>% /
-
- 
+= G !! !"" !''+ 533 44 !>>% /
 C M (
 
  %
@@ -56,13 +52,13 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 99 
 99# ,;; (??: C
-992 8<< %CC$ *
-FF .;; << 
+992 8<< %CC$ *
 >> CC  
 ??- .??2 3
 @@( )@@- .
-FF3 5HH KKS U™
-{C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\ExceptionMessages.cs
+FF .;; << 
+FF3 5HH KKS U€
+bD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\ExceptionMessages.cs
 
  )
 
@@ -88,8 +84,8 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  )
 
- 2­
-{C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\FormatValidations.cs
+ 2”
+bD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\FormatValidations.cs
 
  )
 
@@ -97,20 +93,24 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  +
 
-		 1‹
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\OperationalMessages.cs
+		 1r
+dD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Common\OperationalMessages.cs
 
- +ï
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IBaseService.cs
+ +Ö
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IBaseService.cs
 
- !
+ !
+
+ 
   
-
- 
 
 % )
 
-/ ;
+/ ;
+
+
+
+ 
 
 
  
@@ -119,17 +119,13 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 
 
- 
-
-
-
-$ &”
-zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IChartService.cs
+$ &{
+aD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IChartService.cs
 
  "
 
- )
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ICommentsService.cs
+ )ö
+dD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ICommentsService.cs
 
  %
 
@@ -153,8 +149,8 @@ zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 & (
 
-1 7Ô
-zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IEventService.cs
+1 7»
+aD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IEventService.cs
 
  "
 
@@ -196,15 +192,15 @@ zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 B H
 
- “
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IHomeService.cs
+ z
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IHomeService.cs
 
  !
 
 
 
- #È
-~C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IJoinEventService.cs
+ #¯
+eD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IJoinEventService.cs
 
  &
 
@@ -216,8 +212,8 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 		 
 
-		# *ç
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ILikeService.cs
+		# *Î
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ILikeService.cs
 
  !
 
@@ -235,8 +231,8 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  
 
- #«
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\INewsService.cs
+ #’
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\INewsService.cs
 
  !
 
@@ -244,13 +240,13 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 ! #
 
-		 
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IPostService.cs
+		 è
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IPostService.cs
 
-		 !
+		 !
+
+ %
 & ' 
-
- %
 
 - 1
 
@@ -286,13 +282,13 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  
 
-& 2ù
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IProposalService.cs
+& 2à
+dD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IProposalService.cs
 
-		 %
+		 %
+
+ %
 & ' 
-
- %
 
 - 1
 
@@ -326,16 +322,16 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  
 
-$ &¹
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ISettingsService.cs
+$ & 
+dD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\ISettingsService.cs
 
  %
 
- 
-		 		 
+ 
 
-		 Ð
-zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IVotesService.cs
+		 
+		 		 ·
+aD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Contracts\IVotesService.cs
 
  "
 
@@ -349,8 +345,8 @@ zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 		 
 
-		# +Ã
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\DTOs\HomeStatisticsDto.cs
+		# +ª
+`D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\DTOs\HomeStatisticsDto.cs
 
  "
 
@@ -362,8 +358,8 @@ yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
  
 
- Ø
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\EventService.cs
+ 
+VD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\EventService.cs
 
  ž
 ; C 77 88 ]]" *
@@ -382,9 +378,7 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 G Q"" jj' 1qq %|| !}} !
 ÀÀ' 1
 ËË 
-ÌÌ %
-
- 
+ÌÌ %
 . 6 $
 8 >    
 7 B!! *
@@ -397,8 +391,7 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ''; <''@ A(
 .. 77) 3== $PP& 0
 :: ??, 7
-DD $FF) 9
-FF %JJ; C
+DD $FF) 9
 HH LL QQ% )
 JJ( )JJ- .
 NN $TT8 @
@@ -432,13 +425,13 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ‚‚S T
 
 ‰‰2 3
-‰‰7 8$
+‰‰7 8
+
+““ $$
 
 ““% &
 ““ 
- 
-
-““ $$
+ $
 
 ““, 0
 ••0 4
@@ -449,27 +442,21 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ››# /
 œœ "
 
-òò ?
-•• /
-
 ™™ 
 ™™ 
 
 šš 
-šš $
+šš 
+
+¡¡ )$
 
 ¡¡* +
 ¡¡ 
-¨¨ 
-
-¡¡ )$
+¨¨ $
 
 ¡¡1 3
 ££ !
 §§# %
-
-éé .
-££ 
 
 §§ 
 §§ 
@@ -538,11 +525,17 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ÒÒP Q
 
 ÙÙ/ 0
-ÙÙ4 5$
+ÙÙ4 5
+
+éé .
+££ $
 
 éé3 5
 ëë 
-îîS U$
+îîS U
+
+òò ?
+•• /$
 
 òòD H
 ôô 
@@ -550,14 +543,12 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 òòN Z
 úú 
-ýýS _À
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Exceptions\NegativeNumberNotAllowedException.cs
+ýýS _š
+vD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\Exceptions\NegativeNumberNotAllowedException.cs
 
- 2
-
- 0
-8 ? ¸
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\HomeService.cs
+ 2
+8 ? “
+UD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\HomeService.cs
 
 
 
@@ -566,9 +557,7 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 > G &&& /
 E J ''" '
 : ? %%" '
-: > ((! %
-
- 
+: > ((! %
 . 4  
 1 : &
 8 = 
@@ -576,45 +565,41 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 - 1 
 
   ! *
-"" ++ ö
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\NewsService.cs
+"" ++ Ñ
+UD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\NewsService.cs
 
  P
-: @ + 1&& (( // << $EE 
-
- 
+: @ + 1&& (( // << $EE 
 < B  
 
  )
-. 0 !Y [
-HH . :: 2
+. 0 !Y [2
   $$ %% && ,
-L MQ R
-++% &++ 44 
+L MQ R
 
 ++ $
+++% &++ 44 
 ++, 0--0 422 (
 ++6 B--6 B22# /33 "
-QQ ?-- /
-11# $11( )
-88* +88 ?? 
+11# $11( )
 
 88 )
+88* +88 ?? 
 881 3:: !>>$ &
 >> >> 
 
 CC 
-HH3 5JJ MMS U
+HH . :: 
+HH3 5JJ MMS U
+QQ ?-- /
 QQD HSS VVS W
-QQN ZYY \\S _¼
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\PostLikeService.cs
+QQN ZYY \\S _—
+YD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\PostLikeService.cs
 
 
 
   F
-/ 6   '' #22 "66 
-
- 
+/ 6   '' #22 "66 
 5 < "
 
  
@@ -632,8 +617,8 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 %%: @((G M// #
 %%G Q55 (2
 '' ** ,, 22, 055 
-((  !((% &((; <ß
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\PostService.cs
+((  !((% &((; <º
+UD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\PostService.cs
 
   
 : A // 00 77 II WW %``" )pp uu+ 2
@@ -643,9 +628,7 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ”” 
 ¦¦ 4
 E K    %DD 
-ŽŽ $
-
- 
+ŽŽ $
 < C "
 q w  
 
@@ -654,30 +637,26 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 G I  H J++  
    "" 
   ; <  @ A
-'' //( 5
-33% &33 << 
+'' //( 5
 
 33 $
+33% &33 << 
 33, 0550 4:: (
-336 B556 B::# /;; " 
-
-²² ?55 /BB /
-99# $99( )
-@@- .@@ OO 
+336 B556 B::# /;; "
+99# $99( )
 
 @@ ,
+@@- .@@ OO 
 @@4 8BB0 4MM (
 @@> JBB6 BMM# /NN "
 @@S UDD4 6KK- /
 DD' (DD, -
 KK KK 
-LL# $LL( )
-SS* +SS ZZ 
+LL# $LL( )
 
 SS )
-SS1 3UU !YY$ &
-
-©© .UU 
+SS* +SS ZZ 
+SS1 3UU !YY$ &
 YY YY 
 
 ^^ %
@@ -722,11 +701,15 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ¡¡ 
 
 ¦¦, -
-¦¦1 2$
+¦¦1 2
+
+©© .UU $
 
 ©©3 5
 «« 
-®®S U$
+®®S U 
+
+²² ?55 /BB /$
 
 ²²D H
 ´´ 
@@ -734,8 +717,8 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 ²²N Z
 ºº 
-½½S _
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\ProposalService.cs
+½½S _Ø
+YD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\ProposalService.cs
 
   
 " 3-- +–
@@ -744,44 +727,37 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
  
  !
 ”” "
-™™ "
-
- 
+™™ "
 D N (
 
  %2
 8 =!! ""# (## #**" '
 F L$$ $44  &
 U ^))) 299& /
- 77 >>+ 3
-** ,,2 7;; 2
+ 77 >>+ 32
 ,, --5 >//h q55  )99I R
 --0 1--H I
 22 77$ +99< C
 99  ::9 E
-:: ';;( 2
-BB% &BB KK 
+:: ';;( 2
 
 BB $
+BB% &BB KK 
 BB, 0DD0 4II (
-BB6 BDD6 BII# /JJ " 
-
-¥¥ ?DD /QQ /
-HH# $HH( )
-OO- .OO YY 
+BB6 BDD6 BII# /JJ "
+HH# $HH( )
 
 OO ,
+OO- .OO YY 
 OO4 8QQ0 4WW (
 OO> JQQ6 BWW# /XX "
 OOS YUU- 3
 UU UU 
-VV# $VV( )
-]]* +]] dd 
+VV# $VV( )
 
 ]] )
-]]1 3__ !cc$ &
-
-œœ .__ 
+]]* +]] dd 
+]]1 3__ !cc$ &
 cc cc 
 
 hh %
@@ -814,11 +790,15 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 ™™E K
 
 ™™/ 0
-™™4 5$
+™™4 5
+
+œœ .__ $
 
 œœ3 5
 žž 
-¡¡S U$
+¡¡S U 
+
+¥¥ ?DD /QQ /$
 
 ¥¥D H
 §§ 
@@ -826,30 +806,25 @@ rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 
 ¥¥N Z
 ­­ 
-°°S _„
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\SettingsService.cs
+°°S _ß
+YD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\SettingsService.cs
 
   (
-= O # * *
-
- 
+= O # * *
 C U& 8
 
- 
-% & 4 5
+ 
 
- $¡
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\VotesService.cs
+ $
+% & 4 5ü
+VD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services.Data\VotesService.cs
 
  <
-+ :   '   +++ *// &
-
- 
++ :   '   +++ *// &
 . =# 2
 
  %
 * 4 ), 6
-22 . 
   
   
 
@@ -858,5 +833,6 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Services\GreenC
 > D!!O U(( #
 K P.. 2
    ## %% ++4 8.. 
-!!  !!!% &!!C D
+!!  !!!% &!!C D
+22 . 
 223 544 77S U

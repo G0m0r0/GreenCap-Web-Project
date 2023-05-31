@@ -1,5 +1,5 @@
-£
-ŠC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.Infrastructure\Attributes\CurrentYearMaxValueAttribute.cs
+‰
+qD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.Infrastructure\Attributes\CurrentYearMaxValueAttribute.cs
 	namespace 	
 GreenCap
  

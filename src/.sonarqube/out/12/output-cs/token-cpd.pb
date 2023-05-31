@@ -1,5 +1,5 @@
-§
-çC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\AdministrationController.cs
+ä
+tD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\AdministrationController.cs
 	namespace 	
 GreenCap
  
@@ -50,8 +50,8 @@
 BaseController, :
 { 
 } 
-} Ó
-àC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\DashboardController.cs
+} ‘
+oD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\DashboardController.cs
 	namespace 	
 GreenCap
  
@@ -134,8 +134,8 @@
 ;' (
 } 	
 } 
-} ëZ
-ÖC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\EventsController.cs
+} ˜Y
+lD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\EventsController.cs
 	namespace 	
 GreenCap
  
@@ -940,8 +940,8 @@ ActionName
 õõ 	
 }
 úú 
-}ùù Ñp
-ÉC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\NewsController.cs
+}ùù Ío
+jD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\NewsController.cs
 	namespace 	
 GreenCap
  
@@ -1956,8 +1956,8 @@ NewsExists
 •• 	
 }
 ¶¶ 
-}ßß √o
-ÑC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\PostsController.cs
+}ßß ©o
+kD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\PostsController.cs
 	namespace 	
 GreenCap
  
@@ -2969,8 +2969,8 @@ PostExists
 ¶¶ 	
 }
 ßß 
-}®® ¬p
-àC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\ProposalsController.cs
+}®® ®p
+oD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Areas\Administration\Controllers\ProposalsController.cs
 	namespace 	
 GreenCap
  
@@ -3981,8 +3981,8 @@ ActionName
 •• 	
 }
 ¶¶ 
-}ßß Ö
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\BaseController.cs
+}ßß Ï
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\BaseController.cs
 	namespace 	
 GreenCap
  
@@ -4000,8 +4000,8 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 Controller" ,
 { 
 } 
-} ˝
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ChartController.cs
+} ‰
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ChartController.cs
 	namespace 	
 GreenCap
  
@@ -4104,8 +4104,8 @@ oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.We
 ;( )
 } 	
 }   
-}!! Ö#
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\CommentsController.cs
+}!! Ï"
+YD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\CommentsController.cs
 	namespace 	
 GreenCap
  
@@ -4356,8 +4356,8 @@ ClaimTypes112 <
 ;55Q R
 }66 	
 }77 
-}88 ™J
-pC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\EventsController.cs
+}88 ëJ
+WD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\EventsController.cs
 	namespace 	
 GreenCap
  
@@ -4895,8 +4895,8 @@ ClaimTypesuu2 <
 ;yy: ;
 }zz 	
 }{{ 
-}|| ì_
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ForumController.cs
+}|| ˙^
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ForumController.cs
 	namespace 	
 GreenCap
  
@@ -5707,8 +5707,8 @@ Categories
 öö 	
 }
 õõ 
-}úú Ê
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\HomeController.cs
+}úú Õ
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\HomeController.cs
 	namespace 	
 GreenCap
  
@@ -5886,8 +5886,8 @@ UsersCount+ 5
 ;,,l m
 }-- 	
 }.. 
-}// ¿
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\LikesController.cs
+}// ß
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\LikesController.cs
 	namespace 	
 GreenCap
  
@@ -6052,8 +6052,8 @@ IsPositive""L V
 ;++ 
 },, 	
 }-- 
-}.. –"
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\NewsController.cs
+}.. ∑"
+UD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\NewsController.cs
 	namespace 	
 GreenCap
  
@@ -6292,8 +6292,8 @@ PageNumber)) 
 ;<<: ;
 }== 	
 }>> 
-}?? ·t
-sC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ProposalsController.cs
+}?? »t
+ZD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\ProposalsController.cs
 	namespace 	
 GreenCap
  
@@ -7369,8 +7369,8 @@ SystemName
 ®® 	
 }
 ©© 
-}™™ »
-rC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\SettingsController.cs
+}™™ Ø
+YD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\SettingsController.cs
 	namespace 	
 GreenCap
  
@@ -7556,8 +7556,8 @@ repository%% !
 ;''< =
 }(( 	
 })) 
-}** ˘
-oC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\VotesController.cs
+}** ‡
+VD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Controllers\VotesController.cs
 	namespace 	
 GreenCap
  
@@ -7703,9 +7703,9 @@ ProposalId$$G Q
 ;&&J K
 }'' 	
 }(( 
-})) Â
+})) Ã
 
-[C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Program.cs
+BD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Program.cs
 	namespace 	
 GreenCap
  
@@ -7808,8 +7808,8 @@ UseStartup# -
 ) 
 ; 
 } 
-} í_
-[C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Startup.cs
+} ˘^
+BD:\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web\Startup.cs
 	namespace 	
 GreenCap
  

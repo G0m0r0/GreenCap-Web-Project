@@ -1,5 +1,5 @@
-ª
-vC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\EventServiceTest.cs
+…
+]D:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\EventServiceTest.cs
 
  !
 
@@ -9,15 +9,13 @@ vC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.
 F N(( **F N
 E N**U ^
 H U**e r(
-. 8%% ''I S((R \
-
-!! 
+. 8%% ''I S((R \
 ## %%7 >
 
 .. *
 00 990 9
-:: << &	
-uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\PostServiceTest.cs
+:: << &ø
+\D:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\PostServiceTest.cs
 
   |
 & 1)) 66 "FF "XX "YY" -hh "ii" -|| " &
@@ -27,9 +25,7 @@ uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.
 " -2
 ; C&& ))4 <77( 0GG# +
 F N'' ))C K(
-. 8$$ &&G Q''R \
-
-   
+. 8$$ &&G Q''R \
 "" $$7 >
 
 -- *
@@ -101,17 +97,15 @@ uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.
 «« 
 
 ¤¤ 
-««& /ÿ
-yC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\ProposalServiceTest.cs
+««& /Ú
+`D:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\ProposalServiceTest.cs
 
 		 $
 * 9  
 ? K < H
-. 8 O Y
-
- "
- 7 >”
-zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\SettingsServiceTests.cs
+. 8 O Y
+ 7 >û
+aD:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\SettingsServiceTests.cs
 
  %
 
@@ -119,8 +113,8 @@ zC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.
  ; B<
      L U
   . 8
-  #ã
-uC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\VoteServiceTest.cs
+  #Ê
+\D:\Programming\SoftUni-Web-Project\src\Tests\GreenCap.Services.Data.Tests\VoteServiceTest.cs
 
   
 

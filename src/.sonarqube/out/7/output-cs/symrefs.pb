@@ -1,457 +1,148 @@
-¡
-†C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Administration\Dashboard\IndexViewModel.cs
+¿
+]D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Common\ServicesConstants.cs
 
- 
+ )
 
-  á
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\EventEditViewModel.cs
+ +
 
-
-
- #
+ 6
 
- 
+		 5
 
- 
+ 8
 
- !
+ 7
 
- 
+ =
 
- !
+ *‚
+\D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\IPhysNewsScarperService.cs
 
-## 
+ ,
 
-(( ¼
-~C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\PostEditViewModel.cs
+ 
 
-
-
- "
+! *
+SD:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Models\NewsDTO.cs
 
- 
+ 
 
- "
+ 
 
- !
+ 
 
-  Á
-‚C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\EditViewModel\ProposalEditViewModel.cs
+		 
 
-		 &
+ 
 
- 
-
- 
-
- !
-
- &
-mC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\ErrorViewModel.cs
-
- 
- @ I
-
- !³
-€C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\CommentInputModel.cs
+! +³
+]D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\Models\NewsShortIntroDTO.cs
 
  "
 
- 
-
- 
-
-		 å
-‚C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\EventInputViewModel.cs
-
- $
-
- 
-
- !
-
- 
-
- !
-
- 
-
-$$ 
-
-'' #´
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\PostInputViewModel.cs
-
- #
-
- "
-
- !
-
-  ¬
-…C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\PostLikeInputViewModel.cs
-
- '
-
- 
-
- ¿
-€C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\ProposalViewModel.cs
-
-		 "
-
- 
-
- !
-
- &
-
-& ,¬
-…C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\InputViewModels\ProposalVoteInputModel.cs
-
- '
-
- 
-
-
-
- œ
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ChartResponseModel.cs
-
- #
-
- 'Ì
-ƒC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\EventOutputViewModel.cs
-
-
- %&&+ ?
- 88_ a
-
- 
-
- !
- ++" +
- --" )
- #))# 0
-
- 
- 77" .
- ''" +
-
- 
-   #//" /
-"" %55" 1
-
-$$ "
-$$6 C&& 
-'' ''  !
-''- 0(( 
-(( ((# $
-)) ))! "
-))2 5** 
-**  **6 7
-**O P**T U
-++ ++  !
-++- 0,, 
-,, ,,# $
--- --  !
---+ ... 
-.. ..# $
-// //  !
-//1 400 (
-00 00= >33- .44. /
-55 55  !
-553 666 
-66  666 7
-66Q R66V W
-77 77  !
-770 388 
-88 88# $883 4
-88M N88R S£
-ˆC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\EventsListOutputViewModel.cs
-
- *
-
-1 7×
-ŒC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\HomeStatisticsOutputViewModel.cs
-
- .
-
- 
-
- !
-
-		 
-
- 
-
- ¡
-†C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\NewsListOutputViewModel.cs
-
- (
-
-0 8£
-‚C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\NewsOutputViewModel.cs
- $* =
-
-		 
-
- 
-
- 
- $$" (
-
- !
-   " *
-
- 
-
- !
-
- #
- """" .
-
- "
-6 C 
-       !
-  , /!! 
-!! !!# $
-"" ""  !
-""0 3## 
-## ### $
-$$ $$  !
-$$* -%% 
-%% %%# $%%D E»
-ŠC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostCommentsOutputViewModel.cs
- ,- H
-
-
-
- 
-
- 
- L S
- ! )
-
- &
- !! ,
-
- 
-
- "
-6 C 
-   
-+ . 
- " #
-   
-. 1 
- # $†
-‰C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostDetailsOutputViewModel.cs
- +''* D
-
- 
-
- "
- !P [
-
- *
- !**" -
- ((" *
- ",," .
- .." '
- 00" +
-
- 
-
-!!8 @
-
-## #
-
-%% "
-%%6 C'' 
-(( ((  !
-((, /)) 
-)) ))# $
-** **  !
-**/ 2++ 
-++ ++# $
-,, ,,  !
-,,0 3-- 
--- --# $
-.. ..  !
-..) ,// 
-// //# $
-//S T//X Y
-00 00  !
-00- 011 
-11 11# $
-11T U11Z [¿
-‚C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostOutputViewModel.cs
- $77* =
-
- 
-
- "
- !K V
-
- 
- &%%U e(
-  " "!! $
-
-%% /
-'' !::" -
-)) 88" *
-++ "<<" .
--- >>" '
-// @@" +
-
-11 #
-
-338 @
-
-55 "
-556 C77 
-88 88  !
-88, /99 
-99 99# $
-:: ::  !
-::/ 2;; 
-;; ;;# $
-<< <<  !
-<<0 3== 
-== ==# $
->> >>  !
->>) ,?? 
-?? ??# $
-??S T??X Y
-@@ @@  !
-@@- 0AA 
-AA AA# $
-AAT UAAZ [¢
-‡C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostsListOutputViewModel.cs
-
- )
-
-0 5·
-„C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\PostVoteResponseModel.cs
-
- &
-
- 
-
- 
-
-		 †
-C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalDetailsOutputViewModel.cs
-
-
- /"". L
-
- 
-
- 
-
- &
- ##" +
- "++" (
- #%%" /
-
- !
-  ''" ,
- !))" -
-
- 
-
-   "
-  6 C"" 
-## ##  !
-##- 0$$ 
-$$ $$# $
-%% %%  !
-%%1 4&& 
-&& &&# $
-'' ''  !
-''. 1(( 
-((  ((% &((P Q
-)) ))  !
-))/ 2** 
-**  !**% &**> ?
-**N O**S T
-++ ++  !
-++* -,, 
-,, ,,# $
-,,3 4,,O P,,\ ]
-†C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalOutputViewModel.cs
-		 (. E
-
- 
-
- 
-
- &
- " +
- " *
-
- 
- #!!" /
-
- "
-6 C 
-   !
-, / *
-  ! [ \
-€ 
-   !
-- 0   
-     # $
-!! !!  !
-!!1 4"" 
-"" ""# $¦
-‹C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalsListOutputViewModel.cs
-
- -
-
-4 =ž
-ƒC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\OutputViewModel\ProposalVoteResponse.cs
-
- %
-
- !®
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\PagingViewModel.cs
-
-  2
- 		, 6. 8( 2* 4
-
-		 #
-
- %
-
- 
- : D
-
- !
-  @ M
- U a
-
- —
-}C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Settings\SettingsListViewModel.cs
-
- &
-
-- 5¸
-xC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Web\GreenCap.Web.ViewModels\Settings\SettingViewModel.cs
- !- =
-
-
-
- 
-
- 
-
- 
- " #
-
- "
-6 C 
-  
-  
-# $( )9 :
+ 
+
+ !
+
+		 #
+
+ 
+
+ "
+
+ ã
+[D:\Programming\SoftUni-Web-Project\src\Services\GreenCap.Services\PhysNewsScarperService.cs
+
+ '
+ $
+$ +
+( . 4 :,
+* 1 
+ƒƒ  '
+¼¼ "2
+B L GG  *UU !VV !2
+: @ **% +@@ !AA !
+5 ? (
+- 3  
+
+"" )
+"". 7$$5 >
+$$ !&&! 2
+(( 66! +
+** .. 
+,, ,, 
+33 @@+ 2
+EE  8((, D
+EE@ LII/ ;RR #<
+GG KK MM PP UU+ 3XX 
+II  !II% &
+[[' 2$$) 4
+[[7 @`` %
+]] ff !nn  
+``' (dd, -
+dd ff& *
+qq dd$ +(
+qq$ -vv || ( "*
+ss xx || 
+- 8 
+tt  
+““F P
+
+ 
+„„ 0
+
+ƒƒ 
+ŠŠ 
+‹‹ 
+““ l
+
+ 
+•• 
+™™ 
+ 
+¡¡ 
+¦¦ 
+¸¸ 
+ºº #
+ÑÑ" +T
+
+‘‘ 
+ÃÃ 
+ÄÄ 
+ÅÅ 
+ÏÏ 
+ÑÑ 
+ÓÓ T
+
+““ 
+••$ %
+™™& '
+ 
+¡¡  !
+¦¦% &
+«« T
+
+«« 
+°° 
+±± 
+²² 
+³³ 
+µµ 
+¸¸! %
+
+ºº 
+½½ "<
+
+¼¼ 
+ÃÃ  
+ÄÄ  #
+ÅÅ !
+ÇÇ! $
+
+ÇÇ 
+ÉÉ& 40
+
+ÈÈ 
+ËË 
+ÌÌ 
+ÏÏ  "

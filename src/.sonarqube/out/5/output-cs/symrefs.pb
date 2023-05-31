@@ -1,5 +1,5 @@
-¸
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Address.cs
+Ÿ
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Address.cs
 
 		 
 
@@ -10,14 +10,10 @@ dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
   
    
 
- Ø
-lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationRole.cs
+ §
+SD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationRole.cs
 
-		  
-
- 
-
- 
+		  
 & * 
 
  !
@@ -26,14 +22,20 @@ lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 
  
 
- "’
-lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationUser.cs
+ "í
+SD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\ApplicationUser.cs
 
 
 
   
 
- 
+ !
+
+ #
+
+   
+
+"" "
 $$= B 
 &&> D 
 ((> D 
@@ -43,24 +45,14 @@ lC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 00- 6 
 223 B  
 446 H #
-66) . 
-
- !
-
- #
-
-   
-
-"" "¥
-iC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\CategoryNews.cs
+66) . €
+PD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\CategoryNews.cs
 
 		 
 
- 
-) 4 
-
- î
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Comment.cs
+ 
+) 4 Õ
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Comment.cs
 		  
 
  
@@ -72,33 +64,15 @@ dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
  
 ' + 
 
- Á
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Enums\Category.cs
+ `
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Enums\Category.cs
 
- 
-
- 
-
- 
-
- 
-
- 
-
-		 
-
-
-
- ¥
-bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Event.cs
+ €
+ID:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Event.cs
 
 
 
  
-
- 
-''3 B  )
-))6 G "%%< M	%%t …
 
  
 
@@ -111,14 +85,12 @@ bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
    
 ## %%) 4%%a l
 
-%% Ø
-bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Image.cs
+%% 
+''3 B  )
+))6 G "%%< M	%%t …³
+ID:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Image.cs
 
- 
-
-
-
- 
+ 
  # 
 
  
@@ -128,8 +100,8 @@ bC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
  
    #
 
- ñ
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\News.cs
+ Ø
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\News.cs
 
 		 
 
@@ -150,14 +122,10 @@ aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 && #
 (($ ,** #
 
-++ í
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Post.cs
+++ È
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Post.cs
 
  
-
- 
-"", 4 
-$$- 7 
 
  "
 
@@ -166,16 +134,14 @@ aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 
  !
 
-    ñ
-eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Proposal.cs
+    
+"", 4 
+$$- 7 Ì
+LD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Proposal.cs
 
 
 
  
-
- 
-##" ( 
-%%) . 
 
  
 
@@ -184,15 +150,17 @@ eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
  &
 ' +   
 
-!! !Š
-dC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Setting.cs
+!! !
+##" ( 
+%%) . q
+KD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Setting.cs
 
  
 
  
 
-		 ½
-kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventHosts.cs
+		 ¤
+RD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventHosts.cs
 
  
 		 # 
@@ -200,8 +168,8 @@ kC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
  
    
 
- À
-nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventSignedIn.cs
+ §
+UD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserEventSignedIn.cs
 
  "
  #
@@ -211,8 +179,8 @@ nC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
  
    
 
- Ã
-eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserLike.cs
+ ª
+LD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\UserLike.cs
 
  
   		 
@@ -224,8 +192,8 @@ eC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.D
 
  
 
- «
-aC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Vote.cs
+ ’
+HD:\Programming\SoftUni-Web-Project\src\Data\GreenCap.Data.Models\Vote.cs
 
  
 

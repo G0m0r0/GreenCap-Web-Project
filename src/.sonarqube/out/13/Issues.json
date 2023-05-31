@@ -5,33 +5,12 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.2.0.0",
-        "fileVersion": "4.2.0-4.22220.5 (432d17a8)",
-        "semanticVersion": "4.2.0",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
         "language": "en-US"
       },
       "results": [
-        {
-          "ruleId": "CA1063",
-          "level": "warning",
-          "message": "Provide an overridable implementation of Dispose(bool) on 'SeleniumTests' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 18,
-                  "endLine": 9,
-                  "endColumn": 31
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
         {
           "ruleId": "SA1516",
           "level": "warning",
@@ -39,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
                 "region": {
                   "startLine": 9,
                   "startColumn": 5,
@@ -63,7 +42,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
                 "region": {
                   "startLine": 9,
                   "startColumn": 5,
@@ -84,7 +63,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
                 "region": {
                   "startLine": 10,
                   "startColumn": 5,
@@ -105,7 +84,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
                 "region": {
                   "startLine": 11,
                   "startColumn": 5,
@@ -120,123 +99,18 @@
           }
         },
         {
-          "ruleId": "CA1065",
-          "level": "warning",
-          "message": "Dispose creates an exception of type NotImplementedException. Exceptions should not be raised in this type of method. If this exception instance might be raised, change this method's logic so it no longer raises an exception.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 13,
-                  "endLine": 35,
-                  "endColumn": 56
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CA1063",
           "level": "warning",
-          "message": "Modify 'SeleniumTests.Dispose' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns",
+          "message": "Provide an overridable implementation of Dispose(bool) on 'SeleniumTests' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
                 "region": {
-                  "startLine": 33,
-                  "startColumn": 21,
-                  "endLine": 33,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "xUnit1004",
-          "level": "note",
-          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
-                "region": {
-                  "startLine": 27,
-                  "startColumn": 15,
-                  "endLine": 27,
-                  "endColumn": 54
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1816",
-          "level": "note",
-          "message": "Change SeleniumTests.Dispose() to call GC.SuppressFinalize(object). This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 21,
-                  "endLine": 33,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "xUnit1004",
-          "level": "note",
-          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 15,
-                  "endLine": 24,
-                  "endColumn": 54
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "xUnit1004",
-          "level": "note",
-          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
-                "region": {
-                  "startLine": 17,
-                  "startColumn": 15,
-                  "endLine": 17,
-                  "endColumn": 54
+                  "startLine": 9,
+                  "startColumn": 18,
+                  "endLine": 9,
+                  "endColumn": 31
                 }
               }
             }
@@ -252,7 +126,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
                 "region": {
                   "startLine": 4,
                   "startColumn": 5,
@@ -276,7 +150,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
                 "region": {
                   "startLine": 6,
                   "startColumn": 5,
@@ -300,7 +174,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
                 "region": {
                   "startLine": 4,
                   "startColumn": 5,
@@ -321,12 +195,138 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 5,
                   "endLine": 5,
                   "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 15,
+                  "endLine": 17,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 15,
+                  "endLine": 24,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1065",
+          "level": "warning",
+          "message": "Dispose creates an exception of type NotImplementedException. Exceptions should not be raised in this type of method. If this exception instance might be raised, change this method's logic so it no longer raises an exception.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 13,
+                  "endLine": 35,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1063",
+          "level": "warning",
+          "message": "Modify 'SeleniumTests.Dispose' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1816",
+          "level": "note",
+          "message": "Change SeleniumTests.Dispose() to call GC.SuppressFinalize(object). This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 21,
+                  "endLine": 33,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "xUnit1004",
+          "level": "note",
+          "message": "Test methods should not be skipped. Remove the Skip property to start running the test again.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/WebTests.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 15,
+                  "endLine": 27,
+                  "endColumn": 54
                 }
               }
             }
@@ -342,7 +342,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumTests.cs",
                 "region": {
                   "startLine": 12,
                   "startColumn": 37,
@@ -363,7 +363,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/dimit/Desktop/Dido/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
+                "uri": "file:///D:/Programming/SoftUni-Web-Project/src/Tests/GreenCap.Web.Tests/SeleniumServerFactory.cs",
                 "region": {
                   "startLine": 16,
                   "startColumn": 34,
@@ -384,7 +384,7 @@
           "shortDescription": "Implement IDisposable Correctly",
           "fullDescription": "All IDisposable types should implement the Dispose pattern correctly.",
           "defaultLevel": "warning",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1063",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1063",
           "properties": {
             "category": "Design",
             "isEnabledByDefault": false,
@@ -400,7 +400,7 @@
           "shortDescription": "Do not raise exceptions in unexpected locations",
           "fullDescription": "A method that is not expected to throw exceptions throws an exception.",
           "defaultLevel": "warning",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1065",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1065",
           "properties": {
             "category": "Design",
             "isEnabledByDefault": false,
@@ -416,7 +416,7 @@
           "shortDescription": "Dispose methods should call SuppressFinalize",
           "fullDescription": "A method that is an implementation of Dispose does not call GC.SuppressFinalize; or a method that is not an implementation of Dispose calls GC.SuppressFinalize; or a method calls GC.SuppressFinalize and passes something other than this (Me in Visual Basic).",
           "defaultLevel": "note",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1816",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1816",
           "properties": {
             "category": "Usage",
             "isEnabledByDefault": true,
@@ -432,7 +432,7 @@
           "shortDescription": "Disposable fields should be disposed",
           "fullDescription": "A type that implements System.IDisposable declares fields that are of types that also implement IDisposable. The Dispose method of the field is not called by the Dispose method of the declaring type. To fix a violation of this rule, call Dispose on fields that are of types that implement IDisposable if you are responsible for allocating and releasing the unmanaged resources held by the field.",
           "defaultLevel": "warning",
-          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2213",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2213",
           "properties": {
             "category": "Usage",
             "isEnabledByDefault": false,

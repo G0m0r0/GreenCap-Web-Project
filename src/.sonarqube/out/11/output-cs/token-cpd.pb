@@ -1,5 +1,5 @@
-ðC
-XC:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\Sandbox\Program.cs
+×C
+?D:\Programming\SoftUni-Web-Project\src\Tests\Sandbox\Program.cs
 	namespace 	
 Sandbox
  
@@ -466,8 +466,8 @@ FromResult:: (
 ;XXG H
 }YY 	
 }ZZ 
-}[[ ¬
-_C:\Users\dimit\Desktop\Dido\Programming\SoftUni-Web-Project\src\Tests\Sandbox\SandboxOptions.cs
+}[[ “
+FD:\Programming\SoftUni-Web-Project\src\Tests\Sandbox\SandboxOptions.cs
 	namespace 	
 Sandbox
  
