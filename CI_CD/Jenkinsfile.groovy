@@ -1,5 +1,4 @@
 pipeline {
-    
     agent any
 
     triggers {
@@ -7,32 +6,45 @@ pipeline {
     }
 
     stages {
-        
         stage('Audit tools') {
             steps {
                 sh '''
                     echo "Git:"
                     git --version
-                    
+
                     echo "\n.NET:"
                     dotnet --version
-                    
                 '''
             }
         }
-        
+
         stage('Clone sources') {
             steps {
                 git 'https://github.com/G0m0r0/GreenCap-Web-Project.git'
             }
         }
-        
+
         stage('Build') {
             steps {
                 sh 'cd src && dotnet build GreenCap.sln'
             }
         }
-        
+
+        stage('Create Docker image') {
+            steps {
+                sh 'docker build -t your-dockerhub-username/your-repo-name:latest CI_CD'
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'your-credentials-id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+                    sh 'docker push g0m0r0/greencap:latest'
+                }
+            }
+        }
+
         stage('SonarQube analysis') {
             steps {
                 withCredentials([string(credentialsId: 'sonar_credential', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -42,7 +54,7 @@ pipeline {
                             dotnet tool install --global dotnet-sonarscanner
                             fi
                             export PATH="$PATH:$HOME/.dotnet/tools"
-                            dotnet sonarscanner begin /k:"GreenCap" /d:sonar.host.url="http://sonarqube:9000"  /d:sonar.login="$SONAR_AUTH_TOKEN"
+                            dotnet sonarscanner begin /k:"GreenCap" /d:sonar.host.url="http://sonarqube:9000" /d:sonar.login="$SONAR_AUTH_TOKEN" /d:sonar.cs.analyzer.projectOutPath="/var/jenkins_home/.dotnet/tools/.store/dotnet-sonarscanner/5.13.0/dotnet-sonarscanner/5.13.0/tools/net5.0/any"
                             cd src && dotnet build GreenCap.sln
                             dotnet sonarscanner end /d:sonar.login="$SONAR_AUTH_TOKEN"
                         '''
@@ -51,24 +63,7 @@ pipeline {
             }
         }
 
-        // stage('SonarQube Analysis') {
-        //     steps {
-        //         withCredentials([string(credentialsId: 'sonar_credential', variable: 'SONAR_AUTH_TOKEN')]) {
-        //             withSonarQubeEnv(installationName: 'SonarServer') {
-        //                 def scannerHome = tool 'SonarScanner for MSBuild'
-        //                 withSonarQubeEnv() {
-        //                     sh '''
-        //                         dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"GreenCap\" /d:sonar.host.url="http://sonarqube:9000"  /d:sonar.login="$SONAR_AUTH_TOKEN
-        //                         cd src && dotnet build
-        //                         dotnet ${scannerHome}/SonarScanner.MSBuild.dll end /d:sonar.login="$SONAR_AUTH_TOKEN
-        //                     '''
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-        
-        stage('Quality gate') {
+       stage('Quality gate') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
@@ -76,7 +71,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             echo 'always'
